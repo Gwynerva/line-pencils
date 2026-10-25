@@ -2,7 +2,7 @@
 %S 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384
 %O 1,3
 %C a(n) counts the possible multisets of sizes of the lines with at least three points of a linear space (equivalently, of a simple matroid of rank at most 3) on n points. Dually, it counts the multisets of pencil sizes of n lines in the plane, no two parallel, that are combinatorially consistent (two pencils share at most one line). The empty multiset is counted, so a(1) = a(2) = 1.
-%C A072964(n-1) counts the multisets allowed by arithmetic alone (Sum_i binomial(k_i,2) <= binomial(n,2)); a(n) <= A072964(n-1) with equality only for n <= 3. The multisets that occur for arrangements of real lines are counted by [C]; they agree with a(n) for n <= 6 and are fewer for every n >= 7, because the type {3^7} (the Fano plane, plus n - 7 generic lines) is counted here but is not realizable over the reals.
+%C A072964(n-1) counts the multisets allowed by arithmetic alone (Sum_i binomial(k_i,2) <= binomial(n,2)); a(n) <= A072964(n-1) with equality only for n <= 3. The multisets that occur for arrangements of real lines are counted by A399464; they agree with a(n) for n <= 6 and are fewer for every n >= 7, because the type {3^7} (the Fano plane, plus n - 7 generic lines) is counted here but is not realizable over the reals.
 %C Computed by an exhaustive search over linear spaces with prescribed block sizes, confirmed independently by a SAT formulation for n <= 12.
 %D B. Grünbaum, Arrangements and Spreads, CBMS Regional Conference Series in Mathematics 10, AMS, Providence, 1972.
 %H Petra Radko, <a href="https://gwynerva.github.io/line-pencils/sequences/combinatorial/">How n Lines Can Meet: combinatorially possible types</a>, 2026.
@@ -10,5 +10,5 @@
 %H Petra Radko, <a href="https://github.com/Gwynerva/line-pencils">Programs and logs</a>, 2026.
 %e For n = 4 the a(4) = 3 multisets are {}, {3} and {4}; the arithmetically admissible {3, 3} is impossible because two blocks of size 3 in a 4-set share two elements.
 %e For n = 7 the a(7) = 17 multisets include {3^7}, the Fano plane.
-%Y Cf. A072964, A001200, [C], [D].
+%Y Cf. A072964, A001200, A399464, [D].
 %K nonn,hard,more
