@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block htmltitle %}
+  {% if page.url in ["", "./", "index.html"] %}
+    <title>{{ config.site_name }}</title>
+  {% else %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
+
+{% block extrahead %}
+  {% set desc = (page.meta.description if page.meta and page.meta.description else config.site_description) %}
+  {% set ttl = config.site_name if page.url in ["", "./", "index.html"] else (page.title | striptags) ~ " - " ~ config.site_name %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:title" content="{{ ttl }}">
+  <meta property="og:description" content="{{ desc }}">
+  {% if page.canonical_url %}<meta property="og:url" content="{{ page.canonical_url }}">{% endif %}
+  <meta name="twitter:card" content="summary">
+{% endblock %}

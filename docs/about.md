@@ -1,3 +1,7 @@
+---
+description: "Who did what in this project, how to cite it, the licence, and how the results can be reproduced."
+---
+
 # About
 
 **How n Lines Can Meet** is an open mathematical notebook. It grew out of a school-level question —

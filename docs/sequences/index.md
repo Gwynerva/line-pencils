@@ -1,3 +1,7 @@
+---
+description: "All known terms of the four sequences about how n lines can meet, with the evidence behind each term and the terms that are still open."
+---
+
 # The four sequences
 
 All known terms of the four sequences, with the evidence behind each. Intervals mark terms that are not yet known

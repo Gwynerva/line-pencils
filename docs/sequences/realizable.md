@@ -1,3 +1,7 @@
+---
+description: "c(n): the number of different ways n straight lines in the plane can meet. Exact up to 11 lines: 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180."
+---
+
 # c(n): ways n lines can meet
 
 **In one sentence:** $c(n)$ is the number of different ways $n$ lines in the plane, no two parallel, can meet — two

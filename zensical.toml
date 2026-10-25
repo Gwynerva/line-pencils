@@ -1,6 +1,6 @@
 [project]
 site_name = "How n Lines Can Meet"
-site_description = "Pencil types of line arrangements and the integer sequences they generate"
+site_description = "Draw n lines, no two parallel: how many of them can pass through each crossing point? Pictures, counts, proofs and new integer sequences."
 site_author = "Petra Radko"
 site_url = "https://gwynerva.github.io/line-pencils/"
 repo_url = "https://github.com/Gwynerva/line-pencils"
@@ -37,6 +37,7 @@ nav = [
 ]
 
 [project.theme]
+custom_dir = "overrides"
 logo = "assets/logo.svg"
 favicon = "assets/logo.svg"
 features = [

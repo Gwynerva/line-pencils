@@ -1,3 +1,7 @@
+---
+description: "Complete proofs behind every number on the site: classical inequalities, impossible configurations, lines versus pseudolines, and bounds on intersection points."
+---
+
 # Theorems and proofs
 
 Every statement on this site is justified here: by a complete proof, by a precise reference, or by a description

@@ -1,3 +1,7 @@
+---
+description: "The question in plain words: n lines, no two parallel, and the list of how many lines meet at each point. An example, then the precise definitions."
+---
+
 # The question
 
 This page states the problem: first in plain words, then precisely. It also explains why we may work in the

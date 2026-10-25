@@ -1,3 +1,7 @@
+---
+description: "The papers and books cited on the site, from Melchior and Sylvester-Gallai to the orchard problem and oriented matroids, with links."
+---
+
 # References
 
 Full bibliographic data for everything cited on this site. The verification trail (which statements were read in

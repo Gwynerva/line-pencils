@@ -1,3 +1,7 @@
+---
+description: "Draw n lines, no two parallel: how many of them can pass through each crossing point? Pictures, counts, proofs and new integer sequences."
+---
+
 # How n Lines Can Meet
 
 *Pencil types of line arrangements and the integer sequences they generate.*

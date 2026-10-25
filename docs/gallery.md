@@ -1,3 +1,7 @@
+---
+description: "Interactive drawings of every known way 1 to 13 lines can meet, each built from exact coordinates. Click a point to see which lines pass through it."
+---
+
 # Gallery
 
 Every pencil type that is known to be realizable, for 1 to 13 lines, drawn from its exact certificate, plus three

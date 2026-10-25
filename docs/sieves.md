@@ -1,3 +1,7 @@
+---
+description: "Why most ways lines could meet cannot be drawn: three tests in turn, counting, combinatorics and geometry, and where each first rules something out."
+---
+
 # The three sieves
 
 The sequences count what survives three successive tests: arithmetic, combinatorics and geometry. This page

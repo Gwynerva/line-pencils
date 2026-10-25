@@ -1,3 +1,7 @@
+---
+description: "d(n): how many different numbers of crossing points n lines can have. Exact up to 13 lines, with a proof that 2n-3 points are impossible from 12 lines on."
+---
+
 # d(n): how many intersection points can n lines have?
 
 **In one sentence:** $d(n)$ is the number of different possible numbers of intersection points of $n$ lines in the

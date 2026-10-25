@@ -1,3 +1,7 @@
+---
+description: "a(n): the ways n lines could meet if only counting mattered. It equals the number of partitions of a triangular number into triangular parts."
+---
+
 # a(n): arithmetically admissible types
 
 The first test is pure counting: there must be enough pairs of lines for the pencils. The sequence it gives is

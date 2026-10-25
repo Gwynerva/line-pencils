@@ -56,7 +56,20 @@ non-realizable multiset is excluded by one of the following, recorded per multis
   relations), which every real arrangement has (`engine/ls.c`, mode 4; `runs/orient_{n}.json`);
 * a theorem: the unique linear space of type {4^9} on 12 points is the dual Hesse configuration, excluded by the
   Sylvester–Gallai theorem (`data/exclusions.json`); for {6,4,3^12} and {6,3^14} every orientable linear space has a
-  Gröbner-basis certificate that any realization carries an extra collinearity (`data/proofs/`).
+  Gröbner-basis certificate that any realization carries an extra collinearity (`data/proofs/`);
+* the literature: {3^20} for n = 12 would be 12 lines with 20 triple points, more than the known maximum of 19 for the
+  orchard problem (A003035).
+
+Each multiset gets exactly one verdict in the classification file. The names used there are:
+
+| verdict | meaning |
+|---|---|
+| `real` | a certificate exists and is accepted by the verifier |
+| `no-linear-space` | the combinatorial search says NO (also counted out of b(n)) |
+| `melchior`, `csima-sawyer` | the inequality of that name fails |
+| `non-orientable` | linear spaces exist, but none admits a chirotope |
+| `theorem`, `non-realizable-proved`, `literature` | excluded by the theorem, proof or published bound above |
+| `open` | none of the above; the term is then given as an interval |
 
 **d(n).** The attained values are read off the certificates. The missing values are excluded by: the loss argument
 (n(n−1)/2 − 1 and n(n−1)/2 − 3 never occur, since a point on k lines removes k(k−1)/2 − 1 points and 1, 3 are not sums
@@ -74,10 +87,16 @@ python verifier/verify.py data/certificates/n*.json
 python scripts/classify.py 13
 ```
 
-The second command prints `verified 1332 certificates, 0 rejected` and the number of distinct certified types for
-each n (2, 3, 5, 9, 16, 28, 53, 98, 180, 335, 600 for n = 3, ..., 13). The third recomputes all four sequences from the
-certificates, the theorem filters and the search logs, printing an interval wherever a term is not exact; it stops with
-an error if any certificate fails or if two searches disagree. Python 3.10 or later is the only requirement.
+The first command runs the verifier's own tests. The second prints `verified 1332 certificates, 0 rejected` and the
+number of distinct certified types for each n: 2, 3, 5, 9, 16, 28, 53, 98, 180, 335, 600 for n = 3, ..., 13, plus 3
+sample arrangements for n = 14 used on the site.
+
+The third recomputes all four sequences from the certificates, the theorem filters and the search logs. For each n it
+prints the four terms and how many multisets received each verdict, then the four sequences, with an interval
+`[low, high]` wherever a term is not exact. It stops with an error if any certificate fails or if two searches
+disagree. Python 3.10 or later is the only requirement.
+
+The certificate files can also be compared with `data/CHECKSUMS.txt` (`sha256sum -c data/CHECKSUMS.txt`).
 
 To repeat a search instead of reading its log: compile the engine with `gcc -O2 -o engine/ls engine/ls.c` and run
 `python scripts/engine_run.py 12 0 120 out.json` (all 1286 multisets for n = 12; 384 answers YES).

@@ -1,3 +1,7 @@
+---
+description: "What is still unknown about how n lines can meet: the undecided cases for 12 and 13 lines, growth rates, and related questions worth exploring."
+---
+
 # Open problems and where to dig
 
 What is not known: the undecided terms, conjectures supported by the data, and related questions.

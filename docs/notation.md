@@ -1,3 +1,7 @@
+---
+description: "The symbols used on the site: pencil types, numbers of intersection points, linear spaces, and how the four sequences are numbered."
+---
+
 # Notation
 
 The symbols used on this site, fixed once. Where the literature has a standard, it follows Grünbaum's

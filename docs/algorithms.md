@@ -1,3 +1,7 @@
+---
+description: "How the numbers were computed: exhaustive search, SAT solving, orientability checks and exact certificates, with the command that reproduces each step."
+---
+
 # Algorithms
 
 This page describes every computation behind the numbers: what each program decides, why its answer is

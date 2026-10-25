@@ -1,3 +1,7 @@
+---
+description: "b(n): the ways n lines could meet if the only rule were that two lines cross once. Known exactly up to 12 lines: 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384."
+---
+
 # b(n): ways n lines could meet, judging by combinatorics alone
 
 **In one sentence:** $b(n)$ is the number of different ways $n$ lines can meet that are consistent with the single

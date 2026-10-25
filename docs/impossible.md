@@ -1,3 +1,7 @@
+---
+description: "Ways n lines could meet that pass the counting and combinatorial tests but still cannot be drawn with straight lines, each with the reason why."
+---
+
 # What cannot be drawn
 
 Most arithmetically admissible pencil types cannot be drawn. This page lists, for each number of lines, the types that survive the combinatorial test but are still impossible, together with the reason, and the types that are undecided. Types that already fail the combinatorial test (two pencils would share two lines) or one of the classical inequalities are only counted; the full lists are in `data/results/classification_n{n}.json`.

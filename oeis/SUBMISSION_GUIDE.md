@@ -1,79 +1,86 @@
 # Submitting the sequences to the OEIS
 
-The three draft entries are in `B_combinatorial.txt`, `C_realizable.txt`, `D_points.txt` (OEIS internal format,
-one `%X` line per field), and are also shown on the site page *OEIS submissions*. This guide is for the author.
+The three draft entries are `C_realizable.txt`, `D_points.txt` and `B_combinatorial.txt`, in the OEIS internal format
+(one `%X` line per field). This guide is for the author.
 
-## 1. Registration
+## 1. How a draft maps to the web form
 
-1. Create an account at https://oeis.org/register (name, e-mail; a short note on who you are helps the editors).
-2. After the e-mail confirmation you can use the "Contribute new sequence" form at https://oeis.org/Submit.html.
-3. Read the OEIS style sheet (https://oeis.org/wiki/Style_Sheet) once; the drafts follow it, but editors are strict
-   about Name capitalisation, the `%e` examples and the keyword list.
+Log in at https://oeis.org and open "Contribute a new sequence" (https://oeis.org/Submit.html). Copy each field
+without its `%X` prefix:
+
+| draft line | form field | notes |
+|---|---|---|
+| `%N` | Name | one line |
+| `%S` | Data | the terms, comma-separated |
+| `%O` | Offset | `1` (the form computes the second number itself; if it asks, `1,3`) |
+| `%C` | Comments | one comment per line, in the order of the draft |
+| `%D` | References | one per line |
+| `%H` | Links | one per line, exactly as written, including `<a href=...>` |
+| `%e` | Example | one per line |
+| `%Y` | Crossrefs | one line |
+| `%K` | Keywords | `nonn,hard,more` |
+
+There is no Program field to fill: the programs are in the repository, which the Links point to.
 
 ## 2. Order of submission and A-numbers
 
-A-numbers are assigned immediately when a draft is created, before review. Submit in this order:
+An A-number is assigned as soon as a draft is saved, before review. Submit in this order:
 
-1. **C (realizable types)** — the main sequence. Note its number A??????.
-2. **D (numbers of intersection points)** — put C's number into its Crossrefs and Comments where the drafts say `[sequence C]`.
-3. **B (combinatorially possible types)** — likewise with C's and D's numbers.
-4. Edit C to add B's and D's numbers (editing your own draft is allowed while it is under review).
-5. Propose the comment on **A072964** (and optionally **A003035**) as an edit to the existing entries; keep each comment
-   to two or three lines and cite the site.
+1. **C (realizable types)**, the main sequence. Write down its A-number.
+2. **D (numbers of intersection points)**. Replace `[C]` in Crossrefs by C's number.
+3. **B (combinatorially possible types)**. Replace `[C]` and `[D]` by the numbers.
+4. **Edit C** (allowed while it is under review) to add the other two numbers:
+   * Comments, after the line about A072964, add:
+     `a(n) <= [B](n), the number of multisets realizable by a linear space; the two agree for n <= 6.`
+   * Crossrefs become `Cf. A072964, A003035, A001200, A005834, [B], [D].`
+5. Optionally, propose a short comment on **A072964**: "a(n-1) is the number of arithmetically admissible pencil
+   types of n lines; see [C] for those realizable by real lines." Keep it to one or two lines.
 
-In every draft replace `[sequence B/C/D]` by the actual A-numbers before saving; a draft with placeholders will be
-sent back.
+Never save a draft with a placeholder in square brackets left in it.
 
 ## 3. What the Data field must contain
 
 Only terms that are proved or computer-verified with certificates:
 
-* B: `1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384` (n = 1..12). If $b(13)$ is finished before submission, add it.
-* C: `1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180` (n = 1..11). **Do not** add $c(12)$ unless it is exact; the bound
-  $335 \le c(12) \le 337$ goes in a comment.
+* C: `1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180` (n = 1..11). The bound 335 <= c(12) <= 337 is in a comment, not in the data.
 * D: `1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56` (n = 1..13).
-
-Offset: `1,3` (the first term with index 1; the third term is the first term greater than 1). If you decide to start at
-$n = 2$ or $n = 3$, drop the leading terms and change the offset accordingly — but keep all three sequences consistent.
+* B: `1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384` (n = 1..12).
 
 ## 4. Keywords
 
-`nonn,hard,more`. Do not add `nice` yourself (editors do). `hard` is justified: the next term of C needs the resolution
-of two open types; `more` because more terms are wanted.
+`nonn,hard,more`. Do not add `nice` yourself; editors do. `hard` is justified because the next term of C needs two
+open cases to be settled; `more` because more terms are wanted.
 
-## 5. Typical reviewer questions and answers
+## 5. Questions editors are likely to ask, and the facts for answering them
 
-* *Is this a well-defined sequence? What exactly is counted?* — Multisets of pencil sizes (the $t$-vector restricted
-  to $k \ge 3$) of arrangements of $n$ distinct lines in the real projective plane; equivalently, $n$ lines in the
-  Euclidean plane with no two parallel (projective transformations do not change pencils). The empty multiset counts.
-* *How were the terms verified?* — Every realizable type has exact coordinates checked by an independent verifier
-  (exact arithmetic in $\mathbb Q(\sqrt d)$); every non-realizable type is excluded by Melchior's or Csima–Sawyer's
-  inequality or by an exhaustive search showing that no linear space of that type admits a chirotope. Logs and code
-  are public; the verifier runs in CI.
-* *Why is $c(12)$ not given?* — Nineteen types are orientable (or of unknown orientability) without a known
-  realization; among them $\{6, 4, 3^{12}\}$, $\{6, 3^{14}\}$ and $\{3^{18}\}$ are expected to be non-realizable but this is
-  not yet proved.
-* *Isn't this A005834 / A129230?* — No; those are unrelated recurrences that agree on a few terms. The drafts say so.
-* *Why offset 1?* — One line, no intersection points: one (empty) type and one value $f_0 = 0$. Any other choice is
-  a matter of taste; say so if asked.
-* *Can you give the terms as a b-file?* — Not needed for 11–13 terms; the Data field suffices.
-* *References* — all are in the drafts with DOIs; the site has the full list.
+Answer in your own words; these are the facts, not text to paste.
 
-## 6. The OEIS policy on AI (read before submitting)
+* *What exactly is counted?* Multisets of pencil sizes, that is the numbers of lines through each intersection point
+  with at least three lines, over all arrangements of n distinct lines in the plane with no two parallel. Working in
+  the real projective plane gives the same answers. The empty multiset counts.
+* *How were the terms verified?* Every realizable type has exact coordinates, checked by a small independent
+  verifier in exact arithmetic. Every other type is excluded by Melchior's or Csima-Sawyer's inequality, by an
+  exhaustive search showing no linear space of that type exists, or by one showing that none is orientable. The code
+  and logs are public, and the verifier runs automatically on every change.
+* *Why is c(12) not given?* Two types for 12 lines are undecided: {4^5, 3^9}, whose orientability search did not
+  finish, and {3^18}, which is orientable but has no known realization. Two other types, {6, 4, 3^12} and {6, 3^14},
+  were proved impossible with straight lines although they are possible with pseudolines.
+* *Isn't this A005834 or A129230?* No. Those sequences agree with ours on a few terms only; the drafts say so.
+* *Why offset 1?* One line has no intersection points: one (empty) type and one value, 0 points.
+* *A b-file?* Not needed for 11 to 13 terms; the Data field is enough.
 
-The OEIS wiki page "Use of AI for OEIS Submissions" requires a human author who takes responsibility for every
-field and can explain the results; it forbids listing an AI tool as author or co-author, pasting AI-generated text
-into the editors' "pink boxes", and submitting programs one does not understand. In July 2026 N. J. A. Sloane proposed
-on SeqFan that AI-produced sequences be presumed wrong unless certified. Practical consequences for these drafts:
+## 6. The OEIS policy on AI
 
-* the Author line is generated by the OEIS from your account name (Petra Radko) and is not part of the draft; the role of Claude Code is disclosed on the site's About page;
-* answer editors' questions in your own words (the guide above lists the likely questions and the facts to answer them);
-* point to the certificates and the verifier: every realizable term is certified by exact coordinates, every excluded
-  type by a theorem or an exhaustive search whose logs are public — this is exactly the kind of certification the
-  editors want;
-* be ready to run `python verifier/verify.py data/certificates/n*.json` and `python scripts/classify.py 13` yourself.
+The OEIS wiki page "Use of AI for OEIS Submissions" requires a human author who takes responsibility for every field
+and can explain the results. It forbids listing an AI tool as author or co-author, pasting AI-generated text into the
+editors' discussion boxes, and submitting programs one does not understand. In practice:
+
+* the author line is taken from your account (Petra Radko); the role of Claude Code is disclosed on the site's About page;
+* answer the editors in your own words, using the facts in section 5;
+* point to the certificates and the verifier: this is the kind of certification editors ask for;
+* be ready to run the checks from `VERIFY.md` yourself.
 
 ## 7. After acceptance
 
-Add the A-numbers to the site (`docs/oeis.md`, `docs/index.md`) and to `README.md`; update the crossrefs if a later
-term is proved (e.g. $c(12)$).
+Add the A-numbers to the site (home page and the sequence pages) and to `README.md`. Update the entries if a later
+term is proved, for example c(12).

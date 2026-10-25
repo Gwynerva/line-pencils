@@ -8,13 +8,13 @@
 %D P. D. T. A. Elliott, On the number of circles determined by n points, Acta Math. Acad. Sci. Hungar. 18 (1967), 181-188.
 %D P. Erdős, On a problem of Grünbaum, Canad. Math. Bull. 15 (1972), 23-25.
 %D B. Grünbaum, Arrangements and Spreads, CBMS Regional Conference Series in Mathematics 10, AMS, Providence, 1972.
+%D F. Hirzebruch, Arrangements of lines and algebraic surfaces, in: Arithmetic and Geometry, Vol. II, Progr. Math. 36, Birkhäuser, Boston, 1983, 113-140.
 %D L. M. Kelly and W. O. J. Moser, On the number of ordinary lines determined by n points, Canad. J. Math. 10 (1958), 210-219.
 %D P. Salamon and P. Erdős, The solution to a problem of Grünbaum, Canad. Math. Bull. 31 (1988), 129-138.
-%H Petra Radko, How n Lines Can Meet, https://gwynerva.github.io/line-pencils/ (2026); the sequence of point counts with proofs: https://gwynerva.github.io/line-pencils/sequences/points/
-%H Petra Radko, Verification: definitions, certificates, how each term is established, https://github.com/Gwynerva/line-pencils/blob/main/VERIFY.md
-%H Petra Radko, Code, certificates and logs, https://github.com/Gwynerva/line-pencils
+%H Petra Radko, <a href="https://gwynerva.github.io/line-pencils/sequences/points/">How n Lines Can Meet: numbers of intersection points</a>, 2026.
+%H Petra Radko, <a href="https://github.com/Gwynerva/line-pencils/blob/main/VERIFY.md">Verification: definitions, certificates and how each term is established</a>, 2026.
+%H Petra Radko, <a href="https://github.com/Gwynerva/line-pencils">Programs, certificates and logs</a>, 2026.
 %e For n = 4 the possible numbers of points are 1, 4, 6, so a(4) = 3: four lines not all concurrent have at least four points, and 5 is impossible because a point on three lines removes two points at once.
 %e For n = 5 the possible numbers are 1, 5, 6, 8, 10, so a(5) = 5.
-%o (Python) See the links.
-%Y Cf. A072964, A003035, A129230, [B], [C].
+%Y Cf. A072964, A003035, A129230, [C].
 %K nonn,hard,more

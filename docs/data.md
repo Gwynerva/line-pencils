@@ -1,3 +1,7 @@
+---
+description: "Where the data are and how to check them yourself: exact certificates for every drawable type and a small verifier that rechecks them all."
+---
+
 # Data and verification
 
 All data behind the site can be checked independently. This page describes where the data are, their formats,
