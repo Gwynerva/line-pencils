@@ -15,7 +15,7 @@
 %D L. M. Kelly and W. O. J. Moser, On the number of ordinary lines determined by n points, Canad. J. Math. 10 (1958), 210-219.
 %D E. Melchior, Über Vielseite der projektiven Ebene, Deutsche Math. 5 (1941), 461-475.
 %H Petra Radko, <a href="https://gwynerva.github.io/line-pencils/sequences/realizable/">How n Lines Can Meet: realizable types</a>, 2026.
-%H Petra Radko, <a href="https://gwynerva.github.io/line-pencils/gallery/">Drawings of all realizable types for n <= 13</a>, 2026.
+%H Petra Radko, <a href="https://gwynerva.github.io/line-pencils/gallery/">Drawings of all types known to be realizable for n <= 13 (complete for n <= 11)</a>, 2026.
 %H Petra Radko, <a href="https://github.com/Gwynerva/line-pencils/blob/main/VERIFY.md">Verification: definitions, certificates and how each term is established</a>, 2026.
 %H Petra Radko, <a href="https://github.com/Gwynerva/line-pencils">Programs, certificates and logs</a>, 2026.
 %e For n = 5 the a(5) = 5 multisets are {} (general position, 10 points), {3}, {3, 3}, {4} and {5}.

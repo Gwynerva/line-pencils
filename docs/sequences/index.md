@@ -22,12 +22,13 @@ How each column is established:
   certificates and 59 undecided types.
 * **$d(n)$** combines certificates (a value is attained) with theorems (a value is impossible); for $n \le 13$ every value
   is decided ([details](points.md)). The term $d(12) = 46$ uses the non-realizability of the three types with
-  $21$ points: $\{4^9\}$ by a theorem, $\{5^2, 4^3, 3^6\}$ and $\{5^3, 3^9\}$ by the orientability search.
+  $21$ points that pass both the combinatorial test and Melchior's inequality: $\{4^9\}$ by a theorem, $\{5^2, 4^3, 3^6\}$ and $\{5^3, 3^9\}$ by the orientability search.
 
 ## What is not in the OEIS
 
 The arithmetic sequence is A072964 shifted. The other three were searched for in the OEIS (full
 sequences, subsequences of five consecutive terms, shifts): no entry matches. Two entries coincide with ours on a few
 terms by accident and must not be confused with them: A129230 ($0, 1, 3, 5, 9, 13, 18, 24, 30, 38, 46, 55, \dots$, a
-golden-ratio floor sum) agrees with $d(n)$ for $n \le 12$ and differs at $n = 13$ ($55 \ne 56$); A005834
+golden-ratio floor sum) is shifted by two: its terms $3, 5, \dots, 46$ coincide with $d(4), \dots, d(12)$, and the next
+term is $55 \ne d(13) = 56$; A005834
 ($0, 2, 2, 5, 8, 16, 28, 53, 98, 183, \dots$) contains $16, 28, 53, 98$ and then $183 \ne 180$.

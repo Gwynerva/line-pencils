@@ -37,7 +37,8 @@ different *numbers of intersection points* $n$ lines can have.
 That three sequences arising from a question a schoolchild can ask are missing from the On-Line Encyclopedia of
 Integer Sequences is the reason for this site. The missing entries are not an oversight that a formula would
 fix: the sequence $c(n)$ contains the *orchard problem* of Sylvester (how many triple points can $n$ lines have?),
-which was settled only for large $n$ by Green and Tao in 2013.[^gt] Any closed form for $c(n)$ would answer it for every $n$.
+which was settled only for large $n$ by Green and Tao in 2013.[^gt] The list of realizable types determines the answer
+to it, so a complete description of that list, not just its size, would solve the orchard problem for every $n$.
 
 [^gt]: B. Green, T. Tao, On sets defining few ordinary lines, *Discrete & Computational Geometry* 50 (2013), 409–468,
     [doi:10.1007/s00454-013-9518-9](https://doi.org/10.1007/s00454-013-9518-9).
@@ -49,10 +50,10 @@ which was settled only for large $n$ by Green and Tao in 2013.[^gt] Any closed f
 * One page per [sequence](sequences/index.md), with the status of every term: *proved*, *computer-verified*, *bounded*, or *conjectured*.
 * [Theorems and proofs](theorems.md): what is known classically, what we proved, and what the computer checked.
   Among the new results: for $n \ge 13$ lines the number of intersection points is $1$, $n$, $2n-4$, $2n-2$, or at least
-  $2n-1$; in particular $2n-3$ intersection points are impossible exactly when $n \ge 12$.
+  $2n-1$; in particular, for $n \ge 6$, $2n-3$ intersection points are impossible exactly when $n \ge 12$.
 * [Algorithms](algorithms.md) and [data](data.md): how the tests were computed, how every example is certified by
   exact arithmetic, and how to check everything independently.
-* A [gallery](gallery.md) of every realizable type up to 13 lines, drawn from exact coordinates, and a page on
+* A [gallery](gallery.md) of every type known to be realizable up to 13 lines (complete up to 11 lines), drawn from exact coordinates, and a page on
   [what cannot be drawn](impossible.md) and why.
 * [Open problems](open.md).
 

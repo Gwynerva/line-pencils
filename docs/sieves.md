@@ -37,7 +37,7 @@ lies in exactly one block. Such a structure is a **linear space** (equivalently 
 A type is *combinatorially possible* if some linear space has blocks of exactly these sizes.
 
 Deciding this is a finite search, and the number of linear spaces on $n$ points grows fast (A001200: 232 929 for
-$n = 12$, 28 872 973 for $n = 13$[^a001200]); the [algorithms page](algorithms.md) explains how the search is organised
+$n = 11$, 28 872 973 for $n = 12$[^a001200]); the [algorithms page](algorithms.md) explains how the search is organised
 so that all $1286$ admissible types for $n = 12$ are decided in about a minute, and how a SAT solver was used as an
 independent check.
 
@@ -105,7 +105,7 @@ but not realizable ([Theorems C4, C5](theorems.md#lines-vs-pseudolines)).
 | 6 | 15 | 9 | 9 | |
 | 7 | 32 | 17 | 16 | Fano $\{3^7\}$ |
 | 8 | 66 | 29 | 28 | Möbius–Kantor $\{3^8\}$ |
-| 9 | 141 | 56 | 53 | Hesse $\{3^{12}\}$, $\{3^{11}\}$, $\{4^2, 3^7\}$ |
+| 9 | 141 | 56 | 53 | dual Hesse $\{3^{12}\}$, $\{3^{11}\}$, $\{4^2, 3^7\}$ |
 | 10 | 295 | 106 | 98 | eight types, e.g. $\{3^{13}\}$ |
 | 11 | 619 | 202 | 180 | 22 types |
 | 12 | 1286 | 384 | 335 … 337 | 47 to 49 types; see [what cannot be drawn](impossible.md) |

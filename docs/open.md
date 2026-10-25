@@ -84,6 +84,6 @@ The same question makes sense elsewhere and we have not touched it:
 
 $c(n)$ contains the orchard problem: the maximal $t_3$ for $n$ lines is the largest $t$ with $\{3^t\} \cup$ (anything)
 realizable. Conversely the orchard literature gives the only non-trivial *upper* bounds we know for a single pencil
-size (A003035: $19$ for $n = 12$, $22$ for $n = 13$ — the latter computer-verified but unpublished). We use the bound for
-$n = 12$ to exclude $\{3^{20}\}$; our own methods have not reproduced it, because the orientability search for this
-type did not finish.
+size (A003035: $19$ for $n = 12$, $22$ for $n = 13$). For $n = 12$ we reproved the bound for the type $\{3^{20}\}$ alone:
+its linear spaces are the Steiner triple systems of order 13 minus a point, and none of them is orientable
+([Proposition C3a](theorems.md)).

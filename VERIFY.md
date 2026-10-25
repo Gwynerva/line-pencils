@@ -54,11 +54,12 @@ non-realizable multiset is excluded by one of the following, recorded per multis
   t_2 = n(n−1)/2 − Σ k_i(k_i−1)/2;
 * no linear space of the type admits a chirotope (an orientation satisfying the three-term Grassmann–Plücker
   relations), which every real arrangement has (`engine/ls.c`, mode 4; `runs/orient_{n}.json`);
-* a theorem: the unique linear space of type {4^9} on 12 points is the dual Hesse configuration, excluded by the
+* a theorem: the unique linear space of type {4^9} on 12 points is the dual of the Hesse configuration AG(2,3), excluded by the
   Sylvester–Gallai theorem (`data/exclusions.json`); for {6,4,3^12} and {6,3^14} every orientable linear space has a
   Gröbner-basis certificate that any realization carries an extra collinearity (`data/proofs/`);
-* the literature: {3^20} for n = 12 would be 12 lines with 20 triple points, more than the known maximum of 19 for the
-  orchard problem (A003035).
+* a computation for {3^20}: its linear spaces on 12 points are exactly the Steiner triple systems of order 13 with
+  one point deleted; all 26 deletions of the two such systems are non-orientable (`scripts/orchard12.py`). This agrees
+  with the orchard number 19 for 12 points (A003035).
 
 Each multiset gets exactly one verdict in the classification file. The names used there are:
 
@@ -68,7 +69,7 @@ Each multiset gets exactly one verdict in the classification file. The names use
 | `no-linear-space` | the combinatorial search says NO (also counted out of b(n)) |
 | `melchior`, `csima-sawyer` | the inequality of that name fails |
 | `non-orientable` | linear spaces exist, but none admits a chirotope |
-| `theorem`, `non-realizable-proved`, `literature` | excluded by the theorem, proof or published bound above |
+| `theorem`, `non-realizable-proved` | excluded by one of the theorems or computations above |
 | `open` | none of the above; the term is then given as an interval |
 
 **d(n).** The attained values are read off the certificates. The missing values are excluded by: the loss argument

@@ -24,9 +24,10 @@ def utype(t):
 REASON = {
     "non-orientable": "no linear space of this type admits an orientation (exhaustive search)",
     "non-realizable-proved": "orientable, but every orientable linear space of this type forces an extra collinearity (Gröbner certificate; [Theorems C4, C5](theorems.md#lines-vs-pseudolines))",
-    "theorem": "theorem: the unique linear space is the dual Hesse configuration, excluded by Sylvester–Gallai",
+    "theorem": "theorem: the unique linear space is the dual of the Hesse configuration, excluded by Sylvester–Gallai ([Proposition C3](theorems.md))",
     "literature": "orchard problem: twelve lines have at most 19 triple points (Burr, Grünbaum, Sloane 1974)",
 }
+ORCH = "none of its five linear spaces (Steiner triple systems of order 13 minus a point) admits an orientation ([Proposition C3a](theorems.md))"
 BAND = "band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands))"
 
 
@@ -43,7 +44,7 @@ def main(nmax):
            '<div class="figs" markdown>', ""]
     for f, cap in (("fano.svg", "The Fano plane, type {3<sup>7</sup>} for 7 lines: there is no ordinary point at all, which the Sylvester–Gallai theorem forbids."),
                    ("moebius-kantor.svg", "The Möbius–Kantor configuration, type {3<sup>8</sup>} for 8 lines: it passes every inequality, but admits no orientation."),
-                   ("hesse.svg", "The Hesse configuration, type {3<sup>12</sup>} for 9 lines: every pair of points lies on a line of three.")):
+                   ("hesse.svg", "The Hesse configuration: nine points, every pair on a line of three. Dually, nine lines of type {3<sup>12</sup>}, the dual Hesse arrangement.")):
         out += ['<figure markdown="1">', "", f'--8<-- "fig/{f}"', "", f"<figcaption>{cap}</figcaption>", "</figure>", ""]
     out += ["</div>", ""]
     for n in range(4, nmax + 1):
@@ -63,11 +64,15 @@ def main(nmax):
         if cnt["open"]:
             parts.append(f"{cnt['open']} undecided")
         out.append("; ".join(parts) + ".\n")
+        if any(r["verdict"] in ("melchior", "csima-sawyer") and r.get("linear_space") is None for r in rows):
+            out.append("For this number of lines the inequalities were checked first, and only the types that pass them "
+                       "went to the combinatorial test, so the count of combinatorial failures covers those types only.\n")
         special = [r for r in rows if r["verdict"] in REASON or (r["verdict"] == "theorem" and "bands" in r.get("reference", ""))]
         if special:
             out.append("| type | points | why it cannot be drawn |\n|---|---|---|")
             for r in sorted(special, key=lambda r: (-sum(r["type"]), r["type"])):
-                why = BAND if "bands" in r.get("reference", "") else REASON[r["verdict"]]
+                ref = r.get("reference", "")
+                why = BAND if "bands" in ref else ORCH if "orchard12" in ref else REASON[r["verdict"]]
                 out.append(f"| {utype(r['type'])} | {r['f0']} | {why} |")
             out.append("")
         openr = [r for r in rows if r["verdict"] == "open"]
@@ -75,7 +80,8 @@ def main(nmax):
             out.append("Undecided: " + ", ".join(utype(r["type"]) for r in sorted(openr, key=lambda r: (-sum(r["type"]), r["type"]))) + ".\n")
         ineqr = [r for r in rows if r["verdict"] in ("melchior", "csima-sawyer", "debruijn-erdos")]
         if ineqr:
-            out.append(f'<details><summary>{len(ineqr)} types excluded by an inequality</summary>\n')
+            k = len(ineqr)
+            out.append(f'<details><summary>{k} {"type" if k == 1 else "types"} excluded by an inequality</summary>\n')
             out.append(", ".join(utype(r["type"]) for r in sorted(ineqr, key=lambda r: (-sum(r["type"]), r["type"]))) + ".\n")
             out.append("</details>\n")
     with open(os.path.join(ROOT, "docs", "impossible.md"), "w", encoding="utf-8") as f:

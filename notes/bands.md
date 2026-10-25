@@ -34,12 +34,14 @@ multiplicity is at most $\max_p \mu'(p) + 1 \le m$. $\square$
 **Theorem 3 (bands).** For $k \ge 0$ let $\mathrm{BAND}(k)$ be the set of multisets $\{\mu'(p) + \varepsilon_p : p \in V(\mathcal A')\}$
 (entries $\ge 3$ kept) over all realizable types of $k$ lines and all $0/1$-assignments $\varepsilon$, and $N(k) = |\mathrm{BAND}(k)|$.
 1. For every $n$, a type with largest entry $m = n - k$ is realizable only if the rest of the type lies in $\mathrm{BAND}(k)$.
-2. If $n \ge k + \binom k2$ (and $k \ge 3$, or trivially for $k \le 2$), every element of $\mathrm{BAND}(k)$, prefixed with $m$, is
+2. If $n \ge 2$ and $m = n - k \ge \max(\binom k2, k + 1)$, every element of $\mathrm{BAND}(k)$, prefixed with $m$, is
    realizable; hence the number of realizable types of $n$ lines with largest pencil exactly $n - k$ equals $N(k)$,
-   independently of $n$.
+   independently of $n$. For $k \ge 4$ the condition is $n \ge k + \binom k2$; for $k = 2, 3$ it is $n \ge 2k + 1$, and it
+   cannot be weakened there: at $n = 6$, $k = 3$ only $4 = N(3) - 1$ types occur, because $\{4\} \in \mathrm{BAND}(3)$
+   would raise the largest pencil above $m = 3$.
 
-*Proof.* (1) is Lemma 1. (2): $|S| \le f_0(\mathcal A') \le \binom k2 \le m$ and $\mu'(p) + 1 \le k + 1 \le m$ (as $\binom k2 \ge k + 1$
-for $k \ge 3$), so Lemma 2 applies. $\square$
+*Proof.* (1) is Lemma 1. (2): $|S| \le f_0(\mathcal A') \le \binom k2 \le m$ and $\mu'(p) + 1 \le k + 1 \le m$, so Lemma 2
+applies. $\square$
 
 $N(k)$ for $k = 0, \dots, 8$: $1, 1, 2, 5, 12, 30, 74, 176, 401$ (`python scripts/bands.py --table 8`; computed from the
 certified types of $k$ lines, so these values are exact for $k \le 11$ and lower bounds beyond). The data for
@@ -57,7 +59,7 @@ Figure 5), are exactly the dissections with $P$ collinear with intersection poin
 
 Theorem 3 gives the exact number of realizable types with a pencil of size $\ge n - 4$ for all $n \ge 10$:
 $1 + 1 + 2 + 5 + 12 = 21$; with size $\ge n-5$ for $n \ge 15$: $51$; etc. Summing the stable bands,
-$$ c(n) \;\ge\; \sum_{k \,:\, k + \binom k2 \le n} N(k), $$
+$$ c(n) \;\ge\; \sum_{k \,:\, n - k \ge \max(\binom k2,\, k+1)} N(k), $$
 and the lower bound $\log N(k) \gtrsim$ … is of the same order as the trivial bound. More importantly, part (1) is a
 **necessary condition for realizability** that is independent of the three sieves and very effective in practice:
 at $n = 13$ it excludes 41 types that survive the arithmetic, combinatorial and inequality sieves

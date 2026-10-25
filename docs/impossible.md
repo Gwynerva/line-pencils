@@ -1,7 +1,3 @@
----
-description: "Ways n lines could meet that pass the counting and combinatorial tests but still cannot be drawn with straight lines, each with the reason why."
----
-
 # What cannot be drawn
 
 Most arithmetically admissible pencil types cannot be drawn. This page lists, for each number of lines, the types that survive the combinatorial test but are still impossible, together with the reason, and the types that are undecided. Types that already fail the combinatorial test (two pencils would share two lines) or one of the classical inequalities are only counted; the full lists are in `data/results/classification_n{n}.json`.
@@ -30,7 +26,7 @@ Each of these is a perfectly good linear space, and the last two even exist with
 
 --8<-- "fig/hesse.svg"
 
-<figcaption>The Hesse configuration, type {3<sup>12</sup>} for 9 lines: every pair of points lies on a line of three.</figcaption>
+<figcaption>The Hesse configuration: nine points, every pair on a line of three. Dually, nine lines of type {3<sup>12</sup>}, the dual Hesse arrangement.</figcaption>
 </figure>
 
 </div>
@@ -51,7 +47,7 @@ Each of these is a perfectly good linear space, and the last two even exist with
 
 32 admissible types; 16 realizable; 15 fail the combinatorial test; 1 fails an inequality (Melchior or Csima–Sawyer).
 
-<details><summary>1 types excluded by an inequality</summary>
+<details><summary>1 type excluded by an inequality</summary>
 
 {3<sup>7</sup>}.
 
@@ -118,7 +114,7 @@ Each of these is a perfectly good linear space, and the last two even exist with
 
 | type | points | why it cannot be drawn |
 |---|---|---|
-| {3<sup>20</sup>} | 26 | orchard problem: twelve lines have at most 19 triple points (Burr, Grünbaum, Sloane 1974) |
+| {3<sup>20</sup>} | 26 | none of its five linear spaces (Steiner triple systems of order 13 minus a point) admits an orientation ([Proposition C3a](theorems.md)) |
 | {4<sup>2</sup>, 3<sup>16</sup>} | 24 | no linear space of this type admits an orientation (exhaustive search) |
 | {4<sup>3</sup>, 3<sup>14</sup>} | 23 | no linear space of this type admits an orientation (exhaustive search) |
 | {5, 3<sup>16</sup>} | 25 | no linear space of this type admits an orientation (exhaustive search) |
@@ -134,7 +130,7 @@ Each of these is a perfectly good linear space, and the last two even exist with
 | {5<sup>3</sup>, 3<sup>8</sup>} | 23 | no linear space of this type admits an orientation (exhaustive search) |
 | {4<sup>8</sup>, 3<sup>2</sup>} | 22 | no linear space of this type admits an orientation (exhaustive search) |
 | {5<sup>2</sup>, 4<sup>3</sup>, 3<sup>5</sup>} | 23 | no linear space of this type admits an orientation (exhaustive search) |
-| {4<sup>9</sup>} | 21 | theorem: the unique linear space is the dual Hesse configuration, excluded by Sylvester–Gallai |
+| {4<sup>9</sup>} | 21 | theorem: the unique linear space is the dual of the Hesse configuration, excluded by Sylvester–Gallai ([Proposition C3](theorems.md)) |
 | {4<sup>8</sup>, 3} | 24 | no linear space of this type admits an orientation (exhaustive search) |
 | {4<sup>8</sup>} | 26 | no linear space of this type admits an orientation (exhaustive search) |
 
@@ -149,6 +145,8 @@ Undecided: {3<sup>18</sup>}, {4<sup>5</sup>, 3<sup>9</sup>}.
 ## 13 lines
 
 2654 admissible types; 600 realizable; 554 fail the combinatorial test; 1400 fail an inequality (Melchior or Csima–Sawyer); 59 undecided.
+
+For this number of lines the inequalities were checked first, and only the types that pass them went to the combinatorial test, so the count of combinatorial failures covers those types only.
 
 | type | points | why it cannot be drawn |
 |---|---|---|

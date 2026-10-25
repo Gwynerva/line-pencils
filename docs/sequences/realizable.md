@@ -30,7 +30,7 @@ type has one of them:
   first) is stored in `data/certificates/`. The [verifier](../data.md) recomputes the pencil type of
   each certificate with exact arithmetic; it runs in continuous integration on every change of the repository.
 * **Non-realizable types: a proof.** Each of the $b(n) - c(n)$ combinatorially possible but non-realizable types is
-  excluded by Melchior's inequality (Fano $\{3^7\}$, Hesse $\{3^{12}\}$, and most others), by the Csima–Sawyer bound
+  excluded by Melchior's inequality (Fano $\{3^7\}$, dual Hesse $\{3^{12}\}$, and most others), by the Csima–Sawyer bound
   $t_2 \ge 6n/13$ ($\{3^{11}\}$ at $n = 9$, $\{4, 3^{15}\}$ and $\{3^{17}\}$ at $n = 11$), or because no linear space of
   the type is orientable (Möbius–Kantor $\{3^8\}$ at $n = 8$; $\{4^2, 3^9\}$ and $\{3^{13}\}$ at $n = 10$; nine types at
   $n = 11$). The orientability verdicts come from an exhaustive search ([algorithms](../algorithms.md)); the files
@@ -41,14 +41,11 @@ type has one of them:
 Of the 384 combinatorially possible types, 335 have verified certificates (331 over $\mathbb Q$, one over $\mathbb Q(\sqrt 2)$,
 three over $\mathbb Q(\sqrt 5)$; the quadratic fields reflect where the search found the example, not a necessity),
 28 are excluded by Melchior's
-inequality, $\{4^9\}$ by a theorem (it is the dual Hesse configuration: [theorems](../theorems.md)), $\{3^{20}\}$ by the
-orchard bound $t_3 \le 19$ for twelve lines,[^bgs] 15 types because no linear space of theirs is orientable, and
+inequality, $\{4^9\}$ by a theorem (it is the type of the complex Hesse arrangement: [theorems](../theorems.md)), $\{3^{20}\}$ because
+none of its five linear spaces is orientable ([Proposition C3a](../theorems.md)), 15 more types because no linear space of theirs is orientable, and
 $\{6, 4, 3^{12}\}$, $\{6, 3^{14}\}$ by exact algebraic certificates although they are orientable ([Theorems C4, C5](../theorems.md#lines-vs-pseudolines)).
 Two types remain undecided. The table lists every type not excluded by an inequality, with its status; the undecided
 ones are at the top.
-
-[^bgs]: S. A. Burr, B. Grünbaum, N. J. A. Sloane, The orchard problem, *Geometriae Dedicata* 2 (1974), 397–424,
-    [doi:10.1007/BF00147569](https://doi.org/10.1007/BF00147569); OEIS A003035.
 
 --8<-- "open12.md"
 

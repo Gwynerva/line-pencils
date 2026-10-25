@@ -21,11 +21,11 @@ points; Erdős 1972, Salamon–Erdős 1988.)
 ## 1. The top of the range
 
 **Theorem 1.** For every $n \ge 3$: $\binom n2 - 1 \notin V(n)$ and $\binom n2 - 3 \notin V(n)$, while
-$\binom n2, \binom n2 - 2 \in V(n)$, and $\binom n2 - 4 \in V(n)$ for $n \ge 4$.
+$\binom n2, \binom n2 - 2 \in V(n)$, and $\binom n2 - 4 \in V(n)$ for $n \ge 5$.
 
 *Proof.* The loss is a sum of numbers from $\{2, 5, 9, 14, \dots\}$, and $1$ and $3$ are not such sums.
 General position gives loss $0$; one triple point (three lines through a point, the rest generic) gives
-loss $2$; one quadruple point or two triple points give loss $4$ (for $n \ge 4$). $\square$
+loss $2$; two triple points give loss $4$ (for $n \ge 5$; a quadruple point gives loss $5$). $\square$
 
 (Grünbaum observed this; Erdős 1972 quotes it. Every integer $\ge 4$ is a sum of $2$s and $5$s, which is
 why the top of $V(n)$ is a solid block once $n$ is large enough to host the required pencils.)
@@ -98,10 +98,10 @@ in exact arithmetic, so the printed bound is a proof.
   $f_0 \ge \frac{n(n-1)}{m+3} > \frac{3n(n-1)}{n+18} \ge 2n-2$, the last inequality being $n^2 - 37n + 36 \ge 0$, true for $n \ge 36$.
   (The overlap $17 \le n \le 120$ between the numerical check and this argument is deliberate.) $\square$
 
-**Corollary 7.** $2n - 3 \in V(n)$ if and only if $n \le 11$.
+**Corollary 7.** For $n \ge 6$: $2n - 3 \in V(n)$ if and only if $n \le 11$.
 
-*Proof.* For $n \ge 13$: Theorem 6. For $n = 12$: $2n-3 = 21$; the three admissible types with $f_0 = 21$ that pass the
-combinatorial sieve, $\{4^9\}$, $\{5^2, 4^3, 3^6\}$, $\{5^3, 3^9\}$, are not realizable ($\{4^9\}$: dual Hesse configuration,
+*Proof.* For $n \ge 13$: Theorem 6. For $n = 12$: $2n-3 = 21$; of the 43 admissible types with $f_0 = 21$, 34 have no linear space and
+six fail Melchior's inequality; the remaining three, $\{4^9\}$, $\{5^2, 4^3, 3^6\}$, $\{5^3, 3^9\}$, are not realizable ($\{4^9\}$: dual Hesse configuration,
 `data/exclusions.json`; the other two: no orientable linear space, `runs/orient_12.json`). For $6 \le n \le 11$ certificates
 exist (`data/certificates/`): $\{3^5\}$, $\{4^2\}$ ($n = 7$); $\{4, 3^5\}$, $\{5, 3^3\}$ ($n = 8$); $\{4, 3^8\}$, $\{5, 3^6\}$, $\{4^3, 3^3\}$ ($n = 9$);
 $\{5, 4, 3^7\}$, $\{4^4, 3^4\}$ ($n = 10$); $\{4^4, 3^8\}$ ($n = 11$); $\{3^3\}$ ($n = 6$, $f_0 = 9$). For $n = 4, 5$ the value $2n - 3$

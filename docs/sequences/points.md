@@ -30,8 +30,8 @@ piece of the large-$n$ structure from $n = 13$ on.
 $d(n)$ for $n = 1, \dots, 13$: **1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56** (out of $\binom n2 = 0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78$ conceivable values).
 
 All thirteen terms are <span class="status-computed">computer-verified</span> (the attained values by certificates,
-the missing values by theorems or exhaustive computation); $d(13) = 56$ in addition follows from Theorem 3 below with
-only the certificates as computational input.
+the missing values by theorems or exhaustive computation); $d(13) = 56$ also follows from Theorem 3 below, whose proof
+uses an exact computation for $13 \le n \le 35$ instead of the classification.
 
 ## The sets V(n)
 
@@ -62,17 +62,17 @@ Theorem 1, and "computation" means that every admissible type with that $f_0$ wa
 
 <div class="thm" markdown>
 **Theorem 1 (the top).** <span class="status-proved">proved</span> For every $n \ge 3$, $\binom n2 - 1 \notin V(n)$ and
-$\binom n2 - 3 \notin V(n)$, while $\binom n2$ and $\binom n2 - 2$ are in $V(n)$, and $\binom n2 - 4 \in V(n)$ for $n \ge 4$.
+$\binom n2 - 3 \notin V(n)$, while $\binom n2$ and $\binom n2 - 2$ are in $V(n)$, and $\binom n2 - 4 \in V(n)$ for $n \ge 5$.
 </div>
 <div class="proof" markdown>
 *Proof.* $f_0 = \binom n2 - \ell$ where the loss $\ell = \sum_{k\ge3}(\binom k2 - 1)t_k$ is a sum of numbers from
-$\{2, 5, 9, 14, \dots\}$; $1$ and $3$ are not such sums. General position, one triple point, and two triple points (or one
-quadruple point) give losses $0, 2, 4$. <span class="qed">$\square$</span>
+$\{2, 5, 9, 14, \dots\}$; $1$ and $3$ are not such sums. General position, one triple point, and two triple points give losses $0, 2, 4$;
+two triple points need $n \ge 5$ lines. <span class="qed">$\square$</span>
 </div>
 
 <div class="thm" markdown>
 **Lemma 2 (large pencils).** <span class="status-proved">proved</span> Let $m$ be the size of the largest pencil of $\mathcal A$.
-If $m = n$ then $f_0 = 1$; if $m = n-1$ then $f_0 = n$; if $m = n-2$ then $f_0 \in \{2n-4, 2n-2\}$, both values occurring for every $n \ge 4$.
+If $m = n$ then $f_0 = 1$; if $m = n-1$ then $f_0 = n$; if $m = n-2$ then $f_0 \in \{2n-4, 2n-2\}$, both values occurring for every $n \ge 5$ (for $n = 4$ only $2n - 2 = 6$).
 </div>
 <div class="proof" markdown>
 *Proof.* Let $P$ be the point of multiplicity $m$ and call the lines not through $P$ *free*. A free line meets the $m$
@@ -90,7 +90,7 @@ Both cases are realizable. <span class="qed">$\square$</span>
 </div>
 
 <div class="thm" markdown>
-**Theorem 3 (the bottom, $n \ge 13$).** <span class="status-proved">proved</span> Let $n \ge 13$. If no $n-2$ lines of
+**Theorem 3 (the bottom, $n \ge 13$).** <span class="status-proved">proved, computer-assisted</span> Let $n \ge 13$. If no $n-2$ lines of
 $\mathcal A$ are concurrent, then $f_0(\mathcal A) \ge 2n - 2$. Consequently
 
 $$ V(n) \cap [1, 2n-2] = \{1,\ n,\ 2n-4,\ 2n-2\} \qquad (n \ge 13), $$
@@ -117,9 +117,9 @@ is on the [theorems page](../theorems.md#points).
 <div class="proof" markdown>
 *Proof.* *Case $n \ge 13$.* This is Theorem 3.
 
-*Case $n = 12$.* The three admissible types with $21$ points that pass the combinatorial sieve, $\{4^9\}$,
-$\{5^2, 4^3, 3^6\}$ and $\{5^3, 3^9\}$, are not realizable. The first is the dual Hesse configuration; the other two admit
-no orientable linear space ([realizable page](realizable.md)).
+*Case $n = 12$.* There are $43$ admissible types with $21$ points. For $34$ of them no linear space exists, and six more
+fail Melchior's inequality. The remaining three, $\{4^9\}$, $\{5^2, 4^3, 3^6\}$ and $\{5^3, 3^9\}$, are not realizable: the first
+is excluded by Proposition C3, and the other two admit no orientable linear space ([realizable page](realizable.md)).
 
 *Case $n \le 11$.* Certificates exist with $2n - 3$ points:
 
@@ -134,8 +134,8 @@ For $n = 4$ and $5$ the value $2n - 3$ is $5$, resp. $7$, excluded by Theorem 1,
 precisely, $2n-3 \in V(n)$ iff $n = 3$ or $6 \le n \le 11$. <span class="qed">$\square$</span>
 </div>
 
-<div class="thm conj" markdown>
-**Observation 5 (a formula that must fail).** For $n = 12, 13$,
+<div class="thm" markdown>
+**Observation 5 (a formula that must fail).** <span class="status-computed">computer-verified</span> For $n = 12, 13$,
 $V(n) = \{1, n, 2n-4\} \cup [2n-2, \binom n2 - 4] \cup \{\binom n2 - 2, \binom n2\}$, so $d(n) = \binom n2 - 2n + 4 = \frac{n^2 - 5n + 8}{2}$.
 This cannot continue: the bounds in the proof of Theorem 3 give $f_0 \ge 2n + 2$ for $n = 17$ whenever no $n - 2$
 lines are concurrent, so $2n - 1, 2n, 2n+1 \notin V(17)$ and $d(17) \le 103$. For large $n$, Salamon and Erdős show that

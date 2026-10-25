@@ -28,9 +28,10 @@ $t_2 \;\ge\; 3 + \sum_{k \ge 4} (k - 3)\, t_k .$ In particular $t_2 \ge 3$ (the 
 </div>
 
 <div class="thm" markdown>
-**Theorem A4 (Hirzebruch, 1983).**[^hir] For an arrangement of $n \ge 6$ lines in the complex projective plane with
-$t_n = t_{n-1} = t_{n-2} = 0$, $t_2 + \tfrac34 t_3 \;\ge\; n + \sum_{k\ge5} (2k - 9)\, t_k .$ We only use the weaker
-coefficients $k - 4 \le 2k - 9$.
+**Theorem A4 (Hirzebruch, 1983).**[^hir] For an arrangement of $n$ lines in the complex projective plane with
+$t_n = t_{n-1} = 0$, $t_2 + \tfrac34 t_3 \;\ge\; n + \sum_{k\ge5} (k - 4)\, t_k .$ This is the form stated by Hirzebruch
+in the remarks added in proof (p. 140), and the only one used here. The literature usually quotes a stronger
+right-hand side, with coefficients $2k - 9$, under the hypothesis $n \ge 6$ and $t_n = t_{n-1} = t_{n-2} = 0$.
 </div>
 
 <div class="thm" markdown>
@@ -46,10 +47,6 @@ linear space admitting such a chirotope is realizable by an arrangement of pseud
 linear spaces are not realizable by lines, while orientable ones may or may not be.
 </div>
 
-<div class="thm" markdown>
-**Theorem A8 (orchard bound for twelve lines; Burr–Grünbaum–Sloane, 1974).**[^bgs] Twelve lines in the real plane have
-at most 19 triple points.
-</div>
 
 [^dbe]: N. G. de Bruijn, P. Erdős, On a combinatorial problem, *Indagationes Mathematicae* 10 (1948), 421–423.
 [^mel]: E. Melchior, Über Vielseite der projektiven Ebene, *Deutsche Mathematik* 5 (1940/41), 461–475.
@@ -90,7 +87,8 @@ verifier; Theorem D1 below explains why acceptance proves realizability.
 * by Theorem A2, A3 or A1, applied to its $t_k$;
 * because it has no orientable linear space (Algorithm 3, engine mode 4, `runs/orient_{n}.json`; the SAT implementation
   agrees where it finished);
-* for $n = 12$, because it is $\{4^9\}$ (Proposition C3) or $\{3^{20}\}$ (Theorem A8).
+* for $n = 12$, because it is $\{4^9\}$ (Proposition C3), $\{3^{20}\}$ (Proposition C3a), or $\{6, 4, 3^{12}\}$ or
+  $\{6, 3^{14}\}$ (Theorems C4 and C5).
 
 The classification files `data/results/classification_n{n}.json` list the reason for every type. For $n = 12$ two types
 remain open, whence the upper bound $335 + 2$. <span class="qed">$\square$</span>
@@ -104,13 +102,17 @@ arrangement is either $P$, or an intersection point $p$ of $\mathcal A'$ (with m
 if a pencil line passes through $p$ — we say $p$ is *absorbed*), or an ordinary point on a pencil line.
 
 <div class="thm" markdown>
-**Theorem B4 (bands).** <span class="status-proved">proved</span> Let $\mathrm{BAND}(k)$ be the set of multisets obtained from a
-realizable type of $k$ lines (double points included) by adding $1$ to the multiplicities of an arbitrary subset of its
-points, and let $N(k) = \lvert\mathrm{BAND}(k)\rvert$. Then:
+**Theorem B4 (bands).** <span class="status-proved">proved</span> Take a realizable arrangement of $k$ lines, list the
+multiplicities of all its intersection points (double points included), add $1$ to the multiplicities of an arbitrary
+subset of these points, and keep the entries $\ge 3$. Let $\mathrm{BAND}(k)$ be the set of multisets obtained in this way,
+and $N(k) = \lvert\mathrm{BAND}(k)\rvert$. Then:
 
 1. for every $n$, a type whose largest entry is $m = n - k$ is realizable only if the rest of it belongs to $\mathrm{BAND}(k)$;
-2. if $n \ge k + \binom k2$, every such type is realizable, so the number of realizable types of $n$ lines with largest
-   pencil exactly $n - k$ equals $N(k)$, independently of $n$.
+2. if $n \ge 2$ and $m = n - k \ge \max\bigl(\binom k2, k + 1\bigr)$, every such type is realizable, so the number of
+   realizable types of $n$ lines with largest pencil exactly $m$ equals $N(k)$, independently of $n$.
+
+The condition on $m$ is needed: for $n = 6$ and $k = 3$ the element $\{4\}$ of $\mathrm{BAND}(3)$ would make the
+largest pencil $4$, not $m = 3$, and only $4 = N(3) - 1$ types occur.
 
 Moreover, if $S$ is the set of absorbed points, the number of intersection points is
 $f_0 = 1 + km + f_0(\mathcal A') - \sum_{p \in S}\mu'(p)$.
@@ -122,7 +124,7 @@ ordinary point, and the type has the stated form.
 
 (2) Choose $P$ off the lines of $\mathcal A'$ and off every line joining two of its intersection points. Join $P$ to the
 points to be absorbed (at most $\binom k2 \le m$ of them) and add generic lines through $P$ until there are $m$. Besides
-the absorbed points only ordinary points are created, and $P$ stays the largest pencil because
+the absorbed points only ordinary points are created, and no point has more than $m$ lines because
 $\mu'(p) + 1 \le k + 1 \le m$.
 
 The formula for $f_0$ is a direct count of the points along the pencil lines; full details are in `notes/bands.md`.
@@ -204,7 +206,8 @@ no orientation (Algorithm 3; classically, Hilbert–Cohn-Vossen §16 or Gropp 19
 
 <div class="thm" markdown>
 **Proposition C3 (nine quadruple points).** <span class="status-proved">proved</span> The type $\{4^9\}$ for twelve lines is
-combinatorially possible, unique as a linear space (the dual Hesse configuration), and not realizable by real lines.
+combinatorially possible and unique as a linear space, and not realizable by real lines. Over $\mathbb C$ it is the type
+of the Hesse arrangement: the twelve lines of the Hesse configuration, four through each of its nine points.
 </div>
 <div class="proof" markdown>
 *Proof.* Consider twelve elements carrying nine blocks of size 4, any two blocks sharing at most one element. An element
@@ -222,6 +225,28 @@ on a 3-point line, so it has no ordinary line, contradicting the Sylvester–Gal
 $\mathbb C$ the configuration exists (the nine inflection points of a cubic and their twelve lines), so the obstruction
 is genuinely real. <span class="qed">$\square$</span>
 </div>
+
+<div class="thm" markdown>
+**Proposition C3a (twenty triple points).** <span class="status-computed">computer-verified</span> The type $\{3^{20}\}$ for
+twelve lines is combinatorially possible but not realizable, not even by pseudolines: none of its linear spaces is
+orientable.
+</div>
+<div class="proof" markdown>
+*Proof.* Work in the dual picture: twelve points and twenty 3-point lines, which cover $60$ of the $66$ pairs. A point
+lies on $(11 - d)/2$ of the 3-point lines, where $d$ is the number of uncovered pairs at that point, so $d$ is odd. The
+twelve values of $d$ sum to $2 \cdot 6 = 12$, so every $d$ equals $1$: the uncovered pairs form a perfect matching.
+
+Add a thirteenth point and join it to the two ends of each uncovered pair. The result is a Steiner triple system of
+order 13, and conversely deleting a point from a Steiner triple system of order 13 gives a linear space of type
+$\{3^{20}\}$. There are exactly two Steiner triple systems of order 13 up to isomorphism.[^cr] Their 26 point
+deletions fall into 5 isomorphism classes, and the SAT encoding of Algorithm 3 shows that none of the 26 admits a
+chirotope (`scripts/orchard12.py`, `runs/orchard12.json`). <span class="qed">$\square$</span>
+</div>
+
+This agrees with the orchard problem: Burr, Grünbaum and Sloane list $19$ as the largest number of 3-point lines for
+twelve points.[^bgs]
+
+[^cr]: C. J. Colbourn, A. Rosa, *Triple Systems*, Oxford University Press, 1999.
 
 ## C′. Lines versus pseudolines at n = 12 {#lines-vs-pseudolines}
 
@@ -259,7 +284,7 @@ This is an incidence theorem in the spirit of Pappus, and it also has a short pr
 $A, B, C, D, E, F$, and "collinear with a point of the line at infinity" becomes "parallel". The 4-block says that
 $A, B, D$ are collinear, and the triples say
 
-$$CD \parallel EF, \qquad BC \parallel DE, \qquad AC \parallel BE \parallel DF, \qquad AE \parallel BF, \qquad AF \parallel CE .$$
+$$CD \parallel EF, \qquad BC \parallel DE, \qquad CF \parallel AB, \qquad AC \parallel BE \parallel DF, \qquad AE \parallel BF, \qquad AF \parallel CE .$$
 
 Put $A = 0$, $B = b\,u$, $D = d\,u$ and $C = v$, where $u, v$ are independent (because $A, B, C$ are not collinear) and
 $b, d$ are distinct and non-zero. From $AC \parallel BE \parallel DF$ we get $E = b\,u + e\,v$ and $F = d\,u + f\,v$. Then:
@@ -268,7 +293,10 @@ $b, d$ are distinct and non-zero. From $AC \parallel BE \parallel DF$ we get $E 
 * $AE \parallel BF$ gives $bf = e(d - b) = b e^2$, so $f = e^2$;
 * $AF \parallel CE$ gives $d(e-1) = fb$, that is $b(e+1)(e-1) = be^2$, that is $-1 = 0$.
 
-So the configuration does not exist over any field; the parallelism $CD \parallel EF$ was not even needed.
+So the configuration does not exist over any field; the parallelisms $CD \parallel EF$ and $CF \parallel AB$ were not even
+needed. This is slightly stronger than the statement of the theorem: under the non-degeneracy conditions used here
+($A, B, C$ not collinear, $A, B, D$ distinct) the collinearities have no solution at all, while the Gröbner certificate
+only says that every solution, degenerate or not, has $7, 10, 11$ collinear.
 <span class="qed">$\square$</span>
 </div>
 
@@ -283,9 +311,11 @@ forced, for the other two one of two specific triples.
 <div class="proof" markdown>
 *Proof.* *Enumeration.* `engine/ls.c`, mode 5.
 
-*Isomorphism classes.* `scripts/canon_dedupe.py` computes an exact canonical form. The 6-block is unique, so an
-isomorphism permutes the six other points, and the minimum over the 720 permutations of the sorted pair-masks is a
-complete invariant. The VF2 graph-isomorphism check agrees on the first class.
+*Isomorphism classes.* `scripts/canon_dedupe.py` computes an exact canonical form. The 6-block $B$ is unique, so an
+isomorphism maps $B$ to itself and the six other points $X$ to themselves. Each point $q \in B$ is recorded by the set
+of pairs of $X$ that lie in a block through $q$ (its pair-mask), and the blocks inside $X$ by one more pair-mask. Taking
+the $q$-masks as a sorted list removes the labels of $B$; the minimum of (sorted $q$-masks, $X$-mask) over the 720
+permutations of $X$ is then a complete invariant. An independent VF2 graph-isomorphism check agrees on the first class.
 
 *Certificates.* `data/proofs/n12_6-3x14.json`; each is verified by a reduced Gröbner basis $\{1\}$ in sympy.
 <span class="qed">$\square$</span>
@@ -348,7 +378,7 @@ loss is at most $\frac{m+1}{m+3}(\binom n2 - 3)$. <span class="qed">$\square$</s
 </div>
 
 <div class="thm" markdown>
-**Theorem E3.** <span class="status-proved">proved</span> For $n \ge 13$: if no $n - 2$ lines are concurrent then $f_0 \ge 2n-2$.
+**Theorem E3.** <span class="status-proved">proved, computer-assisted</span> For $n \ge 13$: if no $n - 2$ lines are concurrent then $f_0 \ge 2n-2$.
 </div>
 <div class="proof" markdown>
 *Proof.* Let $m \le n - 3$ be the largest multiplicity and $b = n - m \ge 3$. There are three ranges of $n$.
@@ -376,7 +406,8 @@ hence $f_0 \ge \frac5{24}\cdot 78 + \frac7{24}\cdot 3 + \frac12 \cdot 13 = 23.62
 
 Together with Lemma 2 of the points page (largest pencil of size $\ge n-2$) this gives
 $V(n) \cap [1, 2n-2] = \{1, n, 2n-4, 2n-2\}$ for $n \ge 13$, and in particular **$2n - 3$ is never the number of intersection
-points of $n \ge 13$ lines**. For $n = 12$ the same conclusion ($21 \notin V(12)$) is computer-verified; for $n \le 11$ it is false.
+points of $n \ge 13$ lines**. For $n = 12$ the same conclusion ($21 \notin V(12)$) is computer-verified. It is false for $n = 3$ and for
+$6 \le n \le 11$, and true for $n = 4, 5$.
 
 <div class="thm" markdown>
 **Theorem E4.** <span class="status-computed">computer-verified</span> $d(n) = 1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56$ for $n = 1, \dots, 13$.

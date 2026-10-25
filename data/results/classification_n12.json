@@ -20650,9 +20650,9 @@
 "f0": 26,
 "t2": 6,
 "linear_space": "YES",
-"verdict": "literature",
-"reference": "S. A. Burr, B. Grunbaum, N. J. A. Sloane, The orchard problem, Geometriae Dedicata 2 (1974) 397-424; OEIS A003035(12) = 19.",
-"statement": "Orchard problem: 12 lines in the real plane have at most 19 triple points, while {3^20} would have 20."
+"verdict": "theorem",
+"reference": "scripts/orchard12.py, runs/orchard12.json; uniqueness of the two STS(13): Colbourn-Rosa, Triple Systems, Oxford 1999",
+"statement": "Dually, a linear space on 12 points with twenty 3-point lines leaves 6 pairs uncovered, and every point is on exactly one of them (it has an odd number of uncovered partners, and these numbers sum to 12). Adding a point joined to the 6 uncovered pairs gives a Steiner triple system of order 13; conversely deleting a point of an STS(13) gives such a space. There are exactly two STS(13), so there are 26 point deletions (5 isomorphism classes), and the SAT encoding shows that none admits a chirotope. Hence no real arrangement (not even of pseudolines) has type {3^20}. This agrees with the orchard number A003035(12) = 19 (Burr-Grunbaum-Sloane 1974)."
 },
 {
 "type": [

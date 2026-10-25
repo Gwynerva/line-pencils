@@ -143,7 +143,7 @@ if __name__ == "__main__":
     if sys.argv[1] == "--table":
         K = int(sys.argv[2])
         for k in range(0, K + 1):
-            print("k = %2d: N(k) = %d  (stable for n >= %d)" % (k, len(band(k)), k + comb(k, 2)))
+            print("k = %2d: N(k) = %d  (stable for n >= %d)" % (k, len(band(k)), k + max(comb(k, 2), k + 1, 2 - k)))
         sys.exit(0)
     n = int(sys.argv[1])
     rows = json.load(open(os.path.join(ROOT, "data", "results", "classification_n%d.json" % n)))
