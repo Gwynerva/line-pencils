@@ -4,6 +4,7 @@
 %C For each intersection point of an arrangement of n lines record the number of lines through it; a(n) is the number of different multisets that occur over all arrangements of n lines. Equivalently: arrangements of n distinct lines in the real projective plane; or, dually, multisets of the sizes of the lines with at least three points determined by n points in the plane.
 %C Points on exactly two lines may be omitted from the multiset: their number is binomial(n,2) - Sum_i binomial(k_i,2). The empty multiset (no point on three or more lines) is counted, so a(1) = a(2) = 1.
 %C a(n) <= A072964(n-1), the number of multisets allowed by arithmetic alone (Sum_i binomial(k_i,2) <= binomial(n,2)).
+%C a(n) <= A400149(n), the number of multisets realizable by a linear space; the two agree for n <= 6.
 %C The largest number of 3's in a multiset counted by a(n) is A003035(n), the maximal number of 3-point lines in the orchard problem.
 %C 335 <= a(12) <= 337 (two multisets undecided). The multisets {6, 4, 3^12} and {6, 3^14} are realizable by pseudolines but not by lines, so the analogous sequence for pseudoline arrangements is larger at n = 12.
 %C Not to be confused with A005834, which contains 16, 28, 53, 98 and continues 183.
@@ -21,5 +22,5 @@
 %e For n = 5 the a(5) = 5 multisets are {} (general position, 10 points), {3}, {3, 3}, {4} and {5}.
 %e For n = 7, the multiset {3^7} (the Fano plane) is consistent with two lines meeting only once but has no point on exactly two lines, which the Sylvester-Gallai theorem forbids; it is the first such multiset that is not counted.
 %e For n = 10 the multiset {5, 3^10} (a regular pentagram with its five axes of symmetry) is realizable, but only with irrational coordinates (sqrt(5)).
-%Y Cf. A072964, A003035, A001200, A005834.
+%Y Cf. A072964, A003035, A001200, A005834, A399605, A400149.
 %K nonn,hard,more

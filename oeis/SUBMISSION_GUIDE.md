@@ -28,11 +28,11 @@ An A-number is assigned as soon as a draft is saved, before review. Submit in th
 
 1. **C (realizable types)**, the main sequence. Write down its A-number.
 2. **D (numbers of intersection points)**. Replace `A399464` in Crossrefs by C's number.
-3. **B (combinatorially possible types)**. Replace `A399464` and `[D]` by the numbers.
+3. **B (combinatorially possible types)**. Replace `A399464` and `A399605` by the numbers.
 4. **Edit C** (allowed while it is under review) to add the other two numbers:
    * Comments, after the line about A072964, add:
      `a(n) <= [B](n), the number of multisets realizable by a linear space; the two agree for n <= 6.`
-   * Crossrefs become `Cf. A072964, A003035, A001200, A005834, [B], [D].`
+   * Crossrefs become `Cf. A072964, A003035, A001200, A005834, [B], A399605.`
 5. Optionally, propose a short comment on **A072964**: "a(n-1) is the number of arithmetically admissible pencil
    types of n lines; see A399464 for those realizable by real lines." Keep it to one or two lines.
 

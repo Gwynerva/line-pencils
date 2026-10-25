@@ -17,5 +17,5 @@
 %H Petra Radko, <a href="https://github.com/Gwynerva/line-pencils">Programs, certificates and logs</a>, 2026.
 %e For n = 4 the possible numbers of points are 1, 4, 6, so a(4) = 3: four lines not all concurrent have at least four points, and 5 is impossible because a point on three lines removes two points at once.
 %e For n = 5 the possible numbers are 1, 5, 6, 8, 10, so a(5) = 5.
-%Y Cf. A072964, A003035, A129230, A399464.
+%Y Cf. A072964, A003035, A129230, A399464, A400149.
 %K nonn,hard,more

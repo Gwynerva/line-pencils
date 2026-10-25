@@ -10,5 +10,5 @@
 %H Petra Radko, <a href="https://github.com/Gwynerva/line-pencils">Programs and logs</a>, 2026.
 %e For n = 4 the a(4) = 3 multisets are {}, {3} and {4}; the arithmetically admissible {3, 3} is impossible because two blocks of size 3 in a 4-set share two elements.
 %e For n = 7 the a(7) = 17 multisets include {3^7}, the Fano plane.
-%Y Cf. A072964, A001200, A399464, [D].
+%Y Cf. A072964, A001200, A399464, A399605.
 %K nonn,hard,more
