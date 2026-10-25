@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" role="img"><title>The Hesse configuration AG(2,3): nine points, twelve lines of three; the four wrapped diagonals cannot be straight</title>
+<line x1="43.0" y1="70.0" x2="277.0" y2="70.0" class="fig-line"/>
+<line x1="70.0" y1="43.0" x2="70.0" y2="277.0" class="fig-line"/>
+<line x1="43.0" y1="160.0" x2="277.0" y2="160.0" class="fig-line"/>
+<line x1="160.0" y1="43.0" x2="160.0" y2="277.0" class="fig-line"/>
+<line x1="43.0" y1="250.0" x2="277.0" y2="250.0" class="fig-line"/>
+<line x1="250.0" y1="43.0" x2="250.0" y2="277.0" class="fig-line"/>
+<line x1="48.4" y1="48.4" x2="271.6" y2="271.6" class="fig-line"/>
+<line x1="271.6" y1="48.4" x2="48.4" y2="271.6" class="fig-line"/>
+<path d="M 160.0 70.0 Q 385.0 160.0 70.0 250.0" class="fig-curve"/>
+<path d="M 250.0 70.0 Q -65.0 160.0 160.0 250.0" class="fig-curve"/>
+<path d="M 160.0 70.0 Q -65.0 160.0 250.0 250.0" class="fig-curve"/>
+<path d="M 70.0 70.0 Q 385.0 160.0 160.0 250.0" class="fig-curve"/>
+<circle cx="70.0" cy="70.0" r="5.5" class="fig-pt"/>
+<circle cx="160.0" cy="70.0" r="5.5" class="fig-pt"/>
+<circle cx="250.0" cy="70.0" r="5.5" class="fig-pt"/>
+<circle cx="70.0" cy="160.0" r="5.5" class="fig-pt"/>
+<circle cx="160.0" cy="160.0" r="5.5" class="fig-pt"/>
+<circle cx="250.0" cy="160.0" r="5.5" class="fig-pt"/>
+<circle cx="70.0" cy="250.0" r="5.5" class="fig-pt"/>
+<circle cx="160.0" cy="250.0" r="5.5" class="fig-pt"/>
+<circle cx="250.0" cy="250.0" r="5.5" class="fig-pt"/>
+</svg>

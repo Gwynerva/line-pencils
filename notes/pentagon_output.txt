@@ -1,0 +1,6 @@
+partitions of E(K5) into 5 pairs of disjoint edges: 6
+isomorphism classes: [(5, 6)]
+
+class (orbit size 6): [((0, 1), (2, 3)), ((0, 2), (1, 4)), ((1, 3), (0, 4)), ((2, 4), (0, 3)), ((3, 4), (1, 2))]
+  X5 = (-1/2 + sqrt(5)/2 : 3/2 - sqrt(5)/2 : 1)  degenerate=False  Q's distinct=True  real=True
+  X5 = (-sqrt(5)/2 - 1/2 : sqrt(5)/2 + 3/2 : 1)  degenerate=False  Q's distinct=True  real=True

@@ -1,0 +1,123 @@
+/* ---------- palette: one blue scale ---------- */
+:root {
+  --lp-blue: #2f6fd6;
+  --lp-line: #4a5262;
+  --lp-hot: #1d5fd0;
+  --lp-k2: #a3a9b5;
+  --lp-s1: #93b8f2; --lp-s2: #5f93e6; --lp-s3: #3274dc; --lp-s4: #1f55b0; --lp-s5: #10316e;
+
+
+}
+[data-md-color-scheme="slate"] {
+  --lp-blue: #7aa7ff;
+  --lp-line: #b9c2d3;
+  --lp-hot: #8fb6ff;
+  --lp-k2: #6b7385;
+  --lp-s1: #3d6bc8; --lp-s2: #5c8ef2; --lp-s3: #86afff; --lp-s4: #b6cfff; --lp-s5: #eef4ff;
+}
+
+/* ---------- typography and blocks ---------- */
+.md-typeset h1 { font-weight: 600; }
+.md-typeset .thm {
+  border-left: 3px solid var(--lp-blue); padding: .6rem 1rem; margin: 1.2rem 0;
+  background: var(--md-code-bg-color); border-radius: 0 .25rem .25rem 0;
+}
+.md-typeset .thm > p:first-child { margin-top: 0; }
+.md-typeset .thm > p:last-child { margin-bottom: 0; }
+.md-typeset .thm.conj { border-left-style: dashed; }
+.md-typeset .thm.openp { border-left-color: var(--md-default-fg-color--lighter); }
+.md-typeset .proof { padding-left: 1rem; border-left: 2px dotted var(--md-default-fg-color--lighter); margin: .8rem 0 1.4rem; }
+.md-typeset .proof > p { margin: .55rem 0; }
+.md-typeset .qed { float: right; }
+.nobr { white-space: nowrap; }
+
+/* status labels: coloured words in running text, badges in theorem boxes */
+.status-proved, .status-computed, .status-bound, .status-conj { font-weight: 600; white-space: nowrap; }
+.status-proved, .status-computed { color: var(--lp-blue); }
+.status-computed { font-style: italic; }
+.status-bound, .status-conj { color: var(--md-default-fg-color--light); }
+.md-typeset .thm .status-proved, .md-typeset .thm .status-computed, .md-typeset .thm .status-bound, .md-typeset .thm .status-conj {
+  float: right; margin: 0 0 .3rem .8rem; padding: .05rem .55rem; border-radius: 1rem; font-size: .68rem; font-style: normal;
+  letter-spacing: .03em; text-transform: uppercase; line-height: 1.5; border: 1px solid currentColor;
+}
+.md-typeset .thm .status-proved { background: var(--lp-blue); border-color: var(--lp-blue); color: var(--md-default-bg-color); }
+
+.md-typeset mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; padding: .2rem 0; }
+.md-typeset table:not([class]) { font-size: .8rem; }
+
+/* ---------- static figures ---------- */
+.md-typeset .figs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1rem 0; }
+.md-typeset .figs figure, .md-typeset figure.fig { margin: 0; text-align: center; }
+.md-typeset figcaption { font-size: .8rem; line-height: 1.35; margin-top: .4rem; color: var(--md-default-fg-color--light); }
+.md-typeset figure svg { max-width: 100%; height: auto; }
+.fig-line { stroke: var(--lp-line); stroke-width: 1.6; fill: none; stroke-linecap: round; }
+.fig-curve { stroke: var(--lp-line); stroke-width: 1.6; fill: none; stroke-dasharray: 6 5; }
+.fig-pt { fill: var(--lp-s3); stroke: var(--md-default-bg-color); stroke-width: 1.2; }
+.fig-box { fill: var(--md-code-bg-color); stroke: var(--md-default-fg-color--lightest); stroke-width: 1.5; }
+.fig-box.inner { stroke: var(--lp-blue); }
+.fig-text { fill: var(--md-default-fg-color); font-family: var(--md-text-font-family, serif); }
+
+/* ---------- arrangements (docs/javascripts/arrangements.js) ---------- */
+.lp-svg { width: 100%; height: auto; display: block; }
+.lp-svg .ln { stroke: var(--lp-line); stroke-width: .006; stroke-linecap: round; transition: opacity .2s, stroke .2s; }
+.lp-svg.big .ln { stroke-width: .005; }
+.lp-svg .pt { stroke: var(--md-default-bg-color); stroke-width: .006; transition: opacity .2s; }
+.lp-svg .pt.k2 { fill: var(--lp-k2); }
+.lp-svg .pt.s1, .lp-keys .s1 { fill: var(--lp-s1); background: var(--lp-s1); }
+.lp-svg .pt.s2, .lp-keys .s2 { fill: var(--lp-s2); background: var(--lp-s2); }
+.lp-svg .pt.s3, .lp-keys .s3 { fill: var(--lp-s3); background: var(--lp-s3); }
+.lp-svg .pt.s4, .lp-keys .s4 { fill: var(--lp-s4); background: var(--lp-s4); }
+.lp-svg .pt.s5, .lp-keys .s5 { fill: var(--lp-s5); background: var(--lp-s5); }
+.lp-keys .k2 { background: var(--lp-k2); }
+.lp-keys { display: flex; flex-wrap: wrap; gap: .2rem .9rem; font-size: .78rem; }
+.lp-keys i { display: inline-block; width: .7rem; height: .7rem; border-radius: 50%; margin-right: .3rem; vertical-align: middle; }
+.lp-svg .pt:not(.k2) { cursor: pointer; }
+.lp-svg.focus .ln { opacity: .15; }
+.lp-svg.focus .ln.hot { opacity: 1; stroke: var(--lp-hot); stroke-width: .012; }
+.lp-svg.focus .pt { opacity: .35; }
+.lp-svg.focus .pt.hot { opacity: 1; }
+
+.lp-hero-wrap { display: grid; grid-template-columns: minmax(220px, 340px) 1fr; gap: 2rem; align-items: center; }
+.lp-hero { aspect-ratio: 1; }
+@media (max-width: 760px) { .lp-hero-wrap { grid-template-columns: 1fr; } .lp-hero { max-width: 300px; margin: 0 auto; } }
+.lp-draw { max-width: 300px; aspect-ratio: 1; margin: 0 auto; }
+
+.lp-legend { display: flex; flex-wrap: wrap; gap: .3rem .9rem; align-items: center; font-size: .8rem; color: var(--md-default-fg-color--light); }
+.lp-legend i { display: inline-block; border-radius: 50%; margin-right: .3rem; vertical-align: middle; }
+
+.lp-chips { display: flex; flex-wrap: wrap; gap: .35rem; margin: 1rem 0 .5rem; }
+.lp-chip { min-width: 2.2rem; padding: .25rem .6rem; border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--lp-blue) 35%, transparent);
+  background: color-mix(in srgb, var(--lp-blue) 7%, transparent); color: var(--md-default-fg-color);
+  cursor: pointer; font: inherit; font-size: .8rem; font-weight: 500;
+  transition: background-color .15s, border-color .15s, color .15s; }
+.lp-chip:hover, .lp-chip:focus-visible { border-color: var(--lp-blue); background: color-mix(in srgb, var(--lp-blue) 18%, transparent); color: var(--lp-blue); outline: none; }
+.lp-chip[aria-selected="true"], .lp-chip[aria-selected="true"]:hover { background: var(--lp-blue); border-color: var(--lp-blue); color: var(--md-default-bg-color); }
+.lp-summary { font-size: .8rem; color: var(--md-default-fg-color--light); }
+.lp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .8rem; }
+.lp-card { display: flex; flex-direction: column; padding: .4rem; border: 1px solid var(--md-default-fg-color--lightest); border-radius: .4rem;
+  background: var(--md-default-bg-color); cursor: pointer; font: inherit; color: inherit; text-align: center; transition: border-color .15s; }
+.lp-card:hover, .lp-card:focus-visible { border-color: var(--lp-blue); }
+.lp-art { aspect-ratio: 1; }
+.lp-cap { display: flex; flex-direction: column; font-size: .72rem; line-height: 1.3; margin-top: .2rem; }
+.lp-type { overflow-wrap: anywhere; }
+.lp-meta { color: var(--md-default-fg-color--light); }
+
+.lp-modal { position: fixed; inset: 0; z-index: 1000; background: rgba(8, 12, 22, .72); backdrop-filter: blur(3px); display: flex; align-items: center; justify-content: center; padding: 2vh 2vw; }
+.lp-dialog { position: relative; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 1.5rem;
+  width: min(1400px, 100%); height: 100%; overflow: auto; padding: 1.5rem; border-radius: .6rem; align-items: center;
+  background: var(--md-default-bg-color); color: var(--md-default-fg-color); box-shadow: 0 10px 40px rgba(0, 0, 0, .35); }
+@media (max-width: 760px) { .lp-dialog { grid-template-columns: 1fr; } }
+.lp-big { aspect-ratio: 1; max-height: calc(96vh - 3rem); margin: 0 auto; width: 100%; }
+.lp-big .lp-svg { max-height: calc(96vh - 3rem); }
+.lp-info { font-size: .85rem; }
+.lp-info h2 { margin: .2rem 0 .6rem; font-size: 1.1rem; overflow-wrap: anywhere; }
+.lp-eyebrow { font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--md-default-fg-color--light); }
+.lp-hint, .lp-src { color: var(--md-default-fg-color--light); font-size: .78rem; }
+.lp-now { min-height: 1.4em; color: var(--lp-blue); font-weight: 600; }
+.lp-coef { font-family: var(--md-code-font-family); font-size: .72rem; max-height: 14rem; overflow: auto; }
+.lp-coef li:hover { color: var(--lp-blue); }
+.lp-close { position: absolute; top: .4rem; right: .6rem; border: 0; background: none; font-size: 1.6rem; line-height: 1; cursor: pointer; color: var(--md-default-fg-color--light); }
+.lp-noscroll { overflow: hidden; }
+
+.md-typeset sup { line-height: 0; }

@@ -1,0 +1,1227 @@
+{
+ "_comment": "Pencil types excluded by a theorem (ours, in notes/) or by a published result not re-proved here. key = pencil sizes; kind = theorem | literature.",
+ "12": {
+  "4,4,4,4,4,4,4,4,4": {
+   "kind": "theorem",
+   "statement": "A linear space on 12 points with nine 4-point lines is unique: each point lies on exactly three of the lines (4*9/12), so the dual incidence structure has 9 points and 12 three-point lines covering all 36 pairs, i.e. it is a Steiner triple system of order 9, which is unique (AG(2,3), the Hesse configuration). AG(2,3) is not realizable by real points and lines because every pair of its points lies on a 3-point line, contradicting the Sylvester-Gallai theorem; projective duality transfers non-realizability to the 12-point structure. Hence {4^9} is not the type of a real arrangement of 12 lines. (It is the type of the 12 lines of the Hesse configuration over the complex numbers.)",
+   "reference": "notes/points.md, section 3; Sylvester-Gallai theorem (Melchior 1940/41, Gallai 1944); uniqueness of STS(9): e.g. Colbourn-Rosa, Triple Systems, Oxford 1999, Table 1.?"
+  },
+  "3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3": {
+   "kind": "literature",
+   "statement": "Orchard problem: 12 lines in the real plane have at most 19 triple points, while {3^20} would have 20.",
+   "reference": "S. A. Burr, B. Grunbaum, N. J. A. Sloane, The orchard problem, Geometriae Dedicata 2 (1974) 397-424; OEIS A003035(12) = 19."
+  }
+ },
+ "13": {
+  "11,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 11 = n-2 lines; removing it leaves 2 lines, and {5} is not obtainable from any realizable type of 2 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "11,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 11 = n-2 lines; removing it leaves 2 lines, and {4} is not obtainable from any realizable type of 2 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "11,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 11 = n-2 lines; removing it leaves 2 lines, and {4, 3} is not obtainable from any realizable type of 2 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "11,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 11 = n-2 lines; removing it leaves 2 lines, and {3^2} is not obtainable from any realizable type of 2 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "11,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 11 = n-2 lines; removing it leaves 2 lines, and {3^3} is not obtainable from any realizable type of 2 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "11,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 11 = n-2 lines; removing it leaves 2 lines, and {3^4} is not obtainable from any realizable type of 2 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,6": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {6} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,6,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {6, 3} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {5} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {5, 4} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,5,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {5, 4, 3} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {5, 3} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,5,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {5, 3^2} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,5,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {5, 3^3} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {4^2} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,4,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {4^3} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,4,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {4^2, 3} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,4,4,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {4^2, 3^2} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,4,4,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {4^2, 3^3} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {4, 3} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,4,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {4, 3^2} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,4,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {4, 3^3} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,4,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {4, 3^4} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {3^4} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "10,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 10 = n-3 lines; removing it leaves 3 lines, and {3^5} is not obtainable from any realizable type of 3 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,8": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {8} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,7": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {7} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,7,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {7, 4} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,7,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {7, 3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,7,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {7, 3^2} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,6": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {6} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,6,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {6, 5} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,6,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {6, 5, 3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,6,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {6, 4} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,6,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {6, 4^2} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,6,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {6, 4, 3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,6,4,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {6, 4, 3^2} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,6,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {6, 3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,6,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {6, 3^2} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,6,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {6, 3^3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {5^2} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,5,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {5^2, 4} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,5,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {5^2, 3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,5,5,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {5^2, 3^2} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {5, 4} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,5,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {5, 4^2} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,5,4,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {5, 4^3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,5,4,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {5, 4^2, 3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,5,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {5, 4, 3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,5,4,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {5, 4, 3^2} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {5, 3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,5,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {5, 3^2} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,5,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {5, 3^3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {4^2} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,4,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {4^3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,4,4,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {4^4} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,4,4,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {4^3, 3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,4,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {4^2, 3} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "9,4,4,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 9 = n-4 lines; removing it leaves 4 lines, and {4^2, 3^2} is not obtainable from any realizable type of 4 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,8": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {8} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,8,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {8, 4} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,8,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {8, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,8,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {8, 3^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,8,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {8, 3^3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,7": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {7} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,7,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {7, 5} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,7,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {7, 5, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,7,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {7, 4} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,7,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {7, 4^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,7,4,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {7, 4^2, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,7,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {7, 4, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,7,4,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {7, 4, 3^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,7,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {7, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,7,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {7, 3^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,7,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {7, 3^3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,6": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,6,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6^2, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,6,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6^2, 3^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 5} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 5^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 5, 4} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,5,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 5, 4, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 5, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,5,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 5, 3^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 4} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 4^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,4,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 4^3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,4,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 4^2, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 4, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,4,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 4, 3^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 3^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,6,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {6, 3^3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5^3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,5,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5^3, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5^2, 4} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,5,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5^2, 4^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,5,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5^2, 4, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5^2, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,5,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5^2, 3^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5, 4} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5, 4^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,4,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5, 4^3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,4,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5, 4^2, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5, 4, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,5,4,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {5, 4, 3^2} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,4,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {4^3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,4,4,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {4^4} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "8,4,4,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 8 = n-5 lines; removing it leaves 5 lines, and {4^3, 3} is not obtainable from any realizable type of 5 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,7": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,6": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 6} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,6,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 6, 4} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,6,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 6, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,6,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 6, 3^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 5} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 5^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 5, 4} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,5,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 5, 4, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 5, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,5,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 5, 3^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 4} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 4^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,4,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 4^3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,4,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 4^2, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 4, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,4,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 4, 3^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 3^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,7,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {7, 3^3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,6": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,6,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6^2, 5} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,6,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6^2, 4} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,6,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6^2, 4^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,6,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6^2, 4, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,6,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6^2, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,6,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6^2, 3^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 5} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 5^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,5,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 5^2, 4} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,5,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 5^2, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 5, 4} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,5,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 5, 4^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,5,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 5, 4, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 5, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,5,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 5, 3^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 4} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 4^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,4,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 4^3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,4,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 4^2, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 4, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,6,4,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {6, 4, 3^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5^3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,5,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5^4} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,5,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5^3, 4} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,5,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5^3, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5^2, 4} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,5,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5^2, 4^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,5,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5^2, 4, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5^2, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,5,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5^2, 3^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5, 4^2} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,4,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5, 4^3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,4,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5, 4^2, 3} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,5,3,3,3,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5, 3^10} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,4,4,4,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {4^3, 3^7} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "7,4,4,3,3,3,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {4^2, 3^10} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,6": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6^2} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,6,6": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6^3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,6,6,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6^3, 3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,6,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6^2, 5} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,6,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6^2, 5, 4} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,6,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6^2, 5, 3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,6,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6^2, 4} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,6,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6^2, 4^2} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,6,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6^2, 4, 3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,6,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6^2, 3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,6,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6^2, 3^2} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 5} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 5^2} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,5,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 5^3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,5,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 5^2, 4} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,5,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 5^2, 3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 5, 4} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,5,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 5, 4^2} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,5,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 5, 4, 3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 5, 3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,5,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 5, 3^2} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4^2} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,4,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4^3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,4,4,4,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4^3, 3^5} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,4,4,4,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4^3, 3^6} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,4,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4^2, 3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,4,4,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4^2, 3^3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,4,4,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4^2, 3^4} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,4,4,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4^2, 3^5} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,4,4,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4^2, 3^6} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,4,4,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4^2, 3^7} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,4,4,3,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4^2, 3^8} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,4,3,3,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4, 3^9} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,4,3,3,3,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4, 3^10} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,6,3,3,3,3,3,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 3^12} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^4} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^3, 4} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^3, 3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^2, 4} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^2, 4^2} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,4,4,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^2, 4^2, 3^5} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^2, 4, 3} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,4,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^2, 4, 3^4} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,4,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^2, 4, 3^5} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,4,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^2, 4, 3^6} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,4,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^2, 4, 3^7} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,4,3,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^2, 4, 3^8} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,5,3,3,3,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^2, 3^10} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,4,4,4,4,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5, 4^4, 3^4} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,4,4,4,4,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5, 4^4, 3^5} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,4,4,4,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5, 4^3, 3^7} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,4,4,4,3,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5, 4^3, 3^8} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,5,4,4,3,3,3,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5, 4^2, 3^10} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "6,4,4,4,4,4,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {4^5, 3^7} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,5": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^4} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 4} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,4,4,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 4^2, 3^4} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,4,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 4, 3^3} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,4,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 4, 3^4} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,4,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 4, 3^5} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,4,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 4, 3^6} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 3} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 3^4} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 3^5} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 3^6} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 3^7} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,3,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 3^8} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,5,3,3,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 3^9} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,5,5,4,4,4,4,3,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^2, 4^4, 3^3} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,4,4,4,4,4,4,4,4": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {4^8} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,4,4,4,4,4,4,4,4,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {4^8, 3} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  },
+  "5,4,4,4,4,4,4,4,4,3,3": {
+   "kind": "theorem",
+   "statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {4^8, 3^2} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
+   "reference": "notes/bands.md"
+  }
+ }
+}

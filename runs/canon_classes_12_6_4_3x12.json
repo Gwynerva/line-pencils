@@ -1,0 +1,87 @@
+{
+ "n": 12,
+ "source": "runs/enum_12_6_4_3x12.txt",
+ "labelled_total": 30240,
+ "classes": [
+  {
+   "blocks": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     0,
+     8,
+     9
+    ],
+    [
+     0,
+     10,
+     11
+    ],
+    [
+     1,
+     7,
+     8
+    ],
+    [
+     1,
+     9,
+     10
+    ],
+    [
+     2,
+     6,
+     7,
+     9
+    ],
+    [
+     2,
+     8,
+     11
+    ],
+    [
+     3,
+     6,
+     8
+    ],
+    [
+     3,
+     7,
+     10
+    ],
+    [
+     3,
+     9,
+     11
+    ],
+    [
+     4,
+     6,
+     10
+    ],
+    [
+     4,
+     7,
+     11
+    ],
+    [
+     5,
+     6,
+     11
+    ],
+    [
+     5,
+     8,
+     10
+    ]
+   ],
+   "labelled_count": 30240
+  }
+ ],
+ "method": "canonical form over permutations of the points off the unique largest block"
+}

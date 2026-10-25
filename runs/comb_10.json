@@ -1,0 +1,5567 @@
+{
+"": {
+"info": "YES nodes=46 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"10": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9
+]
+],
+"info": "YES nodes=2 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"3": {
+"blocks": [
+[
+0,
+1,
+2
+]
+],
+"info": "YES nodes=44 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+7,
+8,
+9
+]
+],
+"info": "YES nodes=42 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+5,
+8,
+9
+],
+[
+6,
+7,
+8
+]
+],
+"info": "YES nodes=46 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+4,
+8,
+9
+],
+[
+5,
+7,
+8
+],
+[
+6,
+7,
+9
+]
+],
+"info": "YES nodes=58 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+4,
+6,
+7
+],
+[
+4,
+8,
+9
+],
+[
+5,
+6,
+8
+],
+[
+5,
+7,
+9
+]
+],
+"info": "YES nodes=72 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+3,
+8,
+9
+],
+[
+4,
+6,
+8
+],
+[
+4,
+7,
+9
+],
+[
+5,
+6,
+9
+],
+[
+5,
+7,
+8
+]
+],
+"info": "YES nodes=59 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+3,
+6,
+7
+],
+[
+3,
+8,
+9
+],
+[
+4,
+6,
+8
+],
+[
+4,
+7,
+9
+],
+[
+5,
+6,
+9
+],
+[
+5,
+7,
+8
+]
+],
+"info": "YES nodes=36 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+3,
+4,
+5
+],
+[
+3,
+6,
+7
+],
+[
+3,
+8,
+9
+],
+[
+4,
+6,
+8
+],
+[
+4,
+7,
+9
+],
+[
+5,
+6,
+9
+],
+[
+5,
+7,
+8
+]
+],
+"info": "YES nodes=30 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+2,
+4,
+5
+],
+[
+2,
+6,
+7
+],
+[
+2,
+8,
+9
+],
+[
+3,
+4,
+6
+],
+[
+3,
+5,
+8
+],
+[
+3,
+7,
+9
+],
+[
+4,
+7,
+8
+],
+[
+5,
+6,
+9
+]
+],
+"info": "YES nodes=2628 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+1,
+8,
+9
+],
+[
+2,
+4,
+5
+],
+[
+2,
+6,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+4,
+8
+],
+[
+3,
+5,
+9
+],
+[
+3,
+6,
+7
+],
+[
+4,
+6,
+9
+],
+[
+5,
+7,
+8
+]
+],
+"info": "YES nodes=2206 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+1,
+6,
+7
+],
+[
+1,
+8,
+9
+],
+[
+2,
+4,
+6
+],
+[
+2,
+5,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+4,
+9
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+8
+],
+[
+4,
+7,
+8
+],
+[
+5,
+6,
+9
+]
+],
+"info": "YES nodes=511 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+1,
+4,
+5
+],
+[
+1,
+6,
+7
+],
+[
+1,
+8,
+9
+],
+[
+2,
+4,
+6
+],
+[
+2,
+5,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+4,
+9
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+8
+],
+[
+4,
+7,
+8
+],
+[
+5,
+6,
+9
+]
+],
+"info": "YES nodes=51 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.01
+},
+"3,3,3,3,3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+0,
+6,
+7
+],
+[
+0,
+8,
+9
+],
+[
+1,
+3,
+4
+],
+[
+1,
+5,
+6
+],
+[
+1,
+7,
+8
+],
+[
+2,
+3,
+6
+],
+[
+2,
+4,
+8
+],
+[
+2,
+5,
+9
+],
+[
+3,
+5,
+8
+],
+[
+3,
+7,
+9
+],
+[
+4,
+5,
+7
+],
+[
+4,
+6,
+9
+]
+],
+"info": "YES nodes=28121 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.01
+},
+"3,3,3,3,3,3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=51897 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.01
+},
+"3,3,3,3,3,3,3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=5 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.01
+},
+"4": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+]
+],
+"info": "YES nodes=41 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+7,
+8,
+9
+]
+],
+"info": "YES nodes=39 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+5,
+8,
+9
+],
+[
+6,
+7,
+8
+]
+],
+"info": "YES nodes=43 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+4,
+8,
+9
+],
+[
+5,
+7,
+8
+],
+[
+6,
+7,
+9
+]
+],
+"info": "YES nodes=55 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+4,
+6,
+7
+],
+[
+4,
+8,
+9
+],
+[
+5,
+6,
+8
+],
+[
+5,
+7,
+9
+]
+],
+"info": "YES nodes=69 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+3,
+8,
+9
+],
+[
+4,
+6,
+8
+],
+[
+4,
+7,
+9
+],
+[
+5,
+6,
+9
+],
+[
+5,
+7,
+8
+]
+],
+"info": "YES nodes=56 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+3,
+6,
+7
+],
+[
+3,
+8,
+9
+],
+[
+4,
+6,
+8
+],
+[
+4,
+7,
+9
+],
+[
+5,
+6,
+9
+],
+[
+5,
+7,
+8
+]
+],
+"info": "YES nodes=33 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+3,
+4,
+5
+],
+[
+3,
+6,
+7
+],
+[
+3,
+8,
+9
+],
+[
+4,
+6,
+8
+],
+[
+4,
+7,
+9
+],
+[
+5,
+6,
+9
+],
+[
+5,
+7,
+8
+]
+],
+"info": "YES nodes=27 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+2,
+4,
+5
+],
+[
+2,
+6,
+7
+],
+[
+2,
+8,
+9
+],
+[
+3,
+4,
+6
+],
+[
+3,
+5,
+8
+],
+[
+3,
+7,
+9
+],
+[
+4,
+7,
+8
+],
+[
+5,
+6,
+9
+]
+],
+"info": "YES nodes=2625 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+8,
+9
+],
+[
+2,
+4,
+5
+],
+[
+2,
+6,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+4,
+8
+],
+[
+3,
+5,
+9
+],
+[
+3,
+6,
+7
+],
+[
+4,
+6,
+9
+],
+[
+5,
+7,
+8
+]
+],
+"info": "YES nodes=1218 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+6,
+7
+],
+[
+1,
+8,
+9
+],
+[
+2,
+4,
+6
+],
+[
+2,
+5,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+4,
+9
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+8
+],
+[
+4,
+7,
+8
+],
+[
+5,
+6,
+9
+]
+],
+"info": "YES nodes=203 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.01
+},
+"4,3,3,3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+4,
+5
+],
+[
+1,
+6,
+7
+],
+[
+1,
+8,
+9
+],
+[
+2,
+4,
+6
+],
+[
+2,
+5,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+4,
+9
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+8
+],
+[
+4,
+7,
+8
+],
+[
+5,
+6,
+9
+]
+],
+"info": "YES nodes=31 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3,3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+0,
+4,
+5
+],
+[
+0,
+6,
+7
+],
+[
+0,
+8,
+9
+],
+[
+1,
+4,
+6
+],
+[
+1,
+5,
+8
+],
+[
+1,
+7,
+9
+],
+[
+2,
+4,
+7
+],
+[
+2,
+5,
+9
+],
+[
+2,
+6,
+8
+],
+[
+3,
+4,
+8
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+9
+]
+],
+"info": "YES nodes=12579 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.01
+},
+"4,3,3,3,3,3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=365 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.01
+},
+"4,4": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+6,
+7,
+8,
+9
+]
+],
+"info": "YES nodes=36 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+4,
+8,
+9
+],
+[
+5,
+6,
+7,
+8
+]
+],
+"info": "YES nodes=55 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+3,
+8,
+9
+],
+[
+4,
+7,
+8
+],
+[
+5,
+6,
+7,
+9
+]
+],
+"info": "YES nodes=269 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+3,
+7,
+8,
+9
+],
+[
+4,
+5,
+7
+],
+[
+4,
+6,
+8
+],
+[
+5,
+6,
+9
+]
+],
+"info": "YES nodes=188 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+2,
+8,
+9
+],
+[
+3,
+6,
+7,
+8
+],
+[
+4,
+5,
+8
+],
+[
+4,
+7,
+9
+],
+[
+5,
+6,
+9
+]
+],
+"info": "YES nodes=2736 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+2,
+7,
+8,
+9
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+8
+],
+[
+4,
+5,
+8
+],
+[
+4,
+6,
+7
+],
+[
+5,
+6,
+9
+]
+],
+"info": "YES nodes=1113 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+2,
+7,
+8,
+9
+],
+[
+3,
+4,
+7
+],
+[
+3,
+5,
+8
+],
+[
+3,
+6,
+9
+],
+[
+4,
+5,
+9
+],
+[
+4,
+6,
+8
+],
+[
+5,
+6,
+7
+]
+],
+"info": "YES nodes=34 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+8,
+9
+],
+[
+2,
+5,
+6,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+4,
+8
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+9
+],
+[
+4,
+5,
+9
+],
+[
+4,
+6,
+7
+]
+],
+"info": "YES nodes=960 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+0,
+8,
+9
+],
+[
+1,
+7,
+8
+],
+[
+2,
+5,
+6,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+4,
+8
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+9
+],
+[
+4,
+5,
+9
+],
+[
+4,
+6,
+7
+]
+],
+"info": "YES nodes=162746 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.02
+},
+"4,4,3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+0,
+7,
+8,
+9
+],
+[
+1,
+5,
+7
+],
+[
+1,
+6,
+8
+],
+[
+2,
+4,
+7
+],
+[
+2,
+5,
+8
+],
+[
+2,
+6,
+9
+],
+[
+3,
+4,
+8
+],
+[
+3,
+5,
+9
+],
+[
+3,
+6,
+7
+],
+[
+4,
+5,
+6
+]
+],
+"info": "YES nodes=33143 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.01
+},
+"4,4,3,3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+0,
+7,
+8,
+9
+],
+[
+1,
+4,
+7
+],
+[
+1,
+5,
+8
+],
+[
+1,
+6,
+9
+],
+[
+2,
+4,
+8
+],
+[
+2,
+5,
+9
+],
+[
+2,
+6,
+7
+],
+[
+3,
+4,
+9
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+8
+],
+[
+4,
+5,
+6
+]
+],
+"info": "YES nodes=38 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,3,3,3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=420 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.01
+},
+"4,4,4": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+3,
+7,
+8,
+9
+],
+[
+4,
+5,
+6,
+7
+]
+],
+"info": "YES nodes=78 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+2,
+8,
+9
+],
+[
+3,
+6,
+7,
+8
+],
+[
+4,
+5,
+6,
+9
+]
+],
+"info": "YES nodes=1493 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+2,
+7,
+8,
+9
+],
+[
+3,
+5,
+6,
+7
+],
+[
+4,
+5,
+8
+],
+[
+4,
+6,
+9
+]
+],
+"info": "YES nodes=2118 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+2,
+5,
+6,
+7
+],
+[
+2,
+8,
+9
+],
+[
+3,
+4,
+5,
+8
+],
+[
+3,
+7,
+9
+],
+[
+4,
+6,
+9
+]
+],
+"info": "YES nodes=6866 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+8,
+9
+],
+[
+2,
+5,
+6,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+4,
+5,
+9
+],
+[
+3,
+7,
+8
+],
+[
+4,
+6,
+7
+]
+],
+"info": "YES nodes=23907 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+7,
+8,
+9
+],
+[
+2,
+5,
+6,
+7
+],
+[
+3,
+4,
+7
+],
+[
+3,
+5,
+8
+],
+[
+3,
+6,
+9
+],
+[
+4,
+5,
+9
+],
+[
+4,
+6,
+8
+]
+],
+"info": "YES nodes=6807 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+5,
+6,
+7
+],
+[
+1,
+8,
+9
+],
+[
+2,
+4,
+5,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+4,
+7
+],
+[
+3,
+5,
+9
+],
+[
+3,
+6,
+8
+],
+[
+4,
+6,
+9
+]
+],
+"info": "YES nodes=4751 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+0,
+8,
+9
+],
+[
+1,
+5,
+6,
+8
+],
+[
+1,
+7,
+9
+],
+[
+2,
+4,
+5,
+9
+],
+[
+2,
+7,
+8
+],
+[
+3,
+4,
+8
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+9
+],
+[
+4,
+6,
+7
+]
+],
+"info": "YES nodes=3111 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+0,
+6,
+7
+],
+[
+0,
+8,
+9
+],
+[
+1,
+4,
+6,
+8
+],
+[
+1,
+5,
+7,
+9
+],
+[
+2,
+4,
+7
+],
+[
+2,
+5,
+8
+],
+[
+2,
+6,
+9
+],
+[
+3,
+4,
+9
+],
+[
+3,
+5,
+6
+],
+[
+3,
+7,
+8
+]
+],
+"info": "YES nodes=1204 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.01
+},
+"4,4,4,3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+0,
+4,
+5,
+6
+],
+[
+0,
+7,
+8,
+9
+],
+[
+1,
+4,
+7
+],
+[
+1,
+5,
+8
+],
+[
+1,
+6,
+9
+],
+[
+2,
+4,
+8
+],
+[
+2,
+5,
+9
+],
+[
+2,
+6,
+7
+],
+[
+3,
+4,
+9
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+8
+]
+],
+"info": "YES nodes=14 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,4": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+7,
+8,
+9
+],
+[
+2,
+5,
+6,
+7
+],
+[
+3,
+4,
+5,
+8
+]
+],
+"info": "YES nodes=1824 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,4,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+7,
+8,
+9
+],
+[
+2,
+5,
+6,
+7
+],
+[
+3,
+4,
+5,
+8
+],
+[
+4,
+6,
+9
+]
+],
+"info": "YES nodes=8039 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,4,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+7,
+8,
+9
+],
+[
+2,
+4,
+5,
+7
+],
+[
+2,
+6,
+8
+],
+[
+3,
+4,
+6,
+9
+],
+[
+3,
+5,
+8
+]
+],
+"info": "YES nodes=11252 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,4,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+5,
+6,
+7
+],
+[
+1,
+8,
+9
+],
+[
+2,
+4,
+5,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+4,
+6,
+9
+],
+[
+3,
+7,
+8
+]
+],
+"info": "YES nodes=29328 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,4,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+0,
+8,
+9
+],
+[
+1,
+5,
+6,
+8
+],
+[
+1,
+7,
+9
+],
+[
+2,
+4,
+5,
+9
+],
+[
+2,
+6,
+7
+],
+[
+3,
+4,
+7,
+8
+],
+[
+3,
+6,
+9
+]
+],
+"info": "YES nodes=74107 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.01
+},
+"4,4,4,4,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+0,
+7,
+8,
+9
+],
+[
+1,
+4,
+5,
+7
+],
+[
+1,
+6,
+8
+],
+[
+2,
+4,
+6,
+9
+],
+[
+2,
+5,
+8
+],
+[
+3,
+4,
+8
+],
+[
+3,
+5,
+9
+],
+[
+3,
+6,
+7
+]
+],
+"info": "YES nodes=12694 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,4,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+0,
+5,
+6,
+7
+],
+[
+0,
+8,
+9
+],
+[
+1,
+4,
+5,
+8
+],
+[
+1,
+7,
+9
+],
+[
+2,
+4,
+6,
+9
+],
+[
+2,
+7,
+8
+],
+[
+3,
+4,
+7
+],
+[
+3,
+5,
+9
+],
+[
+3,
+6,
+8
+]
+],
+"info": "YES nodes=2186 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,4,3,3,3,3,3,3,3": {
+"info": "NO nodes=246 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,4,4": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+0,
+7,
+8,
+9
+],
+[
+1,
+5,
+6,
+7
+],
+[
+2,
+4,
+5,
+8
+],
+[
+3,
+4,
+6,
+9
+]
+],
+"info": "YES nodes=4461 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,4,4,4,3": {
+"info": "NO nodes=38464 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,4,4,3,3": {
+"info": "NO nodes=61522 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.01
+},
+"4,4,4,4,4,3,3,3": {
+"info": "NO nodes=41576 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,4,4,3,3,3,3": {
+"info": "NO nodes=8218 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,4,4,3,3,3,3,3": {
+"info": "NO nodes=118 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,4,4,4": {
+"info": "NO nodes=1116 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,4,4,4,3": {
+"info": "NO nodes=2094 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,4,4,4,3,3": {
+"info": "NO nodes=950 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,4,4,4,3,3,3": {
+"info": "NO nodes=32 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,4,4,4,4": {
+"info": "NO nodes=43 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,4,4,4,4,3": {
+"info": "NO nodes=10 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+]
+],
+"info": "YES nodes=37 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+7,
+8,
+9
+]
+],
+"info": "YES nodes=35 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+5,
+8,
+9
+],
+[
+6,
+7,
+8
+]
+],
+"info": "YES nodes=39 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+4,
+8,
+9
+],
+[
+5,
+7,
+8
+],
+[
+6,
+7,
+9
+]
+],
+"info": "YES nodes=51 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+4,
+6,
+7
+],
+[
+4,
+8,
+9
+],
+[
+5,
+6,
+8
+],
+[
+5,
+7,
+9
+]
+],
+"info": "YES nodes=65 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+3,
+8,
+9
+],
+[
+4,
+6,
+8
+],
+[
+4,
+7,
+9
+],
+[
+5,
+6,
+9
+],
+[
+5,
+7,
+8
+]
+],
+"info": "YES nodes=52 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+3,
+6,
+7
+],
+[
+3,
+8,
+9
+],
+[
+4,
+6,
+8
+],
+[
+4,
+7,
+9
+],
+[
+5,
+6,
+9
+],
+[
+5,
+7,
+8
+]
+],
+"info": "YES nodes=29 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+2,
+6,
+7
+],
+[
+2,
+8,
+9
+],
+[
+3,
+5,
+6
+],
+[
+3,
+7,
+8
+],
+[
+4,
+5,
+8
+],
+[
+4,
+6,
+9
+],
+[
+5,
+7,
+9
+]
+],
+"info": "YES nodes=664 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+1,
+8,
+9
+],
+[
+2,
+6,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+5,
+8
+],
+[
+3,
+6,
+9
+],
+[
+4,
+5,
+9
+],
+[
+4,
+7,
+8
+],
+[
+5,
+6,
+7
+]
+],
+"info": "YES nodes=329 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+0,
+8,
+9
+],
+[
+1,
+6,
+8
+],
+[
+1,
+7,
+9
+],
+[
+2,
+5,
+6
+],
+[
+2,
+7,
+8
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+9
+],
+[
+4,
+5,
+8
+],
+[
+4,
+6,
+7
+]
+],
+"info": "YES nodes=7602 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3,3,3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+0,
+6,
+7
+],
+[
+0,
+8,
+9
+],
+[
+1,
+5,
+6
+],
+[
+1,
+7,
+8
+],
+[
+2,
+5,
+7
+],
+[
+2,
+6,
+9
+],
+[
+3,
+5,
+8
+],
+[
+3,
+7,
+9
+],
+[
+4,
+5,
+9
+],
+[
+4,
+6,
+8
+]
+],
+"info": "YES nodes=2965 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3,3,3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=273 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+6,
+7,
+8,
+9
+]
+],
+"info": "YES nodes=32 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+4,
+8,
+9
+],
+[
+5,
+6,
+7,
+8
+]
+],
+"info": "YES nodes=51 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+3,
+8,
+9
+],
+[
+4,
+7,
+8
+],
+[
+5,
+6,
+7,
+9
+]
+],
+"info": "YES nodes=265 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+3,
+7,
+8,
+9
+],
+[
+4,
+5,
+7
+],
+[
+4,
+6,
+8
+],
+[
+5,
+6,
+9
+]
+],
+"info": "YES nodes=184 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+2,
+8,
+9
+],
+[
+3,
+6,
+7,
+8
+],
+[
+4,
+5,
+8
+],
+[
+4,
+7,
+9
+],
+[
+5,
+6,
+9
+]
+],
+"info": "YES nodes=1157 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+2,
+7,
+8,
+9
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+8
+],
+[
+4,
+5,
+8
+],
+[
+4,
+6,
+7
+],
+[
+5,
+6,
+9
+]
+],
+"info": "YES nodes=324 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+1,
+8,
+9
+],
+[
+2,
+6,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+5,
+6,
+9
+],
+[
+3,
+7,
+8
+],
+[
+4,
+5,
+8
+],
+[
+4,
+6,
+7
+]
+],
+"info": "YES nodes=1103 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+1,
+6,
+7
+],
+[
+1,
+8,
+9
+],
+[
+2,
+5,
+6,
+8
+],
+[
+2,
+7,
+9
+],
+[
+3,
+5,
+7
+],
+[
+3,
+6,
+9
+],
+[
+4,
+5,
+9
+],
+[
+4,
+7,
+8
+]
+],
+"info": "YES nodes=565 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=17662 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=841 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+3,
+7,
+8,
+9
+],
+[
+4,
+5,
+6,
+7
+]
+],
+"info": "YES nodes=74 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,4,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+2,
+8,
+9
+],
+[
+3,
+6,
+7,
+8
+],
+[
+4,
+5,
+6,
+9
+]
+],
+"info": "YES nodes=737 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,4,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+2,
+7,
+8,
+9
+],
+[
+3,
+5,
+6,
+7
+],
+[
+4,
+5,
+8
+],
+[
+4,
+6,
+9
+]
+],
+"info": "YES nodes=842 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,4,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+1,
+8,
+9
+],
+[
+2,
+6,
+7,
+8
+],
+[
+3,
+5,
+6,
+9
+],
+[
+4,
+5,
+8
+],
+[
+4,
+7,
+9
+]
+],
+"info": "YES nodes=4774 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,4,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+1,
+7,
+8,
+9
+],
+[
+2,
+5,
+6,
+7
+],
+[
+3,
+5,
+8
+],
+[
+3,
+6,
+9
+],
+[
+4,
+5,
+9
+],
+[
+4,
+6,
+8
+]
+],
+"info": "YES nodes=1954 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,4,3,3,3,3,3": {
+"info": "NO nodes=59886 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,3,3,3,3,3,3": {
+"info": "NO nodes=12982 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,3,3,3,3,3,3,3": {
+"info": "NO nodes=848 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,4": {
+"info": "NO nodes=1289 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,4,3": {
+"info": "NO nodes=7775 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,4,3,3": {
+"info": "NO nodes=15840 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,4,3,3,3": {
+"info": "NO nodes=13521 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,4,3,3,3,3": {
+"info": "NO nodes=4756 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,4,3,3,3,3,3": {
+"info": "NO nodes=606 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,4,4": {
+"info": "NO nodes=390 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,4,4,3": {
+"info": "NO nodes=1209 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,4,4,3,3": {
+"info": "NO nodes=966 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,4,4,3,3,3": {
+"info": "NO nodes=188 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,4,4,4": {
+"info": "NO nodes=61 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,4,4,4,3": {
+"info": "NO nodes=39 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+5,
+6,
+7,
+8,
+9
+]
+],
+"info": "YES nodes=28 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,5,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+3,
+8,
+9
+],
+[
+4,
+5,
+6,
+7,
+8
+]
+],
+"info": "YES nodes=68 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,5,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+2,
+8,
+9
+],
+[
+3,
+7,
+8
+],
+[
+4,
+5,
+6,
+7,
+9
+]
+],
+"info": "YES nodes=379 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,5,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+1,
+8,
+9
+],
+[
+2,
+7,
+8
+],
+[
+3,
+6,
+8
+],
+[
+4,
+5,
+6,
+7,
+9
+]
+],
+"info": "YES nodes=2580 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,5,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+0,
+8,
+9
+],
+[
+1,
+7,
+8
+],
+[
+2,
+6,
+8
+],
+[
+3,
+5,
+6,
+7,
+9
+],
+[
+4,
+5,
+8
+]
+],
+"info": "YES nodes=17713 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"5,5,3,3,3,3,3": {
+"info": "NO nodes=48077 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.01
+},
+"5,5,3,3,3,3,3,3": {
+"info": "NO nodes=21275 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,3,3,3,3,3,3,3": {
+"info": "NO nodes=2573 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=46 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4": {
+"info": "NO nodes=549 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,3": {
+"info": "NO nodes=5670 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,3,3": {
+"info": "NO nodes=20198 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,3,3,3": {
+"info": "NO nodes=29253 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,3,3,3,3": {
+"info": "NO nodes=17406 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,3,3,3,3,3": {
+"info": "NO nodes=4181 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,3,3,3,3,3,3": {
+"info": "NO nodes=194 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,4": {
+"info": "NO nodes=729 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,4,3": {
+"info": "NO nodes=2967 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,4,3,3": {
+"info": "NO nodes=3314 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,4,3,3,3": {
+"info": "NO nodes=1316 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,4,3,3,3,3": {
+"info": "NO nodes=148 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,4,4": {
+"info": "NO nodes=160 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,4,4,3": {
+"info": "NO nodes=221 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,4,4,3,3": {
+"info": "NO nodes=48 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4,4,4,4": {
+"info": "NO nodes=9 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5": {
+"info": "NO nodes=135 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5,3": {
+"info": "NO nodes=757 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5,3,3": {
+"info": "NO nodes=1277 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5,3,3,3": {
+"info": "NO nodes=898 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5,3,3,3,3": {
+"info": "NO nodes=228 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5,3,3,3,3,3": {
+"info": "NO nodes=5 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5,4": {
+"info": "NO nodes=126 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5,4,3": {
+"info": "NO nodes=403 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5,4,3,3": {
+"info": "NO nodes=257 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5,4,3,3,3": {
+"info": "NO nodes=21 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5,4,4": {
+"info": "NO nodes=36 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5,4,4,3": {
+"info": "NO nodes=7 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5,5": {
+"info": "NO nodes=22 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,5,5,3": {
+"info": "NO nodes=26 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+]
+],
+"info": "YES nodes=32 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"6,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+],
+[
+7,
+8,
+9
+]
+],
+"info": "YES nodes=30 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"6,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+],
+[
+5,
+8,
+9
+],
+[
+6,
+7,
+8
+]
+],
+"info": "YES nodes=34 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"6,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+],
+[
+4,
+8,
+9
+],
+[
+5,
+7,
+8
+],
+[
+6,
+7,
+9
+]
+],
+"info": "YES nodes=46 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"6,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+],
+[
+4,
+6,
+7
+],
+[
+4,
+8,
+9
+],
+[
+5,
+6,
+8
+],
+[
+5,
+7,
+9
+]
+],
+"info": "YES nodes=60 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"6,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+],
+[
+3,
+8,
+9
+],
+[
+4,
+6,
+8
+],
+[
+4,
+7,
+9
+],
+[
+5,
+6,
+9
+],
+[
+5,
+7,
+8
+]
+],
+"info": "YES nodes=34 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"6,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+],
+[
+3,
+6,
+7
+],
+[
+3,
+8,
+9
+],
+[
+4,
+6,
+8
+],
+[
+4,
+7,
+9
+],
+[
+5,
+6,
+9
+],
+[
+5,
+7,
+8
+]
+],
+"info": "YES nodes=20 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"6,3,3,3,3,3,3,3": {
+"info": "NO nodes=6551 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=1494 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=178 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,3,3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=12 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+],
+[
+6,
+7,
+8,
+9
+]
+],
+"info": "YES nodes=27 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"6,4,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+],
+[
+4,
+8,
+9
+],
+[
+5,
+6,
+7,
+8
+]
+],
+"info": "YES nodes=46 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"6,4,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+],
+[
+3,
+8,
+9
+],
+[
+4,
+7,
+8
+],
+[
+5,
+6,
+7,
+9
+]
+],
+"info": "YES nodes=111 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"6,4,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+],
+[
+2,
+8,
+9
+],
+[
+3,
+7,
+8
+],
+[
+4,
+6,
+7,
+9
+],
+[
+5,
+6,
+8
+]
+],
+"info": "YES nodes=280 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"6,4,3,3,3,3": {
+"info": "NO nodes=12526 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,3,3,3,3,3": {
+"info": "NO nodes=6422 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,3,3,3,3,3,3": {
+"info": "NO nodes=1798 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,3,3,3,3,3,3,3": {
+"info": "NO nodes=225 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=13 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4": {
+"info": "NO nodes=197 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,3": {
+"info": "NO nodes=1388 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,3,3": {
+"info": "NO nodes=2922 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,3,3,3": {
+"info": "NO nodes=2461 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,3,3,3,3": {
+"info": "NO nodes=1094 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,3,3,3,3,3": {
+"info": "NO nodes=197 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,3,3,3,3,3,3": {
+"info": "NO nodes=13 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,4": {
+"info": "NO nodes=96 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,4,3": {
+"info": "NO nodes=388 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,4,3,3": {
+"info": "NO nodes=387 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,4,3,3,3": {
+"info": "NO nodes=112 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,4,3,3,3,3": {
+"info": "NO nodes=9 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,4,4": {
+"info": "NO nodes=32 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,4,4,3": {
+"info": "NO nodes=47 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,4,4,3,3": {
+"info": "NO nodes=5 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4,4,4,4": {
+"info": "NO nodes=3 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+],
+[
+5,
+6,
+7,
+8,
+9
+]
+],
+"info": "YES nodes=23 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"6,5,3": {
+"info": "NO nodes=296 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,3,3": {
+"info": "NO nodes=1227 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,3,3,3": {
+"info": "NO nodes=2403 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,3,3,3,3": {
+"info": "NO nodes=2082 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,3,3,3,3,3": {
+"info": "NO nodes=646 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,3,3,3,3,3,3": {
+"info": "NO nodes=96 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,4": {
+"info": "NO nodes=162 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,4,3": {
+"info": "NO nodes=668 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,4,3,3": {
+"info": "NO nodes=904 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,4,3,3,3": {
+"info": "NO nodes=432 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,4,3,3,3,3": {
+"info": "NO nodes=81 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,4,4": {
+"info": "NO nodes=64 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,4,4,3": {
+"info": "NO nodes=116 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,4,4,3,3": {
+"info": "NO nodes=43 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,4,4,4": {
+"info": "NO nodes=12 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,5": {
+"info": "NO nodes=33 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,5,3": {
+"info": "NO nodes=62 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,5,3,3": {
+"info": "NO nodes=71 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,5,3,3,3": {
+"info": "NO nodes=16 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,5,4": {
+"info": "NO nodes=24 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,5,4,3": {
+"info": "NO nodes=15 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,5,5": {
+"info": "NO nodes=3 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6": {
+"info": "NO nodes=17 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,3": {
+"info": "NO nodes=129 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,3,3": {
+"info": "NO nodes=374 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,3,3,3": {
+"info": "NO nodes=401 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,3,3,3,3": {
+"info": "NO nodes=116 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,3,3,3,3,3": {
+"info": "NO nodes=10 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,4": {
+"info": "NO nodes=60 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,4,3": {
+"info": "NO nodes=165 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,4,3,3": {
+"info": "NO nodes=86 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,4,3,3,3": {
+"info": "NO nodes=7 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,4,4": {
+"info": "NO nodes=12 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,4,4,3": {
+"info": "NO nodes=4 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,5": {
+"info": "NO nodes=15 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,5,3": {
+"info": "NO nodes=13 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"6,6,6": {
+"info": "NO nodes=2 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5,
+6
+]
+],
+"info": "YES nodes=26 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"7,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5,
+6
+],
+[
+7,
+8,
+9
+]
+],
+"info": "YES nodes=24 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"7,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5,
+6
+],
+[
+5,
+8,
+9
+],
+[
+6,
+7,
+8
+]
+],
+"info": "YES nodes=28 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"7,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5,
+6
+],
+[
+4,
+8,
+9
+],
+[
+5,
+7,
+8
+],
+[
+6,
+7,
+9
+]
+],
+"info": "YES nodes=27 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"7,3,3,3,3": {
+"info": "NO nodes=765 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,3,3,3,3,3": {
+"info": "NO nodes=346 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,3,3,3,3,3,3": {
+"info": "NO nodes=127 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,3,3,3,3,3,3,3": {
+"info": "NO nodes=32 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=3 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5,
+6
+],
+[
+6,
+7,
+8,
+9
+]
+],
+"info": "YES nodes=21 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"7,4,3": {
+"info": "NO nodes=199 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,3,3": {
+"info": "NO nodes=420 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,3,3,3": {
+"info": "NO nodes=368 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,3,3,3,3": {
+"info": "NO nodes=139 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,3,3,3,3,3": {
+"info": "NO nodes=37 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,3,3,3,3,3,3": {
+"info": "NO nodes=4 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,4": {
+"info": "NO nodes=49 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,4,3": {
+"info": "NO nodes=85 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,4,3,3": {
+"info": "NO nodes=96 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,4,3,3,3": {
+"info": "NO nodes=37 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,4,3,3,3,3": {
+"info": "NO nodes=4 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,4,4": {
+"info": "NO nodes=20 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,4,4,3": {
+"info": "NO nodes=19 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,4,4,3,3": {
+"info": "NO nodes=4 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4,4,4,4": {
+"info": "NO nodes=3 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,5": {
+"info": "NO nodes=16 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,5,3": {
+"info": "NO nodes=87 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,5,3,3": {
+"info": "NO nodes=157 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,5,3,3,3": {
+"info": "NO nodes=87 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,5,3,3,3,3": {
+"info": "NO nodes=19 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,5,4": {
+"info": "NO nodes=28 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,5,4,3": {
+"info": "NO nodes=35 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,5,4,3,3": {
+"info": "NO nodes=19 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,5,4,4": {
+"info": "NO nodes=7 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,5,5": {
+"info": "NO nodes=6 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,5,5,3": {
+"info": "NO nodes=6 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,6": {
+"info": "NO nodes=11 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,6,3": {
+"info": "NO nodes=34 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,6,3,3": {
+"info": "NO nodes=25 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,6,3,3,3": {
+"info": "NO nodes=3 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,6,4": {
+"info": "NO nodes=10 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,6,4,3": {
+"info": "NO nodes=4 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,7": {
+"info": "NO nodes=5 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"7,7,3": {
+"info": "NO nodes=3 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7
+]
+],
+"info": "YES nodes=19 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"8,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7
+],
+[
+7,
+8,
+9
+]
+],
+"info": "YES nodes=17 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"8,3,3": {
+"info": "NO nodes=55 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,3,3,3": {
+"info": "NO nodes=35 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,3,3,3,3": {
+"info": "NO nodes=19 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,3,3,3,3,3": {
+"info": "NO nodes=8 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,4": {
+"info": "NO nodes=13 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,4,3": {
+"info": "NO nodes=35 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,4,3,3": {
+"info": "NO nodes=19 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,4,3,3,3": {
+"info": "NO nodes=8 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,4,4": {
+"info": "NO nodes=7 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,4,4,3": {
+"info": "NO nodes=8 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,5": {
+"info": "NO nodes=9 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,5,3": {
+"info": "NO nodes=15 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,5,3,3": {
+"info": "NO nodes=5 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,5,4": {
+"info": "NO nodes=3 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"8,6": {
+"info": "NO nodes=4 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"9": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8
+]
+],
+"info": "YES nodes=11 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "YES",
+"time": 0.0
+},
+"9,3": {
+"info": "NO nodes=8 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"9,3,3": {
+"info": "NO nodes=5 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"9,3,3,3": {
+"info": "NO nodes=2 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"9,4": {
+"info": "NO nodes=5 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+},
+"9,4,3": {
+"info": "NO nodes=2 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 20.0,
+"status": "NO",
+"time": 0.0
+}
+}

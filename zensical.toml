@@ -1,0 +1,89 @@
+[project]
+site_name = "How n Lines Can Meet"
+site_description = "Pencil types of line arrangements and the integer sequences they generate"
+site_author = "Petra Radko"
+site_url = "https://gwynerva.github.io/line-pencils/"
+repo_url = "https://github.com/Gwynerva/line-pencils"
+repo_name = "Gwynerva/line-pencils"
+copyright = "Text and figures CC BY 4.0, code MIT · Petra Radko"
+extra_css = ["stylesheets/extra.css"]
+extra_javascript = [
+  "javascripts/mathjax.js",
+  "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js",
+  "javascripts/arrangements.js",
+]
+nav = [
+  { "Home" = "index.md" },
+  { "Gallery" = "gallery.md" },
+  { "The question" = [
+    { "Problem and definitions" = "problem.md" },
+    { "Notation" = "notation.md" },
+    { "The three sieves" = "sieves.md" },
+  ] },
+  { "The sequences" = [
+    { "Overview" = "sequences/index.md" },
+    { "a(n): arithmetic" = "sequences/arithmetic.md" },
+    { "b(n): consistent ways to meet" = "sequences/combinatorial.md" },
+    { "c(n): ways n lines can meet" = "sequences/realizable.md" },
+    { "d(n): numbers of intersection points" = "sequences/points.md" },
+  ] },
+  { "Theorems and proofs" = "theorems.md" },
+  { "Algorithms" = "algorithms.md" },
+  { "What cannot be drawn" = "impossible.md" },
+  { "Data and verification" = "data.md" },
+  { "Open problems" = "open.md" },
+  { "References" = "references.md" },
+  { "About" = "about.md" },
+]
+
+[project.theme]
+logo = "assets/logo.svg"
+favicon = "assets/logo.svg"
+features = [
+  "navigation.instant",
+  "navigation.instant.progress",
+  "navigation.sections",
+  "navigation.top",
+  "navigation.footer",
+  "toc.follow",
+  "content.footnote.tooltips",
+  "content.code.copy",
+  "search.highlight",
+]
+
+[project.theme.font]
+text = "Source Serif 4"
+code = "JetBrains Mono"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "blue"
+accent = "blue"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "blue"
+accent = "blue"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to light mode"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+toc.permalink = true
+pymdownx.arithmatex.generic = true
+pymdownx.details = {}
+pymdownx.highlight.anchor_linenums = true
+pymdownx.inlinehilite = {}
+pymdownx.snippets.base_path = ["snippets", "docs"]
+pymdownx.snippets.check_paths = true
+pymdownx.superfences = {}
+pymdownx.tabbed.alternate_style = true

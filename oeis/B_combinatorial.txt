@@ -1,0 +1,15 @@
+%N Number of different ways n lines can meet that are consistent with the rule that two lines meet only once: multisets {k_1, ..., k_r} with 3 <= k_i <= n such that there are k_i-subsets of an n-set, any two sharing at most one element.
+%S 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384
+%O 1,3
+%C a(n) counts the possible multisets of sizes of the lines with at least three points of a linear space (equivalently, of a simple matroid of rank at most 3) on n points. Dually, it counts the multisets of pencil sizes of n lines in the plane, no two parallel, that are combinatorially consistent (two pencils share at most one line). The empty multiset is counted, so a(1) = a(2) = 1.
+%C A072964(n-1) counts the multisets allowed by arithmetic alone (Sum_i binomial(k_i,2) <= binomial(n,2)); a(n) <= A072964(n-1) with equality only for n <= 3. The multisets that occur for arrangements of real lines are counted by [C]; they agree with a(n) for n <= 6 and are fewer from n = 7 on (the Fano plane {3^7} is the first linear space type without a real realization).
+%C Computed by an exhaustive search over linear spaces with prescribed block sizes, confirmed independently by a SAT formulation for n <= 11.
+%D B. Grünbaum, Arrangements and Spreads, CBMS Regional Conference Series in Mathematics 10, AMS, Providence, 1972.
+%H Petra Radko, How n Lines Can Meet, https://gwynerva.github.io/line-pencils/ (2026); this sequence: https://gwynerva.github.io/line-pencils/sequences/combinatorial/
+%H Petra Radko, Verification: definitions, certificates, how each term is established, https://github.com/Gwynerva/line-pencils/blob/main/VERIFY.md
+%H Petra Radko, Code and logs, https://github.com/Gwynerva/line-pencils
+%e For n = 4 the a(4) = 3 multisets are {}, {3} and {4}; the arithmetically admissible {3, 3} is impossible because two blocks of size 3 in a 4-set share two elements.
+%e For n = 7 the a(7) = 17 multisets include {3^7}, the Fano plane.
+%o (Python, C) See the links.
+%Y Cf. A072964, A001200 (linear spaces on n points), [C], [D].
+%K nonn,hard,more

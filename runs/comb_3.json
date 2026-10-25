@@ -1,0 +1,23 @@
+{
+"": {
+"info": "YES nodes=4 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.04
+},
+"3": {
+"blocks": [
+[
+0,
+1,
+2
+]
+],
+"info": "YES nodes=2 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.04
+}
+}

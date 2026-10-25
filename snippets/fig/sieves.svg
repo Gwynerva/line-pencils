@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="680" height="400" font-family="Georgia, 'Source Serif 4', serif">
+<title>The three sieves as nested sets</title>
+<rect x="16" y="16" width="648" height="368" rx="14" class="fig-box"/>
+<text x="32" y="40" font-size="15" class="fig-text">all multisets of pencil sizes</text>
+<rect x="40" y="56" width="600" height="304" rx="14" class="fig-box"/>
+<text x="56" y="80" font-size="15" class="fig-text">arithmetically admissible</text>
+<text x="624" y="80" font-size="15" text-anchor="end" font-weight="bold" class="fig-text">a(12) = 1286</text>
+<rect x="76" y="110" width="528" height="226" rx="14" class="fig-box"/>
+<text x="92" y="134" font-size="15" class="fig-text">combinatorially possible (linear spaces)</text>
+<text x="588" y="134" font-size="15" text-anchor="end" font-weight="bold" class="fig-text">b(12) = 384</text>
+<rect x="130" y="178" width="420" height="134" rx="14" class="fig-box inner"/>
+<text x="146" y="202" font-size="15" class="fig-text">realizable by real lines</text>
+<text x="534" y="202" font-size="15" text-anchor="end" font-weight="bold" class="fig-text">c(12) = 335 … 337</text>
+<text x="340" y="328" text-anchor="middle" font-size="12.5" class="fig-text">between the two inner boxes: orientable but not realizable, e.g. {6, 4, 3<tspan dy="-5" font-size="9">12</tspan><tspan dy="5">} for n = 12</tspan></text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" role="img"><title>The Fano plane: seven points, seven lines of three; one of them must be a circle</title>
+<line x1="172.3" y1="38.8" x2="45.5" y2="258.2" class="fig-line"/>
+<line x1="160.0" y1="38.8" x2="160.0" y2="258.2" class="fig-line"/>
+<line x1="33.3" y1="237.0" x2="286.7" y2="237.0" class="fig-line"/>
+<line x1="39.4" y1="247.6" x2="229.5" y2="137.9" class="fig-line"/>
+<line x1="274.5" y1="258.2" x2="147.7" y2="38.8" class="fig-line"/>
+<line x1="280.6" y1="247.6" x2="90.5" y2="137.9" class="fig-line"/>
+<circle cx="160.0" cy="178.0" r="59.0" class="fig-curve"/>
+<circle cx="160.0" cy="60.0" r="5.5" class="fig-pt"/>
+<circle cx="57.8" cy="237.0" r="5.5" class="fig-pt"/>
+<circle cx="262.2" cy="237.0" r="5.5" class="fig-pt"/>
+<circle cx="160.0" cy="237.0" r="5.5" class="fig-pt"/>
+<circle cx="211.1" cy="148.5" r="5.5" class="fig-pt"/>
+<circle cx="108.9" cy="148.5" r="5.5" class="fig-pt"/>
+<circle cx="160.0" cy="178.0" r="5.5" class="fig-pt"/>
+</svg>

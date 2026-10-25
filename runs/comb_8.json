@@ -1,0 +1,1036 @@
+{
+"": {
+"info": "YES nodes=29 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"3": {
+"blocks": [
+[
+0,
+1,
+2
+]
+],
+"info": "YES nodes=27 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+5,
+6,
+7
+]
+],
+"info": "YES nodes=25 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+3,
+6,
+7
+],
+[
+4,
+5,
+6
+]
+],
+"info": "YES nodes=29 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+2,
+6,
+7
+],
+[
+3,
+5,
+6
+],
+[
+4,
+5,
+7
+]
+],
+"info": "YES nodes=41 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+2,
+4,
+5
+],
+[
+2,
+6,
+7
+],
+[
+3,
+4,
+6
+],
+[
+3,
+5,
+7
+]
+],
+"info": "YES nodes=55 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+1,
+6,
+7
+],
+[
+2,
+4,
+6
+],
+[
+2,
+5,
+7
+],
+[
+3,
+4,
+7
+],
+[
+3,
+5,
+6
+]
+],
+"info": "YES nodes=42 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+1,
+4,
+5
+],
+[
+1,
+6,
+7
+],
+[
+2,
+4,
+6
+],
+[
+2,
+5,
+7
+],
+[
+3,
+4,
+7
+],
+[
+3,
+5,
+6
+]
+],
+"info": "YES nodes=19 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"3,3,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2
+],
+[
+0,
+4,
+5
+],
+[
+0,
+6,
+7
+],
+[
+1,
+3,
+4
+],
+[
+1,
+5,
+6
+],
+[
+2,
+3,
+6
+],
+[
+2,
+4,
+7
+],
+[
+3,
+5,
+7
+]
+],
+"info": "YES nodes=529 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.05
+},
+"3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=38 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.03
+},
+"4": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+]
+],
+"info": "YES nodes=24 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+5,
+6,
+7
+]
+],
+"info": "YES nodes=22 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+3,
+6,
+7
+],
+[
+4,
+5,
+6
+]
+],
+"info": "YES nodes=26 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+2,
+6,
+7
+],
+[
+3,
+5,
+6
+],
+[
+4,
+5,
+7
+]
+],
+"info": "YES nodes=38 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+2,
+4,
+5
+],
+[
+2,
+6,
+7
+],
+[
+3,
+4,
+6
+],
+[
+3,
+5,
+7
+]
+],
+"info": "YES nodes=52 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+6,
+7
+],
+[
+2,
+4,
+6
+],
+[
+2,
+5,
+7
+],
+[
+3,
+4,
+7
+],
+[
+3,
+5,
+6
+]
+],
+"info": "YES nodes=26 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+4,
+5
+],
+[
+1,
+6,
+7
+],
+[
+2,
+4,
+6
+],
+[
+2,
+5,
+7
+],
+[
+3,
+4,
+7
+],
+[
+3,
+5,
+6
+]
+],
+"info": "YES nodes=12 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"4,3,3,3,3,3,3,3": {
+"info": "NO nodes=28 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+4,
+5,
+6,
+7
+]
+],
+"info": "YES nodes=19 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+2,
+6,
+7
+],
+[
+3,
+4,
+5,
+6
+]
+],
+"info": "YES nodes=38 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+1,
+6,
+7
+],
+[
+2,
+5,
+6
+],
+[
+3,
+4,
+5,
+7
+]
+],
+"info": "YES nodes=103 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3
+],
+[
+0,
+6,
+7
+],
+[
+1,
+5,
+6
+],
+[
+2,
+4,
+5,
+7
+],
+[
+3,
+4,
+6
+]
+],
+"info": "YES nodes=272 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"4,4,3,3,3,3": {
+"info": "NO nodes=345 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,3,3,3,3,3": {
+"info": "NO nodes=31 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4": {
+"info": "NO nodes=71 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,3": {
+"info": "NO nodes=229 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,3,3": {
+"info": "NO nodes=160 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,3,3,3": {
+"info": "NO nodes=21 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,4": {
+"info": "NO nodes=18 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"4,4,4,4,3": {
+"info": "NO nodes=13 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+]
+],
+"info": "YES nodes=20 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+5,
+6,
+7
+]
+],
+"info": "YES nodes=18 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+3,
+6,
+7
+],
+[
+4,
+5,
+6
+]
+],
+"info": "YES nodes=22 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3,3,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+2,
+6,
+7
+],
+[
+3,
+5,
+6
+],
+[
+4,
+5,
+7
+]
+],
+"info": "YES nodes=21 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"5,3,3,3,3": {
+"info": "NO nodes=127 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,3,3,3,3,3": {
+"info": "NO nodes=32 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,3,3,3,3,3,3": {
+"info": "NO nodes=3 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4
+],
+[
+4,
+5,
+6,
+7
+]
+],
+"info": "YES nodes=15 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"5,4,3": {
+"info": "NO nodes=85 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,3,3": {
+"info": "NO nodes=96 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,3,3,3": {
+"info": "NO nodes=37 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,3,3,3,3": {
+"info": "NO nodes=4 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4": {
+"info": "NO nodes=20 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,3": {
+"info": "NO nodes=19 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,3,3": {
+"info": "NO nodes=4 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,4,4,4": {
+"info": "NO nodes=3 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5": {
+"info": "NO nodes=10 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,3": {
+"info": "NO nodes=26 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,3,3": {
+"info": "NO nodes=16 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"5,5,4": {
+"info": "NO nodes=7 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"6": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+]
+],
+"info": "YES nodes=15 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"6,3": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5
+],
+[
+5,
+6,
+7
+]
+],
+"info": "YES nodes=13 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"6,3,3": {
+"info": "NO nodes=29 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"6,3,3,3": {
+"info": "NO nodes=15 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"6,3,3,3,3": {
+"info": "NO nodes=5 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4": {
+"info": "NO nodes=9 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,3": {
+"info": "NO nodes=15 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,3,3": {
+"info": "NO nodes=5 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"6,4,4": {
+"info": "NO nodes=3 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5": {
+"info": "NO nodes=5 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"6,5,3": {
+"info": "NO nodes=3 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"7": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5,
+6
+]
+],
+"info": "YES nodes=9 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+},
+"7,3": {
+"info": "NO nodes=6 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"7,3,3": {
+"info": "NO nodes=3 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"7,4": {
+"info": "NO nodes=3 leaves=0 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "NO",
+"time": 0.0
+},
+"8": {
+"blocks": [
+[
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7
+]
+],
+"info": "YES nodes=2 leaves=1 orientable=0 checks=0 fails=0 tcheck=0.0 satnodes=0",
+"mode": 0,
+"secs": 60.0,
+"status": "YES",
+"time": 0.0
+}
+}

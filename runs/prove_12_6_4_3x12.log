@@ -1,0 +1,5 @@
+class 1/1 (30240 labelled copies)
+frame (0, 1, 6, 7) unknowns 12 equations 16
+numerical solutions sampled: 60 ; hitting set of collapsing triples: [(7, 10, 11)] ; uncovered: 0
+  product over triples [(7, 10, 11)] in the radical: True (0s)
+{6, 4, 3^12} NOT REALIZABLE: every orientable linear space of this type is proved non-realizable (0s)

@@ -1,0 +1,20 @@
+%N Number of different possible numbers of intersection points of n lines in the plane, no two parallel.
+%S 1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56
+%O 1,3
+%C n lines, no two parallel, have between 1 and binomial(n,2) intersection points; a(n) is the number of values that actually occur (for n = 1 the only value is 0). Dually, a(n) is the number of distinct numbers of lines determined by n points in the plane (Grünbaum's problem); Erdős (1972) and Salamon and Erdős (1988) determined the set of values for all sufficiently large n.
+%C The values binomial(n,2)-1 and binomial(n,2)-3 never occur. For n >= 10 the values strictly between n and 2n-4 do not occur (Elliott). For n >= 13 the values below 2n-1 are exactly 1, n, 2n-4 and 2n-2; in particular 2n-3 intersection points are impossible for n >= 12 (for n = 12 by exhaustive computation, for n >= 13 by a counting argument using the inequalities of Melchior and Hirzebruch).
+%C a(n) = binomial(n,2) - 2n + 4 for n = 12 and 13; 65 <= a(14) <= 67; the formula fails for n >= 17.
+%C Not to be confused with A129230, which agrees with a(n) for n <= 12 and has 55 at n = 13.
+%D P. D. T. A. Elliott, On the number of circles determined by n points, Acta Math. Acad. Sci. Hungar. 18 (1967), 181-188.
+%D P. Erdős, On a problem of Grünbaum, Canad. Math. Bull. 15 (1972), 23-25.
+%D B. Grünbaum, Arrangements and Spreads, CBMS Regional Conference Series in Mathematics 10, AMS, Providence, 1972.
+%D L. M. Kelly and W. O. J. Moser, On the number of ordinary lines determined by n points, Canad. J. Math. 10 (1958), 210-219.
+%D P. Salamon and P. Erdős, The solution to a problem of Grünbaum, Canad. Math. Bull. 31 (1988), 129-138.
+%H Petra Radko, How n Lines Can Meet, https://gwynerva.github.io/line-pencils/ (2026); the sequence of point counts with proofs: https://gwynerva.github.io/line-pencils/sequences/points/
+%H Petra Radko, Verification: definitions, certificates, how each term is established, https://github.com/Gwynerva/line-pencils/blob/main/VERIFY.md
+%H Petra Radko, Code, certificates and logs, https://github.com/Gwynerva/line-pencils
+%e For n = 4 the possible numbers of points are 1, 4, 6, so a(4) = 3: four lines not all concurrent have at least four points, and 5 is impossible because a point on three lines removes two points at once.
+%e For n = 5 the possible numbers are 1, 5, 6, 8, 10, so a(5) = 5.
+%o (Python) See the links.
+%Y Cf. A072964, A003035, A129230, [B], [C].
+%K nonn,hard,more

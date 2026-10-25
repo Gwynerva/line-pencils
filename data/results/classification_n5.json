@@ -1,0 +1,72 @@
+[
+{
+"type": [],
+"f0": 10,
+"t2": 10,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+5
+],
+"f0": 1,
+"t2": 0,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+4
+],
+"f0": 5,
+"t2": 4,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+4,
+3
+],
+"f0": 3,
+"t2": 1,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+3
+],
+"f0": 8,
+"t2": 7,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+3,
+3
+],
+"f0": 6,
+"t2": 4,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+3,
+3,
+3
+],
+"f0": 4,
+"t2": 1,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+}
+]

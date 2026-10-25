@@ -1,0 +1,5 @@
+n=12 type {6, 3^14}
+  [20s] linear space #1 not realized numerically
+  [41s] linear space #2 not realized numerically
+  [59s] linear space #3 not realized numerically
+  [73s] linear space #4 not realized numerically

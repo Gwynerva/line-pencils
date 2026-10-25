@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" role="img"><title>The Moebius-Kantor configuration (8_3) on Z/8: lines {i, i+1, i+3}; drawn abstractly, curved where straightness fails</title>
+<path d="M 244.9 75.1 Q 145.1 92.4 105.0 160.0" class="fig-curve"/>
+<path d="M 160.0 105.0 Q 32.7 -24.6 75.1 244.9" class="fig-curve"/>
+<path d="M 75.1 75.1 Q 92.4 174.9 160.0 215.0" class="fig-curve"/>
+<path d="M 105.0 160.0 Q -24.6 287.3 244.9 244.9" class="fig-curve"/>
+<path d="M 75.1 244.9 Q 174.9 227.6 215.0 160.0" class="fig-curve"/>
+<path d="M 160.0 215.0 Q 287.3 344.6 244.9 75.1" class="fig-curve"/>
+<path d="M 244.9 244.9 Q 227.6 145.1 160.0 105.0" class="fig-curve"/>
+<path d="M 215.0 160.0 Q 344.6 32.7 75.1 75.1" class="fig-curve"/>
+<circle cx="244.9" cy="75.1" r="5.5" class="fig-pt"/>
+<circle cx="160.0" cy="105.0" r="5.5" class="fig-pt"/>
+<circle cx="75.1" cy="75.1" r="5.5" class="fig-pt"/>
+<circle cx="105.0" cy="160.0" r="5.5" class="fig-pt"/>
+<circle cx="75.1" cy="244.9" r="5.5" class="fig-pt"/>
+<circle cx="160.0" cy="215.0" r="5.5" class="fig-pt"/>
+<circle cx="244.9" cy="244.9" r="5.5" class="fig-pt"/>
+<circle cx="215.0" cy="160.0" r="5.5" class="fig-pt"/>
+</svg>

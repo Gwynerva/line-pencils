@@ -1,0 +1,24 @@
+invariant classes: 4
+class 1 [[0, 1, 2, 3, 4, 5], [0, 10, 11], [1, 7, 8], [1, 9, 10], [2, 6, 7], [2, 9, 11], [3, 6, 9], [3, 7, 11], [3, 8, 10], [4, 6, 10], [4, 7, 9], [4, 8, 11], [5, 6, 11], [5, 7, 10], [5, 8, 9]]
+frame (0, 1, 6, 7) unknowns 12 equations 14
+numerical solutions sampled: 47 ; hitting set of collapsing triples: [(7, 10, 11), (0, 6, 8)] ; uncovered: 0
+  product over triples [(7, 10, 11)] in the radical: False (8s)
+  product over triples [(7, 10, 11), (0, 6, 8)] in the radical: True (8s)
+PROVED [[7, 10, 11], [0, 6, 8]] 7.9
+class 2 [[0, 1, 2, 3, 4, 5], [0, 8, 9], [0, 10, 11], [1, 8, 10], [1, 9, 11], [2, 6, 8], [2, 7, 11], [3, 6, 9], [3, 7, 10], [4, 6, 10], [4, 7, 9], [4, 8, 11], [5, 6, 11], [5, 7, 8], [5, 9, 10]]
+frame (0, 1, 6, 7) unknowns 12 equations 14
+numerical solutions sampled: 57 ; hitting set of collapsing triples: [(7, 10, 11)] ; uncovered: 0
+  product over triples [(7, 10, 11)] in the radical: True (1s)
+PROVED [[7, 10, 11]] 0.8
+class 3 [[0, 1, 2, 3, 4, 5], [0, 8, 9], [0, 10, 11], [1, 7, 8], [1, 9, 10], [2, 6, 7], [2, 9, 11], [3, 6, 9], [3, 7, 11], [3, 8, 10], [4, 6, 10], [4, 7, 9], [4, 8, 11], [5, 6, 11], [5, 7, 10]]
+frame (0, 1, 6, 7) unknowns 12 equations 14
+numerical solutions sampled: 38 ; hitting set of collapsing triples: [(7, 10, 11)] ; uncovered: 0
+  product over triples [(7, 10, 11)] in the radical: True (0s)
+PROVED [[7, 10, 11]] 0.5
+class 4 [[0, 1, 2, 3, 4, 5], [0, 8, 9], [0, 10, 11], [1, 7, 8], [1, 9, 10], [2, 6, 7], [2, 8, 10], [2, 9, 11], [3, 6, 8], [3, 7, 11], [4, 6, 9], [4, 7, 10], [5, 6, 10], [5, 7, 9], [5, 8, 11]]
+frame (0, 1, 6, 7) unknowns 12 equations 14
+numerical solutions sampled: 59 ; hitting set of collapsing triples: [(7, 10, 11), (1, 6, 11)] ; uncovered: 0
+  product over triples [(7, 10, 11)] in the radical: False (0s)
+  product over triples [(7, 10, 11), (1, 6, 11)] in the radical: True (0s)
+PROVED [[7, 10, 11], [1, 6, 11]] 0.5
+ALL PROVED

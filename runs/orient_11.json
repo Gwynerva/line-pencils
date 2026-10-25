@@ -1,0 +1,65 @@
+{
+"4,3,3,3,3,3,3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=24882034 leaves=140448 orientable=0 checks=140448 fails=140448 tcheck=195.8 satnodes=0",
+"mode": 4,
+"secs": 1800.0,
+"status": "NO",
+"time": 206.41
+},
+"4,4,3,3,3,3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=94392497 leaves=429168 orientable=0 checks=429168 fails=429168 tcheck=428.2 satnodes=0",
+"mode": 4,
+"secs": 1800.0,
+"status": "NO",
+"time": 458.33
+},
+"4,4,4,3,3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=133385485 leaves=502416 orientable=0 checks=502416 fails=502416 tcheck=535.1 satnodes=0",
+"mode": 4,
+"secs": 1800.0,
+"status": "NO",
+"time": 579.48
+},
+"4,4,4,4,4,4,3,3,3": {
+"info": "NO nodes=8167117 leaves=12528 orientable=0 checks=12528 fails=12528 tcheck=19.4 satnodes=0",
+"mode": 4,
+"secs": 1800.0,
+"status": "NO",
+"time": 22.59
+},
+"5,4,3,3,3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=2078077 leaves=16608 orientable=0 checks=16608 fails=16608 tcheck=16.4 satnodes=0",
+"mode": 4,
+"secs": 1800.0,
+"status": "NO",
+"time": 16.97
+},
+"5,4,4,4,3,3,3,3,3,3": {
+"info": "NO nodes=4784896 leaves=23232 orientable=0 checks=23232 fails=23232 tcheck=32.2 satnodes=0",
+"mode": 4,
+"secs": 1800.0,
+"status": "NO",
+"time": 33.96
+},
+"5,4,4,4,4,3,3,3": {
+"info": "NO nodes=1205985 leaves=624 orientable=0 checks=624 fails=624 tcheck=1.0 satnodes=0",
+"mode": 4,
+"secs": 1800.0,
+"status": "NO",
+"time": 1.51
+},
+"5,5,3,3,3,3,3,3,3,3,3": {
+"info": "NO nodes=1985307 leaves=2160 orientable=0 checks=2160 fails=2160 tcheck=3.6 satnodes=0",
+"mode": 4,
+"secs": 1800.0,
+"status": "NO",
+"time": 4.38
+},
+"5,5,4,3,3,3,3,3,3": {
+"info": "NO nodes=7590405 leaves=2304 orientable=0 checks=2304 fails=2304 tcheck=3.8 satnodes=0",
+"mode": 4,
+"secs": 1800.0,
+"status": "NO",
+"time": 7.03
+}
+}

@@ -1,0 +1,16 @@
+name: verify certificates
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: self-tests of the verifier
+        run: python verifier/verify.py --self-test
+      - name: verify every certificate in the repository
+        run: python verifier/verify.py data/certificates/n*.json
+      - name: certificate checksums
+        run: sha256sum -c data/CHECKSUMS.txt

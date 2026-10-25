@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.exe
+*.o
+engine/ls
+site/
+.cache/
+*.tmp
+runs/**/partial/
+runs/enum_*.txt
+.claude/

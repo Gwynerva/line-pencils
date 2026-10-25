@@ -1,0 +1,809 @@
+[
+{
+"type": [],
+"f0": 28,
+"t2": 28,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+8
+],
+"f0": 1,
+"t2": 0,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+7
+],
+"f0": 8,
+"t2": 7,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+7,
+4
+],
+"f0": 3,
+"t2": 1,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+7,
+3
+],
+"f0": 6,
+"t2": 4,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+7,
+3,
+3
+],
+"f0": 4,
+"t2": 1,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+6
+],
+"f0": 14,
+"t2": 13,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+6,
+5
+],
+"f0": 5,
+"t2": 3,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+6,
+5,
+3
+],
+"f0": 3,
+"t2": 0,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+6,
+4
+],
+"f0": 9,
+"t2": 7,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+6,
+4,
+4
+],
+"f0": 4,
+"t2": 1,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+6,
+4,
+3
+],
+"f0": 7,
+"t2": 4,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+6,
+4,
+3,
+3
+],
+"f0": 5,
+"t2": 1,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+6,
+3
+],
+"f0": 12,
+"t2": 10,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+6,
+3,
+3
+],
+"f0": 10,
+"t2": 7,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+6,
+3,
+3,
+3
+],
+"f0": 8,
+"t2": 4,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+6,
+3,
+3,
+3,
+3
+],
+"f0": 6,
+"t2": 1,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5
+],
+"f0": 19,
+"t2": 18,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+5,
+5
+],
+"f0": 10,
+"t2": 8,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+5,
+4
+],
+"f0": 5,
+"t2": 2,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+5,
+3
+],
+"f0": 8,
+"t2": 5,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+5,
+3,
+3
+],
+"f0": 6,
+"t2": 2,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+4
+],
+"f0": 14,
+"t2": 12,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+5,
+4,
+4
+],
+"f0": 9,
+"t2": 6,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+4,
+4,
+4
+],
+"f0": 4,
+"t2": 0,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+4,
+4,
+3
+],
+"f0": 7,
+"t2": 3,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+4,
+4,
+3,
+3
+],
+"f0": 5,
+"t2": 0,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+4,
+3
+],
+"f0": 12,
+"t2": 9,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+4,
+3,
+3
+],
+"f0": 10,
+"t2": 6,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+4,
+3,
+3,
+3
+],
+"f0": 8,
+"t2": 3,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+4,
+3,
+3,
+3,
+3
+],
+"f0": 6,
+"t2": 0,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+3
+],
+"f0": 17,
+"t2": 15,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+5,
+3,
+3
+],
+"f0": 15,
+"t2": 12,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+5,
+3,
+3,
+3
+],
+"f0": 13,
+"t2": 9,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+5,
+3,
+3,
+3,
+3
+],
+"f0": 11,
+"t2": 6,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+3,
+3,
+3,
+3,
+3
+],
+"f0": 9,
+"t2": 3,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+5,
+3,
+3,
+3,
+3,
+3,
+3
+],
+"f0": 7,
+"t2": 0,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+4
+],
+"f0": 23,
+"t2": 22,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+4,
+4
+],
+"f0": 18,
+"t2": 16,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+4,
+4,
+4
+],
+"f0": 13,
+"t2": 10,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+4,
+4,
+4,
+4
+],
+"f0": 8,
+"t2": 4,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+4,
+4,
+4,
+4,
+3
+],
+"f0": 6,
+"t2": 1,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+4,
+4,
+4,
+3
+],
+"f0": 11,
+"t2": 7,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+4,
+4,
+4,
+3,
+3
+],
+"f0": 9,
+"t2": 4,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+4,
+4,
+4,
+3,
+3,
+3
+],
+"f0": 7,
+"t2": 1,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+4,
+4,
+3
+],
+"f0": 16,
+"t2": 13,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+4,
+4,
+3,
+3
+],
+"f0": 14,
+"t2": 10,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+4,
+4,
+3,
+3,
+3
+],
+"f0": 12,
+"t2": 7,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+4,
+4,
+3,
+3,
+3,
+3
+],
+"f0": 10,
+"t2": 4,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+4,
+4,
+3,
+3,
+3,
+3,
+3
+],
+"f0": 8,
+"t2": 1,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+4,
+3
+],
+"f0": 21,
+"t2": 19,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+4,
+3,
+3
+],
+"f0": 19,
+"t2": 16,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+4,
+3,
+3,
+3
+],
+"f0": 17,
+"t2": 13,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+4,
+3,
+3,
+3,
+3
+],
+"f0": 15,
+"t2": 10,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+4,
+3,
+3,
+3,
+3,
+3
+],
+"f0": 13,
+"t2": 7,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+4,
+3,
+3,
+3,
+3,
+3,
+3
+],
+"f0": 11,
+"t2": 4,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+4,
+3,
+3,
+3,
+3,
+3,
+3,
+3
+],
+"f0": 9,
+"t2": 1,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+},
+{
+"type": [
+3
+],
+"f0": 26,
+"t2": 25,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+3,
+3
+],
+"f0": 24,
+"t2": 22,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+3,
+3,
+3
+],
+"f0": 22,
+"t2": 19,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+3,
+3,
+3,
+3
+],
+"f0": 20,
+"t2": 16,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+3,
+3,
+3,
+3,
+3
+],
+"f0": 18,
+"t2": 13,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+3,
+3,
+3,
+3,
+3,
+3
+],
+"f0": 16,
+"t2": 10,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+3,
+3,
+3,
+3,
+3,
+3,
+3
+],
+"f0": 14,
+"t2": 7,
+"linear_space": "YES",
+"verdict": "real",
+"field_d": 0
+},
+{
+"type": [
+3,
+3,
+3,
+3,
+3,
+3,
+3,
+3
+],
+"f0": 12,
+"t2": 4,
+"linear_space": "YES",
+"verdict": "non-orientable"
+},
+{
+"type": [
+3,
+3,
+3,
+3,
+3,
+3,
+3,
+3,
+3
+],
+"f0": 10,
+"t2": 1,
+"linear_space": "NO",
+"verdict": "no-linear-space"
+}
+]

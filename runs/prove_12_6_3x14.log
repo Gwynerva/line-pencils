@@ -1,0 +1,19 @@
+class 1/4 (34560 labelled copies)
+frame (0, 1, 6, 7) unknowns 12 equations 14
+numerical solutions sampled: 47 ; hitting set of collapsing triples: [(7, 10, 11), (0, 6, 8)] ; uncovered: 0
+  product over triples [(7, 10, 11)] in the radical: False (8s)
+  product over triples [(7, 10, 11), (0, 6, 8)] in the radical: True (8s)
+class 2/4 (14400 labelled copies)
+frame (0, 1, 6, 7) unknowns 12 equations 14
+numerical solutions sampled: 57 ; hitting set of collapsing triples: [(7, 10, 11)] ; uncovered: 0
+  product over triples [(7, 10, 11)] in the radical: True (1s)
+class 3/4 (57600 labelled copies)
+frame (0, 1, 6, 7) unknowns 12 equations 14
+numerical solutions sampled: 38 ; hitting set of collapsing triples: [(7, 10, 11)] ; uncovered: 0
+  product over triples [(7, 10, 11)] in the radical: True (0s)
+class 4/4 (28800 labelled copies)
+frame (0, 1, 6, 7) unknowns 12 equations 14
+numerical solutions sampled: 59 ; hitting set of collapsing triples: [(7, 10, 11), (1, 6, 11)] ; uncovered: 0
+  product over triples [(7, 10, 11)] in the radical: False (0s)
+  product over triples [(7, 10, 11), (1, 6, 11)] in the radical: True (1s)
+{6, 3^14} NOT REALIZABLE: every orientable linear space of this type is proved non-realizable (10s)
