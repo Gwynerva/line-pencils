@@ -109,8 +109,18 @@ def banner(W, H, dark, L, path):
     SUB = "Pencil types of line arrangements and the integer sequences they generate"
     te = x0 + max(title.getlength("How n Lines Can Meet"), sub.getlength(SUB))   # right edge of the text
     # the arrangement fills the height and the right part; behind the text it is almost transparent
-    cx = max(w - h * 0.62, te + h * 0.30)
-    art = arrangement_layer(L, w, h, int(cx), h // 2, h * 0.44, line_col, pts, max(2, SS), 4.2 * SS)
+    # scale and centre by the intersection points, keeping 9% of the height free above and below
+    P = []
+    for (a1, b1, c1), (a2, b2, c2) in itertools.combinations(L, 2):
+        det = a1 * b2 - a2 * b1
+        if abs(det) > 1e-12:
+            P.append(((-c1 * b2 + c2 * b1) / det, (-a1 * c2 + a2 * c1) / det))
+    ylo, yhi = min(y for _, y in P), max(y for _, y in P)
+    xlo, xhi = min(x for x, _ in P), max(x for x, _ in P)
+    R = min(h * 0.82 / (yhi - ylo), w * 0.36 / (xhi - xlo))
+    cy = h / 2 + (ylo + yhi) / 2 * R
+    cx = w - h * 0.09 - xhi * R                      # rightmost point 9% of the height from the right edge
+    art = arrangement_layer(L, w, h, int(cx), int(cy), R, line_col, pts, int(2.2 * SS), 6.5 * SS)
     ramp = Image.new("L", (w, h), 255)
     rise = int(h * 0.30)                              # width of the transition after the text
     ramp.paste(28, (0, 0, int(te), h))
