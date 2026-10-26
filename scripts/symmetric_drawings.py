@@ -19,7 +19,8 @@ drawing with the largest symmetry group, then the best ratio (smallest distance 
 
 The drawings are floating-point realizations of the type, not certificates: the certified coordinates are in
 data/certificates, and the two arrangements need not be projectively equivalent.  scripts/build_gallery_data.py
-checks every drawing with the same tolerance as the certified drawings.
+checks every drawing with the same tolerance as the certified drawings.  A single pencil {n} gets no symmetric
+drawing: every drawing of it is the same fan of lines.
 
 usage: python scripts/symmetric_drawings.py [NMAX] [WORKERS]       -> data/symmetric_drawings.json
 """
@@ -230,8 +231,8 @@ def process(args):
             continue                     # a line at infinity or two parallel lines
         n = bin(mask).count("1")
         t = tuple(sorted((x for x in (bin(mask & q).count("1") for q in pts) if x >= 3), reverse=True))
-        if t not in certified.get(n, ()):
-            continue
+        if t not in certified.get(n, ()) or t == (n,):
+            continue                     # unknown type, or a single pencil (looks the same in every drawing)
         if (n, t) in best:
             continue                     # one drawing per type and view; views compete in main()
         fin = finish(chart([P[q] for q in range(len(P)) if mask >> q & 1], c))
