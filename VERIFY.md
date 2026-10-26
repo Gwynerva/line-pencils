@@ -27,10 +27,10 @@ the finitely many intersection points.
 | n | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | b(n) | 1 | 1 | 2 | 3 | 5 | 9 | 17 | 29 | 56 | 106 | 202 | 384 | ≥ 662 |
-| c(n) | 1 | 1 | 2 | 3 | 5 | 9 | 16 | 28 | 53 | 98 | 180 | 335–337 | 600–659 |
+| c(n) | 1 | 1 | 2 | 3 | 5 | 9 | 16 | 28 | 53 | 98 | 180 | 336 | 620–659 |
 | d(n) | 1 | 1 | 2 | 3 | 5 | 9 | 13 | 18 | 24 | 30 | 38 | 46 | 56 |
 
-Only exact values are submitted: b(n) for n ≤ 12, c(n) for n ≤ 11, d(n) for n ≤ 13. For comparison, the number of
+Only exact values are submitted: b(n) for n ≤ 12, c(n) for n ≤ 12, d(n) for n ≤ 13. For comparison, the number of
 multisets allowed by arithmetic alone (sum of k_i(k_i−1)/2 at most n(n−1)/2) is A072964(n−1):
 1, 1, 2, 4, 7, 15, 32, 66, 141, 295, 619, 1286, 2654.
 
@@ -59,7 +59,12 @@ non-realizable multiset is excluded by one of the following, recorded per multis
   Gröbner-basis certificate that any realization carries an extra collinearity (`data/proofs/`);
 * a computation for {3^20}: its linear spaces on 12 points are exactly the Steiner triple systems of order 13 with
   one point deleted; all 26 deletions of the two such systems are non-orientable (`scripts/orchard12.py`). This agrees
-  with the orchard number 19 for 12 points (A003035).
+  with the orchard number 19 for 12 points (A003035);
+* a computation for {4^5, 3^9}: the five 4-pencils can sit in only 8 ways on 12 lines, and for each of them SAT shows
+  that no linear space of the type admits a chirotope; three solvers agree (`scripts/orient_split.py`,
+  `runs/orient_split_12.json`);
+* for n = 13, the band theorem (`notes/bands.md`): a type whose largest pencil has n − k lines must come from a type of
+  k lines by absorbing points (`data/exclusions.json`, kind `theorem`).
 
 Each multiset gets exactly one verdict in the classification file. The names used there are:
 
@@ -88,9 +93,9 @@ python verifier/verify.py data/certificates/n*.json
 python scripts/classify.py 13
 ```
 
-The first command runs the verifier's own tests. The second prints `verified 1332 certificates, 0 rejected` and the
-number of distinct certified types for each n: 2, 3, 5, 9, 16, 28, 53, 98, 180, 335, 600 for n = 3, ..., 13, plus 3
-sample arrangements for n = 14 used on the site.
+The first command runs the verifier's own tests. The second prints `verified 2454 certificates, 0 rejected` and the
+number of distinct certified types for each n: 2, 3, 5, 9, 16, 28, 53, 98, 180, 336, 620 for n = 3, ..., 13, and 1104
+for n = 14 (a lower bound for c(14)).
 
 The third recomputes all four sequences from the certificates, the theorem filters and the search logs. For each n it
 prints the four terms and how many multisets received each verdict, then the four sequences, with an interval

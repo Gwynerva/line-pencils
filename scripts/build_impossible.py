@@ -28,6 +28,7 @@ REASON = {
     "literature": "orchard problem: twelve lines have at most 19 triple points (Burr, Grünbaum, Sloane 1974)",
 }
 ORCH = "none of its five linear spaces (Steiner triple systems of order 13 minus a point) admits an orientation ([Proposition C3a](theorems.md))"
+SPLIT = "none of its linear spaces admits an orientation: an exhaustive SAT check over the 8 possible configurations of the five 4-pencils ([Proposition C3b](theorems.md))"
 BAND = "band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands))"
 
 
@@ -72,7 +73,7 @@ def main(nmax):
             out.append("| type | points | why it cannot be drawn |\n|---|---|---|")
             for r in sorted(special, key=lambda r: (-sum(r["type"]), r["type"])):
                 ref = r.get("reference", "")
-                why = BAND if "bands" in ref else ORCH if "orchard12" in ref else REASON[r["verdict"]]
+                why = BAND if "bands" in ref else ORCH if "orchard12" in ref else SPLIT if "orient_split" in ref else REASON[r["verdict"]]
                 out.append(f"| {utype(r['type'])} | {r['f0']} | {why} |")
             out.append("")
         openr = [r for r in rows if r["verdict"] == "open"]

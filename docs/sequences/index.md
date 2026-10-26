@@ -16,10 +16,9 @@ How each column is established:
   A072964 ([details](arithmetic.md)).
 * **$b(n)$** is <span class="status-computed">computer-verified</span>: an exhaustive search over linear spaces decides every
   admissible type, with no time-outs, and a SAT solver re-derives the same answers ([details](combinatorial.md)).
-* **$c(n)$** for $n \le 11$ is <span class="status-computed">computer-verified</span>: every realizable type has an exact
+* **$c(n)$** for $n \le 12$ is <span class="status-computed">computer-verified</span>: every realizable type has an exact
   certificate checked by the verifier, every other type is excluded by a theorem or by the exhaustive orientability
-  search. For $n = 12$: 335 certificates and 2 undecided types ([details](realizable.md)); for $n = 13$: 600
-  certificates and 59 undecided types.
+  search ([details](realizable.md)). For $n = 13$: 620 certificates and 39 undecided types.
 * **$d(n)$** combines certificates (a value is attained) with theorems (a value is impossible); for $n \le 13$ every value
   is decided ([details](points.md)). The term $d(12) = 46$ uses the non-realizability of the three types with
   $21$ points that pass both the combinatorial test and Melchior's inequality: $\{4^9\}$ by a theorem, $\{5^2, 4^3, 3^6\}$ and $\{5^3, 3^9\}$ by the orientability search.

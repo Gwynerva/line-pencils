@@ -12,7 +12,7 @@ the last two.
 
 --8<-- "fig/sieves.svg"
 
-<figcaption>Twelve lines: 1286 types pass the arithmetic test, 384 pass the combinatorial test, between 335 and 337 are realizable.</figcaption>
+<figcaption>Twelve lines: 1286 types pass the arithmetic test, 384 pass the combinatorial test, 336 are realizable.</figcaption>
 </figure>
 
 ## Sieve 1: arithmetic
@@ -108,4 +108,4 @@ but not realizable ([Theorems C4, C5](theorems.md#lines-vs-pseudolines)).
 | 9 | 141 | 56 | 53 | dual Hesse $\{3^{12}\}$, $\{3^{11}\}$, $\{4^2, 3^7\}$ |
 | 10 | 295 | 106 | 98 | eight types, e.g. $\{3^{13}\}$ |
 | 11 | 619 | 202 | 180 | 22 types |
-| 12 | 1286 | 384 | 335 … 337 | 47 to 49 types; see [what cannot be drawn](impossible.md) |
+| 12 | 1286 | 384 | 336 | 48 types; see [what cannot be drawn](impossible.md) |

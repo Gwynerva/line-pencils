@@ -44,7 +44,7 @@ multiplicity is at most $\max_p \mu'(p) + 1 \le m$. $\square$
 applies. $\square$
 
 $N(k)$ for $k = 0, \dots, 8$: $1, 1, 2, 5, 12, 30, 74, 176, 401$ (`python scripts/bands.py --table 8`; computed from the
-certified types of $k$ lines, so these values are exact for $k \le 11$ and lower bounds beyond). The data for
+certified types of $k$ lines, so these values are exact for $k \le 12$ and lower bounds beyond). The data for
 $n = 11, 12, 13$ agree with the theorem in its range of validity ($k \le 4$) and, as it happens, also for $k = 5$ at
 $n = 11, 12$.
 
@@ -62,7 +62,8 @@ $1 + 1 + 2 + 5 + 12 = 21$; with size $\ge n-5$ for $n \ge 15$: $51$; etc. Summin
 $$ c(n) \;\ge\; \sum_{k \,:\, n - k \ge \max(\binom k2,\, k+1)} N(k), $$
 and the lower bound $\log N(k) \gtrsim$ … is of the same order as the trivial bound. More importantly, part (1) is a
 **necessary condition for realizability** that is independent of the three sieves and very effective in practice:
-at $n = 13$ it excludes 41 types that survive the arithmetic, combinatorial and inequality sieves
+at $n = 13$ it excludes 28 types that survive the arithmetic, combinatorial and inequality sieves (41 before more of
+the combinatorial searches finished)
 (`data/exclusions.json`, kind `theorem`, reference this note), and the construction of Lemma 2 produced the missing
 certificates $\{8, 6\}$, $\{7^2\}$, $\{7, 4^4, 3^3\}$ (`scripts/bands.py 13`).
 

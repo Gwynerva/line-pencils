@@ -2,7 +2,7 @@
 
 usage: python scripts/build_tables.py
 Produces:
-  snippets/open12.md       table of the undecided / recently decided types for n = 12
+  snippets/open12.md       table of the types for n = 12 that pass the inequalities but were hard to decide
   snippets/sequences.md    the main sequence table with per-term status
   snippets/counts.md       a(n), b(n), c(n), d(n) one-line summaries used in several pages
 """
@@ -42,25 +42,31 @@ for src in ("runs/orient_12.json", "runs/sat_orient_12.json"):
         if v.get("status") in ("YES", "NO"):
             orient[k] = (v["status"], src.split("/")[-1], v.get("time"))
 lines = ["| type | $f_0$ | orientable? | status |", "|---|---|---|---|"]
-notes = {
-    "6,4,3,3,3,3,3,3,3,3,3,3,3,3": "orientable (engine, SAT); numerical realization of its orientable linear spaces failed so far",
-    "6,3,3,3,3,3,3,3,3,3,3,3,3,3,3": "orientable; engine enumeration of its orientable linear spaces, none realized numerically so far",
-    "3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3": "85 non-isomorphic orientable linear spaces tried; numerically, every attempt degenerates",
-}
-sel = [r for r in rows if r["verdict"] in ("open", "non-orientable", "non-realizable-proved", "theorem", "literature")]
-for r in sorted(sel, key=lambda r: (r["verdict"] != "open", -sum(r["type"]), r["type"])):
+notes = {}
+recent = {"3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3": "realizable: found by the zone walk ([algorithms](../algorithms.md#zone-walk)), integer coefficients"}
+sel = [r for r in rows if r["verdict"] in ("open", "non-orientable", "non-realizable-proved", "theorem", "literature")
+       or key(tuple(r["type"])) in recent]
+for r in sorted(sel, key=lambda r: (r["verdict"] != "open", key(tuple(r["type"])) not in recent, -sum(r["type"]), r["type"])):
     t = tuple(r["type"]); k = key(t)
     o = orient.get(k)
-    if o is None:
+    if "orient_split" in r.get("reference", "") or "orchard12" in r.get("reference", ""):
+        ostr = "no"
+    elif o is None:
         ostr = "—"
     else:
         ostr = "no" if o[0] == "NO" else "yes"
-    if r["verdict"] == "open":
+    if k in recent:
+        st = recent[k]
+    elif r["verdict"] == "open":
         st = "**undecided**: " + notes.get(k, "the orientability search did not finish")
     elif r["verdict"] == "non-orientable":
         st = "not realizable: no orientable linear space"
     elif r["verdict"] == "non-realizable-proved":
         st = "not realizable although orientable: Gröbner certificate for every orientable linear space ([Theorems C4, C5](../theorems.md#lines-vs-pseudolines))"
+    elif r["verdict"] == "theorem" and "orchard12" in r.get("reference", ""):
+        st = "not realizable: none of its linear spaces is orientable ([Proposition C3a](../theorems.md))"
+    elif r["verdict"] == "theorem" and "orient_split" in r.get("reference", ""):
+        st = "not realizable: none of its linear spaces is orientable ([Proposition C3b](../theorems.md))"
     elif r["verdict"] == "theorem":
         st = "not realizable: theorem (dual Hesse configuration + Sylvester–Gallai)"
     else:

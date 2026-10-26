@@ -49,7 +49,7 @@ sizes $k_i$ is exactly the combinatorial skeleton of a set of $n$ points with li
 |---|---|---|
 | $a(n)$ | number of arithmetically admissible types for $n$ lines | 1, 1, 2, 4, 7, 15, 32, 66, 141, 295, 619, 1286 |
 | $b(n)$ | number of types admitting a linear space | 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384 |
-| $c(n)$ | number of types of arrangements of $n$ real lines | 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180 |
+| $c(n)$ | number of types of arrangements of $n$ real lines | 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336 |
 | $d(n)$ | number of distinct values of $f_0$ over arrangements of $n$ lines | 1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56 |
 | $V(n)$ | the set of values of $f_0$; $d(n) = \lvert V(n) \rvert$ | |
 | $A_n$ | the set of arithmetically admissible types; $a(n) = \lvert A_n\rvert$ | |

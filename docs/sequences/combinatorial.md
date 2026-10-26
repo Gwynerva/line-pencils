@@ -24,7 +24,7 @@ linear spaces on $n$ elements (compare A001200, which counts the linear spaces t
 
 ## Terms
 
-$b(n)$ for $n = 1, \dots, 12$: **1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384**; for $n = 13$: <span class="status-bound">662 … 2100</span>.
+$b(n)$ for $n = 1, \dots, 12$: **1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384**; for $n = 13$: <span class="status-bound">662 … 2087</span>.
 The arithmetic sieve loses $0, 0, 0, 1, 2, 6, 15, 37, 85, 189, 417, 902$ types to the combinatorial one.
 
 All terms through $n = 12$ are <span class="status-computed">computer-verified</span>:

@@ -1,7 +1,8 @@
 /* Interactive drawings of line arrangements.
  *
  * Data: assets/data/gallery.json, written by scripts/build_gallery_data.py. Every arrangement is a list of lines
- * a x + b y + c = 0 (floats, already placed by a projective transformation chosen for legibility). The intersection
+ * a x + b y + c = 0 (floats, already placed by a projective transformation chosen for legibility): "L" is the
+ * certified arrangement, "S" (where present) a symmetric drawing of the same type. The intersection
  * points and the lines through each of them are computed here, with the same tolerance that the build script uses to
  * check that the drawing reproduces the certified type.
  *
@@ -140,13 +141,25 @@
   }
 
   /* ---------- gallery ---------- */
+  const MODES = { beautiful: "Beautiful", exact: "Exact" };
+  const pick = (it, mode) => (mode === "beautiful" && it.S ? it.S : it.L);
+  function symText(it) { return it.rot >= 3 ? "a symmetry group of order " + it.sym : "a mirror symmetry"; }
   function gallery(root) {
     data().then(D => {
       const ns = Object.keys(D.n).map(Number).sort((a, b) => a - b);
-      let cur = 10;
+      let cur = 10, mode = "beautiful";
       try { const v = +localStorage.getItem("lp-n"); if (D.n[v]) cur = v; } catch (e) {}
-      root.innerHTML = `<div class="lp-chips" role="tablist"></div><p class="lp-summary"></p><div class="lp-grid"></div>`;
-      const chips = root.querySelector(".lp-chips"), grid = root.querySelector(".lp-grid"), summ = root.querySelector(".lp-summary");
+      try { const m = localStorage.getItem("lp-mode"); if (MODES[m]) mode = m; } catch (e) {}
+      root.innerHTML = `<div class="lp-modes" role="tablist" aria-label="Drawing style"></div><p class="lp-modenote"></p>` +
+        `<div class="lp-chips lp-ns" role="tablist" aria-label="Number of lines"></div><p class="lp-summary"></p><div class="lp-grid"></div>`;
+      const chips = root.querySelector(".lp-ns"), grid = root.querySelector(".lp-grid"), summ = root.querySelector(".lp-summary");
+      const modes = root.querySelector(".lp-modes"), note = root.querySelector(".lp-modenote");
+      Object.keys(MODES).forEach(m => {
+        const b = document.createElement("button");
+        b.type = "button"; b.className = "lp-chip lp-mode"; b.dataset.mode = m; b.textContent = MODES[m]; b.setAttribute("role", "tab");
+        b.addEventListener("click", () => { mode = m; try { localStorage.setItem("lp-mode", m); } catch (e) {} show(cur); });
+        modes.appendChild(b);
+      });
       ns.forEach(n => {
         const b = document.createElement("button");
         b.type = "button"; b.className = "lp-chip"; b.textContent = n; b.setAttribute("role", "tab");
@@ -156,28 +169,35 @@
       const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => {
         if (!e.isIntersecting) return;
         const card = e.target; io.unobserve(card);
-        card.querySelector(".lp-art").appendChild(draw(card._it.L));
+        card.querySelector(".lp-art").appendChild(draw(pick(card._it, mode)));
       }), { rootMargin: "300px" }) : null;
       function show(n) {
         cur = n;
         try { localStorage.setItem("lp-n", n); } catch (e) {}
         chips.querySelectorAll(".lp-chip").forEach(c => c.setAttribute("aria-selected", +c.textContent === n ? "true" : "false"));
+        modes.querySelectorAll(".lp-mode").forEach(c => c.setAttribute("aria-selected", c.dataset.mode === mode ? "true" : "false"));
+        note.textContent = mode === "beautiful"
+          ? "Symmetric drawings, built from regular polygons, the symmetry axes of polyhedra and sections of 4-dimensional mirror arrangements. Types without one are drawn as under Exact."
+          : "The certified arrangements, drawn from their exact coordinates.";
         const items = D.n[n];
         const f0s = [...new Set(items.map(it => it.f0))].sort((a, b) => a - b);
+        const nsym = items.filter(it => it.S).length;
         summ.textContent = n <= 2
           ? (n === 1 ? "One line: no intersection point." : "Two lines: one intersection point.")
           : `${items.length} pencil types drawn for ${n} lines; numbers of intersection points: ${f0s.join(", ")}.` +
-            (n >= 12 ? " For this n the list is a lower bound." : "");
+            (mode === "beautiful" ? ` ${nsym} of them have a symmetric drawing.` : "") +
+            (n >= 13 ? " For this n the list is a lower bound." : "");
         grid.innerHTML = "";
         items.forEach(it => {
           const card = document.createElement("button");
           card.type = "button"; card.className = "lp-card";
-          card.innerHTML = `<div class="lp-art"></div><div class="lp-cap"><span class="lp-type">${typeText(n, it.type)}</span><span class="lp-meta">f₀ = ${it.f0}${it.d ? " · " + FIELD(it.d) : ""}</span></div>`;
+          const sym = mode === "beautiful" && it.S ? " · " + (it.rot >= 3 ? "order " + it.sym : "mirror") : "";
+          card.innerHTML = `<div class="lp-art"></div><div class="lp-cap"><span class="lp-type">${typeText(n, it.type)}</span><span class="lp-meta">f₀ = ${it.f0}${it.d ? " · " + FIELD(it.d) : ""}${sym}</span></div>`;
           card.setAttribute("aria-label", `Type ${typeText(n, it.type, true, false)}, ${it.f0} intersection points`);
           card._it = it;
-          card.addEventListener("click", () => modal(n, it));
+          card.addEventListener("click", () => modal(n, it, mode));
           grid.appendChild(card);
-          if (io) io.observe(card); else card.querySelector(".lp-art").appendChild(draw(it.L));
+          if (io) io.observe(card); else card.querySelector(".lp-art").appendChild(draw(pick(it, mode)));
         });
       }
       show(cur);
@@ -194,7 +214,8 @@
   }
 
   /* ---------- modal ---------- */
-  function modal(n, it) {
+  function modal(n, it, mode) {
+    if (!it.S) mode = "exact";
     const m = document.createElement("div");
     m.className = "lp-modal"; m.setAttribute("role", "dialog"); m.setAttribute("aria-modal", "true");
     const pencils = it.type.length ? it.type.length + (it.type.length === 1 ? " point" : " points") + " on three or more lines" : "no point on three or more lines";
@@ -205,29 +226,53 @@
       <div class="lp-info">
         <div class="lp-eyebrow">${n} lines</div>
         <h2>${typeText(n, it.type)}</h2>
+        <div class="lp-chips lp-tabs" role="tablist" aria-label="Drawing style"></div>
+        <p class="lp-view"></p>
         <p>${it.f0} intersection points: ${pencils}${t2 ? " and " + t2 + " ordinary crossing" + (t2 === 1 ? "" : "s") : ""}.
         Coordinates of the certificate lie in ${FIELD(it.d)}.</p>
         <p class="lp-keys"></p>
         <p class="lp-hint">Point at an intersection to see the lines through it.</p>
         <div class="lp-now"></div>
-        <details><summary>Exact lines <i>a x + b y + c z = 0</i></summary><ol class="lp-coef"></ol></details>
+        <details class="lp-exact"><summary>Exact lines <i>a x + b y + c z = 0</i></summary><ol class="lp-coef"></ol></details>
         <p class="lp-src">${sourceText(it.source)}</p>
       </div></div>`;
     document.body.appendChild(m);
     document.documentElement.classList.add("lp-noscroll");
-    const svg = draw(it.L, { big: true });
-    m.querySelector(".lp-big").appendChild(svg);
-    const now = m.querySelector(".lp-now");
-    m.querySelector(".lp-keys").innerHTML = svg._ks.map(k => `<span><i class="s${svg._shade(k)}"></i>${k} lines</span>`).join("") +
-      `<span><i class="k2"></i>2 lines</span>`;
-    interactive(svg, p => { now.textContent = p.k + " lines meet here: " + p.lines.map(i => "ℓ" + (i + 1)).join(", "); });
+    const now = m.querySelector(".lp-now"), big = m.querySelector(".lp-big"), view = m.querySelector(".lp-view");
+    const tabs = m.querySelector(".lp-tabs"), exact = m.querySelector(".lp-exact");
+    let svg = null;
+    function render(md) {
+      mode = md;
+      tabs.querySelectorAll(".lp-chip").forEach(c => c.setAttribute("aria-selected", c.dataset.mode === md ? "true" : "false"));
+      big.innerHTML = ""; now.textContent = "";
+      svg = draw(pick(it, md), { big: true });
+      big.appendChild(svg);
+      m.querySelector(".lp-keys").innerHTML = svg._ks.map(k => `<span><i class="s${svg._shade(k)}"></i>${k} lines</span>`).join("") +
+        `<span><i class="k2"></i>2 lines</span>`;
+      interactive(svg, p => { now.textContent = p.k + " lines meet here" + (md === "exact" ? ": " + p.lines.map(i => "ℓ" + (i + 1)).join(", ") : "") + "."; });
+      view.textContent = md === "beautiful"
+        ? `${it.how} The drawing has ${symText(it)}. It is a floating-point realization of the same type, checked with the same tolerance as the exact drawing; the certificate is shown under Exact, and the two arrangements need not be projective images of each other.`
+        : "The certified arrangement, drawn from its exact coordinates by a projective transformation chosen for legibility.";
+      exact.hidden = md !== "exact";
+      m.querySelector(".lp-src").hidden = md !== "exact";
+    }
+    if (it.S) {
+      Object.keys(MODES).forEach(md => {
+        const b = document.createElement("button");
+        b.type = "button"; b.className = "lp-chip"; b.dataset.mode = md; b.textContent = MODES[md]; b.setAttribute("role", "tab");
+        b.addEventListener("click", () => render(md));
+        tabs.appendChild(b);
+      });
+    } else tabs.hidden = true;
     const ol = m.querySelector(".lp-coef");
     it.exact.forEach((line, i) => {
       const li = document.createElement("li");
       li.textContent = "ℓ" + (i + 1) + ": (" + line.map(p => numText(p, it.d)).join(", ") + ")";
-      li.addEventListener("mouseenter", () => highlight(svg, [i])); li.addEventListener("mouseleave", () => highlight(svg, null));
+      li.addEventListener("mouseenter", () => { if (mode === "exact") highlight(svg, [i]); });
+      li.addEventListener("mouseleave", () => highlight(svg, null));
       ol.appendChild(li);
     });
+    render(mode);
     function close() { m.remove(); document.documentElement.classList.remove("lp-noscroll"); document.removeEventListener("keydown", key); }
     function key(e) { if (e.key === "Escape") close(); }
     m.addEventListener("click", e => { if (e.target === m) close(); });

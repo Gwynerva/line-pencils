@@ -143,9 +143,9 @@ $V(n)$ below roughly $n^{3/2}$ consists of separated "bands", so $d(n) = \binom 
 </div>
 
 <div class="thm openp" markdown>
-**Open question.** Determine $d(14), d(15), d(16)$. The band construction ([theorems](../theorems.md#bands)) and
-the extension of certified 13-line arrangements by a line through several existing points give certificates for
-65 values at $n = 14$; together with the exclusions this leaves exactly two undecided values, $27$ and $28$, so
+**Open question.** Determine $d(14), d(15), d(16)$. The band construction ([theorems](../theorems.md#bands)), the
+extension of certified 13-line arrangements by a line through several existing points and the zone walk
+([algorithms](../algorithms.md#zone-walk)) give certificates for 65 values at $n = 14$; together with the exclusions this leaves exactly two undecided values, $27$ and $28$, so
 $65 \le d(14) \le 67$. For $n = 15$: $73 \le d(15) \le 79$ (undecided $29$–$33$, $37$); $n = 16$: $83 \le d(16) \le 91$;
 $n = 17$: $92 \le d(17) \le 103$ (`notes/bands.md`). The undecided values at the low end would need an arrangement
 whose largest pencil has only $5$ to $7$ lines and whose other lines are extremely concurrent; the LP bound with

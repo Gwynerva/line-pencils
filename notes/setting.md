@@ -54,7 +54,7 @@ only value). This offset convention is a choice to be confirmed by the author be
 * **Orientability** is the computable intermediate step between $b$ and $c$: every real arrangement gives a chirotope
   (signs of $3\times3$ determinants) satisfying the three-term Grassmann–Plücker relations; a linear space admitting
   no chirotope is not realizable. The converse fails (Pappus: the non-Pappus configuration is orientable but not
-  realizable), and this is exactly where the remaining open cases at $n = 12$ live.
+  realizable), and this is exactly where $\{6, 4, 3^{12}\}$ and $\{6, 3^{14}\}$ at $n = 12$ live.
 
 ## Necessary conditions used as filters
 

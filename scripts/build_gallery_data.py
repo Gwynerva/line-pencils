@@ -6,7 +6,9 @@ points and their pencils itself (docs/javascripts/arrangements.js).  The exact c
 well, for display.  The regular pentagram with its axes is stored under "star" with exact 5-fold symmetry.
 
 Every stored drawing is checked here: the pencils recomputed from the float lines with the same tolerance as the
-browser must give exactly the certified type.
+browser must give exactly the certified type.  Where data/symmetric_drawings.json (scripts/symmetric_drawings.py)
+has a symmetric drawing of the type, it is checked in the same way and stored as "S" (with its symmetry order and a
+sentence on how it was obtained); the gallery shows it under "Beautiful" and the certified drawing under "Exact".
 
 usage: python scripts/build_gallery_data.py [NMAX]
 """
@@ -73,6 +75,10 @@ def star_lines():
     return [[round(a, 6), round(b, 6), round(c, 6)] for a, b, c in L]
 
 
+SYM_FILE = os.path.join(ROOT, "data", "symmetric_drawings.json")
+SYM = json.load(open(SYM_FILE)) if os.path.exists(SYM_FILE) else {}
+
+
 def main(nmax):
     out = {"star": {"n": 10, "type": [5] + [3] * 10, "L": star_lines()}, "n": {}}
     assert pencils_float(out["star"]["L"]) == [5] + [3] * 10
@@ -101,9 +107,14 @@ def main(nmax):
                 raise SystemExit("n=%d type %s: no layout reproduces the type" % (n, t))
             items.append({"type": t, "f0": f0(n, tuple(t)), "d": c["d"], "source": c.get("source", ""),
                           "L": best, "exact": c["lines"]})
+        sym = SYM.get(str(n), {})
+        for it in items:
+            s_ = sym.get(",".join(map(str, it["type"])))
+            if s_ and pencils_float(s_["L"], SEP / 4) == it["type"]:
+                it.update({"S": s_["L"], "sym": s_["symmetry"], "rot": s_["rotation"], "how": s_["how"]})
         items.sort(key=lambda it: (-max(it["type"] or [2]), -len(it["type"]), it["type"]), reverse=False)
         out["n"][str(n)] = items
-        print("n=%d: %d drawings" % (n, len(items)), flush=True)
+        print("n=%d: %d drawings, %d with a symmetric view" % (n, len(items), sum(1 for it in items if "S" in it)), flush=True)
     os.makedirs(os.path.join(ROOT, "docs", "assets", "data"), exist_ok=True)
     with open(os.path.join(ROOT, "docs", "assets", "data", "gallery.json"), "w") as f:
         json.dump(out, f, separators=(",", ":"))

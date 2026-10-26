@@ -71,8 +71,8 @@ which is how the lower bounds for $c(n)$ are read off.
 
 ```bash
 python verifier/verify.py data/certificates/n*.json
-# verified 1332 certificates, 0 rejected
-# distinct realizable types per n: {3: 2, 4: 3, 5: 5, 6: 9, 7: 16, 8: 28, 9: 53, 10: 98, 11: 180, 12: 335, 13: 600, 14: 3}
+# verified 2454 certificates, 0 rejected
+# distinct realizable types per n: {3: 2, 4: 3, 5: 5, 6: 9, 7: 16, 8: 28, 9: 53, 10: 98, 11: 180, 12: 336, 13: 620, 14: 1104}
 ```
 
 ## Impossibility records
@@ -85,7 +85,7 @@ Non-realizability is never asserted without a reason that can be checked:
 | Melchior / Csima–Sawyer / de Bruijn–Erdős | computed from the type by `scripts/pencils.py` | one line of arithmetic |
 | no orientable linear space | `runs/orient_{n}.json` (engine mode 4), `runs/sat_orient_{n}.json` | re-run Algorithm 3 |
 | orientable, but no realization (e.g. $\{6, 4, 3^{12}\}$) | `data/proofs/*.json`: every orientable linear space with its Gröbner certificate | recompute the Gröbner bases ([algorithms](algorithms.md), §8) |
-| theorem (e.g. $\{4^9\}$, band theorem) or literature (e.g. $\{3^{20}\}$, orchard bound) | `data/exclusions.json` with statement and reference | read the proof / the paper |
+| theorem or recorded computation (e.g. $\{4^9\}$; $\{3^{20}\}$ and $\{4^5, 3^9\}$, none of whose linear spaces is orientable; the band theorem at $n = 13$) | `data/exclusions.json` with statement and reference | read the proof / re-run the script |
 
 `data/results/classification_n{n}.json` lists, for every admissible type, its $f_0$, whether a linear space exists,
 the verdict and the reason; `data/results/sequences.json` holds the four sequences with intervals where a term is not

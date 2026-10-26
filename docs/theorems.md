@@ -75,8 +75,7 @@ verdict on every type for $n \le 12$. <span class="qed">$\square$</span>
 </div>
 
 <div class="thm" markdown>
-**Theorem B3.** <span class="status-computed">computer-verified</span> $c(n) = 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180$ for $n = 1, \dots, 11$,
-and $335 \le c(12) \le 337$.
+**Theorem B3.** <span class="status-computed">computer-verified</span> $c(n) = 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336$ for $n = 1, \dots, 12$.
 </div>
 <div class="proof" markdown>
 *Proof.* *Lower bounds.* The certificates in `data/certificates/n{n}.json`, one per type, are all accepted by the exact
@@ -87,11 +86,11 @@ verifier; Theorem D1 below explains why acceptance proves realizability.
 * by Theorem A2, A3 or A1, applied to its $t_k$;
 * because it has no orientable linear space (Algorithm 3, engine mode 4, `runs/orient_{n}.json`; the SAT implementation
   agrees where it finished);
-* for $n = 12$, because it is $\{4^9\}$ (Proposition C3), $\{3^{20}\}$ (Proposition C3a), or $\{6, 4, 3^{12}\}$ or
-  $\{6, 3^{14}\}$ (Theorems C4 and C5).
+* for $n = 12$, because it is $\{4^9\}$ (Proposition C3), $\{3^{20}\}$ (Proposition C3a), $\{4^5, 3^9\}$
+  (Proposition C3b), or $\{6, 4, 3^{12}\}$ or $\{6, 3^{14}\}$ (Theorems C4 and C5).
 
-The classification files `data/results/classification_n{n}.json` list the reason for every type. For $n = 12$ two types
-remain open, whence the upper bound $335 + 2$. <span class="qed">$\square$</span>
+The classification files `data/results/classification_n{n}.json` list the reason for every type; for $n \le 12$ none
+is open. <span class="qed">$\square$</span>
 </div>
 
 ## B′. The band theorem {#bands}
@@ -132,7 +131,7 @@ The formula for $f_0$ is a direct count of the points along the pencil lines; fu
 </div>
 
 $N(k) = 1, 1, 2, 5, 12, 30, 74, 176, 401$ for $k = 0, \dots, 8$. The data for $n \le 13$ agree with the theorem wherever it
-applies. Part (1) is a sieve in its own right: at $n = 13$ it excludes 41 types that pass every other test,
+applies. Part (1) is a sieve in its own right: at $n = 13$ it excludes 28 types that pass every other test,
 and part (2) builds certificates on demand (`scripts/bands.py`). Applied to $f_0$, the formula gives the bands of
 Salamon and Erdős with a one-line proof; see the [points page](sequences/points.md).
 
@@ -245,6 +244,39 @@ chirotope (`scripts/orchard12.py`, `runs/orchard12.json`). <span class="qed">$\s
 
 This agrees with the orchard problem: Burr, Grünbaum and Sloane list $19$ as the largest number of 3-point lines for
 twelve points.[^bgs]
+
+<div class="thm" markdown>
+**Proposition C3b (five quadruple points).** <span class="status-computed">computer-verified</span> The type
+$\{4^5, 3^9\}$ for twelve lines is combinatorially possible but not realizable, not even by pseudolines: none of its
+linear spaces is orientable.
+</div>
+<div class="proof" markdown>
+*Proof.* Two pencils share at most one line, so the five 4-pencils are described, up to relabelling, by the lines that
+lie in at least two of them: a family of subsets of the five pencils, any two sharing at most one pencil. The five
+pencils have 20 incidences with only 12 lines, and exactly 8 such configurations fit. For each of the 8 the
+4-pencils are fixed and the SAT encoding of Algorithm 3 is asked for a chirotope on a linear space of type
+$\{4^5, 3^9\}$ containing them; all 8 instances are unsatisfiable, with three different solvers (CaDiCaL, Glucose,
+MapleChrono). As a control, the same 8 instances for the realizable type $\{4^5, 3^8\}$ are all satisfiable
+(`scripts/orient_split.py`, `runs/orient_split_12.json`). <span class="qed">$\square$</span>
+</div>
+
+The undivided search (engine, mode 4) did not finish in four hours for this type; fixing the 4-pencils first is what
+makes it easy. Why the type is tight: in any arrangement of lines or pseudolines with $p_j$ faces with $j$ sides,
+Euler's formula gives $\sum_j (j - 3)\, p_j = t_2 - 3 - \sum_{k \ge 4} (k - 3)\, t_k$ (Melchior's inequality is the
+statement that the left side is $\ge 0$). For $\{4^5, 3^9\}$ the right side is $9 - 3 - 5 = 1$, so all faces would be
+triangles except one quadrilateral.
+
+<div class="thm" markdown>
+**Example C3c (eighteen triple points).** <span class="status-computed">computer-verified</span> The type $\{3^{18}\}$
+for twelve lines is realizable, with small integer coefficients: the lines $a x + b y + c z = 0$ with $(a : b : c)$
+equal to
+
+$$\begin{gathered}(0{:}1{:}{-1}),\ (1{:}0{:}{-1}),\ (1{:}{-2}{:}0),\ (1{:}{-1}{:}0),\ (0{:}2{:}{-1}),\ (1{:}{-1}{:}1),\\
+(0{:}0{:}1),\ (1{:}1{:}{-1}),\ (1{:}1{:}0),\ (1{:}{-2}{:}3),\ (1{:}0{:}2),\ (2{:}{-1}{:}{-3})\end{gathered}$$
+
+have exactly 18 triple points and 12 double points (`data/certificates/n12.json`). It was found by the zone walk
+([algorithms](algorithms.md#zone-walk)), after a numerical search over 85 orientable linear spaces had failed.
+</div>
 
 [^cr]: C. J. Colbourn, A. Rosa, *Triple Systems*, Oxford University Press, 1999.
 

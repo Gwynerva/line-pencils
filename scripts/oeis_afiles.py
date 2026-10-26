@@ -5,7 +5,7 @@ usage: python scripts/oeis_afiles.py            -> writes oeis/a399464.txt, oeis
 Sources: data/results/classification_n{n}.json (one record per arithmetically admissible type, with
 'linear_space' in YES/NO/None and 'verdict' in real / melchior / csima-sawyer / non-orientable / ...).
   A400149 (b): types with linear_space == "YES", n <= 12.
-  A399464 (c): types with verdict == "real", n <= 11.
+  A399464 (c): types with verdict == "real", n <= 12.
   A399605 (d): numbers of intersection points binomial(n,2) - Sum binomial(k_i,2) + r over the realizable types,
                n <= 13 (for n = 12, 13 the undecided types do not add new values; this is checked against
                data/results/sequences.json and the known terms).
@@ -18,7 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "oeis")
 
 B = [1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384]
-C = [1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180]
+C = [1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336]
 D = [1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56]
 
 
@@ -70,11 +70,11 @@ def main():
     write("a400149.txt", [], out)
     # A399464
     out = ["# A399464: multisets of the numbers of lines through the intersection points (with at least three lines)",
-           "# of n lines in the plane, no two parallel; all a(n) realizable multisets for n <= 11."] + note
+           "# of n lines in the plane, no two parallel; all a(n) realizable multisets for n <= 12."] + note
     reals = {}
     for n in range(1, 14):
         reals[n] = [r["type"] for r in rows(n) if r["verdict"] == "real"]
-    for n in range(1, 12):
+    for n in range(1, 13):
         ts = reals[n]
         assert len(ts) == C[n - 1], (n, len(ts), C[n - 1])
         ts.sort(key=typekey)

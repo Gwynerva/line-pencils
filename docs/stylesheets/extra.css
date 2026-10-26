@@ -94,6 +94,9 @@
 .lp-chip:hover, .lp-chip:focus-visible { border-color: var(--lp-blue); background: color-mix(in srgb, var(--lp-blue) 18%, transparent); color: var(--lp-blue); outline: none; }
 .lp-chip[aria-selected="true"], .lp-chip[aria-selected="true"]:hover { background: var(--lp-blue); border-color: var(--lp-blue); color: var(--md-default-bg-color); }
 .lp-summary { font-size: .8rem; color: var(--md-default-fg-color--light); }
+.lp-modes { display: flex; gap: .35rem; margin: 1rem 0 .2rem; }
+.lp-modenote, .lp-view { font-size: .78rem; color: var(--md-default-fg-color--light); margin: .2rem 0 0; }
+.lp-tabs { margin: .2rem 0 .4rem; }
 .lp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .8rem; }
 .lp-card { display: flex; flex-direction: column; padding: .4rem; border: 1px solid var(--md-default-fg-color--lightest); border-radius: .4rem;
   background: var(--md-default-bg-color); cursor: pointer; font: inherit; color: inherit; text-align: center; transition: border-color .15s; }

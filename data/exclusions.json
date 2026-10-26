@@ -10,6 +10,11 @@
    "kind": "theorem",
    "statement": "Dually, a linear space on 12 points with twenty 3-point lines leaves 6 pairs uncovered, and every point is on exactly one of them (it has an odd number of uncovered partners, and these numbers sum to 12). Adding a point joined to the 6 uncovered pairs gives a Steiner triple system of order 13; conversely deleting a point of an STS(13) gives such a space. There are exactly two STS(13), so there are 26 point deletions (5 isomorphism classes), and the SAT encoding shows that none admits a chirotope. Hence no real arrangement (not even of pseudolines) has type {3^20}. This agrees with the orchard number A003035(12) = 19 (Burr-Grunbaum-Sloane 1974).",
    "reference": "scripts/orchard12.py, runs/orchard12.json; uniqueness of the two STS(13): Colbourn-Rosa, Triple Systems, Oxford 1999"
+  },
+  "4,4,4,4,4,3,3,3,3,3,3,3,3,3": {
+   "kind": "theorem",
+   "statement": "Two pencils share at most one line, so the five 4-pencils are determined, up to relabelling, by the lines lying in at least two of them; only 8 such configurations fit into 12 lines (20 incidences). For each of the 8, SAT (the chirotope encoding of scripts/sat_orient.py with the 4-pencils fixed) shows that no linear space of type {4^5, 3^9} containing them admits a chirotope; three different solvers agree, and the same 8 cases for the realizable type {4^5, 3^8} are all satisfiable. Hence no arrangement of 12 lines, not even of pseudolines, has type {4^5, 3^9}.",
+   "reference": "scripts/orient_split.py, runs/orient_split_12.json; docs/theorems.md, Proposition C3b"
   }
  },
  "13": {

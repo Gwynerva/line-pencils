@@ -31,7 +31,7 @@ different *numbers of intersection points* $n$ lines can have.
 |---|---|---|
 | $a(n)$, types allowed by arithmetic | 1, 1, 2, 4, 7, 15, 32, 66, 141, 295, 619, 1286, 2654, … | known: [A072964](https://oeis.org/A072964), shifted by one |
 | $b(n)$, ways $n$ lines can meet, consistent with "two lines meet only once" | 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384 | <span class="status-computed">computed</span> through $n = 12$; **not in the OEIS** |
-| $c(n)$, ways $n$ lines in the plane can meet | 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180 | <span class="status-computed">computed</span> through $n = 11$; $c(12)$ bounded (see the [sequence page](sequences/realizable.md)); **not in the OEIS** |
+| $c(n)$, ways $n$ lines in the plane can meet | 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336 | <span class="status-computed">computed</span> through $n = 12$ (see the [sequence page](sequences/realizable.md)); **not in the OEIS** |
 | $d(n)$, different possible numbers of intersection points | 1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56 | <span class="status-computed">computed</span> through $n = 13$; **not in the OEIS** |
 
 That three sequences arising from a question a schoolchild can ask are missing from the On-Line Encyclopedia of
@@ -53,7 +53,7 @@ to it, so a complete description of that list, not just its size, would solve th
   $2n-1$; in particular, for $n \ge 6$, $2n-3$ intersection points are impossible exactly when $n \ge 12$.
 * [Algorithms](algorithms.md) and [data](data.md): how the tests were computed, how every example is certified by
   exact arithmetic, and how to check everything independently.
-* A [gallery](gallery.md) of every type known to be realizable up to 13 lines (complete up to 11 lines), drawn from exact coordinates, and a page on
+* A [gallery](gallery.md) of every type known to be realizable for 1 to 14 lines (complete up to 12 lines), in symmetric drawings where we found one and from exact coordinates, and a page on
   [what cannot be drawn](impossible.md) and why.
 * [Open problems](open.md).
 

@@ -1,20 +1,19 @@
 ---
-description: "What is still unknown about how n lines can meet: the undecided cases for 12 and 13 lines, growth rates, and related questions worth exploring."
+description: "What is still unknown about how n lines can meet: the undecided cases for 13 lines, the number of intersection points for 14 lines and more, growth rates, and related questions worth exploring."
 ---
 
 # Open problems and where to dig
 
 What is not known: the undecided terms, conjectures supported by the data, and related questions.
 
-## 1. Twelve lines: the last two types
+## 1. Twelve lines: settled
 
-Two pencil types for $n = 12$ are undecided: $\{4^5, 3^9\}$, whose orientability search did not finish, and
-$\{3^{18}\}$, which is orientable but for which 85 non-isomorphic orientable linear spaces were tried numerically
-without success. Thus $335 \le c(12) \le 337$. Two types that were undecided earlier, $\{6, 4, 3^{12}\}$ and
-$\{6, 3^{14}\}$, are proved non-realizable although they are orientable: **the pencil types of 12 lines and of 12
-pseudolines differ** ([Theorems C4, C5](theorems.md#lines-vs-pseudolines)).
+$c(12) = 336$. The last two types were decided in opposite directions: $\{3^{18}\}$ is realizable with small integer
+coefficients ([Example C3c](theorems.md)), and $\{4^5, 3^9\}$ is not even orientable ([Proposition C3b](theorems.md)).
+Two types, $\{6, 4, 3^{12}\}$ and $\{6, 3^{14}\}$, are proved non-realizable although they are orientable: **the pencil
+types of 12 lines and of 12 pseudolines differ** ([Theorems C4, C5](theorems.md#lines-vs-pseudolines)).
 
-What would settle the rest: for a single linear space, non-realizability is a statement about the solutions of a polynomial
+How the orientable cases were settled: for a single linear space, non-realizability is a statement about the solutions of a polynomial
 system; we prove it by exhibiting non-collinear triples whose determinants' product lies in the radical of the
 incidence ideal (a Gröbner-basis certificate, see the [algorithms page](algorithms.md)); an incidence theorem (like
 Pappus for the non-Pappus configuration) is the human-readable special case. For a *type*, every orientable linear
@@ -24,7 +23,9 @@ isomorphism reduction. The outcome for $\{6, 3^{14}\}$ and $\{6, 4, 3^{12}\}$ is
 
 ## 2. Thirteen lines
 
-$600 \le c(13) \le 659$: 600 types have certificates and 59 are undecided. Deciding them needs the orientability
+$620 \le c(13) \le 659$: 620 types have certificates and 39 are undecided. The constructive searches of
+[algorithms page](algorithms.md#zone-walk) (zone walk, targeted deformation, mirror sections) found no numerical solution for any of the 39, which suggests that
+most of them are not realizable. Deciding them needs the orientability
 search and, where it says "orientable", the algebraic method used at $n = 12$; several of these types are harder than
 anything at $n = 12$.
 
@@ -36,7 +37,7 @@ anything at $n = 12$.
 
 Known: $\log a(n) \asymp n^{2/3}$ (partitions into triangular numbers) and $\log c(n) \gtrsim n^{1/2}$ (pencils that share
 no lines realize every partition of $m \le n$ into parts $\ge 3$). The ratios $c(n)/a(n)$ for $n = 6, \dots, 12$ are
-$0.60, 0.50, 0.42, 0.38, 0.33, 0.29, \approx 0.26$: geometry eats a growing share of the arithmetic candidates, but slowly.
+$0.60, 0.50, 0.42, 0.38, 0.33, 0.29, 0.26$: geometry eats a growing share of the arithmetic candidates, but slowly.
 A better lower bound would come from a construction that realizes many types at once; a better upper bound from a
 structural restriction on how many large pencils can coexist (Melchior's inequality is such a restriction, but it is
 far from tight for $k = 3$).
@@ -64,7 +65,7 @@ $n = 12$ by computation).
 $\ge 3$? Is $\{5, 3^{10}\}$ ($n = 10$) the smallest type that is not realizable over $\mathbb Q$?
 </div>
 
-For $n \le 13$ all our certificates are over $\mathbb Q$ or $\mathbb Q(\sqrt d)$, $d \in \{2, 3, 5\}$, but except for the
+For $n \le 14$ all our certificates are over $\mathbb Q$ or $\mathbb Q(\sqrt d)$, $d \in \{2, 3, 5\}$, but except for the
 pentagram we never proved that the irrationality is needed; most of the $\sqrt d$ examples probably have rational cousins.
 Rational realizability is a different sieve ("drawable on graph paper") that would give yet another sequence.
 

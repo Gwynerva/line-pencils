@@ -18806,7 +18806,9 @@
 "f0": 23,
 "t2": 9,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "theorem",
+"reference": "scripts/orient_split.py, runs/orient_split_12.json; docs/theorems.md, Proposition C3b",
+"statement": "Two pencils share at most one line, so the five 4-pencils are determined, up to relabelling, by the lines lying in at least two of them; only 8 such configurations fit into 12 lines (20 incidences). For each of the 8, SAT (the chirotope encoding of scripts/sat_orient.py with the 4-pencils fixed) shows that no linear space of type {4^5, 3^9} containing them admits a chirotope; three different solvers agree, and the same 8 cases for the realizable type {4^5, 3^8} are all satisfiable. Hence no arrangement of 12 lines, not even of pseudolines, has type {4^5, 3^9}."
 },
 {
 "type": [
@@ -20593,8 +20595,8 @@
 "f0": 30,
 "t2": 12,
 "linear_space": "YES",
-"verdict": "open",
-"orientable": true
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [

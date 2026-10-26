@@ -20139,7 +20139,8 @@
 "f0": 31,
 "t2": 20,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [
@@ -20158,11 +20159,8 @@
 ],
 "f0": 29,
 "t2": 17,
-"linear_space": null,
-"verdict": "theorem",
-"reference": "notes/bands.md",
-"statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {5, 3^10} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
-"note": "linear-space status not computed"
+"linear_space": "NO",
+"verdict": "no-linear-space"
 },
 {
 "type": [
@@ -21554,11 +21552,8 @@
 ],
 "f0": 28,
 "t2": 15,
-"linear_space": null,
-"verdict": "theorem",
-"reference": "notes/bands.md",
-"statement": "largest pencil has 7 = n-6 lines; removing it leaves 6 lines, and {4^2, 3^10} is not obtainable from any realizable type of 6 lines by absorbing points (band theorem)",
-"note": "linear-space status not computed"
+"linear_space": "NO",
+"verdict": "no-linear-space"
 },
 {
 "type": [
@@ -21890,7 +21885,8 @@
 "f0": 29,
 "t2": 15,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [
@@ -25696,7 +25692,8 @@
 "f0": 45,
 "t2": 42,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [
@@ -26528,11 +26525,8 @@
 ],
 "f0": 24,
 "t2": 12,
-"linear_space": null,
-"verdict": "theorem",
-"reference": "notes/bands.md",
-"statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4^2, 3^8} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
-"note": "linear-space status not computed"
+"linear_space": "NO",
+"verdict": "no-linear-space"
 },
 {
 "type": [
@@ -26757,7 +26751,8 @@
 "f0": 29,
 "t2": 18,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [
@@ -26800,11 +26795,8 @@
 ],
 "f0": 25,
 "t2": 12,
-"linear_space": null,
-"verdict": "theorem",
-"reference": "notes/bands.md",
-"statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 4, 3^10} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
-"note": "linear-space status not computed"
+"linear_space": "NO",
+"verdict": "no-linear-space"
 },
 {
 "type": [
@@ -27066,7 +27058,8 @@
 "f0": 30,
 "t2": 18,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [
@@ -27108,11 +27101,8 @@
 ],
 "f0": 26,
 "t2": 12,
-"linear_space": null,
-"verdict": "theorem",
-"reference": "notes/bands.md",
-"statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {6, 3^12} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
-"note": "linear-space status not computed"
+"linear_space": "NO",
+"verdict": "no-linear-space"
 },
 {
 "type": [
@@ -29355,11 +29345,8 @@
 ],
 "f0": 25,
 "t2": 13,
-"linear_space": null,
-"verdict": "theorem",
-"reference": "notes/bands.md",
-"statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^2, 4, 3^8} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
-"note": "linear-space status not computed"
+"linear_space": "NO",
+"verdict": "no-linear-space"
 },
 {
 "type": [
@@ -29625,11 +29612,8 @@
 ],
 "f0": 26,
 "t2": 13,
-"linear_space": null,
-"verdict": "theorem",
-"reference": "notes/bands.md",
-"statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5^2, 3^10} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
-"note": "linear-space status not computed"
+"linear_space": "NO",
+"verdict": "no-linear-space"
 },
 {
 "type": [
@@ -30467,11 +30451,8 @@
 ],
 "f0": 26,
 "t2": 14,
-"linear_space": null,
-"verdict": "theorem",
-"reference": "notes/bands.md",
-"statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5, 4^3, 3^7} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
-"note": "linear-space status not computed"
+"linear_space": "NO",
+"verdict": "no-linear-space"
 },
 {
 "type": [
@@ -30491,11 +30472,8 @@
 ],
 "f0": 24,
 "t2": 11,
-"linear_space": null,
-"verdict": "theorem",
-"reference": "notes/bands.md",
-"statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5, 4^3, 3^8} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
-"note": "linear-space status not computed"
+"linear_space": "NO",
+"verdict": "no-linear-space"
 },
 {
 "type": [
@@ -30749,11 +30727,8 @@
 ],
 "f0": 25,
 "t2": 11,
-"linear_space": null,
-"verdict": "theorem",
-"reference": "notes/bands.md",
-"statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {5, 4^2, 3^10} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
-"note": "linear-space status not computed"
+"linear_space": "NO",
+"verdict": "no-linear-space"
 },
 {
 "type": [
@@ -31360,7 +31335,8 @@
 "f0": 29,
 "t2": 14,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [
@@ -31544,7 +31520,8 @@
 "f0": 34,
 "t2": 27,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [
@@ -31966,7 +31943,8 @@
 "f0": 32,
 "t2": 24,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [
@@ -32001,7 +31979,8 @@
 "f0": 28,
 "t2": 18,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [
@@ -32265,11 +32244,8 @@
 ],
 "f0": 25,
 "t2": 12,
-"linear_space": null,
-"verdict": "theorem",
-"reference": "notes/bands.md",
-"statement": "largest pencil has 6 = n-7 lines; removing it leaves 7 lines, and {4^5, 3^7} is not obtainable from any realizable type of 7 lines by absorbing points (band theorem)",
-"note": "linear-space status not computed"
+"linear_space": "NO",
+"verdict": "no-linear-space"
 },
 {
 "type": [
@@ -32847,7 +32823,8 @@
 "f0": 27,
 "t2": 12,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 5
 },
 {
 "type": [
@@ -33620,7 +33597,8 @@
 "f0": 27,
 "t2": 9,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [
@@ -35917,11 +35895,8 @@
 ],
 "f0": 26,
 "t2": 14,
-"linear_space": null,
-"verdict": "theorem",
-"reference": "notes/bands.md",
-"statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 3^8} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
-"note": "linear-space status not computed"
+"linear_space": "NO",
+"verdict": "no-linear-space"
 },
 {
 "type": [
@@ -35941,11 +35916,8 @@
 ],
 "f0": 24,
 "t2": 11,
-"linear_space": null,
-"verdict": "theorem",
-"reference": "notes/bands.md",
-"statement": "largest pencil has 5 = n-8 lines; removing it leaves 8 lines, and {5^3, 3^9} is not obtainable from any realizable type of 8 lines by absorbing points (band theorem)",
-"note": "linear-space status not computed"
+"linear_space": "NO",
+"verdict": "no-linear-space"
 },
 {
 "type": [
@@ -36606,7 +36578,8 @@
 "f0": 30,
 "t2": 21,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [
@@ -36883,7 +36856,8 @@
 "f0": 27,
 "t2": 15,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 5
 },
 {
 "type": [
@@ -38365,7 +38339,7 @@
 ],
 "f0": 30,
 "t2": 19,
-"linear_space": null,
+"linear_space": "YES",
 "verdict": "real",
 "field_d": 0
 },
@@ -38408,7 +38382,7 @@
 ],
 "f0": 26,
 "t2": 13,
-"linear_space": null,
+"linear_space": "YES",
 "verdict": "real",
 "field_d": 5
 },
@@ -39947,7 +39921,8 @@
 "f0": 34,
 "t2": 26,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [
@@ -41899,7 +41874,8 @@
 "f0": 27,
 "t2": 8,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 5
 },
 {
 "type": [
@@ -42984,7 +42960,8 @@
 "f0": 33,
 "t2": 24,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 5
 },
 {
 "type": [
@@ -44993,7 +44970,8 @@
 "f0": 28,
 "t2": 9,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 5
 },
 {
 "type": [
@@ -45468,7 +45446,8 @@
 "f0": 27,
 "t2": 6,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 5
 },
 {
 "type": [
@@ -45898,7 +45877,7 @@
 ],
 "f0": 32,
 "t2": 12,
-"linear_space": null,
+"linear_space": "YES",
 "verdict": "real",
 "field_d": 0
 },
@@ -45928,7 +45907,7 @@
 ],
 "f0": 30,
 "t2": 9,
-"linear_space": null,
+"linear_space": "YES",
 "verdict": "real",
 "field_d": 0
 },
@@ -46403,7 +46382,7 @@
 ],
 "f0": 35,
 "t2": 15,
-"linear_space": null,
+"linear_space": "YES",
 "verdict": "real",
 "field_d": 0
 },
@@ -46433,7 +46412,7 @@
 ],
 "f0": 33,
 "t2": 12,
-"linear_space": null,
+"linear_space": "YES",
 "verdict": "real",
 "field_d": 3
 },
@@ -46952,7 +46931,8 @@
 "f0": 38,
 "t2": 18,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [
@@ -46981,7 +46961,8 @@
 "f0": 36,
 "t2": 15,
 "linear_space": "YES",
-"verdict": "open"
+"verdict": "real",
+"field_d": 0
 },
 {
 "type": [

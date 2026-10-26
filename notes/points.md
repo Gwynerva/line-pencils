@@ -195,7 +195,7 @@ non-realizability (Melchior, Csima–Sawyer, de Bruijn–Erdős, no linear space
 
 Here "dBE" is the de Bruijn–Erdős theorem ($f_0 \ge n$ unless $\mathcal A$ is a pencil; de Bruijn–Erdős 1948, dual
 form), "computation" refers to the exhaustive classification of all types for that $n$. For $n = 13$ the
-*positive* part (56 values attained) rests on the 597 verified certificates in `data/certificates/n13.json`,
+*positive* part (56 values attained) rests on the 620 verified certificates in `data/certificates/n13.json`,
 which cover exactly the 56 values listed; the negative part uses only theorems plus the exhaustive run
 `runs/comb_13_f23.json` (and `runs/sat_13_f23.json` for the two types on which the engine timed out).
 
@@ -212,10 +212,9 @@ then $f_0 \ge kn - \frac12(3k+2)(k-1)$) and the band analysis of Salamon–Erdő
 below roughly $n^{3/2}$ come in separated "bands" $[k(n-k) - \binom k2 + 1,\ k(n-k) + \binom k2 + 1]$, $k = 0, 1, 2, \dots$,
 each band (for $k \ge 3$) contributing $2\binom k2 - 1$ values, so that $d(n) = \binom n2 - \Theta(n^{3/2})$.
 
-**Open question A.** Determine $d(14), d(15), d(16)$. Our bounds leave exactly the following undecided values:
-$n = 14$: is $27 \in V(14)$? ($f_0 \ge 27$ is forced when $m \le 11$; $27$ would need a type with $m \le 11$.)
-$n = 15$: $29$; $n = 16$: $32, 33$. (Values listed by `scripts/f0_bounds.py`.) Everything else in $[2n-2, \binom n2 - 4]$
-is attained by explicit constructions for these $n$ (to be written up) or excluded.
+**Open question A.** Determine $d(14), d(15), d(16)$. Our bounds leave the following values undecided (`notes/bands.md`):
+$n = 14$: $27, 28$; $n = 15$: $29$–$33$, $37$; $n = 16$: $32$–$36$, $40$, $42$, $120$. For $n = 14$ every other value is
+attained by a certified arrangement (`data/certificates/n14.json`) or excluded, so $65 \le d(14) \le 67$.
 
 **Open question B (Salamon–Erdős).** Find the smallest $n^*$ from which the large-$n$ description of $V(n)$ is exact.
 
