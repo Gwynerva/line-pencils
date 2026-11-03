@@ -78,6 +78,12 @@ The same question makes sense elsewhere and we have not touched it:
   $n = 12$ (problem 1).
 * **Complex lines.** The Fano type is still impossible, but Möbius–Kantor ($n = 8$) and Hesse ($n = 9$) become possible:
   the complex sequence is $1, 1, 2, 3, 5, 9, 16, 29, \ge 54, \dots$
+* **Planes in space, hyperplanes in higher dimensions.** For $n$ planes in real projective space, two planes meet in a
+  line, and the analogue of a pencil is a line lying on $k \ge 3$ planes or a point lying on more planes than in
+  general position; the type has to record both, together with which lines pass through which points. The same three sieves apply
+  (arithmetic, the combinatorics of rank-4 matroids, real realizability), and $d$ has two analogues, the numbers
+  of intersection lines and of intersection points. A generic plane cuts the arrangement in an arrangement of $n$
+  lines whose pencils are the lines of the space arrangement, so the planar types are a shadow of the spatial ones.
 * **Lines over finite fields; the sphere (great circles, where every pencil doubles); the hyperbolic plane (where
   non-intersecting lines appear and $f_0$ can be anything from $0$ to $\binom n2$).**
 

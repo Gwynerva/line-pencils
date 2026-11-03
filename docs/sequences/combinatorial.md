@@ -44,6 +44,16 @@ All terms through $n = 12$ are <span class="status-computed">computer-verified</
 
 An earlier, independently written program by the author gives the same values for $n \le 11$.
 
+## Bounds
+
+| | lower bound | upper bound |
+|---|---|---|
+| every $n$ | $b(n) \ge c(n)$ ([A399464](https://oeis.org/A399464)) | $b(n) \le a(n) = \mathrm{A072964}(n-1)$ (definition) |
+| $n = 13$ | $662$: types for which the search found a linear space (`runs/comb_13*.json`, `runs/sat_13*.json`) | $2087 = a(13) - 567$: the $567$ types for which the search or the SAT check proved that no linear space exists |
+
+The $n = 13$ gap consists of 43 queries that timed out and of the types that fail an inequality and were not searched
+([algorithms](../algorithms.md)).
+
 ## Where the arithmetic and combinatorial tests differ
 
 The first type lost is $\{3, 3\}$ at $n = 4$: two triple points among four lines would share two lines. At $n = 12$ the

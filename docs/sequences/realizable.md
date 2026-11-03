@@ -40,6 +40,14 @@ type has one of them:
   verdicts come from an exhaustive search ([algorithms](../algorithms.md)); the files
   `data/results/classification_n{n}.json` list the reason for every type.
 
+## Bounds
+
+| | lower bound | upper bound |
+|---|---|---|
+| every $n$ | the number of partitions of the numbers $m \le n$ into parts $\ge 3$: pencils that share no lines ([arithmetic page](arithmetic.md#growth)) | $c(n) \le b(n)$ ([A400149](https://oeis.org/A400149)) $\le a(n)$ |
+| $n = 13$ | $620$ verified certificates (`data/certificates/n13.json`) | $659 = 620 + 39$ undecided types; all others excluded ([below](#n-13)) |
+| $n = 14$ | $1104$ verified certificates (`data/certificates/n14.json`) | only $c(14) \le b(14) \le a(14) = 5460$; the classification for $n = 14$ was not run |
+
 ## n = 12: what is known
 
 Of the 384 combinatorially possible types, 336 have verified certificates (332 over $\mathbb Q$, one over $\mathbb Q(\sqrt 2)$,

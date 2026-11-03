@@ -59,6 +59,24 @@ Theorem 1, and "computation" means that every admissible type with that $f_0$ wa
     Scientiarum Hungaricae* 18 (1967), 181–188, Theorem 3, [doi:10.1007/BF02020972](https://doi.org/10.1007/BF02020972).
     Conjectured by Kelly and Moser, who proved it for $n \ge 27$ and $n = 10$.
 
+## Bounds
+
+For every $n \ge 12$, $d(n) \le \binom n2 - 2n + 4$: the values $2, \dots, n-1$ are excluded by de Bruijn–Erdős, the values
+$n+1, \dots, 2n-3$ other than $2n-4$ by Theorem 3 (for $n = 12$ by Elliott's theorem and a computation, Corollary 4), and $\binom n2 - 1$,
+$\binom n2 - 3$ by Theorem 1. Equality holds for $n = 12, 13$ (Observation 5), and fails from $n = 16$ on at the latest. For
+large $n$, $d(n) = \binom n2 - \Theta(n^{3/2})$ (Salamon–Erdős, Observation 5).
+
+| $n$ | lower bound (values with a certificate) | upper bound (values not excluded) | undecided values |
+|---|---|---|---|
+| 14 | 65 | 67 | 27, 28 |
+| 15 | 73 | 79 | 29–33, 37 |
+| 16 | 83 | 91 | 8 values |
+| 17 | 92 | 103 | 11 values |
+
+Lower bounds come from the certificates (`data/certificates/n14.json`, the band construction of
+[Theorem B4](../theorems.md#bands)); upper bounds from the theorems below and the bounds in the proof of Theorem 3
+(`scripts/f0_bounds.py`, `notes/bands.md`).
+
 ## Theorems
 
 <div class="thm" markdown>
