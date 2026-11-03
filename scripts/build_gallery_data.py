@@ -10,6 +10,11 @@ browser must give exactly the certified type.  Where data/symmetric_drawings.jso
 has a symmetric drawing of the type, it is checked in the same way and stored as "S" (with its symmetry order and a
 sentence on how it was obtained); the gallery shows it under "Beautiful" and the certified drawing under "Exact".
 
+"gaps" lists, for every n, the numbers of intersection points 1 <= f0 <= C(n,2) that no drawing has, with the reason
+(as in the V(n) table of docs/sequences/points.md): the theorems of de Bruijn-Erdos, Elliott, Theorem 1 and Theorem E3,
+or "computation" when data/results/classification_n{n}.json shows every admissible type with that f0 non-realizable.
+Beyond the classification (n >= 14) the values not attained and not excluded by a theorem are "undecided".
+
 usage: python scripts/build_gallery_data.py [NMAX]
 """
 import itertools, json, math, os, sys
@@ -79,8 +84,44 @@ SYM_FILE = os.path.join(ROOT, "data", "symmetric_drawings.json")
 SYM = json.load(open(SYM_FILE)) if os.path.exists(SYM_FILE) else {}
 
 
+def gap_reason(n, v):
+    """why no arrangement of n lines has f0 = v, by a theorem valid for all n (None if no theorem applies)"""
+    if 2 <= v <= n - 1:
+        return "de Bruijn–Erdős"
+    if n >= 10 and n + 1 <= v <= 2 * n - 5:
+        return "Elliott"
+    if n >= 13 and v == 2 * n - 3:
+        return "Theorem E3"
+    if v in (n * (n - 1) // 2 - 1, n * (n - 1) // 2 - 3):
+        return "Theorem 1"
+    return None
+
+
+def gaps(n, attained):
+    """[[f0, reason], ...] for the values 1 <= f0 <= C(n,2) not in attained"""
+    fn = os.path.join(ROOT, "data", "results", "classification_n%d.json" % n)
+    cls = json.load(open(fn)) if os.path.exists(fn) else None
+    if cls is not None:
+        real = {r["f0"] for r in cls if r["verdict"] == "real"}
+        assert real == attained, "n=%d: drawings and classification disagree" % n
+    out = []
+    for v in range(1, n * (n - 1) // 2 + 1):
+        if v in attained:
+            continue
+        why = gap_reason(n, v)
+        if why is None:
+            if cls is None:
+                why = "undecided"
+            else:
+                rows = [r for r in cls if r["f0"] == v]
+                assert all(r["verdict"] not in ("real", "open") for r in rows), "n=%d f0=%d: not decided" % (n, v)
+                why = "computation"
+        out.append([v, why])
+    return out
+
+
 def main(nmax):
-    out = {"star": {"n": 10, "type": [5] + [3] * 10, "L": star_lines()}, "n": {}}
+    out = {"star": {"n": 10, "type": [5] + [3] * 10, "L": star_lines()}, "n": {}, "gaps": {}}
     assert pencils_float(out["star"]["L"]) == [5] + [3] * 10
     for n in range(1, nmax + 1):
         if n == 1:
@@ -114,9 +155,11 @@ def main(nmax):
                 it.update({"S": s_["L"], "sym": s_["symmetry"], "rot": s_["rotation"], "how": s_["how"]})
         items.sort(key=lambda it: (-max(it["type"] or [2]), -len(it["type"]), it["type"]), reverse=False)
         out["n"][str(n)] = items
+        if n >= 3:
+            out["gaps"][str(n)] = gaps(n, {it["f0"] for it in items})
         print("n=%d: %d drawings, %d with a symmetric view" % (n, len(items), sum(1 for it in items if "S" in it)), flush=True)
     os.makedirs(os.path.join(ROOT, "docs", "assets", "data"), exist_ok=True)
-    with open(os.path.join(ROOT, "docs", "assets", "data", "gallery.json"), "w") as f:
+    with open(os.path.join(ROOT, "docs", "assets", "data", "gallery.json"), "w", newline="\n") as f:
         json.dump(out, f, separators=(",", ":"))
     print("size: %.0f KB" % (os.path.getsize(os.path.join(ROOT, "docs", "assets", "data", "gallery.json")) / 1024))
 

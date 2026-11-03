@@ -147,19 +147,12 @@
   function gallery(root) {
     data().then(D => {
       const ns = Object.keys(D.n).map(Number).sort((a, b) => a - b);
-      let cur = 10, mode = "beautiful";
+      // the grid always shows the symmetric drawing where there is one; the enlarged view switches to the exact one
+      const mode = "beautiful";
+      let cur = 10;
       try { const v = +localStorage.getItem("lp-n"); if (D.n[v]) cur = v; } catch (e) {}
-      try { const m = localStorage.getItem("lp-mode"); if (MODES[m]) mode = m; } catch (e) {}
-      root.innerHTML = `<div class="lp-modes" role="tablist" aria-label="Drawing style"></div><p class="lp-modenote"></p>` +
-        `<div class="lp-chips lp-ns" role="tablist" aria-label="Number of lines"></div><p class="lp-summary"></p><div class="lp-grid"></div>`;
-      const chips = root.querySelector(".lp-ns"), grid = root.querySelector(".lp-grid"), summ = root.querySelector(".lp-summary");
-      const modes = root.querySelector(".lp-modes"), note = root.querySelector(".lp-modenote");
-      Object.keys(MODES).forEach(m => {
-        const b = document.createElement("button");
-        b.type = "button"; b.className = "lp-chip lp-mode"; b.dataset.mode = m; b.textContent = MODES[m]; b.setAttribute("role", "tab");
-        b.addEventListener("click", () => { mode = m; try { localStorage.setItem("lp-mode", m); } catch (e) {} show(cur); });
-        modes.appendChild(b);
-      });
+      root.innerHTML = `<div class="lp-chips lp-ns" role="tablist" aria-label="Number of lines"></div><p class="lp-summary"></p><div class="lp-groups"></div>`;
+      const chips = root.querySelector(".lp-ns"), grid = root.querySelector(".lp-groups"), summ = root.querySelector(".lp-summary");
       ns.forEach(n => {
         const b = document.createElement("button");
         b.type = "button"; b.className = "lp-chip"; b.textContent = n; b.setAttribute("role", "tab");
@@ -175,29 +168,53 @@
         cur = n;
         try { localStorage.setItem("lp-n", n); } catch (e) {}
         chips.querySelectorAll(".lp-chip").forEach(c => c.setAttribute("aria-selected", +c.textContent === n ? "true" : "false"));
-        modes.querySelectorAll(".lp-mode").forEach(c => c.setAttribute("aria-selected", c.dataset.mode === mode ? "true" : "false"));
-        note.textContent = mode === "beautiful"
-          ? "Symmetric drawings, built from regular polygons, the symmetry axes of polyhedra and sections of 4-dimensional mirror arrangements. Types without one are drawn as under Exact."
-          : "The certified arrangements, drawn from their exact coordinates.";
-        const items = D.n[n];
-        const f0s = [...new Set(items.map(it => it.f0))].sort((a, b) => a - b);
+        // stable sort: inside a group the order of build_gallery_data.py is kept
+        const items = D.n[n].slice().sort((a, b) => a.f0 - b.f0);
+        const f0s = [...new Set(items.map(it => it.f0))];
         const nsym = items.filter(it => it.S).length;
         summ.textContent = n <= 2
           ? (n === 1 ? "One line: no intersection point." : "Two lines: one intersection point.")
-          : `${items.length} pencil types drawn for ${n} lines; numbers of intersection points: ${f0s.join(", ")}.` +
-            (mode === "beautiful" ? ` ${nsym} of them have a symmetric drawing.` : "") +
-            (n >= 13 ? " For this n the list is a lower bound." : "");
+          : `${items.length} types, ${f0s.length} numbers of intersection points.` +
+            (nsym ? ` ${nsym} of the types are shown by a symmetric drawing.` : "") +
+            (n >= 13 ? " For this n the list of types is a lower bound." : "");
+        // runs of consecutive missing values with the same reason, e.g. "2–11 points: impossible — de Bruijn–Erdős"
+        const runs = [];
+        ((D.gaps || {})[n] || []).forEach(([v, why]) => {
+          const r = runs[runs.length - 1];
+          if (r && r.why === why && r.hi === v - 1) r.hi = v; else runs.push({ lo: v, hi: v, why });
+        });
+        const rows = f0s.map(v => ({ v, items: items.filter(it => it.f0 === v) }))
+          .concat(runs.map(r => ({ v: r.lo, gap: r }))).sort((a, b) => a.v - b.v);
+        const pts = v => v + (v === 1 ? " point" : " points");
         grid.innerHTML = "";
-        items.forEach(it => {
-          const card = document.createElement("button");
-          card.type = "button"; card.className = "lp-card";
-          const sym = mode === "beautiful" && it.S ? " · " + (it.rot >= 3 ? "order " + it.sym : "mirror") : "";
-          card.innerHTML = `<div class="lp-art"></div><div class="lp-cap"><span class="lp-type">${typeText(n, it.type)}</span><span class="lp-meta">f₀ = ${it.f0}${it.d ? " · " + FIELD(it.d) : ""}${sym}</span></div>`;
-          card.setAttribute("aria-label", `Type ${typeText(n, it.type, true, false)}, ${it.f0} intersection points`);
-          card._it = it;
-          card.addEventListener("click", () => modal(n, it, mode));
-          grid.appendChild(card);
-          if (io) io.observe(card); else card.querySelector(".lp-art").appendChild(draw(pick(it, mode)));
+        rows.forEach(row => {
+          if (row.gap) {
+            const g = row.gap, p = document.createElement("p");
+            p.className = "lp-gap" + (g.why === "undecided" ? " open" : "");
+            const vals = g.lo === g.hi ? pts(g.lo) : g.lo + "–" + g.hi + " points";
+            p.innerHTML = g.why === "undecided"
+              ? `${vals}: <a href="${ROOT}open/">undecided</a>`
+              : `${vals}: impossible — <a href="${ROOT}sequences/points/#the-sets-vn">${g.why}</a>`;
+            grid.appendChild(p);
+            return;
+          }
+          const sec = document.createElement("section");
+          sec.className = "lp-group";
+          const nt = row.items.length;
+          sec.innerHTML = `<h3 class="lp-ghead">${row.v ? row.v + " intersection point" + (row.v === 1 ? "" : "s") : "No intersection point"} · ${nt} type${nt === 1 ? "" : "s"}</h3><div class="lp-grid"></div>`;
+          const box = sec.querySelector(".lp-grid");
+          row.items.forEach(it => {
+            const card = document.createElement("button");
+            card.type = "button"; card.className = "lp-card";
+            const sym = it.S ? " · " + (it.rot >= 3 ? "order " + it.sym : "mirror") : "";
+            card.innerHTML = `<div class="lp-art"></div><div class="lp-cap"><span class="lp-type">${typeText(n, it.type)}</span><span class="lp-meta">${pts(it.f0)}${it.d ? " · " + FIELD(it.d) : ""}${sym}</span></div>`;
+            card.setAttribute("aria-label", `Type ${typeText(n, it.type, true, false)}, ${it.f0} intersection points`);
+            card._it = it;
+            card.addEventListener("click", () => modal(n, it, mode));
+            box.appendChild(card);
+            if (io) io.observe(card); else card.querySelector(".lp-art").appendChild(draw(pick(it, mode)));
+          });
+          grid.appendChild(sec);
         });
       }
       show(cur);
