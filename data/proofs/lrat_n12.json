@@ -1,0 +1,3469 @@
+{
+ "instances": {
+  "C3a_sts13p13_del0": {
+   "check_time": 2.1,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "0c45dcf105be4b3f6a5d5b811e2c9ca4f5b47dd9434d5b1a2a7033953e6b8c45",
+   "proof_bytes": 2344669,
+   "solve_time": 1.4,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      0,
+      3,
+      7
+     ],
+     [
+      0,
+      4,
+      10
+     ],
+     [
+      0,
+      5,
+      9
+     ],
+     [
+      0,
+      6,
+      11
+     ],
+     [
+      1,
+      3,
+      10
+     ],
+     [
+      1,
+      4,
+      7
+     ],
+     [
+      1,
+      5,
+      8
+     ],
+     [
+      1,
+      6,
+      9
+     ],
+     [
+      2,
+      3,
+      8
+     ],
+     [
+      2,
+      4,
+      6
+     ],
+     [
+      2,
+      7,
+      9
+     ],
+     [
+      2,
+      10,
+      11
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      9,
+      11
+     ],
+     [
+      4,
+      8,
+      11
+     ],
+     [
+      5,
+      6,
+      10
+     ],
+     [
+      5,
+      7,
+      11
+     ],
+     [
+      6,
+      7,
+      8
+     ],
+     [
+      8,
+      9,
+      10
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 13 Pasch configurations, point 0 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p13_del1": {
+   "check_time": 2.3,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "24ba2c13d6df995b519f9ca1623269cdc4c7b3fb4ba1889383c2a7d598132306",
+   "proof_bytes": 2277298,
+   "solve_time": 1.3,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      11
+     ],
+     [
+      0,
+      2,
+      5
+     ],
+     [
+      0,
+      3,
+      6
+     ],
+     [
+      0,
+      4,
+      9
+     ],
+     [
+      0,
+      7,
+      10
+     ],
+     [
+      1,
+      3,
+      10
+     ],
+     [
+      1,
+      4,
+      7
+     ],
+     [
+      1,
+      5,
+      8
+     ],
+     [
+      1,
+      6,
+      9
+     ],
+     [
+      2,
+      3,
+      8
+     ],
+     [
+      2,
+      4,
+      6
+     ],
+     [
+      2,
+      7,
+      9
+     ],
+     [
+      2,
+      10,
+      11
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      9,
+      11
+     ],
+     [
+      4,
+      8,
+      11
+     ],
+     [
+      5,
+      6,
+      10
+     ],
+     [
+      5,
+      7,
+      11
+     ],
+     [
+      6,
+      7,
+      8
+     ],
+     [
+      8,
+      9,
+      10
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 13 Pasch configurations, point 1 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p13_del10": {
+   "check_time": 1.9,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "7fd6355a5557cdd7571da4251fa8ca7e0f7938efe3c24e912aacc6052905e091",
+   "proof_bytes": 2329492,
+   "solve_time": 3.2,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      9
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      6
+     ],
+     [
+      0,
+      4,
+      7
+     ],
+     [
+      0,
+      8,
+      10
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      4,
+      8
+     ],
+     [
+      1,
+      5,
+      10
+     ],
+     [
+      1,
+      7,
+      11
+     ],
+     [
+      2,
+      4,
+      10
+     ],
+     [
+      2,
+      5,
+      8
+     ],
+     [
+      2,
+      6,
+      9
+     ],
+     [
+      3,
+      4,
+      9
+     ],
+     [
+      3,
+      5,
+      7
+     ],
+     [
+      3,
+      10,
+      11
+     ],
+     [
+      4,
+      5,
+      6
+     ],
+     [
+      5,
+      9,
+      11
+     ],
+     [
+      6,
+      7,
+      10
+     ],
+     [
+      6,
+      8,
+      11
+     ],
+     [
+      7,
+      8,
+      9
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 13 Pasch configurations, point 10 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p13_del11": {
+   "check_time": 2.6,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "8f39946a068f4cbca73cf0277396e950ad215cb3d01ea6793fdbacc86692c8b5",
+   "proof_bytes": 2238292,
+   "solve_time": 1.4,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      9
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      6
+     ],
+     [
+      0,
+      4,
+      7
+     ],
+     [
+      0,
+      5,
+      10
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      4,
+      8
+     ],
+     [
+      1,
+      6,
+      10
+     ],
+     [
+      1,
+      7,
+      11
+     ],
+     [
+      2,
+      5,
+      8
+     ],
+     [
+      2,
+      6,
+      9
+     ],
+     [
+      2,
+      7,
+      10
+     ],
+     [
+      3,
+      4,
+      9
+     ],
+     [
+      3,
+      5,
+      7
+     ],
+     [
+      3,
+      8,
+      10
+     ],
+     [
+      4,
+      5,
+      6
+     ],
+     [
+      4,
+      10,
+      11
+     ],
+     [
+      5,
+      9,
+      11
+     ],
+     [
+      6,
+      8,
+      11
+     ],
+     [
+      7,
+      8,
+      9
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 13 Pasch configurations, point 11 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p13_del12": {
+   "check_time": 3.0,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "2a28c3b662d94515045d72e102dfbf184b6a1c10944749d4f6e8c84906df7c26",
+   "proof_bytes": 2368679,
+   "solve_time": 1.8,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      9
+     ],
+     [
+      0,
+      3,
+      6
+     ],
+     [
+      0,
+      4,
+      7
+     ],
+     [
+      0,
+      5,
+      10
+     ],
+     [
+      0,
+      8,
+      11
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      4,
+      8
+     ],
+     [
+      1,
+      5,
+      11
+     ],
+     [
+      1,
+      6,
+      10
+     ],
+     [
+      2,
+      4,
+      11
+     ],
+     [
+      2,
+      5,
+      8
+     ],
+     [
+      2,
+      6,
+      9
+     ],
+     [
+      2,
+      7,
+      10
+     ],
+     [
+      3,
+      4,
+      9
+     ],
+     [
+      3,
+      5,
+      7
+     ],
+     [
+      3,
+      8,
+      10
+     ],
+     [
+      4,
+      5,
+      6
+     ],
+     [
+      6,
+      7,
+      11
+     ],
+     [
+      7,
+      8,
+      9
+     ],
+     [
+      9,
+      10,
+      11
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 13 Pasch configurations, point 12 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p13_del2": {
+   "check_time": 1.9,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "7d7e7dda2688a11be88e0ff24272947306df5fbd367a281691abbb935b784426",
+   "proof_bytes": 2287982,
+   "solve_time": 1.3,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      5
+     ],
+     [
+      0,
+      3,
+      6
+     ],
+     [
+      0,
+      4,
+      9
+     ],
+     [
+      0,
+      7,
+      10
+     ],
+     [
+      1,
+      3,
+      7
+     ],
+     [
+      1,
+      4,
+      10
+     ],
+     [
+      1,
+      5,
+      9
+     ],
+     [
+      1,
+      6,
+      11
+     ],
+     [
+      2,
+      3,
+      8
+     ],
+     [
+      2,
+      4,
+      6
+     ],
+     [
+      2,
+      7,
+      9
+     ],
+     [
+      2,
+      10,
+      11
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      9,
+      11
+     ],
+     [
+      4,
+      8,
+      11
+     ],
+     [
+      5,
+      6,
+      10
+     ],
+     [
+      5,
+      7,
+      11
+     ],
+     [
+      6,
+      7,
+      8
+     ],
+     [
+      8,
+      9,
+      10
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 13 Pasch configurations, point 2 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p13_del3": {
+   "check_time": 3.7,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "6be29cd059b8826650d3b7856930b9e92c87aa93a905e750eade59bd61e48bd4",
+   "proof_bytes": 2323908,
+   "solve_time": 2.7,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      6
+     ],
+     [
+      0,
+      4,
+      9
+     ],
+     [
+      0,
+      7,
+      10
+     ],
+     [
+      1,
+      3,
+      7
+     ],
+     [
+      1,
+      4,
+      10
+     ],
+     [
+      1,
+      5,
+      9
+     ],
+     [
+      1,
+      6,
+      11
+     ],
+     [
+      2,
+      3,
+      10
+     ],
+     [
+      2,
+      4,
+      7
+     ],
+     [
+      2,
+      5,
+      8
+     ],
+     [
+      2,
+      6,
+      9
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      9,
+      11
+     ],
+     [
+      4,
+      8,
+      11
+     ],
+     [
+      5,
+      6,
+      10
+     ],
+     [
+      5,
+      7,
+      11
+     ],
+     [
+      6,
+      7,
+      8
+     ],
+     [
+      8,
+      9,
+      10
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 13 Pasch configurations, point 3 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p13_del4": {
+   "check_time": 2.5,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "f37348161db77d2a4c9a5ed19813532f2b475d781f0a48bf388f7ec27b873e86",
+   "proof_bytes": 2409209,
+   "solve_time": 4.2,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      5
+     ],
+     [
+      0,
+      4,
+      9
+     ],
+     [
+      0,
+      7,
+      10
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      4,
+      10
+     ],
+     [
+      1,
+      5,
+      9
+     ],
+     [
+      1,
+      6,
+      11
+     ],
+     [
+      2,
+      4,
+      7
+     ],
+     [
+      2,
+      5,
+      8
+     ],
+     [
+      2,
+      6,
+      9
+     ],
+     [
+      3,
+      4,
+      6
+     ],
+     [
+      3,
+      7,
+      9
+     ],
+     [
+      3,
+      10,
+      11
+     ],
+     [
+      4,
+      8,
+      11
+     ],
+     [
+      5,
+      6,
+      10
+     ],
+     [
+      5,
+      7,
+      11
+     ],
+     [
+      6,
+      7,
+      8
+     ],
+     [
+      8,
+      9,
+      10
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 13 Pasch configurations, point 4 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p13_del5": {
+   "check_time": 2.3,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "e0d80706644aee0b77c8f3048c4eeabf58e005ca90293ca6c3d6873570db0750",
+   "proof_bytes": 2278052,
+   "solve_time": 3.9,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      5
+     ],
+     [
+      0,
+      4,
+      6
+     ],
+     [
+      0,
+      7,
+      10
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      4,
+      7
+     ],
+     [
+      1,
+      5,
+      9
+     ],
+     [
+      1,
+      6,
+      11
+     ],
+     [
+      2,
+      4,
+      10
+     ],
+     [
+      2,
+      5,
+      8
+     ],
+     [
+      2,
+      6,
+      9
+     ],
+     [
+      3,
+      4,
+      8
+     ],
+     [
+      3,
+      7,
+      9
+     ],
+     [
+      3,
+      10,
+      11
+     ],
+     [
+      4,
+      9,
+      11
+     ],
+     [
+      5,
+      6,
+      10
+     ],
+     [
+      5,
+      7,
+      11
+     ],
+     [
+      6,
+      7,
+      8
+     ],
+     [
+      8,
+      9,
+      10
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 13 Pasch configurations, point 5 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p13_del6": {
+   "check_time": 2.4,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "57bc6ec0f2eea656e84de68dd4a7e9257ce75fc235a5f31638a54df1c73ade05",
+   "proof_bytes": 2329577,
+   "solve_time": 3.7,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      4,
+      6
+     ],
+     [
+      0,
+      5,
+      9
+     ],
+     [
+      0,
+      7,
+      10
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      4,
+      7
+     ],
+     [
+      1,
+      5,
+      10
+     ],
+     [
+      1,
+      6,
+      11
+     ],
+     [
+      2,
+      4,
+      10
+     ],
+     [
+      2,
+      5,
+      7
+     ],
+     [
+      2,
+      6,
+      9
+     ],
+     [
+      3,
+      4,
+      8
+     ],
+     [
+      3,
+      5,
+      6
+     ],
+     [
+      3,
+      7,
+      9
+     ],
+     [
+      3,
+      10,
+      11
+     ],
+     [
+      4,
+      9,
+      11
+     ],
+     [
+      5,
+      8,
+      11
+     ],
+     [
+      6,
+      7,
+      8
+     ],
+     [
+      8,
+      9,
+      10
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 13 Pasch configurations, point 6 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p13_del7": {
+   "check_time": 3.4,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "7145444b0362f40609d801476bd3f83477b6cd0d5b8444381f97a9795d74ad96",
+   "proof_bytes": 2375271,
+   "solve_time": 1.9,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      6
+     ],
+     [
+      0,
+      5,
+      9
+     ],
+     [
+      0,
+      7,
+      10
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      4,
+      7
+     ],
+     [
+      1,
+      5,
+      10
+     ],
+     [
+      1,
+      6,
+      9
+     ],
+     [
+      2,
+      4,
+      10
+     ],
+     [
+      2,
+      5,
+      7
+     ],
+     [
+      2,
+      6,
+      8
+     ],
+     [
+      3,
+      4,
+      8
+     ],
+     [
+      3,
+      7,
+      9
+     ],
+     [
+      3,
+      10,
+      11
+     ],
+     [
+      4,
+      5,
+      6
+     ],
+     [
+      4,
+      9,
+      11
+     ],
+     [
+      5,
+      8,
+      11
+     ],
+     [
+      6,
+      7,
+      11
+     ],
+     [
+      8,
+      9,
+      10
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 13 Pasch configurations, point 7 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p13_del8": {
+   "check_time": 1.9,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "0015f8a45a069c5782c67dae031275a1bde57a3417f15678f6f5ff8e0c5838ad",
+   "proof_bytes": 2364379,
+   "solve_time": 2.8,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      6
+     ],
+     [
+      0,
+      4,
+      7
+     ],
+     [
+      0,
+      5,
+      9
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      5,
+      10
+     ],
+     [
+      1,
+      6,
+      9
+     ],
+     [
+      1,
+      7,
+      11
+     ],
+     [
+      2,
+      4,
+      10
+     ],
+     [
+      2,
+      6,
+      8
+     ],
+     [
+      2,
+      7,
+      9
+     ],
+     [
+      3,
+      4,
+      8
+     ],
+     [
+      3,
+      5,
+      7
+     ],
+     [
+      3,
+      10,
+      11
+     ],
+     [
+      4,
+      5,
+      6
+     ],
+     [
+      4,
+      9,
+      11
+     ],
+     [
+      5,
+      8,
+      11
+     ],
+     [
+      6,
+      7,
+      10
+     ],
+     [
+      8,
+      9,
+      10
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 13 Pasch configurations, point 8 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p13_del9": {
+   "check_time": 1.9,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "0c1844091c53e4328b33b72aec3fff0f0b94ab88ad0ab2f7060df785add54c21",
+   "proof_bytes": 2313482,
+   "solve_time": 3.0,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      6
+     ],
+     [
+      0,
+      4,
+      7
+     ],
+     [
+      0,
+      5,
+      9
+     ],
+     [
+      0,
+      8,
+      10
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      4,
+      8
+     ],
+     [
+      1,
+      5,
+      10
+     ],
+     [
+      1,
+      6,
+      9
+     ],
+     [
+      1,
+      7,
+      11
+     ],
+     [
+      2,
+      4,
+      10
+     ],
+     [
+      2,
+      5,
+      8
+     ],
+     [
+      2,
+      7,
+      9
+     ],
+     [
+      3,
+      5,
+      7
+     ],
+     [
+      3,
+      8,
+      9
+     ],
+     [
+      3,
+      10,
+      11
+     ],
+     [
+      4,
+      5,
+      6
+     ],
+     [
+      4,
+      9,
+      11
+     ],
+     [
+      6,
+      7,
+      10
+     ],
+     [
+      6,
+      8,
+      11
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 13 Pasch configurations, point 9 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p8_del0": {
+   "check_time": 2.2,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "e02088949c8f826a2ec0cef5e2cc80c410f9137561de18dc9f3e8d3ef7517161",
+   "proof_bytes": 2335515,
+   "solve_time": 1.6,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      4
+     ],
+     [
+      0,
+      2,
+      7
+     ],
+     [
+      0,
+      3,
+      6
+     ],
+     [
+      0,
+      5,
+      9
+     ],
+     [
+      0,
+      10,
+      11
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      5,
+      6
+     ],
+     [
+      1,
+      7,
+      8
+     ],
+     [
+      1,
+      9,
+      10
+     ],
+     [
+      2,
+      4,
+      6
+     ],
+     [
+      2,
+      5,
+      8
+     ],
+     [
+      2,
+      9,
+      11
+     ],
+     [
+      3,
+      5,
+      10
+     ],
+     [
+      3,
+      7,
+      11
+     ],
+     [
+      3,
+      8,
+      9
+     ],
+     [
+      4,
+      5,
+      11
+     ],
+     [
+      4,
+      7,
+      9
+     ],
+     [
+      4,
+      8,
+      10
+     ],
+     [
+      6,
+      7,
+      10
+     ],
+     [
+      6,
+      8,
+      11
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 8 Pasch configurations, point 0 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p8_del1": {
+   "check_time": 2.1,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "d170913db7c438c7038f387d089e55ad2761c2d77635e6f87172091367e96188",
+   "proof_bytes": 2258284,
+   "solve_time": 1.7,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      11
+     ],
+     [
+      0,
+      2,
+      10
+     ],
+     [
+      0,
+      3,
+      4
+     ],
+     [
+      0,
+      5,
+      7
+     ],
+     [
+      0,
+      6,
+      9
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      5,
+      6
+     ],
+     [
+      1,
+      7,
+      8
+     ],
+     [
+      1,
+      9,
+      10
+     ],
+     [
+      2,
+      4,
+      6
+     ],
+     [
+      2,
+      5,
+      8
+     ],
+     [
+      2,
+      9,
+      11
+     ],
+     [
+      3,
+      5,
+      10
+     ],
+     [
+      3,
+      7,
+      11
+     ],
+     [
+      3,
+      8,
+      9
+     ],
+     [
+      4,
+      5,
+      11
+     ],
+     [
+      4,
+      7,
+      9
+     ],
+     [
+      4,
+      8,
+      10
+     ],
+     [
+      6,
+      7,
+      10
+     ],
+     [
+      6,
+      8,
+      11
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 8 Pasch configurations, point 1 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p8_del10": {
+   "check_time": 2.8,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "52bdddd19644cc6e8dab2d851b54e442bcbe0979a6ee6d8d7c0f5a225ff38877",
+   "proof_bytes": 2413562,
+   "solve_time": 1.4,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      9
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      10
+     ],
+     [
+      0,
+      4,
+      5
+     ],
+     [
+      0,
+      6,
+      8
+     ],
+     [
+      1,
+      2,
+      5
+     ],
+     [
+      1,
+      3,
+      8
+     ],
+     [
+      1,
+      4,
+      7
+     ],
+     [
+      1,
+      10,
+      11
+     ],
+     [
+      2,
+      3,
+      4
+     ],
+     [
+      2,
+      6,
+      7
+     ],
+     [
+      2,
+      8,
+      9
+     ],
+     [
+      3,
+      5,
+      7
+     ],
+     [
+      3,
+      6,
+      9
+     ],
+     [
+      4,
+      6,
+      10
+     ],
+     [
+      4,
+      8,
+      11
+     ],
+     [
+      5,
+      6,
+      11
+     ],
+     [
+      5,
+      9,
+      10
+     ],
+     [
+      7,
+      8,
+      10
+     ],
+     [
+      7,
+      9,
+      11
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 8 Pasch configurations, point 10 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p8_del11": {
+   "check_time": 2.8,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "c04bd4b05fd1915824e487729d5c6be511fc4b440819f397251ff75d49a6978d",
+   "proof_bytes": 2396547,
+   "solve_time": 1.4,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      9
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      4,
+      5
+     ],
+     [
+      0,
+      6,
+      8
+     ],
+     [
+      0,
+      7,
+      10
+     ],
+     [
+      1,
+      2,
+      5
+     ],
+     [
+      1,
+      3,
+      8
+     ],
+     [
+      1,
+      4,
+      7
+     ],
+     [
+      1,
+      6,
+      10
+     ],
+     [
+      2,
+      3,
+      4
+     ],
+     [
+      2,
+      6,
+      7
+     ],
+     [
+      2,
+      8,
+      9
+     ],
+     [
+      3,
+      5,
+      7
+     ],
+     [
+      3,
+      6,
+      9
+     ],
+     [
+      3,
+      10,
+      11
+     ],
+     [
+      4,
+      8,
+      11
+     ],
+     [
+      4,
+      9,
+      10
+     ],
+     [
+      5,
+      6,
+      11
+     ],
+     [
+      5,
+      8,
+      10
+     ],
+     [
+      7,
+      9,
+      11
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 8 Pasch configurations, point 11 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p8_del12": {
+   "check_time": 1.6,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "4ac52a07e2202cfaf7e67ce25f8747af3fbe4ed07e3fceecec5f85279da2218f",
+   "proof_bytes": 2329325,
+   "solve_time": 1.5,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      9
+     ],
+     [
+      0,
+      3,
+      11
+     ],
+     [
+      0,
+      4,
+      5
+     ],
+     [
+      0,
+      6,
+      8
+     ],
+     [
+      0,
+      7,
+      10
+     ],
+     [
+      1,
+      2,
+      5
+     ],
+     [
+      1,
+      3,
+      8
+     ],
+     [
+      1,
+      4,
+      7
+     ],
+     [
+      1,
+      6,
+      10
+     ],
+     [
+      2,
+      3,
+      4
+     ],
+     [
+      2,
+      6,
+      7
+     ],
+     [
+      2,
+      8,
+      9
+     ],
+     [
+      2,
+      10,
+      11
+     ],
+     [
+      3,
+      5,
+      7
+     ],
+     [
+      3,
+      6,
+      9
+     ],
+     [
+      4,
+      6,
+      11
+     ],
+     [
+      4,
+      9,
+      10
+     ],
+     [
+      5,
+      8,
+      10
+     ],
+     [
+      5,
+      9,
+      11
+     ],
+     [
+      7,
+      8,
+      11
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 8 Pasch configurations, point 12 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p8_del2": {
+   "check_time": 2.1,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "f855303699628eb3a3634d0d22da57e7f592ff4e1d53a4760127f8cdfbf9ec84",
+   "proof_bytes": 2279113,
+   "solve_time": 1.9,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      10
+     ],
+     [
+      0,
+      3,
+      4
+     ],
+     [
+      0,
+      5,
+      7
+     ],
+     [
+      0,
+      6,
+      9
+     ],
+     [
+      1,
+      2,
+      7
+     ],
+     [
+      1,
+      3,
+      6
+     ],
+     [
+      1,
+      5,
+      9
+     ],
+     [
+      1,
+      10,
+      11
+     ],
+     [
+      2,
+      4,
+      6
+     ],
+     [
+      2,
+      5,
+      8
+     ],
+     [
+      2,
+      9,
+      11
+     ],
+     [
+      3,
+      5,
+      10
+     ],
+     [
+      3,
+      7,
+      11
+     ],
+     [
+      3,
+      8,
+      9
+     ],
+     [
+      4,
+      5,
+      11
+     ],
+     [
+      4,
+      7,
+      9
+     ],
+     [
+      4,
+      8,
+      10
+     ],
+     [
+      6,
+      7,
+      10
+     ],
+     [
+      6,
+      8,
+      11
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 8 Pasch configurations, point 2 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p8_del3": {
+   "check_time": 2.5,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "bac49639622cc6fd87ba56aadcbc0ac97b5ebe10a33026393a18af5995dd241c",
+   "proof_bytes": 2432566,
+   "solve_time": 1.6,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      4
+     ],
+     [
+      0,
+      5,
+      7
+     ],
+     [
+      0,
+      6,
+      9
+     ],
+     [
+      1,
+      2,
+      4
+     ],
+     [
+      1,
+      3,
+      6
+     ],
+     [
+      1,
+      5,
+      9
+     ],
+     [
+      1,
+      10,
+      11
+     ],
+     [
+      2,
+      5,
+      6
+     ],
+     [
+      2,
+      7,
+      8
+     ],
+     [
+      2,
+      9,
+      10
+     ],
+     [
+      3,
+      5,
+      10
+     ],
+     [
+      3,
+      7,
+      11
+     ],
+     [
+      3,
+      8,
+      9
+     ],
+     [
+      4,
+      5,
+      11
+     ],
+     [
+      4,
+      7,
+      9
+     ],
+     [
+      4,
+      8,
+      10
+     ],
+     [
+      6,
+      7,
+      10
+     ],
+     [
+      6,
+      8,
+      11
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 8 Pasch configurations, point 3 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p8_del4": {
+   "check_time": 2.1,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "aef234169208bb6939710b552a115a1ff67de61a417444ba3a2093fb39ec0fce",
+   "proof_bytes": 2438432,
+   "solve_time": 1.5,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      10
+     ],
+     [
+      0,
+      5,
+      7
+     ],
+     [
+      0,
+      6,
+      9
+     ],
+     [
+      1,
+      2,
+      4
+     ],
+     [
+      1,
+      3,
+      7
+     ],
+     [
+      1,
+      5,
+      9
+     ],
+     [
+      1,
+      10,
+      11
+     ],
+     [
+      2,
+      5,
+      6
+     ],
+     [
+      2,
+      7,
+      8
+     ],
+     [
+      2,
+      9,
+      10
+     ],
+     [
+      3,
+      4,
+      6
+     ],
+     [
+      3,
+      5,
+      8
+     ],
+     [
+      3,
+      9,
+      11
+     ],
+     [
+      4,
+      5,
+      11
+     ],
+     [
+      4,
+      7,
+      9
+     ],
+     [
+      4,
+      8,
+      10
+     ],
+     [
+      6,
+      7,
+      10
+     ],
+     [
+      6,
+      8,
+      11
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 8 Pasch configurations, point 4 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p8_del5": {
+   "check_time": 2.2,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "b4c71b1e58c7154c385f7580c9fff6470a9357c782c20bd30eebde596d1974a6",
+   "proof_bytes": 2256413,
+   "solve_time": 1.5,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      10
+     ],
+     [
+      0,
+      5,
+      7
+     ],
+     [
+      0,
+      6,
+      9
+     ],
+     [
+      1,
+      3,
+      7
+     ],
+     [
+      1,
+      4,
+      6
+     ],
+     [
+      1,
+      5,
+      9
+     ],
+     [
+      1,
+      10,
+      11
+     ],
+     [
+      2,
+      3,
+      4
+     ],
+     [
+      2,
+      5,
+      6
+     ],
+     [
+      2,
+      7,
+      8
+     ],
+     [
+      2,
+      9,
+      10
+     ],
+     [
+      3,
+      5,
+      8
+     ],
+     [
+      3,
+      9,
+      11
+     ],
+     [
+      4,
+      5,
+      10
+     ],
+     [
+      4,
+      7,
+      11
+     ],
+     [
+      4,
+      8,
+      9
+     ],
+     [
+      6,
+      7,
+      10
+     ],
+     [
+      6,
+      8,
+      11
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 8 Pasch configurations, point 5 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p8_del6": {
+   "check_time": 2.2,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "b34b6b4f3d87f3c989cf4ea9edc0c685bd4e135ce49d169d58b13b1c1e75b450",
+   "proof_bytes": 2325320,
+   "solve_time": 1.3,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      10
+     ],
+     [
+      0,
+      4,
+      5
+     ],
+     [
+      0,
+      6,
+      9
+     ],
+     [
+      1,
+      2,
+      5
+     ],
+     [
+      1,
+      3,
+      7
+     ],
+     [
+      1,
+      4,
+      6
+     ],
+     [
+      1,
+      10,
+      11
+     ],
+     [
+      2,
+      3,
+      4
+     ],
+     [
+      2,
+      7,
+      8
+     ],
+     [
+      2,
+      9,
+      10
+     ],
+     [
+      3,
+      5,
+      6
+     ],
+     [
+      3,
+      9,
+      11
+     ],
+     [
+      4,
+      7,
+      11
+     ],
+     [
+      4,
+      8,
+      9
+     ],
+     [
+      5,
+      7,
+      9
+     ],
+     [
+      5,
+      8,
+      10
+     ],
+     [
+      6,
+      7,
+      10
+     ],
+     [
+      6,
+      8,
+      11
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 8 Pasch configurations, point 6 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p8_del7": {
+   "check_time": 2.1,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "2b67ebc677c449849a152f693445c028552c38f80721150d0285eb304ee39c15",
+   "proof_bytes": 2370300,
+   "solve_time": 1.3,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      10
+     ],
+     [
+      0,
+      4,
+      5
+     ],
+     [
+      0,
+      6,
+      7
+     ],
+     [
+      1,
+      2,
+      5
+     ],
+     [
+      1,
+      3,
+      7
+     ],
+     [
+      1,
+      6,
+      9
+     ],
+     [
+      1,
+      10,
+      11
+     ],
+     [
+      2,
+      3,
+      4
+     ],
+     [
+      2,
+      7,
+      8
+     ],
+     [
+      2,
+      9,
+      10
+     ],
+     [
+      3,
+      6,
+      8
+     ],
+     [
+      3,
+      9,
+      11
+     ],
+     [
+      4,
+      6,
+      10
+     ],
+     [
+      4,
+      7,
+      11
+     ],
+     [
+      4,
+      8,
+      9
+     ],
+     [
+      5,
+      6,
+      11
+     ],
+     [
+      5,
+      7,
+      9
+     ],
+     [
+      5,
+      8,
+      10
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 8 Pasch configurations, point 7 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p8_del8": {
+   "check_time": 2.2,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "4778e99f8f7430564a31f2b270c40e6a01d3c0b605a9013cf1d3f9ff541aadd2",
+   "proof_bytes": 2310339,
+   "solve_time": 1.2,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      1,
+      8
+     ],
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      10
+     ],
+     [
+      0,
+      4,
+      5
+     ],
+     [
+      0,
+      7,
+      9
+     ],
+     [
+      1,
+      2,
+      5
+     ],
+     [
+      1,
+      4,
+      7
+     ],
+     [
+      1,
+      6,
+      9
+     ],
+     [
+      1,
+      10,
+      11
+     ],
+     [
+      2,
+      3,
+      4
+     ],
+     [
+      2,
+      6,
+      7
+     ],
+     [
+      2,
+      9,
+      10
+     ],
+     [
+      3,
+      5,
+      7
+     ],
+     [
+      3,
+      6,
+      8
+     ],
+     [
+      3,
+      9,
+      11
+     ],
+     [
+      4,
+      6,
+      10
+     ],
+     [
+      4,
+      8,
+      9
+     ],
+     [
+      5,
+      6,
+      11
+     ],
+     [
+      5,
+      8,
+      10
+     ],
+     [
+      7,
+      8,
+      11
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 8 Pasch configurations, point 8 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3a_sts13p8_del9": {
+   "check_time": 2.7,
+   "claim": "Proposition C3a",
+   "clauses": 196586,
+   "cnf_sha256": "5ae110c9ce3ab0ba16171c209721fcaf2345fdf43b57bb17dafe0a0f25fd5236",
+   "proof_bytes": 2344331,
+   "solve_time": 1.3,
+   "spec": {
+    "blocks": [
+     [
+      0,
+      2,
+      11
+     ],
+     [
+      0,
+      3,
+      10
+     ],
+     [
+      0,
+      4,
+      5
+     ],
+     [
+      0,
+      6,
+      8
+     ],
+     [
+      0,
+      7,
+      9
+     ],
+     [
+      1,
+      2,
+      5
+     ],
+     [
+      1,
+      3,
+      8
+     ],
+     [
+      1,
+      4,
+      7
+     ],
+     [
+      1,
+      6,
+      9
+     ],
+     [
+      1,
+      10,
+      11
+     ],
+     [
+      2,
+      3,
+      4
+     ],
+     [
+      2,
+      6,
+      7
+     ],
+     [
+      2,
+      9,
+      10
+     ],
+     [
+      3,
+      5,
+      7
+     ],
+     [
+      3,
+      9,
+      11
+     ],
+     [
+      4,
+      6,
+      10
+     ],
+     [
+      4,
+      8,
+      11
+     ],
+     [
+      5,
+      6,
+      11
+     ],
+     [
+      5,
+      8,
+      9
+     ],
+     [
+      7,
+      8,
+      10
+     ]
+    ],
+    "claim": "Proposition C3a",
+    "kind": "orient_fixed",
+    "n": 12,
+    "what": "the linear space (STS(13) with 8 Pasch configurations, point 9 deleted) has no chirotope"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 44894
+  },
+  "C3b_case1": {
+   "check_time": 2.6,
+   "claim": "Proposition C3b",
+   "clauses": 209148,
+   "cnf_sha256": "049e04d332ae20d4b18bea9e2b27bff044051d10fc01b8ecb6c8aabe49ad4078",
+   "proof_bytes": 2708694,
+   "solve_time": 6.8,
+   "spec": {
+    "blocks4": [
+     [
+      0,
+      1,
+      2,
+      3
+     ],
+     [
+      0,
+      4,
+      5,
+      6
+     ],
+     [
+      1,
+      4,
+      7,
+      8
+     ],
+     [
+      2,
+      5,
+      7,
+      9
+     ],
+     [
+      3,
+      6,
+      10,
+      11
+     ]
+    ],
+    "claim": "Proposition C3b",
+    "kind": "orient_split",
+    "n": 12,
+    "n3": 9,
+    "what": "no orientable linear space of type {4^5, 3^9} with these five 4-blocks"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 49057
+  },
+  "C3b_case2": {
+   "check_time": 2.3,
+   "claim": "Proposition C3b",
+   "clauses": 209148,
+   "cnf_sha256": "0902e0dfce0cae09111147aeef5da23035639ba7d7bbfc9ce03e8af9b304758e",
+   "proof_bytes": 2502419,
+   "solve_time": 6.5,
+   "spec": {
+    "blocks4": [
+     [
+      0,
+      1,
+      2,
+      3
+     ],
+     [
+      0,
+      4,
+      5,
+      6
+     ],
+     [
+      1,
+      4,
+      7,
+      8
+     ],
+     [
+      2,
+      5,
+      7,
+      9
+     ],
+     [
+      3,
+      6,
+      8,
+      10
+     ]
+    ],
+    "claim": "Proposition C3b",
+    "kind": "orient_split",
+    "n": 12,
+    "n3": 9,
+    "what": "no orientable linear space of type {4^5, 3^9} with these five 4-blocks"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 49057
+  },
+  "C3b_case3": {
+   "check_time": 5.1,
+   "claim": "Proposition C3b",
+   "clauses": 209148,
+   "cnf_sha256": "96b7ef0ef38768a1eb507711f0362cfa1fbbb1592f593453aa27cab2d3a480ce",
+   "proof_bytes": 9120596,
+   "solve_time": 31.6,
+   "spec": {
+    "blocks4": [
+     [
+      0,
+      1,
+      2,
+      3
+     ],
+     [
+      0,
+      4,
+      5,
+      6
+     ],
+     [
+      1,
+      4,
+      7,
+      8
+     ],
+     [
+      2,
+      5,
+      7,
+      9
+     ],
+     [
+      3,
+      6,
+      8,
+      9
+     ]
+    ],
+    "claim": "Proposition C3b",
+    "kind": "orient_split",
+    "n": 12,
+    "n3": 9,
+    "what": "no orientable linear space of type {4^5, 3^9} with these five 4-blocks"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 49057
+  },
+  "C3b_case4": {
+   "check_time": 5.9,
+   "claim": "Proposition C3b",
+   "clauses": 209148,
+   "cnf_sha256": "e5151b366857b15b674f3dff57b83e719964ff29f0f6f5c1c0d499afc5a90915",
+   "proof_bytes": 8633768,
+   "solve_time": 26.7,
+   "spec": {
+    "blocks4": [
+     [
+      0,
+      1,
+      2,
+      3
+     ],
+     [
+      0,
+      4,
+      5,
+      6
+     ],
+     [
+      1,
+      4,
+      7,
+      8
+     ],
+     [
+      2,
+      5,
+      7,
+      9
+     ],
+     [
+      3,
+      6,
+      7,
+      10
+     ]
+    ],
+    "claim": "Proposition C3b",
+    "kind": "orient_split",
+    "n": 12,
+    "n3": 9,
+    "what": "no orientable linear space of type {4^5, 3^9} with these five 4-blocks"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 49057
+  },
+  "C3b_case5": {
+   "check_time": 2.8,
+   "claim": "Proposition C3b",
+   "clauses": 209148,
+   "cnf_sha256": "7b60b6ce39b411c9b45cb8df15a43e7b1335cecfa7065312dab1bcbbe08a4b38",
+   "proof_bytes": 2590137,
+   "solve_time": 5.0,
+   "spec": {
+    "blocks4": [
+     [
+      0,
+      1,
+      2,
+      3
+     ],
+     [
+      0,
+      4,
+      5,
+      8
+     ],
+     [
+      1,
+      4,
+      6,
+      9
+     ],
+     [
+      2,
+      5,
+      7,
+      10
+     ],
+     [
+      3,
+      6,
+      7,
+      11
+     ]
+    ],
+    "claim": "Proposition C3b",
+    "kind": "orient_split",
+    "n": 12,
+    "n3": 9,
+    "what": "no orientable linear space of type {4^5, 3^9} with these five 4-blocks"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 49057
+  },
+  "C3b_case6": {
+   "check_time": 3.5,
+   "claim": "Proposition C3b",
+   "clauses": 209148,
+   "cnf_sha256": "abf525dbd6fef8d8c31dce923c8a82499b499b77224eec4bd83cd68b47a327ff",
+   "proof_bytes": 3303804,
+   "solve_time": 9.9,
+   "spec": {
+    "blocks4": [
+     [
+      0,
+      1,
+      2,
+      3
+     ],
+     [
+      0,
+      4,
+      5,
+      7
+     ],
+     [
+      1,
+      4,
+      6,
+      8
+     ],
+     [
+      2,
+      5,
+      6,
+      9
+     ],
+     [
+      3,
+      6,
+      10,
+      11
+     ]
+    ],
+    "claim": "Proposition C3b",
+    "kind": "orient_split",
+    "n": 12,
+    "n3": 9,
+    "what": "no orientable linear space of type {4^5, 3^9} with these five 4-blocks"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 49057
+  },
+  "C3b_case7": {
+   "check_time": 4.0,
+   "claim": "Proposition C3b",
+   "clauses": 209148,
+   "cnf_sha256": "4eb23d19dccd7a117a97aeb60a7413b06bbc18ba684ec16afd1af3d1fb4f0cba",
+   "proof_bytes": 8158992,
+   "solve_time": 25.0,
+   "spec": {
+    "blocks4": [
+     [
+      0,
+      1,
+      2,
+      3
+     ],
+     [
+      0,
+      4,
+      7,
+      8
+     ],
+     [
+      1,
+      5,
+      7,
+      9
+     ],
+     [
+      2,
+      6,
+      7,
+      10
+     ],
+     [
+      4,
+      5,
+      6,
+      11
+     ]
+    ],
+    "claim": "Proposition C3b",
+    "kind": "orient_split",
+    "n": 12,
+    "n3": 9,
+    "what": "no orientable linear space of type {4^5, 3^9} with these five 4-blocks"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 49057
+  },
+  "C3b_case8": {
+   "check_time": 5.5,
+   "claim": "Proposition C3b",
+   "clauses": 209148,
+   "cnf_sha256": "5c758b98843d7bcdaefbca774f5488fb7c43882e964fdbd015c29a41bf6d6520",
+   "proof_bytes": 9770430,
+   "solve_time": 25.0,
+   "spec": {
+    "blocks4": [
+     [
+      0,
+      1,
+      2,
+      3
+     ],
+     [
+      0,
+      4,
+      6,
+      7
+     ],
+     [
+      1,
+      5,
+      6,
+      8
+     ],
+     [
+      2,
+      4,
+      5,
+      9
+     ],
+     [
+      2,
+      6,
+      10,
+      11
+     ]
+    ],
+    "claim": "Proposition C3b",
+    "kind": "orient_split",
+    "n": 12,
+    "n3": 9,
+    "what": "no orientable linear space of type {4^5, 3^9} with these five 4-blocks"
+   },
+   "status": "UNSAT-VERIFIED",
+   "vars": 49057
+  }
+ },
+ "python_sat": "1.9.dev17",
+ "tools": {
+  "cadical": "CaDiCaL 2.1.3 (git tag rel-2.1.3), standalone binary, options -q --lrat=true --binary=true",
+  "cake_lpr": "github.com/tanyongkiam/cake_lpr commit 033aad53d1733bd4b8ca41cf6f1b5fb5d84f8de2 (x64 cake_lpr.S, sha256 checked against cake_lpr.sha256)"
+ }
+}

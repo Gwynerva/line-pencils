@@ -15,6 +15,9 @@ satisfiable instance in every case.  Hence no arrangement of 12 lines, not even 
 
 usage: python scripts/orient_split.py [OUT.json]       (default runs/orient_split_12.json)
        python scripts/orient_split.py --control        (the same cases for {4^5, 3^8}; all must be YES)
+       python scripts/orient_split.py --proof DIR      (CNF + LRAT proof of each of the 8 cases, checked by cake_lpr)
+The LRAT proofs cover the 8 SAT instances; the reduction to these 8 cases (families(), canon(), blocks_of()) is the
+combinatorial argument above and is not part of any proof file.
 """
 import itertools, json, os, sys, time
 from multiprocessing import Pool
@@ -67,15 +70,21 @@ def cases():
     return list(out.values())
 
 
-def solve(args):
-    blocks4, n3, solver = args
+def split_clauses(blocks4, n3):
+    """CNF: an orientable linear space of type {4^5, 3^n3} on 12 points whose 4-blocks are exactly blocks4"""
     from sat_orient import build
-    from pysat.solvers import Solver
     cl, xs, pool = build(12, [4] * 5 + [3] * n3)
     want = {tuple(b) for b in blocks4}
     for S, v in xs.items():
         if len(S) == 4:
             cl.append([v] if S in want else [-v])
+    return cl
+
+
+def solve(args):
+    blocks4, n3, solver = args
+    from pysat.solvers import Solver
+    cl = split_clauses(blocks4, n3)
     t0 = time.time()
     with Solver(name=solver, bootstrap_with=cl) as slv:
         ok = slv.solve()
@@ -83,6 +92,14 @@ def solve(args):
 
 
 if __name__ == "__main__":
+    if "--proof" in sys.argv:
+        from sat_proof import solve_and_check
+        d = sys.argv[sys.argv.index("--proof") + 1]
+        for i, b in enumerate(cases()):
+            r = solve_and_check(split_clauses(b, 9), os.path.join(d, "C3b_case%d" % (i + 1)))
+            print("case %d %s: %s, proof %s bytes" % (i + 1, b, r["status"], r.get("proof_bytes")), flush=True)
+            assert r["status"] == "UNSAT-VERIFIED"
+        sys.exit(0)
     control = "--control" in sys.argv
     n3 = 8 if control else 9
     cs = cases()

@@ -18,10 +18,19 @@ d_T is in the radical of I  iff  the ideal I + (t*d_T - 1) is the unit ideal, wh
 The candidates T are taken from numerical least-squares solutions (the triples that collapse there); the
 proof itself does not depend on the numerics.
 
+Checkable form (cofactors).  "Groebner basis = [1]" is an output of sympy.  For an independent check the mode
+--cofactors computes, with Singular's `lift`, explicit polynomials h_T (one per collinear triple T inside a block,
+with determinant d_T) and h such that
+        1 = sum_T h_T * d_T + h * (t*g - 1)          (an identity in Q[unknowns, t]),
+and stores them in the proof file.  The identity is checked by exact expansion in verifier/verify.py (standard
+library only), which rebuilds the d_T from the blocks and the frame itself; neither sympy nor Singular is trusted.
+
 usage: python scripts/algebraic_nonrealizability.py N "b1 b2 ..." [--candidates K]
+       python scripts/algebraic_nonrealizability.py --cofactors data/proofs/FILE.json    (adds "cofactors" in place)
 output: PROVED (with the triple T and the Groebner statement) or UNDECIDED.
+Singular is run as $SINGULAR (a command line, default `Singular`; e.g. "docker run -i --rm IMAGE Singular").
 """
-import argparse, itertools, os, sys, time
+import argparse, itertools, json, os, shlex, subprocess, sys, time
 import numpy as np
 import sympy as sp
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,12 +38,11 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from realize import collinear_triples, numeric_realization
 
 
-def setup(n, blocks):
+def setup(n, blocks, frame=None):
     col = collinear_triples(blocks)
     # frame: prefer F0, F1 inside the largest block (so the big block becomes the line z = 0)
     big = max(blocks, key=len)
-    frame = None
-    for f0, f1 in itertools.combinations(big, 2):
+    for f0, f1 in ([] if frame else itertools.combinations(big, 2)):
         for f2, f3 in itertools.combinations([p for p in range(n) if p not in (f0, f1)], 2):
             q = (f0, f1, f2, f3)
             if all(tuple(sorted(t)) not in col for t in itertools.combinations(q, 3)):
@@ -140,10 +148,76 @@ def prove(n, blocks, k=6, verbose=True):
     return {"status": "UNDECIDED", "candidates": [list(c) for c in cands], "time": round(time.time() - t0, 1)}
 
 
+def block_triples(blocks, det):
+    """the generators of I keyed by triple: (T, d_T) for every triple T inside a block with d_T != 0, duplicates of
+    the same polynomial kept once (the first triple in block order); the same list as in setup()"""
+    out = {}
+    for B in blocks:
+        for T in itertools.combinations(sorted(B), 3):
+            d = det(T)
+            if d != 0 and d not in out:
+                out[d] = T
+    return [(T, d) for d, T in out.items()]
+
+
+def poly_json(p, gens):
+    """sparse JSON form: list of [coefficient as "p" or "p/q", [exponent of each generator]]"""
+    P = sp.Poly(p, *gens, domain="QQ")
+    return [[str(c), list(m)] for m, c in sorted(P.terms())]
+
+
+def cofactors(n, blocks, frame, triples):
+    """explicit h_T, h with 1 = sum_T h_T d_T + h (t g - 1), g = prod of the determinants of `triples` (Singular lift)"""
+    frame_, P, vars_, eqs, noncol, det = setup(n, blocks, frame=tuple(frame))
+    t = sp.Symbol("t")
+    gens = list(vars_) + [t]
+    g = sp.Integer(1)
+    for T in triples:
+        g = sp.expand(g * det(tuple(T)))
+    gen = block_triples(blocks, det)
+    polys = [d for _, d in gen] + [sp.expand(t * g - 1)]
+    def sing(e):
+        return str(sp.expand(e)).replace("**", "^")
+    script = ("ring r = 0, (%s), dp;\nideal i = %s;\nmatrix m = lift(i, ideal(1));\nint j;\n"
+              "for (j = 1; j <= nrows(m); j++) { print(\"@\" + string(m[j, 1])); }\nquit;\n") % (
+                 ",".join(map(str, gens)), ",\n".join(sing(e) for e in polys))
+    cmd = shlex.split(os.environ.get("SINGULAR", "Singular")) + ["-q"]
+    t0 = time.time()
+    out = subprocess.run(cmd, input=script.encode(), stdout=subprocess.PIPE, check=True).stdout.decode()
+    rows = [l[1:] for l in out.splitlines() if l.startswith("@")]
+    assert len(rows) == len(polys), out[-2000:]
+    loc = {str(v): v for v in gens}
+    hs = [sp.expand(sp.sympify(r.replace("^", "**"), locals=loc)) for r in rows]
+    # sanity check with sympy (the real check is verifier/verify.py)
+    assert sp.expand(sum(h * f for h, f in zip(hs, polys)) - 1) == 0
+    return {"variables": [str(v) for v in gens],
+            "h": [{"triple": list(T), "poly": poly_json(h, gens)} for (T, _), h in zip(gen, hs) if h != 0],
+            "h_rabinowitsch": poly_json(hs[-1], gens),
+            "terms": sum(len(sp.Poly(h, *gens).terms()) for h in hs),
+            "lift_time": round(time.time() - t0, 1)}
+
+
+def add_cofactors(path):
+    """add a "cofactors" field to every PROVED class of a proof file (data/proofs/n12_*.json)"""
+    with open(path) as f:
+        doc = json.load(f)
+    for c in doc["classes"]:
+        assert c["status"] == "PROVED"
+        c["cofactors"] = cofactors(doc["n"], c["blocks"], c["frame"], c["triples"])
+        print("class %s: %d cofactor terms (%.1fs)" % (c["triples"], c["cofactors"]["terms"], c["cofactors"]["lift_time"]),
+              flush=True)
+    with open(path, "w", newline="\n") as f:
+        json.dump(doc, f, indent=1)
+        f.write("\n")
+
+
 if __name__ == "__main__":
+    if sys.argv[1:2] == ["--cofactors"]:
+        for fn in sys.argv[2:]:
+            add_cofactors(fn)
+        sys.exit(0)
     ap = argparse.ArgumentParser()
     ap.add_argument("n", type=int); ap.add_argument("blocks"); ap.add_argument("--candidates", type=int, default=6)
     a = ap.parse_args()
     blocks = [sorted(map(int, b.split(","))) for b in a.blocks.split()]
-    import json
     print(json.dumps(prove(a.n, blocks, a.candidates), indent=1))

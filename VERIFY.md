@@ -104,6 +104,33 @@ disagree. Python 3.10 or later is the only requirement.
 
 The certificate files can also be compared with `data/CHECKSUMS.txt` (`sha256sum -c data/CHECKSUMS.txt`).
 
+Two kinds of non-realizability proofs can also be checked without trusting the program that found them:
+
+```
+python verifier/verify.py --algebraic data/proofs/n*.json
+python scripts/sat_proof.py check
+```
+
+The first checks {6,4,3^12} and {6,3^14} (Theorems C4, C5). For every orientable linear space of the type, the file
+stores polynomials h_T, h with 1 = Σ h_T d_T + h·(t·g − 1), where the d_T are the collinearity determinants of the
+triples inside blocks and g is the product of the determinants of a few non-collinear triples. The verifier rebuilds
+the d_T and checks the identity by exact expansion, using the standard library only. So every complex solution of
+the collinearities has g = 0, which is an extra collinearity.
+
+The second checks {3^20} and {4^5,3^9} (Propositions C3a, C3b). It rebuilds the 34 SAT instances listed in
+`data/proofs/lrat_n12.json`, compares each CNF with its stored SHA-256, solves it with CaDiCaL writing an LRAT proof,
+and checks the proof with cake_lpr. cake_lpr is a proof checker whose correctness is proved in HOL4 (CakeML). It
+needs `cadical` (2.1.3) and `cake_lpr` on PATH and `pip install python-sat==1.9.dev17`; it takes about a minute. The
+proofs (108 MB) are regenerated rather than stored. CI runs both checks on every push.
+
+Not covered by any certificate: verdicts that come only from the exhaustive search `engine/ls.c`. These are the
+combinatorial sieve (b(n)), the other 15 non-orientable types at n = 12, and the completeness of the list of
+orientable linear spaces used in C4 and C5. The sieve is cross-checked by an independent SAT encoding for every
+n ≤ 12. For the 15 types, SAT on the whole type finished only for {5^2,3^13} (agreeing). The enumeration is cross-checked by two independent
+isomorphism tests.
+The reductions to cases (Steiner triple systems for {3^20}, the 8 configurations of 4-pencils for {4^5,3^9}) are
+short arguments, written out in the proofs.
+
 To repeat a search instead of reading its log: compile the engine with `gcc -O2 -o engine/ls engine/ls.c` and run
 `python scripts/engine_run.py 12 0 120 out.json` (all 1286 multisets for n = 12; 384 answers YES).
 

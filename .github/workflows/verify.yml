@@ -14,3 +14,31 @@ jobs:
         run: python verifier/verify.py data/certificates/n*.json
       - name: certificate checksums
         run: sha256sum -c data/CHECKSUMS.txt
+      - name: non-realizability cofactor identities (Theorems C4, C5)
+        run: python verifier/verify.py --algebraic data/proofs/n*.json
+
+  # UNSAT verdicts behind Propositions C3a and C3b: rebuild every CNF of data/proofs/lrat_n12.json, compare its
+  # SHA-256, solve it with CaDiCaL writing an LRAT proof, and check the proof with the verified checker cake_lpr.
+  lrat-proofs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: python-sat (the version the CNF hashes were made with)
+        run: pip install python-sat==1.9.dev17
+      - name: build CaDiCaL 2.1.3
+        run: |
+          git clone -q --depth 1 --branch rel-2.1.3 https://github.com/arminbiere/cadical.git /tmp/cadical
+          cd /tmp/cadical && ./configure -O3 && make -j4
+          echo "CADICAL=/tmp/cadical/build/cadical" >> "$GITHUB_ENV"
+      - name: build cake_lpr (pinned commit, checksums of the released files)
+        run: |
+          git clone -q https://github.com/tanyongkiam/cake_lpr.git /tmp/cake_lpr
+          cd /tmp/cake_lpr && git checkout -q 033aad53d1733bd4b8ca41cf6f1b5fb5d84f8de2
+          sha256sum -c cake_lpr.sha256 && make
+          echo "CAKE_LPR=/tmp/cake_lpr/cake_lpr" >> "$GITHUB_ENV"
+      - name: regenerate and check every LRAT proof
+        run: python scripts/sat_proof.py check --dir /tmp/proofs --workers 4

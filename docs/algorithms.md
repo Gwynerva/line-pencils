@@ -94,6 +94,42 @@ python scripts/engine_run.py 11 4 1800 runs/orient_11.json --workers 2 --only "4
 python scripts/sat_orient.py 11 runs/sat_orient_11.json --workers 2 --only "..."
 ```
 
+### Checkable UNSAT proofs {#lrat}
+
+A `NO` from a SAT solver is only as good as the solver. For the SAT verdicts that $c(12)$ rests on, the solver is
+taken out of the trusted base: each instance is written as a DIMACS CNF, the standalone CaDiCaL 2.1.3 writes an LRAT
+proof of unsatisfiability (`--lrat`), and the proof is checked by **cake_lpr**, a checker produced by the CakeML
+compiler whose correctness is proved in HOL4 down to the machine code (if it prints `s VERIFIED UNSAT`, the CNF has
+no satisfying assignment). `scripts/sat_proof.py` does this; the three SAT scripts have a `--proof DIR` option that
+does it for every `NO` they produce.
+
+The proofs are not stored: 34 of them take 108 MB, while regenerating and checking all of them takes about a minute.
+Instead `data/proofs/lrat_n12.json` lists every instance with what it encodes, the SHA-256 of its CNF and the size of
+its proof. The CNF is a deterministic function of the encoder (with python-sat 1.9.dev17, whose cardinality encodings
+are part of it), and CaDiCaL is deterministic too: the proofs come out byte for byte the same on every run. The CI
+job `lrat-proofs` builds both tools from pinned sources, rebuilds every CNF, compares the hash, solves and checks.
+
+```bash
+python scripts/sat_proof.py check            # needs cadical and cake_lpr on PATH (or $CADICAL, $CAKE_LPR)
+python scripts/sat_proof.py cnf C3b_case3 case3.cnf    # one instance, for any other solver or checker
+```
+
+What the proofs cover and what they do not:
+
+| claim | covered by LRAT + cake_lpr | still trusted |
+|---|---|---|
+| Proposition C3a, $\{3^{20}\}$ | the 26 point deletions of the two STS(13), each non-orientable | the encoding of §3; that there are exactly two STS(13) (Colbourn–Rosa); that every linear space of type $\{3^{20}\}$ is a point deletion (the short argument in the proof) |
+| Proposition C3b, $\{4^5, 3^9\}$ | the 8 cases with fixed 4-pencils, each non-orientable | the encoding; the reduction to 8 cases (`families()`, `canon()`, `blocks_of()` in `scripts/orient_split.py`) |
+| the 15 other non-orientable types at $n = 12$ | nothing yet: SAT on the whole type is too slow (see below) | the exhaustive search of `engine/ls.c`, mode 4 |
+| everything decided only by `engine/ls.c` (the combinatorial sieve, orientability at $n \le 11$, the enumeration of all orientable linear spaces in §8) | nothing: an exhaustive search emits no certificate | the engine; where the SAT encoding of §2 or §3 agrees, the two independent implementations |
+
+The 15 non-orientable types at $n = 12$ are decided by the engine. The SAT encoding of the whole type, without a
+case split, is too hard for checkable proofs. In a trial on 12 cores, 12 of the 15 instances (and $\{3^{20}\}$ as a
+whole type) were run with a limit of one hour each. Only $\{5^2, 3^{13}\}$ finished, after 35 minutes, and it is
+unsatisfiable, in agreement with the engine. The LRAT proofs grow by about 50 MB per minute of solving, so they are
+not covered yet. A case split like that of Proposition C3b would make each case small, but it would add a reduction
+argument to the trusted part.
+
 ## 4. Finding examples
 
 Realizable types are proved realizable by exhibiting coordinates. The following sources were used:
@@ -145,8 +181,10 @@ python scripts/orient_split.py                         # Proposition C3b
 
 ## 5. Verification
 
-`verifier/verify.py` — described on the [data page](data.md). Standard library only, about 150 lines, exact
-arithmetic in $\mathbb Z[\sqrt d]$, all pencils recomputed as maximal concurrent sets from scratch.
+`verifier/verify.py` — described on the [data page](data.md). Standard library only, exact arithmetic in
+$\mathbb Z[\sqrt d]$, all pencils recomputed as maximal concurrent sets from scratch. With `--algebraic` it checks
+the cofactor identities of §8 (exact polynomial arithmetic over $\mathbb Q$). The LRAT proofs of §3 are checked by
+cake_lpr, not by this program.
 
 ## 6. Classification and the sequences
 
@@ -177,8 +215,18 @@ Three programs, chained (details and the proof of correctness in `notes/nonreali
    $I + (t\, d_{T_1} \cdots d_{T_r} - 1)$ is the unit ideal. By Rabinowitsch's trick this means that every complex
    point of $V(I)$ has one of the $T_i$ collinear. `scripts/prove_type.py` runs this for every class and writes the
    certificates to `data/proofs/`.
+4. `scripts/algebraic_nonrealizability.py --cofactors FILE` makes the Gröbner computation checkable: Singular's
+   `lift` gives explicit polynomials $h_T$ (one per collinear triple $T$ inside a block, with determinant $d_T$) and
+   $h$ such that $1 = \sum_T h_T\, d_T + h \cdot (t\, d_{T_1} \cdots d_{T_r} - 1)$, an identity in $\mathbb Q[\text{unknowns}, t]$, stored with each class. `python verifier/verify.py --algebraic
+   data/proofs/n*.json` (standard library only) rebuilds the $d_T$ from the blocks and the frame itself and checks
+   the identity by exact expansion with `fractions`. The identity is a direct witness for the unit ideal, so neither
+   sympy nor Singular needs to be trusted. The cofactors are small: 62 to 138 terms per class.
 
 Validation: the non-Pappus configuration is proved non-realizable in 7 s, with $T$ = the Pappus line.
+
+Step 4 checks step 3 completely. Steps 1 and 2 are not covered by a certificate: that the listed classes are *all*
+the orientable linear spaces of the type rests on the exhaustive enumeration of the engine and on the isomorphism
+test (two independent implementations).
 
 ## Timings at a glance
 
@@ -194,6 +242,8 @@ Validation: the non-Pappus configuration is proved non-realizable in 7 s, with $
 | orientability, $\{4^5, 3^9\}$ at $n = 12$ (engine mode 4) | | unfinished after 4 h |
 | orientability by SAT, $\{3^{18}\}$ at $n = 12$ (orientable) | | 2 s |
 | orientability by SAT, $\{4^5, 3^9\}$ split into 8 cases (non-orientable) | 8 cases × 3 solvers | under 1 min per case |
+| LRAT proofs for C3a and C3b: build, CaDiCaL, cake_lpr | 34 instances, 108 MB of proofs | 85 s (4 processes) |
+| cofactor identities of Theorems C4, C5 (`verify.py --algebraic`) | 5 classes | 0.2 s |
 | zone walk from two lines to $n = 12$ / $n = 13$ | 333 / 613 types | 12 min / 40 min |
 | $\{4^9\}$ at $n = 13$ from the H4 sections (`--seed 1`) | | 20 s |
 | all orientable linear spaces of $\{6, 3^{14}\}$ (engine mode 5) | 135 360 labelled | 38 min |

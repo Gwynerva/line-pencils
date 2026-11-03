@@ -7,7 +7,7 @@ from fractions import Fraction as F
 from math import gcd
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from verify import verify, Reject, cross
+from verify import verify, Reject, cross, verify_proof_file
 
 
 def Q(*ints):
@@ -221,6 +221,69 @@ class RejectBad(unittest.TestCase):
                 continue
             if not proportional(base["lines"][i], orig):
                 self.assertEqual(independent_type(base), sorted(base["type"], reverse=True), "fuzzed certificate accepted")
+
+
+PROOFS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "proofs")
+
+
+def proof_files():
+    import json
+    out = []
+    for fn in sorted(os.listdir(PROOFS)) if os.path.isdir(PROOFS) else []:
+        if fn.startswith("n") and fn.endswith(".json"):
+            with open(os.path.join(PROOFS, fn)) as f:
+                out.append((fn, json.load(f)))
+    return out
+
+
+class Algebraic(unittest.TestCase):
+    """the Rabinowitsch cofactor identities of data/proofs/n*.json (Theorems C4, C5)"""
+
+    def setUp(self):
+        self.files = proof_files()
+        if not self.files:
+            self.skipTest("no proof files")
+
+    def test_all_proof_files_verify(self):
+        for fn, doc in self.files:
+            self.assertTrue(all(verify_proof_file(doc)), fn)
+
+    def corrupt(self, fn_mod):
+        doc = copy.deepcopy(self.files[0][1])
+        fn_mod(doc["classes"][0])
+        with self.assertRaises(Reject):
+            verify_proof_file(doc)
+
+    def test_changed_coefficient(self):
+        def f(c):
+            term = c["cofactors"]["h"][0]["poly"][0]
+            term[0] = str(F(term[0]) + 1)
+        self.corrupt(f)
+
+    def test_dropped_cofactor(self):
+        self.corrupt(lambda c: c["cofactors"]["h"].pop())
+
+    def test_changed_rabinowitsch_cofactor(self):
+        self.corrupt(lambda c: c["cofactors"]["h_rabinowitsch"].pop())
+
+    def test_cofactor_triple_not_in_block(self):
+        def f(c):
+            c["cofactors"]["h"][0]["triple"] = list(c["triples"][0])
+        self.corrupt(f)
+
+    def test_collinear_triple_in_g(self):
+        self.corrupt(lambda c: c.__setitem__("triples", [sorted(c["blocks"][0])[:3]]))
+
+    def test_swapped_frame(self):
+        def f(c):
+            c["frame"][2], c["frame"][3] = c["frame"][3], c["frame"][2]
+        self.corrupt(f)
+
+    def test_wrong_type(self):
+        doc = copy.deepcopy(self.files[0][1])
+        doc["type"] = doc["type"][:-1]
+        with self.assertRaises(Reject):
+            verify_proof_file(doc)
 
 
 if __name__ == "__main__":

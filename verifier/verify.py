@@ -170,6 +170,167 @@ def verify(cert):
 
 
 # ----------------------------------------------------------------------------
+# non-realizability certificates (Rabinowitsch cofactors), data/proofs/n*.json
+# ----------------------------------------------------------------------------
+# A class of such a file is a linear space (blocks on the points 0..n-1), a projective frame f0..f3, a list of
+# non-collinear triples T_1..T_r and polynomials h_T, h claimed to satisfy
+#     1 = sum_T h_T * d_T + h * (t * g - 1),     g = d_{T_1} * ... * d_{T_r},
+# where d_T is the determinant of the three points of T in the chart below and the sum is over triples T inside
+# blocks.  Every d_T with T inside a block vanishes on a realization, so if the identity holds, every point of the
+# variety of the collinearities has g = 0: one of the T_i is collinear as well.  Hence no realization over C (and
+# a fortiori over R) has exactly the collinearities of the blocks.
+#
+# Chart (a realization can be moved there by a projective map, which preserves collinearity):
+#     f0 = (1:0:0), f1 = (0:1:0), f2 = (0:0:1), f3 = (1:1:1);
+#     a point p of the block through f0 and f1 (other than f0, f1) is (q_p : 1 : 0)  [it lies on the line z = 0
+#     and differs from f0];  every other point is (x_p : y_p : 1)  [it is off the line f0 f1].
+# The verifier rebuilds the d_T itself from the blocks; the stored "equations" are not used.  Polynomials are
+# dicts {exponent tuple: Fraction}; the identity is checked by exact expansion.
+from fractions import Fraction
+from itertools import combinations
+
+
+def p_add(a, b):
+    c = dict(a)
+    for m, x in b.items():
+        y = c.get(m, 0) + x
+        if y:
+            c[m] = y
+        else:
+            c.pop(m, None)
+    return c
+
+
+def p_mul(a, b):
+    c = {}
+    for m1, x1 in a.items():
+        for m2, x2 in b.items():
+            m = tuple(i + j for i, j in zip(m1, m2))
+            y = c.get(m, 0) + x1 * x2
+            if y:
+                c[m] = y
+            else:
+                c.pop(m, None)
+    return c
+
+
+def p_scale(a, s):
+    return {m: x * s for m, x in a.items()} if s else {}
+
+
+def p_const(c, nv):
+    return {(0,) * nv: Fraction(c)} if c else {}
+
+
+def p_var(i, nv):
+    return {tuple(int(j == i) for j in range(nv)): Fraction(1)}
+
+
+def p_det3(u, v, w):
+    """det of the 3x3 matrix with columns u, v, w (3-vectors of polynomials)"""
+    out = {}
+    for (i, j, k), s in (((0, 1, 2), 1), ((1, 2, 0), 1), ((2, 0, 1), 1), ((0, 2, 1), -1), ((1, 0, 2), -1), ((2, 1, 0), -1)):
+        out = p_add(out, p_scale(p_mul(p_mul(u[i], v[j]), w[k]), s))
+    return out
+
+
+def parse_poly(raw, nv):
+    if not isinstance(raw, list):
+        raise Reject("a polynomial must be a list of terms")
+    out = {}
+    for term in raw:
+        if not (isinstance(term, list) and len(term) == 2 and isinstance(term[0], str) and isinstance(term[1], list)
+                and len(term[1]) == nv and all(isinstance(e, int) and not isinstance(e, bool) and e >= 0 for e in term[1])):
+            raise Reject("bad term %r" % (term,))
+        try:
+            c = Fraction(term[0])
+        except (ValueError, ZeroDivisionError):
+            raise Reject("bad coefficient %r" % (term[0],))
+        out = p_add(out, {tuple(term[1]): c})
+    return out
+
+
+def check_linear_space(n, blocks, claimed_type):
+    if not (isinstance(blocks, list) and all(isinstance(B, list) for B in blocks)):
+        raise Reject("blocks must be a list of lists")
+    sets = []
+    for B in blocks:
+        if not (len(B) >= 3 and len(set(B)) == len(B) and all(isinstance(p, int) and 0 <= p < n for p in B)):
+            raise Reject("bad block %r" % (B,))
+        sets.append(frozenset(B))
+    for A, B in combinations(sets, 2):
+        if len(A & B) > 1:
+            raise Reject("blocks %s and %s share two points" % (sorted(A), sorted(B)))
+    if Counter(len(B) for B in sets) != Counter(claimed_type):
+        raise Reject("block sizes %s do not match the type %s" % (sorted(map(len, sets), reverse=True), claimed_type))
+    return sets
+
+
+def verify_rabinowitsch(n, claimed_type, cls):
+    """Check one class of a non-realizability proof file.  Returns the number of cofactor terms or raises Reject."""
+    try:
+        blocks, frame, triples, cof = cls["blocks"], cls["frame"], cls["triples"], cls["cofactors"]
+    except (KeyError, TypeError) as e:
+        raise Reject("missing field %s" % e)
+    sets = check_linear_space(n, blocks, claimed_type)
+    def in_block(T):
+        return any(set(T) <= B for B in sets)
+    if not (isinstance(frame, list) and len(set(frame)) == 4 and all(isinstance(p, int) and 0 <= p < n for p in frame)):
+        raise Reject("bad frame %r" % (frame,))
+    if any(in_block(T) for T in combinations(frame, 3)):
+        raise Reject("three frame points are collinear in the linear space")
+    f0, f1, f2, f3 = frame
+    blk01 = next((B for B in sets if f0 in B and f1 in B), frozenset((f0, f1)))
+    names = []
+    for p in range(n):
+        if p not in frame:
+            names += ["q%d" % p] if p in blk01 else ["x%d" % p, "y%d" % p]
+    names.append("t")
+    if cof.get("variables") != names:
+        raise Reject("variables %r, expected %r" % (cof.get("variables"), names))
+    nv = len(names)
+    idx = {v: i for i, v in enumerate(names)}
+    one, zero = p_const(1, nv), {}
+    P = {f0: (one, zero, zero), f1: (zero, one, zero), f2: (zero, zero, one), f3: (one, one, one)}
+    for p in range(n):
+        if p not in P:
+            P[p] = (p_var(idx["q%d" % p], nv), one, zero) if p in blk01 else \
+                   (p_var(idx["x%d" % p], nv), p_var(idx["y%d" % p], nv), one)
+    def det(T):
+        a, b, c = sorted(T)
+        return p_det3(P[a], P[b], P[c])
+    def triple(T):
+        if not (isinstance(T, list) and len(T) == 3 and len(set(T)) == 3 and all(isinstance(p, int) and 0 <= p < n for p in T)):
+            raise Reject("bad triple %r" % (T,))
+        return tuple(sorted(T))
+    if not (isinstance(triples, list) and triples):
+        raise Reject("no triples")
+    g = one
+    for T in triples:
+        if in_block(triple(T)):
+            raise Reject("triple %r is collinear in the linear space" % (T,))
+        g = p_mul(g, det(triple(T)))
+    tg1 = p_add(p_mul(p_var(idx["t"], nv), g), p_const(-1, nv))
+    total = p_mul(parse_poly(cof["h_rabinowitsch"], nv), tg1)
+    terms = len(cof["h_rabinowitsch"])
+    for entry in cof["h"]:
+        T = triple(entry["triple"])
+        if not in_block(T):
+            raise Reject("cofactor for %r, which is not inside a block" % (T,))
+        total = p_add(total, p_mul(parse_poly(entry["poly"], nv), det(T)))
+        terms += len(entry["poly"])
+    if total != one:
+        raise Reject("the identity 1 = sum h_T d_T + h (t g - 1) fails (%d terms remain)" % len(p_add(total, p_const(-1, nv))))
+    return terms
+
+
+def verify_proof_file(doc):
+    """A proof file: {"n", "type", "classes": [...]}.  Every class must pass verify_rabinowitsch."""
+    n, claimed_type = doc["n"], doc["type"]
+    return [verify_rabinowitsch(n, claimed_type, c) for c in doc["classes"]]
+
+
+# ----------------------------------------------------------------------------
 # command line
 # ----------------------------------------------------------------------------
 def main(argv):
@@ -182,6 +343,18 @@ def main(argv):
         return 0 if r.wasSuccessful() else 1
     if not argv:
         print(__doc__); return 2
+    if argv[0] == "--algebraic":
+        bad = 0
+        for fn in argv[1:]:
+            doc = json.load(open(fn))
+            try:
+                terms = verify_proof_file(doc)
+                print("OK %s: type %s, %d classes, each not realizable (cofactor identity holds; %s terms)"
+                      % (fn, doc["type"], len(terms), terms))
+            except Reject as e:
+                bad += 1
+                print("REJECT %s: %s" % (fn, e))
+        return 1 if bad else 0
     total = bad = 0
     per_n = Counter(); seen = {}
     for fn in argv:

@@ -17,6 +17,8 @@ cd line-pencils
 python verifier/verify.py --self-test                 # the verifier's own tests (Pappus, Desargues, pentagram, corrupted certificates)
 python verifier/verify.py data/certificates/n*.json   # every certificate: exit code 0 iff all verify
 python scripts/classify.py 13                         # recompute the four sequences from certificates + logs
+python verifier/verify.py --algebraic data/proofs/n*.json   # cofactor identities of Theorems C4, C5
+python scripts/sat_proof.py check                     # LRAT proofs of C3a, C3b (needs cadical and cake_lpr)
 ```
 
 Python 3.10+ and nothing else is needed for these three commands. Re-running the *searches* needs a C compiler
@@ -84,8 +86,16 @@ Non-realizability is never asserted without a reason that can be checked:
 | no linear space (combinatorial sieve) | `runs/comb_{n}.json` (`"status": "NO"`, with node counts), `runs/sat_{n}.json` | re-run Algorithm 1 or 2 ([algorithms](algorithms.md)) |
 | Melchior / Csima–Sawyer / de Bruijn–Erdős | computed from the type by `scripts/pencils.py` | one line of arithmetic |
 | no orientable linear space | `runs/orient_{n}.json` (engine mode 4), `runs/sat_orient_{n}.json` | re-run Algorithm 3 |
-| orientable, but no realization (e.g. $\{6, 4, 3^{12}\}$) | `data/proofs/*.json`: every orientable linear space with its Gröbner certificate | recompute the Gröbner bases ([algorithms](algorithms.md), §8) |
-| theorem or recorded computation (e.g. $\{4^9\}$; $\{3^{20}\}$ and $\{4^5, 3^9\}$, none of whose linear spaces is orientable; the band theorem at $n = 13$) | `data/exclusions.json` with statement and reference | read the proof / re-run the script |
+| orientable, but no realization ($\{6, 4, 3^{12}\}$, $\{6, 3^{14}\}$) | `data/proofs/n12_*.json`: every orientable linear space with the triples, the frame and explicit cofactors $h_T, h$ with $1 = \sum_T h_T d_T + h\,(t g - 1)$ | `python verifier/verify.py --algebraic data/proofs/n*.json` checks the identity by exact expansion ([algorithms](algorithms.md), §8) |
+| none of the linear spaces is orientable: $\{3^{20}\}$, $\{4^5, 3^9\}$ | `data/proofs/lrat_n12.json`: 34 SAT instances (26 point deletions of STS(13), 8 cases of $\{4^5, 3^9\}$) with the SHA-256 of each CNF | `python scripts/sat_proof.py check` rebuilds each CNF, solves it with CaDiCaL writing an LRAT proof, and checks the proof with the verified checker cake_lpr ([algorithms](algorithms.md#lrat)) |
+| theorem or recorded computation (e.g. $\{4^9\}$; the band theorem at $n = 13$) | `data/exclusions.json` with statement and reference | read the proof / re-run the script |
+
+What each check covers. The certificate verifier, the cofactor check and cake_lpr each check one step completely, and
+neither the solver nor the computer algebra system that produced the step is trusted. Every verdict that comes only
+from the exhaustive search `engine/ls.c` has no certificate: the combinatorial sieve, the orientability verdicts
+(including the 15 non-orientable types at $n = 12$ other than $\{3^{20}\}$ and $\{4^5, 3^9\}$), and the enumeration
+of all orientable linear spaces behind Theorems C4 and C5. For those, the evidence is two independent implementations
+(engine and SAT) that agree wherever both finished.
 
 `data/results/classification_n{n}.json` lists, for every admissible type, its $f_0$, whether a linear space exists,
 the verdict and the reason; `data/results/sequences.json` holds the four sequences with intervals where a term is not

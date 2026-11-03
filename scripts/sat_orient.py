@@ -24,8 +24,10 @@ Encoding (CNF, solved by CaDiCaL via python-sat):
   * symmetry breaking: the first block of the largest size is {0..k-1}; reorientation freedom is
     used to fix sgn(0,1,x) = + whenever (0,1,x) is not collinear.
 
-usage: python scripts/sat_orient.py N OUT.json [--only "k,k,..;k,k,.."] [--workers W] [--timeout S]
+usage: python scripts/sat_orient.py N OUT.json [--only "k,k,..;k,k,.."] [--workers W] [--timeout S] [--proof DIR]
        python scripts/sat_orient.py --test
+--proof DIR: for every NO, write DIR/<type>.cnf (DIMACS) and an LRAT proof DIR/<type>.lrat (standalone CaDiCaL)
+and check it with cake_lpr (scripts/sat_proof.py); the verdict of the check is stored under "proof".
 """
 import argparse, json, os, sys, time
 from itertools import combinations
@@ -116,7 +118,8 @@ def build(n, sizes, fixed_blocks=None):
 
 
 def solve(args):
-    n, s, timeout = args
+    n, s, timeout = args[:3]
+    proof_dir = args[3] if len(args) > 3 else None
     from pysat.solvers import Solver
     t0 = time.time()
     cl, xs, pool = build(n, s)
@@ -136,6 +139,9 @@ def solve(args):
             if ok:
                 model = set(l for l in slv.get_model() if l > 0)
                 res["blocks"] = [list(S) for S, v in xs.items() if v in model]
+    if proof_dir and res["status"] == "NO":
+        from sat_proof import solve_and_check
+        res["proof"] = solve_and_check(cl, os.path.join(proof_dir, "n%d_%s" % (n, "-".join(map(str, s)))))
     res["time"] = round(time.time() - t0, 2)
     return key(s), res
 
@@ -175,6 +181,7 @@ if __name__ == "__main__":
     ap.add_argument("n", type=int); ap.add_argument("out")
     ap.add_argument("--only", default=None); ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--timeout", type=float, default=None); ap.add_argument("--filter", default="all")
+    ap.add_argument("--proof", default=None, help="directory for CNF + LRAT proofs of the NO verdicts")
     a = ap.parse_args()
     n = a.n
     todo = [unkey(k) for k in a.only.split(";")] if a.only else candidates(n)
@@ -186,7 +193,7 @@ if __name__ == "__main__":
     print(f"n={n} total={len(todo)} todo={len(work)}", flush=True)
     t0 = time.time()
     with Pool(a.workers) as P:
-        for k, r in P.imap_unordered(solve, [(n, s, a.timeout) for s in work]):
+        for k, r in P.imap_unordered(solve, [(n, s, a.timeout, a.proof) for s in work]):
             res[k] = r
             print(f"[{time.time()-t0:.0f}s] {unkey(k)} {r['status']} {r['time']}s", flush=True)
             json.dump(res, open(a.out + ".tmp", "w"), indent=0, sort_keys=True); _replace(a.out + ".tmp", a.out)

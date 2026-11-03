@@ -13,7 +13,8 @@ Encoding (nothing clever, so that it is easy to audit):
 The solver is CaDiCaL through python-sat.  Cardinality constraints use the sequential counter /
 totalizer encodings of pysat.card.
 
-usage: python scripts/sat_linear_space.py N OUT.json [--workers W] [--only ...] [--filter all|theorems]
+usage: python scripts/sat_linear_space.py N OUT.json [--workers W] [--only ...] [--filter all|theorems] [--proof DIR]
+--proof DIR: for every NO, write DIR/<type>.cnf and an LRAT proof, checked by cake_lpr (scripts/sat_proof.py).
 """
 import argparse, json, os, sys, time
 from itertools import combinations
@@ -22,13 +23,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pencils import candidates, theorem_ok, key, unkey
 
 
-def solve(args):
-    n, s = args
+def encode(n, s):
+    """(CNF, block variables) for: blocks of sizes s on n points, two blocks sharing <= 1 point"""
     from pysat.formula import CNF, IDPool
     from pysat.card import CardEnc, EncType
-    from pysat.solvers import Solver
     from collections import Counter
-    t0 = time.time()
     cnt = Counter(s)
     pool = IDPool()
     var = {}
@@ -46,14 +45,31 @@ def solve(args):
     if s:
         kmax = max(s)
         cnf.append([var[tuple(range(kmax))]])
+    return cnf, var, pool
+
+
+def clauses(n, s):
+    return encode(n, s)[0].clauses
+
+
+def solve(args):
+    n, s = args[:2]
+    proof_dir = args[2] if len(args) > 2 else None
+    from pysat.solvers import Solver
+    t0 = time.time()
+    cnf, var, pool = encode(n, s)
     with Solver(name="cadical195", bootstrap_with=cnf.clauses) as slv:
         ok = slv.solve()
         blocks = None
         if ok:
             model = set(l for l in slv.get_model() if l > 0)
             blocks = [list(S) for S, v in var.items() if v in model]
-    return key(s), {"status": "YES" if ok else "NO", "time": round(time.time() - t0, 2), "vars": pool.top,
-                    "clauses": len(cnf.clauses), "blocks": blocks}
+    res = {"status": "YES" if ok else "NO", "time": round(time.time() - t0, 2), "vars": pool.top,
+           "clauses": len(cnf.clauses), "blocks": blocks}
+    if proof_dir and not ok:
+        from sat_proof import solve_and_check
+        res["proof"] = solve_and_check(cnf.clauses, os.path.join(proof_dir, "ls_n%d_%s" % (n, "-".join(map(str, s)))))
+    return key(s), res
 
 
 def _replace(src, dst):
@@ -71,6 +87,7 @@ if __name__ == "__main__":
     ap.add_argument("--workers", type=int, default=os.cpu_count())
     ap.add_argument("--only", default=None)
     ap.add_argument("--filter", default="all", choices=["all", "theorems"])
+    ap.add_argument("--proof", default=None, help="directory for CNF + LRAT proofs of the NO verdicts")
     a = ap.parse_args()
     n = a.n
     todo = [unkey(k) for k in a.only.split(";")] if a.only else candidates(n)
@@ -82,7 +99,7 @@ if __name__ == "__main__":
     print(f"n={n} total={len(todo)} todo={len(work)}", flush=True)
     t0 = time.time(); done = 0
     with Pool(a.workers) as P:
-        for k, r in P.imap_unordered(solve, [(n, s) for s in work]):
+        for k, r in P.imap_unordered(solve, [(n, s, a.proof) for s in work]):
             res[k] = r; done += 1
             if done % 25 == 0 or r["time"] > 5:
                 print(f"[{done}/{len(work)} {time.time()-t0:.0f}s] {unkey(k)} {r['status']} {r['time']}s", flush=True)
