@@ -83,7 +83,7 @@ The same question makes sense elsewhere and we have not touched it:
   general position; the type has to record both, together with which lines pass through which points. The same three sieves apply
   (arithmetic, the combinatorics of rank-4 matroids, real realizability), and $d$ has two analogues, the numbers
   of intersection lines and of intersection points. A generic plane cuts the arrangement in an arrangement of $n$
-  lines whose pencils are the lines of the space arrangement, so the planar types are a shadow of the spatial ones.
+  lines whose pencils are the lines of the space arrangement, so the planar types are a shadow of the spatial ones. A proposed definition and the first counts are on the page [Planes in space](planes.md).
 * **Lines over finite fields; the sphere (great circles, where every pencil doubles); the hyperbolic plane (where
   non-intersecting lines appear and $f_0$ can be anything from $0$ to $\binom n2$).**
 
