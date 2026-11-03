@@ -6,11 +6,11 @@ that is preserved by real realizability:
   * a point whose planes form the Fano configuration (restriction to a rank-3 flat; Sylvester-Gallai),
   * a plane of the arrangement on which the others cut out the Fano configuration (contraction M/e: the
     simplification of M/e is the line arrangement cut out on the plane e),
-  * seven planes forming the dual Fano matroid F7* (restriction; Proposition 2 of notes/planes.md),
+  * seven planes forming the dual Fano matroid F7* (restriction; Proposition P of notes/planes.md),
 
 and otherwise retry the constructive realization much harder.
 
-Usage: python scripts/planes_unresolved.py n
+usage: python scripts/planes_unresolved.py n
 """
 
 import json

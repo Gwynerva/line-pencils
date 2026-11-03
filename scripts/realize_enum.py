@@ -1,7 +1,7 @@
 """Try to realize every orientable linear space listed by the engine in mode 5.
 
 usage: python scripts/realize_enum.py N ENUMFILE [--starts S] [--seeds R] [--max M]
-ENUMFILE: output of `printf 'N 5 SECS k1 k2 ...' | engine/ls5.exe`, lines "ORIENTABLE b1 b2 ..." with
+ENUMFILE: output of `printf 'N 5 SECS k1 k2 ...' | engine/ls` (mode 5), lines "ORIENTABLE b1 b2 ..." with
 blocks as comma-separated point indices.  Labelled spaces that are relabelings of an already tried
 one (cheap invariant) are skipped.  The first verified certificate is appended to data/certificates.
 """

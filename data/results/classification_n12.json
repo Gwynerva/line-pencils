@@ -18002,7 +18002,7 @@
 "t2": 12,
 "linear_space": "YES",
 "verdict": "theorem",
-"reference": "notes/points.md, section 3; Sylvester-Gallai theorem (Melchior 1940/41, Gallai 1944); uniqueness of STS(9): e.g. Colbourn-Rosa, Triple Systems, Oxford 1999, Table 1.?",
+"reference": "docs/theorems.md, Proposition C3; Sylvester-Gallai theorem (Melchior 1940/41, Gallai 1944); uniqueness of STS(9): e.g. Colbourn-Rosa, Triple Systems, Oxford 1999",
 "statement": "A linear space on 12 points with nine 4-point lines is unique: each point lies on exactly three of the lines (4*9/12), so the dual incidence structure has 9 points and 12 three-point lines covering all 36 pairs, i.e. it is a Steiner triple system of order 9, which is unique (AG(2,3), the Hesse configuration). AG(2,3) is not realizable by real points and lines because every pair of its points lies on a 3-point line, contradicting the Sylvester-Gallai theorem; projective duality transfers non-realizability to the 12-point structure. Hence {4^9} is not the type of a real arrangement of 12 lines. (It is the type of the 12 lines of the Hesse configuration over the complex numbers.)"
 },
 {

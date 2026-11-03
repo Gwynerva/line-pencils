@@ -1,5 +1,5 @@
 ---
-description: "The symbols used on the site: pencil types, numbers of intersection points, linear spaces, and how the four sequences are numbered."
+description: "The symbols used on the site: pencil types, numbers of intersection points, linear spaces, the four sequences, status labels and numbering."
 ---
 
 # Notation
@@ -26,7 +26,7 @@ The symbols used on this site, fixed once. Where the literature has a standard, 
 | pencil type | the multiset $\{k^{t_k} : k \ge 2\}$; written without the $2$s, e.g. $\{6, 4, 3^{12}\}$ |
 
 Synonyms found in the literature for the pencil type: *t-vector* $(t_2, t_3, \dots)$, *weak combinatorics*,
-*point-multiplicity sequence*. We prefer "type" and write it as a multiset because the sequences count multisets.
+*point-multiplicity sequence*. We say *pencil type*, or simply *type*, and write it as a multiset because the sequences count multisets.
 
 Pencils of size two are always omitted from the written type; their number is
 $t_2 = \binom n2 - \sum_{k\ge3}\binom k2 t_k$. When an explicit $t_2$ helps, we write $\{6, 4, 3^{12}, 2^9\}$.
@@ -36,7 +36,7 @@ $t_2 = \binom n2 - \sum_{k\ge3}\binom k2 t_k$. When an explicit $t_2$ helps, we 
 | symbol | meaning |
 |---|---|
 | linear space | a set of $n$ elements with a family of *blocks* (subsets of size $\ge 2$) such that every pair of elements lies in exactly one block; for an arrangement, the elements are the lines and the blocks are the pencils |
-| blocks of a type | for a type $\{k_1, \dots, k_r\}$: blocks of sizes $k_1, \dots, k_r$, pairwise sharing at most one point; the uncovered pairs are the 2-blocks |
+| blocks of a type | for a type $\{k_1, \dots, k_r\}$: blocks of sizes $k_1, \dots, k_r$, pairwise sharing at most one element; the uncovered pairs are the 2-blocks |
 | chirotope $\chi$ | an alternating map $\binom{[n]}{3} \to \{+, 0, -\}$ satisfying the three-term Grassmann–Plücker relations; $\chi = 0$ exactly on the collinear triples |
 | orientable | a linear space is orientable if some chirotope has exactly its blocks as zero set; equivalently it is the underlying matroid of a rank-3 oriented matroid, equivalently (Folkman–Lawrence) it is the incidence structure of an arrangement of pseudolines |
 
@@ -65,10 +65,13 @@ Results on this site are labelled by how they are established.
 * <span class="status-computed">computer-verified</span> — established by a program whose algorithm is described on the
   [algorithms page](algorithms.md), with the exact command, log and (for examples) an exact certificate checked by the
   [verifier](data.md);
+* <span class="status-proved">proved, computer-assisted</span> — a proof whose finite part is an exact computation in
+  the repository;
 * <span class="status-bound">bound</span> — only an interval is known; both ends are justified;
 * <span class="status-conj">conjectured</span> — supported by data, not proved.
 
 ## Numbering
 
-Theorems, lemmas and propositions are numbered consecutively within each page. Proofs end with $\square$.
+On the [theorems page](theorems.md) results carry a section letter (A1, B4, C3a, E3); on the other pages they are
+numbered consecutively within the page. Proofs end with $\square$.
 A "Theorem" whose proof relies on a computation says so explicitly and points to the data.

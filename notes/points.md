@@ -1,7 +1,7 @@
 # How many intersection points can n lines have?
 
-Working notes (stage I). Everything here is about an arrangement $\mathcal A$ of $n$ lines in the real
-projective plane (equivalently: $n$ lines in the affine plane, no two parallel; see `notes/setting.md`).
+Everything here is about an arrangement $\mathcal A$ of $n$ lines in the real projective plane (equivalently:
+$n$ lines in the affine plane, no two parallel; see the site pages `docs/problem.md` and `docs/notation.md`).
 $t_k(\mathcal A)$ is the number of points lying on exactly $k$ lines, $f_0 = \sum_k t_k$ the number of
 intersection points, and the *multiplicity* $m(\mathcal A) = \max\{k : t_k > 0\}$ the size of the largest pencil.
 
@@ -75,7 +75,7 @@ $t_2 + \tfrac34 t_3 \ge n + \sum_{k \ge 5} (k - 4)\, t_k$.
 
 This is (a weakening of) Hirzebruch's inequality for arrangements of $n$ lines in the complex projective plane with
 $t_n = t_{n-1} = t_{n-2} = 0$; the standard form has coefficients $2k - 9 \ge k - 4$ (Hirzebruch 1983, §3.1 and
-"Remarks added in proof"; see Pokora 2021, Remark 14, and `notes/literature_followup.md`). A real arrangement is a
+"Remarks added in proof"; see Pokora 2021, Remark 14). A real arrangement is a
 complex one.
 
 **Theorem 6.** Let $n \ge 13$. If $m(\mathcal A) \le n - 3$ then $f_0(\mathcal A) \ge 2n - 2$. Consequently
@@ -218,7 +218,7 @@ attained by a certified arrangement (`data/certificates/n14.json`) or excluded, 
 
 **Open question B (Salamon–Erdős).** Find the smallest $n^*$ from which the large-$n$ description of $V(n)$ is exact.
 
-## References (short; full list in `notes/references.md`)
+## References (short; full list on the site page `docs/references.md`)
 
 de Bruijn–Erdős 1948; Melchior 1940/41; Kelly–Moser 1958; Elliott 1967; Erdős 1972; Grünbaum 1972; Hirzebruch 1983;
 Salamon–Erdős 1988; Csima–Sawyer 1993; Pokora 2021.

@@ -4,8 +4,8 @@ description: "The papers and books cited on the site, from Melchior and Sylveste
 
 # References
 
-Full bibliographic data for everything cited on this site. The verification trail (which statements were read in
-the original papers) is in the repository file `notes/literature_followup.md`.
+Full bibliographic data for everything cited on this site. Statements quoted from these works were checked against
+the original papers where they are available online.
 
 ## Classical theorems on real arrangements
 
@@ -62,7 +62,7 @@ the original papers) is in the repository file `notes/literature_followup.md`.
 23. A. Björner, M. Las Vergnas, B. Sturmfels, N. White, G. M. Ziegler, *Oriented Matroids*, 2nd ed., Encyclopedia of
     Mathematics and its Applications 46, Cambridge University Press, 1999.
     [doi:10.1017/CBO9780511586507](https://doi.org/10.1017/CBO9780511586507)
-24. J. Bokowski, P. Pokora, *On line and pseudoline configurations and ball-quotients*, Periodica Mathematica Hungarica
+24. J. Bokowski, P. Pokora, *On the Sylvester–Gallai and the orchard problem for pseudoline arrangements*, Periodica Mathematica Hungarica
     77 (2018), 164–174. [doi:10.1007/s10998-017-0224-x](https://doi.org/10.1007/s10998-017-0224-x)
 
 ## Linear spaces
@@ -71,7 +71,7 @@ the original papers) is in the repository file `notes/literature_followup.md`.
 26. M. Barakat, R. Behrends, C. Jefferson, L. Kühne, M. Leuner, *On the generation of rank 3 simple matroids with an
     application to Terao's freeness conjecture*, SIAM Journal on Discrete Mathematics 35 (2021).
     [arXiv:1907.01073](https://arxiv.org/abs/1907.01073)
-27. C. J. Colbourn, A. Rosa, *Triple Systems*, Oxford University Press, 1999 (uniqueness of the Steiner triple system of order 9).
+27. C. J. Colbourn, A. Rosa, *Triple Systems*, Oxford University Press, 1999 (uniqueness of the Steiner triple system of order 9; the two Steiner triple systems of order 13).
 
 ## Partitions
 
@@ -99,7 +99,10 @@ Related entries:
 ## Software
 
 * A. Biere, K. Fazekas, M. Fleury, M. Heisinger, *CaDiCaL, Kissat, Paracooba, Plingeling and Treengeling entering the SAT
-  Competition 2020*, in: Proc. SAT Competition 2020, University of Helsinki, 2020, 51–53. Used as CaDiCaL 1.9.5.
+  Competition 2020*, in: Proc. SAT Competition 2020, University of Helsinki, 2020, 51–53. Used as CaDiCaL 1.9.5 (inside python-sat) and, for the LRAT proofs, as the standalone CaDiCaL 2.1.3.
+* Y. K. Tan, M. J. H. Heule, M. O. Myreen, *Verified propagation redundancy and compositional UNSAT checking in
+  CakeML*, International Journal on Software Tools for Technology Transfer 25 (2023), 167–184.
+  [doi:10.1007/s10009-022-00690-y](https://doi.org/10.1007/s10009-022-00690-y) Used as cake_lpr.
 * A. Ignatiev, A. Morgado, J. Marques-Silva, *PySAT: a Python toolkit for prototyping with SAT oracles*, in: SAT 2018,
   Lecture Notes in Computer Science 10929, Springer, 2018, 428–437. [doi:10.1007/978-3-319-94144-8_26](https://doi.org/10.1007/978-3-319-94144-8_26)
 * Zensical (site generator); MathJax.

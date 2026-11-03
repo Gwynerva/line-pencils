@@ -9,13 +9,14 @@ What is not known: the undecided terms, conjectures supported by the data, and r
 ## 1. Twelve lines: settled
 
 $c(12) = 336$. The last two types were decided in opposite directions: $\{3^{18}\}$ is realizable with small integer
-coefficients ([Example C3c](theorems.md)), and $\{4^5, 3^9\}$ is not even orientable ([Proposition C3b](theorems.md)).
+coefficients ([Example C3c](theorems.md#c3c)), and $\{4^5, 3^9\}$ is not even orientable ([Proposition C3b](theorems.md#c3b)).
 Two types, $\{6, 4, 3^{12}\}$ and $\{6, 3^{14}\}$, are proved non-realizable although they are orientable: **the pencil
 types of 12 lines and of 12 pseudolines differ** ([Theorems C4, C5](theorems.md#lines-vs-pseudolines)).
 
 How the orientable cases were settled: for a single linear space, non-realizability is a statement about the solutions of a polynomial
 system; we prove it by exhibiting non-collinear triples whose determinants' product lies in the radical of the
-incidence ideal (a Gröbner-basis certificate, see the [algorithms page](algorithms.md)); an incidence theorem (like
+incidence ideal (a certificate of explicit cofactors, checked by `verify.py --algebraic`; see the
+[algorithms page](algorithms.md)); an incidence theorem (like
 Pappus for the non-Pappus configuration) is the human-readable special case. For a *type*, every orientable linear
 space of that type must be treated, which requires the engine's complete enumeration (mode 5) and an exact
 isomorphism reduction. The outcome for $\{6, 3^{14}\}$ and $\{6, 4, 3^{12}\}$ is recorded on the
@@ -23,7 +24,7 @@ isomorphism reduction. The outcome for $\{6, 3^{14}\}$ and $\{6, 4, 3^{12}\}$ is
 
 ## 2. Thirteen lines
 
-$620 \le c(13) \le 659$: 620 types have certificates and 39 are undecided. The constructive searches of
+$620 \le c(13) \le 659$: 620 types have certificates and 39 are undecided. The constructive searches of the
 [algorithms page](algorithms.md#zone-walk) (zone walk, targeted deformation, mirror sections) found no numerical solution for any of the 39, which suggests that
 most of them are not realizable. Deciding them needs the orientability
 search and, where it says "orientable", the algebraic method used at $n = 12$; several of these types are harder than
@@ -39,8 +40,8 @@ Known: $\log a(n) \asymp n^{2/3}$ (partitions into triangular numbers) and $\log
 no lines realize every partition of $m \le n$ into parts $\ge 3$). The ratios $c(n)/a(n)$ for $n = 6, \dots, 12$ are
 $0.60, 0.50, 0.42, 0.38, 0.33, 0.29, 0.26$: geometry eats a growing share of the arithmetic candidates, but slowly.
 A better lower bound would come from a construction that realizes many types at once; a better upper bound from a
-structural restriction on how many large pencils can coexist (Melchior's inequality is such a restriction, but it is
-far from tight for $k = 3$).
+structural restriction on how many large pencils can coexist (Melchior's inequality is such a restriction, but it
+says nothing about triple points, whose coefficient in it is $0$).
 
 ## 4. The intersection-point sequence beyond n = 13
 
@@ -55,8 +56,8 @@ pencil of five to seven lines while its other lines meet in very few points, a v
 that it does not exist, which would give $d(14) = 65$, but we have no proof and no search that covers it.
 
 The precise threshold $n^*$ from which the Salamon–Erdős description of $V(n)$ is exact is open (they expect it to be
-small). Theorem E3 shows that one feature of it, that $2n-2$ is the fourth smallest value, holds from $n = 12$ on (for
-$n = 12$ by computation).
+small). Theorem E3 proves one feature of it: the four smallest values are $1, n, 2n-4, 2n-2$, which holds from $n = 12$ on
+(for $n = 12$ by computation).
 
 ## 5. Fields of definition
 
@@ -71,7 +72,8 @@ Rational realizability is a different sieve ("drawable on graph paper") that wou
 
 ## 6. Other geometries
 
-The same question makes sense elsewhere and we have not touched it:
+The same question makes sense elsewhere. Apart from pseudolines (Theorems C4, C5) and a first look at planes, we have
+not studied these:
 
 * **Pseudolines.** Replace lines by curves that pairwise cross exactly once. Orientability becomes the exact criterion
   (Folkman–Lawrence), so the sequence is computable in principle; it agrees with $c(n)$ for $n \le 11$ and exceeds it at
@@ -83,7 +85,7 @@ The same question makes sense elsewhere and we have not touched it:
   general position; the type has to record both, together with which lines pass through which points. The same three sieves apply
   (arithmetic, the combinatorics of rank-4 matroids, real realizability), and $d$ has two analogues, the numbers
   of intersection lines and of intersection points. A generic plane cuts the arrangement in an arrangement of $n$
-  lines whose pencils are the lines of the space arrangement, so the planar types are a shadow of the spatial ones. A proposed definition and the first counts are on the page [Planes in space](planes.md).
+  lines whose pencils are the lines of the space arrangement, so the planar types are a shadow of the spatial ones. The page [Planes in space](planes.md) proposes a definition and gives the counts for $n \le 8$.
 * **Lines over finite fields; the sphere (great circles, where every pencil doubles); the hyperbolic plane (where
   non-intersecting lines appear and $f_0$ can be anything from $0$ to $\binom n2$).**
 
@@ -93,4 +95,4 @@ $c(n)$ contains the orchard problem: the maximal $t_3$ for $n$ lines is the larg
 realizable. Conversely the orchard literature gives the only non-trivial *upper* bounds we know for a single pencil
 size (A003035: $19$ for $n = 12$, $22$ for $n = 13$). For $n = 12$ we reproved the bound for the type $\{3^{20}\}$ alone:
 its linear spaces are the Steiner triple systems of order 13 minus a point, and none of them is orientable
-([Proposition C3a](theorems.md)).
+([Proposition C3a](theorems.md#c3a)).

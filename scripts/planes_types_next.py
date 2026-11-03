@@ -5,7 +5,7 @@ which are in runs/planes_matroids_n{n-1}.json).  This script generates all these
 groups them by local type and, for each type, tries to realize its members until one succeeds.  Types without a
 realization are reported with all their (labelled) matroids, which are then reduced up to isomorphism.
 
-Usage: python scripts/planes_types_next.py n     (writes runs/planes_types_n{n}.json, adds to the certificates)
+usage: python scripts/planes_types_next.py n     (writes runs/planes_types_n{n}.json, adds to the certificates)
 """
 
 import json

@@ -8,7 +8,7 @@ hand (notes/planes.md).
 Writes runs/planes_certificates.json (one realization per realizable local type; check it with planes_verify.py)
 and runs/planes_summary_n{N}.json.
 
-Usage: python scripts/planes_count.py N
+usage: python scripts/planes_count.py N
 """
 
 import json

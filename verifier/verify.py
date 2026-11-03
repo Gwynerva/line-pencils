@@ -52,11 +52,32 @@ Everything is done in the projective plane.  An affine picture with no two
 lines parallel is obtained by choosing as line at infinity any line that misses
 all the (finitely many) intersection points.
 
+NON-REALIZABILITY PROOFS (--algebraic)
+--------------------------------------
+A proof file (data/proofs/n*.json) lists, for one pencil type, every isomorphism
+class of its orientable linear spaces.  For each class it gives the blocks, a
+projective frame of four points, a list of triples T (not inside any block) and
+cofactor polynomials with rational coefficients.  The verifier checks:
+1.  the blocks form a linear space of the claimed type (block sizes match, two
+    blocks share at most one point);
+2.  no three frame points lie in a common block, and no listed triple does;
+3.  with the frame (1:0:0), (0:1:0), (0:0:1), (1:1:1), the points of the block
+    through the first two frame points as (q:1:0) and all other points as
+    (x:y:1), it rebuilds the collinearity determinant d_B of every triple B inside
+    a block and the product g of the determinants of the listed triples;
+4.  the identity  1 = sum_B h_B d_B + h (t g - 1)  holds exactly, by expanding
+    every product in Q[x, y, q, t].
+The identity shows that every complex point with the block collinearities has
+g = 0, i.e. some listed triple is collinear as well: no realization of the class
+has exactly its collinearities.  Completeness of the list of classes is not
+checked here (it comes from the exhaustive enumeration of engine/ls.c, mode 5).
+
 USAGE
 -----
     python verifier/verify.py FILE.json [FILE2.json ...]     # each file: a list of certificates
+    python verifier/verify.py --algebraic data/proofs/n*.json # non-realizability proofs (cofactor identities)
     python verifier/verify.py --self-test                     # built-in tests (see test_verify.py)
-Exit status 0 iff every certificate verifies and all self-tests pass.
+Exit status 0 iff every certificate (or proof file) verifies and all self-tests pass.
 """
 import json
 import sys

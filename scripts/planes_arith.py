@@ -4,7 +4,7 @@ lambda: multiset of line sizes k, 3 <= k <= n;  pi: multiset of points (m, tau),
 pencil sizes 3 <= p <= m - 1 with sum C(p,2) <= C(m,2).  Conditions (pairs and triples of planes):
     sum_lambda C(k,2) <= C(n,2),
     sum_lambda C(k,3) + sum_pi [C(m,3) - sum_tau C(p,3)] <= C(n,3).
-Usage: python scripts/planes_arith.py N
+usage: python scripts/planes_arith.py N
 """
 
 import sys

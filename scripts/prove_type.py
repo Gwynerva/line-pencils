@@ -3,8 +3,12 @@ of its ORIENTABLE linear spaces (from scripts/dedupe_enum.py applied to a comple
 
 For each class the algebraic prover (scripts/algebraic_nonrealizability.py) must return PROVED; then no linear
 space of the type has a realization, i.e. the type is not realizable (non-orientable linear spaces cannot be
-realized anyway).  The proof record is written to data/proofs/{type}.json and can be re-checked by re-running
-the Groebner computations it lists.
+realized anyway).  The proof record is written to OUT.json; the stored files are named
+data/proofs/n{N}_{type}.json, e.g. data/proofs/n12_6-3x14.json.  To make it independently checkable, add the
+cofactors (Singular's `lift`) with
+    python scripts/algebraic_nonrealizability.py --cofactors OUT.json
+and check the identities with
+    python verifier/verify.py --algebraic OUT.json
 
 usage: python scripts/prove_type.py N CLASSES.json OUT.json [--candidates K]
 """

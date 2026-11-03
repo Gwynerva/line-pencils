@@ -9,13 +9,16 @@ each of which is exact and can be re-run.
 `engine/ls.c` in mode 5 enumerates every linear space with the prescribed block sizes (the search of mode 0 is
 run to exhaustion instead of stopping at the first solution; the symmetry breaking only identifies relabellings)
 and prints those that admit a chirotope. `scripts/dedupe_enum.py` reduces the labelled output to isomorphism classes
-(graph isomorphism of the point–block incidence graph, networkx VF2, after a cheap invariant pre-sort). Every real
-arrangement of the type would have one of these classes as its incidence structure.
+(graph isomorphism of the point–block incidence graph, networkx VF2, after a cheap invariant pre-sort;
+`runs/enum_classes_*.json`). As a second, independent isomorphism test, `scripts/canon_dedupe.py` computes a
+canonical form over the permutations of the points off the unique largest block (`runs/canon_classes_*.json`); both
+give the same classes. Every real arrangement of the type would have one of these classes as its incidence
+structure.
 
 | type | leaves (all linear spaces, labelled, mod symmetry breaking) | orientable, labelled | isomorphism classes | engine time |
 |---|---|---|---|---|
-| $\{6, 3^{14}\}$ | 676 080 | 135 360 | see `runs/enum_classes_12_6_3x14.json` | 2301 s |
-| $\{6, 4, 3^{12}\}$ | 283 680 | 30 240 | see `runs/enum_classes_12_6_4_3x12.json` | 805 s |
+| $\{6, 3^{14}\}$ | 676 080 | 135 360 | 4 | 2301 s |
+| $\{6, 4, 3^{12}\}$ | 283 680 | 30 240 | 1 | 805 s |
 
 ## Step 2: no realization of a given linear space with exactly its collinearities
 
@@ -35,8 +38,11 @@ every (complex, hence every real) point of $V(I)$ has one of the triples $T_i$ c
 realization with exactly its collinearities.
 
 The triples $T_i$ are found numerically (least squares from random real and complex starts; the triples that
-collapse in the solutions found; a greedy hitting set), but the certificate is checked by a Gröbner basis
-computation in exact arithmetic (sympy), independent of the numerics.
+collapse in the solutions found; a greedy hitting set), but the certificate does not depend on the numerics. The
+prover first finds the reduced Gröbner basis $\{1\}$ (sympy) and then computes explicit cofactors $h_T$, $h$ with
+$1 = \sum_T h_T d_T + h\,(t\, d_{T_1}\cdots d_{T_r} - 1)$, the sum running over the triples inside blocks. These are
+stored in the proof files, and `python verifier/verify.py --algebraic data/proofs/n*.json` rebuilds the
+determinants and checks the identity by exact expansion, using the standard library only.
 
 Validation: the non-Pappus configuration (nine points of Pappus's theorem minus the conclusion line) is proved
 non-realizable in 7 s with $T$ = the Pappus line, as it must be.
@@ -44,8 +50,15 @@ non-realizable in 7 s with $T$ = the Pappus line, as it must be.
 ## Results
 
 Recorded in `data/proofs/n12_6-3x14.json` and `data/proofs/n12_6-4-3x12.json` (one entry per isomorphism class:
-the frame, the unknowns, the generators of $I$, the triples $T_i$, and the running time), produced by
-`scripts/prove_type.py`. See `notes/STATUS.md` for the outcome.
+the frame, the unknowns, the generators of $I$, the triples $T_i$, the cofactors and the running time), produced
+by `scripts/prove_type.py`.
+
+* $\{6, 4, 3^{12}\}$: one isomorphism class of orientable linear spaces (30 240 labelled); certificate with the
+  single triple (7, 10, 11); hand proof below. **Not realizable.**
+* $\{6, 3^{14}\}$: four isomorphism classes (34 560 + 14 400 + 57 600 + 28 800 = 135 360 labelled); certificates
+  in `data/proofs/n12_6-3x14.json` (0.5–8 s each). **Not realizable.**
+
+Both types are orientable, i.e. realizable by pseudolines: the pseudoline sequence exceeds c(12) by at least 2.
 
 ## What this does and does not prove
 
@@ -74,11 +87,3 @@ AC || BE || DF gives E = b u + e v and F = d u + f v. Then
 Contradiction over every field; CD || EF was not needed. Hence no realization exists, in agreement with the
 certificate (which says that in every point of V(I) the points 7, 10, 11 = B, E, F are collinear; indeed the
 system already has no solutions at all once the non-degeneracy b != 0 is imposed).
-
-## Results
-
-* {6, 4, 3^12}: one isomorphism class of orientable linear spaces (30 240 labelled; VF2 and the canonical form agree);
-  certificate with the single triple (7,10,11); hand proof above.  NOT REALIZABLE.
-* {6, 3^14}: four isomorphism classes (34 560 + 14 400 + 57 600 + 28 800 = 135 360 labelled; canonical form
-  `scripts/canon_dedupe.py`); certificates in `data/proofs/n12_6-3x14.json` (0.5-8 s each).  NOT REALIZABLE.
-Both types are orientable, i.e. realizable by pseudolines: the pseudoline sequence exceeds c(12) by at least 2.

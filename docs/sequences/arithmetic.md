@@ -32,7 +32,7 @@ The number of partitions of $N$ into triangular numbers grows like $\exp(c N^{1/
 quadratic polynomial; Hardy–Ramanujan–type asymptotics[^hr]), so $\log a(n) \asymp n^{2/3}$. This is the trivial upper
 bound for $\log b(n)$ and $\log c(n)$. A trivial lower bound for $c(n)$ comes from pencils that share no lines:
 every partition of a number $\le n$ into parts $\ge 3$ is a realizable type (put the parts as disjoint pencils, the
-remaining lines in general position), so $\log c(n) \gtrsim \pi\sqrt{2n/3}$, i.e. $\log c(n) \asymp n^{1/2}$ at least.
+remaining lines in general position), so $\log c(n) \gtrsim \pi\sqrt{2n/3}$; thus $n^{1/2} \lesssim \log c(n) \lesssim n^{2/3}$.
 Whether the true exponent is $1/2$, $2/3$ or in between is an [open problem](../open.md).
 
 [^hr]: G. H. Hardy, S. Ramanujan, Asymptotic formulae in combinatory analysis, *Proceedings of the London

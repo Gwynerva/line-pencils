@@ -2,9 +2,8 @@
 
 usage: python scripts/build_tables.py
 Produces:
-  snippets/open12.md       table of the types for n = 12 that pass the inequalities but were hard to decide
-  snippets/sequences.md    the main sequence table with per-term status
-  snippets/counts.md       a(n), b(n), c(n), d(n) one-line summaries used in several pages
+  snippets/open12.md       table of the types for n = 12 that pass every inequality, with how each was decided
+  snippets/sequences.md    the main sequence table (intervals for terms not known exactly)
 """
 import json, os, sys
 from collections import Counter
@@ -41,9 +40,9 @@ for src in ("runs/orient_12.json", "runs/sat_orient_12.json"):
     for k, v in load(src).items():
         if v.get("status") in ("YES", "NO"):
             orient[k] = (v["status"], src.split("/")[-1], v.get("time"))
-lines = ["| type | $f_0$ | orientable? | status |", "|---|---|---|---|"]
+lines = ["| type | $f_0$ | orientable? | verdict |", "|---|---|---|---|"]
 notes = {}
-recent = {"3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3": "realizable: found by the zone walk ([algorithms](../algorithms.md#zone-walk)), integer coefficients"}
+recent = {"3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3": "realizable ([Example C3c](../theorems.md#c3c))"}
 sel = [r for r in rows if r["verdict"] in ("open", "non-orientable", "non-realizable-proved", "theorem", "literature")
        or key(tuple(r["type"])) in recent]
 for r in sorted(sel, key=lambda r: (r["verdict"] != "open", key(tuple(r["type"])) not in recent, -sum(r["type"]), r["type"])):
@@ -60,17 +59,17 @@ for r in sorted(sel, key=lambda r: (r["verdict"] != "open", key(tuple(r["type"])
     elif r["verdict"] == "open":
         st = "**undecided**: " + notes.get(k, "the orientability search did not finish")
     elif r["verdict"] == "non-orientable":
-        st = "not realizable: no orientable linear space"
+        st = "non-orientable"
     elif r["verdict"] == "non-realizable-proved":
-        st = "not realizable although orientable: Gröbner certificate for every orientable linear space ([Theorems C4, C5](../theorems.md#lines-vs-pseudolines))"
+        st = "Gröbner ([C4, C5](../theorems.md#lines-vs-pseudolines))"
     elif r["verdict"] == "theorem" and "orchard12" in r.get("reference", ""):
-        st = "not realizable: none of its linear spaces is orientable ([Proposition C3a](../theorems.md))"
+        st = "non-orientable ([C3a](../theorems.md#c3a))"
     elif r["verdict"] == "theorem" and "orient_split" in r.get("reference", ""):
-        st = "not realizable: none of its linear spaces is orientable ([Proposition C3b](../theorems.md))"
+        st = "non-orientable ([C3b](../theorems.md#c3b))"
     elif r["verdict"] == "theorem":
-        st = "not realizable: theorem (dual Hesse configuration + Sylvester–Gallai)"
+        st = "Hesse arrangement ([C3](../theorems.md#c3))"
     else:
-        st = "not realizable: orchard bound $t_3 \\le 19$ (Burr–Grünbaum–Sloane)"
+        st = "orchard bound $t_3 \\le 19$"
     lines.append(f"| ${tex(t)}$ | {r['f0']} | {ostr} | {st} |")
 open(os.path.join(OUT, "open12.md"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
 
@@ -81,9 +80,4 @@ for i in range(len(seq["a"])):
     body.append(f"| {i+1} | {cell(seq['a'][i])} | {cell(seq['b'][i])} | {cell(seq['c'][i])} | {cell(seq['d'][i])} |")
 open(os.path.join(OUT, "sequences.md"), "w", encoding="utf-8").write("\n".join(hdr + body) + "\n")
 
-# ---- counts
-def seqstr(q):
-    return ", ".join(str(v) if not isinstance(v, list) else f"[{v[0]}…{v[1]}]" for v in seq[q])
-open(os.path.join(OUT, "counts.md"), "w", encoding="utf-8").write(
-    "\n".join([f"* $a(n)$: {seqstr('a')}", f"* $b(n)$: {seqstr('b')}", f"* $c(n)$: {seqstr('c')}", f"* $d(n)$: {seqstr('d')}"]) + "\n")
 print("tables written; open types at n=12:", sum(1 for r in rows if r["verdict"] == "open"))

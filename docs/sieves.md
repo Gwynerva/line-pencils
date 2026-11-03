@@ -53,13 +53,13 @@ dual form), and the Fano type has $t_2 = 21 - 21 = 0$.
 
 A type is *realizable* if it is the type of an arrangement of $n$ lines in $\mathbb{RP}^2$. Realizability is a
 question about real solutions of polynomial equations (the $3\times 3$ determinants of concurrent triples must vanish,
-all others must not), decidable in principle by Tarski's theorem and hopeless in practice beyond tiny cases. Two
-kinds of tools decide it for us:
+all others must not). It is decidable in principle by Tarski's theorem, but hopeless in practice beyond tiny cases.
+Two kinds of tools decide it for us:
 
 * **Certificates.** If a type is realizable we exhibit coordinates, in $\mathbb Q$ or in a quadratic field
   $\mathbb Q(\sqrt d)$, and an independent [verifier](data.md) recomputes the type with exact arithmetic.
   Some types need the irrationality: $\{5, 3^{10}\}$ for ten lines is a regular pentagram with its axes, and the
-  pentagon forces $\sqrt 5$ (see the [theorems page](theorems.md)).
+  pentagon forces $\sqrt 5$ ([Proposition C1](theorems.md#c1)).
 * **Obstructions.** Classical inequalities valid for all real arrangements (Melchior, Csima–Sawyer, Hirzebruch),
   the de Bruijn–Erdős bound on the number of points, and **orientability**.
 
@@ -70,7 +70,9 @@ $\chi(i,j,k) = \operatorname{sign}\det(p_i, p_j, p_k)$ form a **chirotope**: an 
 that vanishes exactly on the collinear triples and satisfies, for all $a$ and all $x_1, x_2, x_3, x_4$, the
 **three-term Grassmann–Plücker relation**:
 
-> among $\chi(a x_1 x_2)\chi(a x_3 x_4)$, $-\chi(a x_1 x_3)\chi(a x_2 x_4)$, $\chi(a x_1 x_4)\chi(a x_2 x_3)$ either all three are $0$ or both signs $+$ and $-$ occur.[^blswz]
+$$\chi(a x_1 x_2)\chi(a x_3 x_4), \quad -\chi(a x_1 x_3)\chi(a x_2 x_4), \quad \chi(a x_1 x_4)\chi(a x_2 x_3):$$
+
+either all three are $0$, or both signs $+$ and $-$ occur among them.[^blswz]
 
 [^blswz]: A. Björner, M. Las Vergnas, B. Sturmfels, N. White, G. M. Ziegler, *Oriented Matroids*, 2nd ed.,
     Cambridge University Press, 1999, Definition 3.5.3 and Theorem 3.6.2, [doi:10.1017/CBO9780511586507](https://doi.org/10.1017/CBO9780511586507).
@@ -95,7 +97,7 @@ but not realizable ([Theorems C4, C5](theorems.md#lines-vs-pseudolines)).
 
 ## Summary for small n
 
-| $n$ | arithmetic $a(n)$ | combinatorial $b(n)$ | realizable $c(n)$ | combinatorially possible, not realizable |
+| $n$ | $a(n)$ | $b(n)$ | $c(n)$ | combinatorially possible, not realizable |
 |---|---|---|---|---|
 | 1 | 1 | 1 | 1 | |
 | 2 | 1 | 1 | 1 | |

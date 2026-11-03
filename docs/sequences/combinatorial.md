@@ -7,9 +7,8 @@ description: "b(n): the ways n lines could meet if the only rule were that two l
 **In one sentence:** $b(n)$ is the number of different ways $n$ lines can meet that are consistent with the single
 rule that two lines meet only once — whether or not the lines can actually be drawn. OEIS: [A400149](https://oeis.org/A400149).
 
-The second test ignores geometry and keeps only the rule that two lines meet once: can each pencil be assigned a
-set of lines so that no two pencils share two lines? This page gives the terms and the two independent computations
-behind them.
+In other words: can each pencil be assigned a set of lines so that no two pencils share two lines? This page gives
+the terms and the two independent computations behind them.
 
 <div class="thm" markdown>
 **Definition.** A type $\{k_1, \dots, k_r\} \in A_n$ is *combinatorially possible* if there is a family of blocks
@@ -39,20 +38,21 @@ All terms through $n = 12$ are <span class="status-computed">computer-verified</
   Logs: `runs/comb_{n}.json`.
 * **Independent SAT check** (`scripts/sat_linear_space.py`, CaDiCaL through python-sat): one Boolean variable per
   candidate block, cardinality constraints "exactly $t_k$ blocks of size $k$", and "at most one chosen block contains
-  a given pair of points". Agrees with the exhaustive search on every type: all $295$ types for $n = 10$, all $619$ for
+  a given pair of elements". Agrees with the exhaustive search on every type: all $295$ types for $n = 10$, all $619$ for
   $n = 11$ and all $1286$ for $n = 12$ (`runs/sat_{n}.json`).
-
-An earlier, independently written program by the author gives the same values for $n \le 11$.
 
 ## Bounds
 
-| | lower bound | upper bound |
+| $n$ | lower bound | upper bound |
 |---|---|---|
-| every $n$ | $b(n) \ge c(n)$ ([A399464](https://oeis.org/A399464)) | $b(n) \le a(n) = \mathrm{A072964}(n-1)$ (definition) |
-| $n = 13$ | $662$: types for which the search found a linear space (`runs/comb_13*.json`, `runs/sat_13*.json`) | $2087 = a(13) - 567$: the $567$ types for which the search or the SAT check proved that no linear space exists |
+| every $n$ | $c(n)$ | $a(n)$ |
+| 13 | 662 | 2087 |
 
-The $n = 13$ gap consists of 43 queries that timed out and of the types that fail an inequality and were not searched
-([algorithms](../algorithms.md)).
+For every $n$, $c(n) \le b(n) \le a(n)$ ([A399464](https://oeis.org/A399464), [A072964](https://oeis.org/A072964)).
+For $n = 13$ the lower bound counts the types for which the search found a linear space (`runs/comb_13*.json`,
+`runs/sat_13*.json`), and the upper bound is $a(13) - 567$, the $567$ types without a linear space being excluded by the
+search or the SAT check. The $2087 - 662 = 1425$ undecided types are 43 queries that timed out and types that fail an
+inequality and were therefore not searched ([algorithms](../algorithms.md)).
 
 ## Where the arithmetic and combinatorial tests differ
 

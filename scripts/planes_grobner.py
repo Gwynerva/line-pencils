@@ -8,7 +8,7 @@ nonzero entries on a spanning tree of the bipartite pattern graph are set to 1 (
 coordinates).  The ideal of the dependent 4-sets, saturated by the product of the remaining variables and of the
 determinant of one further set that must be a basis, is shown to contain 1.
 
-Usage: python scripts/planes_grobner.py
+usage: python scripts/planes_grobner.py
 """
 
 import itertools

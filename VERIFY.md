@@ -1,6 +1,6 @@
 # Verification
 
-How the terms of the three sequences were obtained and how to check them independently.
+How the terms of the four sequences a(n), b(n), c(n) and d(n) were obtained and how to check them independently.
 
 ## Definitions
 
@@ -14,6 +14,8 @@ arrangement, list how many lines pass through each intersection point.
   meet only once, whether or not the lines can actually be drawn. Formally: multisets {k_1, ..., k_r} with
   3 ≤ k_i ≤ n for which there are subsets B_1, ..., B_r of an n-element set with |B_i| = k_i and |B_i ∩ B_j| ≤ 1
   for i ≠ j.
+* **a(n)** — the number of multisets {k_1, ..., k_r} with 3 ≤ k_i ≤ n allowed by arithmetic alone:
+  Σ k_i(k_i−1)/2 ≤ n(n−1)/2. This is A072964(n−1) and is listed for comparison only.
 * **d(n)** — the number of different possible numbers of intersection points of n lines. For example, four lines
   have 1, 4 or 6 intersection points and nothing else, so d(4) = 3.
 
@@ -26,13 +28,13 @@ the finitely many intersection points.
 
 | n | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| a(n) | 1 | 1 | 2 | 4 | 7 | 15 | 32 | 66 | 141 | 295 | 619 | 1286 | 2654 |
 | b(n) | 1 | 1 | 2 | 3 | 5 | 9 | 17 | 29 | 56 | 106 | 202 | 384 | ≥ 662 |
 | c(n) | 1 | 1 | 2 | 3 | 5 | 9 | 16 | 28 | 53 | 98 | 180 | 336 | 620–659 |
 | d(n) | 1 | 1 | 2 | 3 | 5 | 9 | 13 | 18 | 24 | 30 | 38 | 46 | 56 |
 
-Only exact values are submitted: b(n) for n ≤ 12, c(n) for n ≤ 12, d(n) for n ≤ 13. For comparison, the number of
-multisets allowed by arithmetic alone (sum of k_i(k_i−1)/2 at most n(n−1)/2) is A072964(n−1):
-1, 1, 2, 4, 7, 15, 32, 66, 141, 295, 619, 1286, 2654.
+The OEIS entries A400149 (b), A399464 (c) and A399605 (d) contain only exact values: b(n) and c(n) for n ≤ 12,
+d(n) for n ≤ 13.
 
 ## How each term is established
 
@@ -53,10 +55,12 @@ non-realizable multiset is excluded by one of the following, recorded per multis
 * Melchior's inequality t_2 ≥ 3 + Σ_{k≥4} (k−3) t_k or the Csima–Sawyer bound t_2 ≥ 6n/13 fails, where
   t_2 = n(n−1)/2 − Σ k_i(k_i−1)/2;
 * no linear space of the type admits a chirotope (an orientation satisfying the three-term Grassmann–Plücker
-  relations), which every real arrangement has (`engine/ls.c`, mode 4; `runs/orient_{n}.json`);
+  relations), which every real arrangement has (`engine/ls.c`, mode 4, `runs/orient_{n}.json`; the SAT encoding
+  `scripts/sat_orient.py`, `runs/sat_orient_{n}.json`);
 * a theorem: the unique linear space of type {4^9} on 12 points is the dual of the Hesse configuration AG(2,3), excluded by the
   Sylvester–Gallai theorem (`data/exclusions.json`); for {6,4,3^12} and {6,3^14} every orientable linear space has a
-  Gröbner-basis certificate that any realization carries an extra collinearity (`data/proofs/`);
+  stored cofactor identity, checked by `verify.py --algebraic`, showing that any realization carries an extra
+  collinearity (`data/proofs/`);
 * a computation for {3^20}: its linear spaces on 12 points are exactly the Steiner triple systems of order 13 with
   one point deleted; all 26 deletions of the two such systems are non-orientable (`scripts/orchard12.py`). This agrees
   with the orchard number 19 for 12 points (A003035);
@@ -73,8 +77,10 @@ Each multiset gets exactly one verdict in the classification file. The names use
 | `real` | a certificate exists and is accepted by the verifier |
 | `no-linear-space` | the combinatorial search says NO (also counted out of b(n)) |
 | `melchior`, `csima-sawyer` | the inequality of that name fails |
+| `debruijn-erdos` | fewer than n intersection points without a pencil of all n lines (supported, never the only reason) |
 | `non-orientable` | linear spaces exist, but none admits a chirotope |
 | `theorem`, `non-realizable-proved` | excluded by one of the theorems or computations above |
+| `literature` | excluded by a published theorem not re-proved here (supported; no type currently needs it) |
 | `open` | none of the above; the term is then given as an interval |
 
 **d(n).** The attained values are read off the certificates. The missing values are excluded by: the loss argument
@@ -97,7 +103,7 @@ The first command runs the verifier's own tests. The second prints `verified 245
 number of distinct certified types for each n: 2, 3, 5, 9, 16, 28, 53, 98, 180, 336, 620 for n = 3, ..., 13, and 1104
 for n = 14 (a lower bound for c(14)).
 
-The third recomputes all four sequences from the certificates, the theorem filters and the search logs. For each n it
+The third recomputes all four sequences (and rewrites `data/results/`) from the certificates, the theorem filters and the search logs. For each n it
 prints the four terms and how many multisets received each verdict, then the four sequences, with an interval
 `[low, high]` wherever a term is not exact. It stops with an error if any certificate fails or if two searches
 disagree. Python 3.10 or later is the only requirement.
@@ -125,9 +131,14 @@ proofs (108 MB) are regenerated rather than stored. CI runs both checks on every
 
 Not covered by any certificate: verdicts that come only from the exhaustive search `engine/ls.c`. These are the
 combinatorial sieve (b(n)), the other 15 non-orientable types at n = 12, and the completeness of the list of
-orientable linear spaces used in C4 and C5. The sieve is cross-checked by an independent SAT encoding for every
-n ≤ 12. For the 15 types, SAT on the whole type finished only for {5^2,3^13} (agreeing). The enumeration is cross-checked by two independent
-isomorphism tests.
+orientable linear spaces used in C4 and C5.
+
+* The sieve is cross-checked by an independent SAT encoding for every n ≤ 12.
+* For the 15 non-orientable types, the SAT encoding of the whole type was tried on 12 of them with a limit of one
+  hour each. Only {5^2,3^13} finished, and it agrees with the engine (unsatisfiable).
+* The isomorphism classes of the enumeration are computed by two independent tests (VF2 graph isomorphism and a
+  canonical form), which agree.
+
 The reductions to cases (Steiner triple systems for {3^20}, the 8 configurations of 4-pencils for {4^5,3^9}) are
 short arguments, written out in the proofs.
 
@@ -141,8 +152,15 @@ axes of symmetry. One point lies on five lines, ten points on three, five points
 by a Gröbner-basis computation that this type has exactly two realizations up to projective equivalence, conjugate
 under √5 ↦ −√5; no realization with rational coordinates exists.
 
+## Planes in space
+
+The side direction on arrangements of planes (`docs/planes.md`, `notes/planes.md`) has its own independent
+verifier: `python scripts/planes_verify.py` recomputes the type of every plane certificate in
+`runs/planes_certificates.json` in exact integer arithmetic and confirms 1, 1, 2, 4, 8, 20, 55, 198 types for n ≤ 8.
+
 ## Authorship
 
-The questions were posed by Petra Radko. The programs, computations, proofs and texts were produced by Claude Code
-(Anthropic). The complete write-up is at
-https://gwynerva.github.io/line-pencils/.
+The research questions and the standards of rigour were set by Petra Radko (GitHub: Gwynerva). All of the work — the
+theorems and proofs, the programs, the computations, the figures and the text — was carried out by Claude Code
+(Anthropic's Claude models), starting from Petra Radko's original exploratory scripts and data. The complete
+write-up is at https://gwynerva.github.io/line-pencils/.

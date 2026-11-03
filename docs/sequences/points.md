@@ -1,8 +1,8 @@
 ---
-description: "d(n): how many different numbers of crossing points n lines can have. Exact up to 13 lines, with a proof that 2n-3 points are impossible from 12 lines on. OEIS A399605."
+description: "d(n): how many different numbers of intersection points n lines can have. Exact up to 13 lines, with a proof that 2n-3 points are impossible from 12 lines on. OEIS A399605."
 ---
 
-# d(n): how many intersection points can n lines have?
+# d(n): how many different numbers of intersection points?
 
 **In one sentence:** $d(n)$ is the number of different possible numbers of intersection points of $n$ lines in the
 plane, no two parallel. For four lines the possible numbers are 1, 4 and 6, so $d(4) = 3$.
@@ -12,7 +12,11 @@ The simplest version of the question counts only the intersection points. It alr
 is the one sequence for which statements about all $n$ can be proved.
 
 <div class="thm" markdown>
-**Definition.** $V(n) = \{ f_0(\mathcal A) : \mathcal A \text{ an arrangement of } n \text{ lines}\}$ and $d(n) = \lvert V(n)\rvert$.
+**Definition.** $V(n)$ is the set of numbers of intersection points of arrangements of $n$ lines,
+
+$$V(n) = \{ f_0(\mathcal A) : \mathcal A \text{ an arrangement of } n \text{ lines}\},$$
+
+and $d(n) = \lvert V(n)\rvert$.
 </div>
 
 In the dual picture $V(n)$ is the set of numbers of lines determined by $n$ points of the plane; determining it
@@ -31,8 +35,8 @@ piece of the large-$n$ structure from $n = 13$ on.
 $d(n)$ for $n = 1, \dots, 13$: **1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56** (out of $\binom n2 = 0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78$ conceivable values).
 
 All thirteen terms are <span class="status-computed">computer-verified</span> (the attained values by certificates,
-the missing values by theorems or exhaustive computation); $d(13) = 56$ also follows from Theorem 3 below, whose proof
-uses an exact computation for $13 \le n \le 35$ instead of the classification.
+the missing values by theorems or exhaustive computation). The only missing value of $V(13)$ below $2n - 2$, namely
+$23$, is also excluded by Theorem 3 below, independently of the classification.
 
 ## The sets V(n)
 
@@ -63,18 +67,18 @@ Theorem 1, and "computation" means that every admissible type with that $f_0$ wa
 
 For every $n \ge 12$, $d(n) \le \binom n2 - 2n + 4$: the values $2, \dots, n-1$ are excluded by de Bruijn–Erdős, the values
 $n+1, \dots, 2n-3$ other than $2n-4$ by Theorem 3 (for $n = 12$ by Elliott's theorem and a computation, Corollary 4), and $\binom n2 - 1$,
-$\binom n2 - 3$ by Theorem 1. Equality holds for $n = 12, 13$ (Observation 5), and fails from $n = 16$ on at the latest. For
+$\binom n2 - 3$ by Theorem 1. Equality holds for $n = 12, 13$ (Observation 5) and fails for $n = 16$ and $17$ (table below). For
 large $n$, $d(n) = \binom n2 - \Theta(n^{3/2})$ (Salamon–Erdős, Observation 5).
 
-| $n$ | lower bound (values with a certificate) | upper bound (values not excluded) | undecided values |
+| $n$ | lower bound | upper bound | undecided values |
 |---|---|---|---|
 | 14 | 65 | 67 | 27, 28 |
 | 15 | 73 | 79 | 29–33, 37 |
 | 16 | 83 | 91 | 8 values |
 | 17 | 92 | 103 | 11 values |
 
-Lower bounds come from the certificates (`data/certificates/n14.json`, the band construction of
-[Theorem B4](../theorems.md#bands)); upper bounds from the theorems below and the bounds in the proof of Theorem 3
+Lower bounds count the values with a certificate (`data/certificates/n14.json`, the band construction of
+[Theorem B4](../theorems.md#bands)); upper bounds count the values not excluded by the theorems below and the bounds in the proof of Theorem 3
 (`scripts/f0_bounds.py`, `notes/bands.md`).
 
 ## Theorems
@@ -109,7 +113,7 @@ Both cases are realizable. <span class="qed">$\square$</span>
 </div>
 
 <div class="thm" markdown>
-**Theorem 3 (the bottom, $n \ge 13$).** <span class="status-proved">proved, computer-assisted</span> Let $n \ge 13$. If no $n-2$ lines of
+**Theorem 3 (the bottom, $n \ge 13$; Theorem E3 on the theorems page).** <span class="status-proved">proved, computer-assisted</span> Let $n \ge 13$. If no $n-2$ lines of
 $\mathcal A$ are concurrent, then $f_0(\mathcal A) \ge 2n - 2$. Consequently
 
 $$ V(n) \cap [1, 2n-2] = \{1,\ n,\ 2n-4,\ 2n-2\} \qquad (n \ge 13), $$
@@ -117,9 +121,9 @@ $$ V(n) \cap [1, 2n-2] = \{1,\ n,\ 2n-4,\ 2n-2\} \qquad (n \ge 13), $$
 and in particular $2n-3$ intersection points are impossible for $n \ge 13$.
 </div>
 
-The proof combines three lower bounds for $f_0$ in terms of $m$, the largest pencil size, and $b = n - m$:
+The proof combines three lower bounds for $f_0$ in terms of $m$, the largest pencil size, and $r = n - m$:
 
-* **the spoke bound** $f_0 \ge 1 + G(n, b)$, a refinement of the Kelly–Moser count $f_0 \ge 1 + mb - \binom b2$, obtained by
+* **the spoke bound** $f_0 \ge 1 + G(n, r)$, a refinement of the Kelly–Moser count $f_0 \ge 1 + mr - \binom r2$, obtained by
   counting the points on the $m$ lines through a point of multiplicity $m$;
 * **the Melchior bound** $f_0 \ge \frac{n(n-1) + 3m + 3}{m + 3}$, obtained from Melchior's inequality by a one-line
   optimisation;
@@ -138,7 +142,7 @@ is on the [theorems page](../theorems.md#points).
 
 *Case $n = 12$.* There are $43$ admissible types with $21$ points. For $34$ of them no linear space exists, and six more
 fail Melchior's inequality. The remaining three, $\{4^9\}$, $\{5^2, 4^3, 3^6\}$ and $\{5^3, 3^9\}$, are not realizable: the first
-is excluded by Proposition C3, and the other two admit no orientable linear space ([realizable page](realizable.md)).
+is excluded by [Proposition C3](../theorems.md#c3), and the other two admit no orientable linear space ([realizable page](realizable.md)).
 
 *Case $n \le 11$.* Certificates exist with $2n - 3$ points:
 
@@ -155,8 +159,11 @@ precisely, $2n-3 \in V(n)$ iff $n = 3$ or $6 \le n \le 11$. <span class="qed">$\
 
 <div class="thm" markdown>
 **Observation 5 (a formula that must fail).** <span class="status-computed">computer-verified</span> For $n = 12, 13$,
-$V(n) = \{1, n, 2n-4\} \cup [2n-2, \binom n2 - 4] \cup \{\binom n2 - 2, \binom n2\}$, so $d(n) = \binom n2 - 2n + 4 = \frac{n^2 - 5n + 8}{2}$.
-This cannot continue: the bounds in the proof of Theorem 3 give $f_0 \ge 2n + 2$ for $n = 17$ whenever no $n - 2$
+
+$$V(n) = \{1, n, 2n-4\} \cup [2n-2, \tbinom n2 - 4] \cup \{\tbinom n2 - 2, \tbinom n2\},$$
+
+so $d(n) = \binom n2 - 2n + 4 = \frac{n^2 - 5n + 8}{2}$.
+This cannot continue: already $d(16) \le 91 < 92$, and for $n = 17$ the bounds in the proof of Theorem 3 give $f_0 \ge 2n + 2$ whenever no $n - 2$
 lines are concurrent, so $2n - 1, 2n, 2n+1 \notin V(17)$ and $d(17) \le 103$. For large $n$, Salamon and Erdős show that
 $V(n)$ below roughly $n^{3/2}$ consists of separated "bands", so $d(n) = \binom n2 - \Theta(n^{3/2})$.
 </div>
@@ -168,5 +175,5 @@ extension of certified 13-line arrangements by a line through several existing p
 $65 \le d(14) \le 67$. For $n = 15$: $73 \le d(15) \le 79$ (undecided $29$–$33$, $37$); $n = 16$: $83 \le d(16) \le 91$;
 $n = 17$: $92 \le d(17) \le 103$ (`notes/bands.md`). The undecided values at the low end would need an arrangement
 whose largest pencil has only $5$ to $7$ lines and whose other lines are extremely concurrent; the LP bound with
-Hirzebruch's inequality misses $2n-1$ by a fraction.
+Hirzebruch's inequality falls just short of excluding $2n-1$ (its optimum is a fraction below $2n-1$).
 </div>

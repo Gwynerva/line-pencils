@@ -7,7 +7,7 @@ of the already placed parts of the flats that must contain it.  A candidate is a
 recomputed in exact arithmetic, equals the target.  This finds every matroid that has such a construction sequence;
 the others are reported as unresolved and treated separately.
 
-Usage: python scripts/planes_realize.py N   (reads runs/planes_matroids_n{N}.json, writes runs/planes_real_n{N}.json)
+usage: python scripts/planes_realize.py N   (reads runs/planes_matroids_n{N}.json, writes runs/planes_real_n{N}.json)
 """
 
 import json

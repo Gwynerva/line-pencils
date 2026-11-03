@@ -23,12 +23,13 @@ How each column is established:
   search ([details](realizable.md)). For $n = 13$: 620 certificates and 39 undecided types.
 * **$d(n)$** combines certificates (a value is attained) with theorems (a value is impossible); for $n \le 13$ every value
   is decided ([details](points.md)). The term $d(12) = 46$ uses the non-realizability of the three types with
-  $21$ points that pass both the combinatorial test and Melchior's inequality: $\{4^9\}$ by a theorem, $\{5^2, 4^3, 3^6\}$ and $\{5^3, 3^9\}$ by the orientability search.
+  $21$ points that pass both the combinatorial test and Melchior's inequality: $\{4^9\}$ by [Proposition C3](../theorems.md#c3), $\{5^2, 4^3, 3^6\}$ and $\{5^3, 3^9\}$ by the orientability search.
 
 ## In the OEIS
 
-The arithmetic sequence is A072964 shifted. The other three were not in the OEIS (we searched for the full sequences,
-for five consecutive terms and for shifts) and were added as A400149 ($b$), A399464 ($c$) and A399605 ($d$); each
+The arithmetic sequence is A072964 shifted. Before this project the other three were not in the OEIS (we searched for
+the full sequences, for five consecutive terms and for shifts); they were accepted in November 2026 as A400149 ($b$),
+A399464 ($c$) and A399605 ($d$); each
 entry has a table of the multisets or values behind its terms. Two older entries coincide with ours on a few
 terms by accident and must not be confused with them: A129230 ($0, 1, 3, 5, 9, 13, 18, 24, 30, 38, 46, 55, \dots$, a
 golden-ratio floor sum) is shifted by two: its terms $3, 5, \dots, 46$ coincide with $d(4), \dots, d(12)$, and the next

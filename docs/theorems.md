@@ -5,12 +5,14 @@ description: "Complete proofs behind every number on the site: classical inequal
 # Theorems and proofs
 
 Every statement on this site is justified here: by a complete proof, by a precise reference, or by a description
-of what a computer checked and how. Labels: <span class="status-proved">proved</span>, <span class="status-computed">computer-verified</span>.
+of what a computer checked and how. Labels: <span class="status-proved">proved</span>,
+<span class="status-proved">proved, computer-assisted</span> (a proof whose finite part is an exact computation in the
+repository), <span class="status-computed">computer-verified</span>.
 
 ## A. Classical results we rely on
 
-These are quoted, not re-proved. Each is a statement about arrangements of real lines (or, dually, finite point sets)
-that are not a single pencil.
+These are quoted, not re-proved. Most are statements about arrangements of real lines (or, dually, finite point
+sets) that are not a single pencil.
 
 <div class="thm" markdown>
 **Theorem A1 (de Bruijn–Erdős, 1948; dual form).**[^dbe] An arrangement of $n$ lines that is not a pencil has at least $n$
@@ -36,8 +38,12 @@ right-hand side, with coefficients $2k - 9$, under the hypothesis $n \ge 6$ and 
 
 <div class="thm" markdown>
 **Theorem A5 (Kelly–Moser, 1958).**[^km] If at most $n - k$ of $n$ points are collinear and $n \ge \tfrac12(27k^2 - 33k + 11)$,
-the points determine at least $kn - \tfrac12(3k+2)(k-1)$ lines. **Theorem A6 (Elliott, 1967).**[^ell] If $n \ge 10$ points are
-not all collinear and no $n - 1$ of them are collinear, they determine at least $2n - 4$ lines.
+the points determine at least $kn - \tfrac12(3k+2)(k-1)$ lines.
+</div>
+
+<div class="thm" markdown>
+**Theorem A6 (Elliott, 1967).**[^ell] If $n \ge 10$ points are not all collinear and no $n - 1$ of them are collinear,
+they determine at least $2n - 4$ lines.
 </div>
 
 <div class="thm" markdown>
@@ -71,7 +77,7 @@ linear spaces are not realizable by lines, while orientable ones may or may not 
 *Proof.* For $n \le 2$ the only type is the empty one. For $3 \le n \le 12$ the exhaustive search of
 [Algorithm 1](algorithms.md) decided every admissible type without time-outs; completeness of the search is argued there.
 The counts of `YES` answers are the stated values (`runs/comb_{n}.json`). The SAT encoding (Algorithm 2) returns the same
-verdict on every type for $n \le 12$. <span class="qed">$\square$</span>
+verdict on every type for $10 \le n \le 12$ (`runs/sat_{n}.json`). <span class="qed">$\square$</span>
 </div>
 
 <div class="thm" markdown>
@@ -83,9 +89,9 @@ verifier; Theorem D1 below explains why acceptance proves realizability.
 
 *Upper bounds.* Every combinatorially possible type without a certificate is excluded in one of three ways:
 
-* by Theorem A2, A3 or A1, applied to its $t_k$;
-* because it has no orientable linear space (Algorithm 3, engine mode 4, `runs/orient_{n}.json`; the SAT implementation
-  agrees where it finished);
+* by Theorem A1, A2 or A3, applied to its $t_k$;
+* because it has no orientable linear space (Algorithm 3: engine mode 4, `runs/orient_{11,12}.json`, and the SAT
+  implementation, `runs/sat_orient_*.json`, which agree where both finished);
 * for $n = 12$, because it is $\{4^9\}$ (Proposition C3), $\{3^{20}\}$ (Proposition C3a), $\{4^5, 3^9\}$
   (Proposition C3b), or $\{6, 4, 3^{12}\}$ or $\{6, 3^{14}\}$ (Theorems C4 and C5).
 
@@ -138,7 +144,7 @@ Salamon and Erdős with a one-line proof; see the [points page](sequences/points
 ## C. Particular configurations
 
 <div class="thm" markdown>
-**Proposition C1 (the pentagram needs $\sqrt 5$).** <span class="status-proved">proved</span> Every arrangement of ten
+<a id="c1"></a>**Proposition C1 (the pentagram needs $\sqrt 5$).** <span class="status-proved">proved</span> Every arrangement of ten
 lines of type $\{5, 3^{10}\}$ is projectively equivalent to the regular pentagram together with its five axes of
 symmetry. In particular no such arrangement has all its lines defined over $\mathbb Q$.
 </div>
@@ -171,15 +177,18 @@ Q_4 &= X_3X_5 \cap X_1X_4, & Q_5 &= X_4X_5 \cap X_2X_3.
 
 In words: each side of the pentagon $X_1X_2X_4X_5X_3$ meets the opposite diagonal in one of the $Q_i$.
 
-**Step 3: the algebra.** Take $X_1, X_2, X_3, X_4$ as the projective frame and $X_5 = (x : y : 1)$. The $Q_i$ are polynomial in
+**Step 3: the algebra.** Take $X_1 = (1 : 0 : 0)$, $X_2 = (0 : 1 : 0)$, $X_3 = (0 : 0 : 1)$, $X_4 = (1 : 1 : 1)$ and
+$X_5 = (x : y : 1)$. The $Q_i$ are polynomial in
 $x$ and $y$, and the condition that all five lie on one line is the vanishing of the ten determinants $\det(Q_a, Q_b, Q_c)$.
-A Gröbner basis computation (`scripts/pentagon.py`, output in `notes/pentagon_output.txt`) shows that this system has
+A Gröbner basis computation (`scripts/pentagon.py`, output in `runs/pentagon_output.txt`) shows that this system has
 exactly two solutions,
 
 $$X_5 = \Big(\tfrac{-1 + \sqrt5}{2} : \tfrac{3 - \sqrt5}{2} : 1\Big) \quad\text{and}\quad \Big(\tfrac{-1 - \sqrt5}{2} : \tfrac{3 + \sqrt5}{2} : 1\Big),$$
 
 both real and non-degenerate (no three $X$'s collinear, the five $Q_i$ distinct). They are the two Galois-conjugate
-projective images of the regular pentagon with its axes; in the dual picture the axes are the lines $Q_iX_i$.
+projective images of the regular pentagon with its axes. The points $Q_i$ are dual to the five axes and the $X_j$ to
+the five sides of the pentagram; the five ordinary lines of the dual picture are $Q_1X_5$, $Q_2X_4$, $Q_3X_3$, $Q_4X_2$,
+$Q_5X_1$.
 
 **Conclusion.** Every arrangement of type $\{5, 3^{10}\}$ is projectively equivalent to one of these two. A projective
 transformation defined over $\mathbb Q$ would keep $X_5$ rational, so no realization is defined over $\mathbb Q$.
@@ -187,7 +196,7 @@ transformation defined over $\mathbb Q$ would keep $X_5$ rational, so no realiza
 </div>
 
 <div class="thm" markdown>
-**Proposition C2 (Fano, Möbius–Kantor, Hesse).** <span class="status-proved">proved</span> The types $\{3^7\}$ ($n = 7$),
+<a id="c2"></a>**Proposition C2 (Fano, Möbius–Kantor, Hesse).** <span class="status-proved">proved</span> The types $\{3^7\}$ ($n = 7$),
 $\{3^8\}$ ($n = 8$) and $\{3^{12}\}$ ($n = 9$) are combinatorially possible but not realizable by real lines.
 </div>
 <div class="proof" markdown>
@@ -196,7 +205,8 @@ Hesse configuration $9_4 12_3$); the search of Algorithm 1 finds them.
 
 *Non-realizability.* For $\{3^7\}$, $t_2 = 0$ contradicts Theorem A2; for $\{3^{12}\}$ likewise $t_2 = 36 - 36 = 0$.
 
-For $\{3^8\}$ we have $t_2 = 4$, so the inequalities do not help. The exhaustive search shows that every linear space of this type is the Möbius–Kantor configuration, and that it admits
+For $\{3^8\}$ we have $t_2 = 4$, so the inequalities do not help.
+The exhaustive search shows that every linear space of this type is the Möbius–Kantor configuration, and that it admits
 no orientation (Algorithm 3; classically, Hilbert–Cohn-Vossen §16 or Gropp 1997[^gropp]). <span class="qed">$\square$</span>
 </div>
 
@@ -204,7 +214,7 @@ no orientation (Algorithm 3; classically, Hilbert–Cohn-Vossen §16 or Gropp 19
     [doi:10.1016/S0012-365X(96)00327-5](https://doi.org/10.1016/S0012-365X(96)00327-5).
 
 <div class="thm" markdown>
-**Proposition C3 (nine quadruple points).** <span class="status-proved">proved</span> The type $\{4^9\}$ for twelve lines is
+<a id="c3"></a>**Proposition C3 (nine quadruple points).** <span class="status-proved">proved</span> The type $\{4^9\}$ for twelve lines is
 combinatorially possible and unique as a linear space, and not realizable by real lines. Over $\mathbb C$ it is the type
 of the Hesse arrangement: the twelve lines of the Hesse configuration, four through each of its nine points.
 </div>
@@ -219,14 +229,15 @@ common line; and the twelve lines cover $12 \cdot \binom 32 = 36 = \binom 92$ pa
 This is a Steiner triple system on nine points, which is unique up to isomorphism: the affine plane $AG(2,3)$, the
 Hesse configuration.
 
-Realizability is preserved by duality, and $AG(2,3)$ is not realizable over $\mathbb R$: every pair of its points lies
-on a 3-point line, so it has no ordinary line, contradicting the Sylvester–Gallai theorem (Theorem A2). Over
+In a real arrangement of this type the nine quadruple points and the twelve lines would form $AG(2,3)$ directly: a
+set of nine real points in which every pair lies on a line through a third. Such a set has no ordinary line,
+contradicting the Sylvester–Gallai theorem (Theorem A2). Over
 $\mathbb C$ the configuration exists (the nine inflection points of a cubic and their twelve lines), so the obstruction
 is genuinely real. <span class="qed">$\square$</span>
 </div>
 
 <div class="thm" markdown>
-**Proposition C3a (twenty triple points).** <span class="status-computed">computer-verified</span> The type $\{3^{20}\}$ for
+<a id="c3a"></a>**Proposition C3a (twenty triple points).** <span class="status-computed">computer-verified</span> The type $\{3^{20}\}$ for
 twelve lines is combinatorially possible but not realizable, not even by pseudolines: none of its linear spaces is
 orientable.
 </div>
@@ -239,14 +250,16 @@ Add a thirteenth point and join it to the two ends of each uncovered pair. The r
 order 13, and conversely deleting a point from a Steiner triple system of order 13 gives a linear space of type
 $\{3^{20}\}$. There are exactly two Steiner triple systems of order 13 up to isomorphism.[^cr] Their 26 point
 deletions fall into 5 isomorphism classes, and the SAT encoding of Algorithm 3 shows that none of the 26 admits a
-chirotope (`scripts/orchard12.py`, `runs/orchard12.json`). <span class="qed">$\square$</span>
+chirotope (`scripts/orchard12.py`, `runs/orchard12.json`); each of these UNSAT verdicts also has an LRAT proof
+checked by the verified checker cake_lpr ([algorithms](algorithms.md#lrat), `data/proofs/lrat_n12.json`).
+<span class="qed">$\square$</span>
 </div>
 
 This agrees with the orchard problem: Burr, Grünbaum and Sloane list $19$ as the largest number of 3-point lines for
 twelve points.[^bgs]
 
 <div class="thm" markdown>
-**Proposition C3b (five quadruple points).** <span class="status-computed">computer-verified</span> The type
+<a id="c3b"></a>**Proposition C3b (five quadruple points).** <span class="status-computed">computer-verified</span> The type
 $\{4^5, 3^9\}$ for twelve lines is combinatorially possible but not realizable, not even by pseudolines: none of its
 linear spaces is orientable.
 </div>
@@ -257,7 +270,8 @@ pencils have 20 incidences with only 12 lines, and exactly 8 such configurations
 4-pencils are fixed and the SAT encoding of Algorithm 3 is asked for a chirotope on a linear space of type
 $\{4^5, 3^9\}$ containing them; all 8 instances are unsatisfiable, with three different solvers (CaDiCaL, Glucose,
 MapleChrono). As a control, the same 8 instances for the realizable type $\{4^5, 3^8\}$ are all satisfiable
-(`scripts/orient_split.py`, `runs/orient_split_12.json`). <span class="qed">$\square$</span>
+(`scripts/orient_split.py`, `runs/orient_split_12.json`). Each of the 8 refutations also has an LRAT proof checked by
+cake_lpr ([algorithms](algorithms.md#lrat)). <span class="qed">$\square$</span>
 </div>
 
 The undivided search (engine, mode 4) did not finish in four hours for this type; fixing the 4-pencils first is what
@@ -267,7 +281,7 @@ statement that the left side is $\ge 0$). For $\{4^5, 3^9\}$ the right side is $
 triangles except one quadrilateral.
 
 <div class="thm" markdown>
-**Example C3c (eighteen triple points).** <span class="status-computed">computer-verified</span> The type $\{3^{18}\}$
+<a id="c3c"></a>**Example C3c (eighteen triple points).** <span class="status-computed">computer-verified</span> The type $\{3^{18}\}$
 for twelve lines is realizable, with small integer coefficients: the lines $a x + b y + c z = 0$ with $(a : b : c)$
 equal to
 
@@ -283,7 +297,7 @@ have exactly 18 triple points and 12 double points (`data/certificates/n12.json`
 ## C′. Lines versus pseudolines at n = 12 {#lines-vs-pseudolines}
 
 <div class="thm" markdown>
-**Theorem C4.** <span class="status-computed">computer-verified</span> The type $\{6, 4, 3^{12}\}$ (twelve lines, 23 intersection
+<a id="c4"></a>**Theorem C4.** <span class="status-computed">computer-verified</span> The type $\{6, 4, 3^{12}\}$ (twelve lines, 23 intersection
 points) is realizable by pseudolines but not by straight lines. More precisely: up to isomorphism there is exactly one
 orientable linear space with these block sizes, namely, on the points 0, …, 11:
 
@@ -302,8 +316,9 @@ modulo its symmetry breaking), of which 30 240 are orientable; the exact isomorp
 ones are relabellings of the space above (`runs/enum_classes_12_6_4_3x12.json`).
 
 *Forced collinearity.* Take $0, 1, 6, 7$ as projective frame, the points of the 6-block on the line $z = 0$ and the other
-points in the affine chart. The 16 collinearity determinants generate an ideal $I$ in 12 unknowns, and the Gröbner basis
-of $I + (t \cdot d_{7,10,11} - 1)$ is $\{1\}$ (`data/proofs/n12_6-4-3x12.json`). Hence $d_{7,10,11}$ vanishes on $V(I)$.
+points in the affine chart. The 16 collinearity determinants generate an ideal $I$ in 12 unknowns, and
+$I + (t \cdot d_{7,10,11} - 1)$ is the unit ideal: `data/proofs/n12_6-4-3x12.json` stores explicit cofactors expressing
+$1$ in it, checked by exact expansion with `python verifier/verify.py --algebraic`. Hence $d_{7,10,11}$ vanishes on $V(I)$.
 
 *Pseudolines.* Realizability by pseudolines is the Folkman–Lawrence theorem applied to the chirotope found by the
 engine. <span class="qed">$\square$</span>
@@ -333,7 +348,7 @@ only says that every solution, degenerate or not, has $7, 10, 11$ collinear.
 </div>
 
 <div class="thm" markdown>
-**Theorem C5.** <span class="status-computed">computer-verified</span> The type $\{6, 3^{14}\}$ (twelve lines, 24 intersection
+<a id="c5"></a>**Theorem C5.** <span class="status-computed">computer-verified</span> The type $\{6, 3^{14}\}$ (twelve lines, 24 intersection
 points) is realizable by pseudolines but not by straight lines. Its orientable linear spaces form exactly four
 isomorphism classes (676 080 linear spaces in the exhaustive enumeration, 135 360 of them orientable, with
 34 560 + 14 400 + 57 600 + 28 800 labelled copies of the four classes), and for each class a Gröbner certificate shows that
@@ -349,7 +364,9 @@ of pairs of $X$ that lie in a block through $q$ (its pair-mask), and the blocks 
 the $q$-masks as a sorted list removes the labels of $B$; the minimum of (sorted $q$-masks, $X$-mask) over the 720
 permutations of $X$ is then a complete invariant. An independent VF2 graph-isomorphism check agrees on the first class.
 
-*Certificates.* `data/proofs/n12_6-3x14.json`; each is verified by a reduced Gröbner basis $\{1\}$ in sympy.
+*Certificates.* `data/proofs/n12_6-3x14.json`; for each class explicit cofactors give
+$1 = \sum_T h_T d_T + h\,(t\,d_{T_1} \cdots d_{T_r} - 1)$, an identity checked by exact expansion with
+`python verifier/verify.py --algebraic` (also in continuous integration).
 <span class="qed">$\square$</span>
 </div>
 
@@ -386,17 +403,17 @@ wrong fields, duplicated lines, wrong types and floating-point coordinates are r
 
 ## E. Intersection points {#points}
 
-The proofs of Theorems 1–3 of the [points page](sequences/points.md) are given in full in the repository notes
-(`notes/points.md`); we summarise the structure of the proof of the main theorem and give the one ingredient that is
+Theorem 1 and Lemma 2 of the [points page](sequences/points.md) are proved in full in `notes/points.md`, and its
+Theorem 3 is Theorem E3 below; we summarise the structure of the proof of the main theorem and give the one ingredient that is
 not a one-liner.
 
 <div class="thm" markdown>
 **Lemma E1 (spoke bound).** <span class="status-proved">proved</span> Let $P$ be a point of maximal multiplicity $m$ in an
-arrangement of $n$ lines, $b = n - m$. For each line $L$ through $P$ let $g_L$ be the number of points on $L$ other than $P$.
-Then $f_0 \ge 1 + \sum_L g_L$; each $g_L$ partitions the $b$ lines not through $P$ into $g_L$ classes of sizes $\le m - 1$
+arrangement of $n$ lines, $r = n - m$. For each line $L$ through $P$ let $g_L$ be the number of points on $L$ other than $P$.
+Then $f_0 \ge 1 + \sum_L g_L$; each $g_L$ partitions the $r$ lines not through $P$ into $g_L$ classes of sizes $\le m - 1$
 (the lines through one point of $L$); and the total number of pairs of free lines inside classes, over all $L$, is at
-most $\binom b2$. Consequently $f_0 \ge 1 + G(n, b)$ for the integer programme $G$ defined in `notes/points.md`, and in
-closed form $f_0 \ge 1 + mb - \binom b2$ (Kelly–Moser's Lemma 4.1).
+most $\binom r2$. Consequently $f_0 \ge 1 + G(n, r)$ for the integer programme $G$ defined in `notes/points.md`, and in
+closed form $f_0 \ge 1 + mr - \binom r2$ (Kelly–Moser's Lemma 4.1).
 </div>
 
 <div class="thm" markdown>
@@ -410,17 +427,17 @@ loss is at most $\frac{m+1}{m+3}(\binom n2 - 3)$. <span class="qed">$\square$</s
 </div>
 
 <div class="thm" markdown>
-**Theorem E3.** <span class="status-proved">proved, computer-assisted</span> For $n \ge 13$: if no $n - 2$ lines are concurrent then $f_0 \ge 2n-2$.
+<a id="e3"></a>**Theorem E3.** <span class="status-proved">proved, computer-assisted</span> For $n \ge 13$: if no $n - 2$ lines are concurrent then $f_0 \ge 2n-2$.
 </div>
 <div class="proof" markdown>
-*Proof.* Let $m \le n - 3$ be the largest multiplicity and $b = n - m \ge 3$. There are three ranges of $n$.
+*Proof.* Let $m \le n - 3$ be the largest multiplicity and $r = n - m \ge 3$. There are three ranges of $n$.
 
-*Case $n \ge 36$.* If $b \le (2n-9)/3$, Lemma E1 gives $f_0 \ge 1 + mb - \binom b2 \ge 2n - 2$: the difference is
-$n(b-2) - \frac{3b^2 - b - 6}2$, which is $\ge 0$ when $n \ge \frac32 b + \frac92$. Otherwise $m < (n+9)/3$, and Lemma E2
+*Case $n \ge 36$.* If $r \le (2n-9)/3$, Lemma E1 gives $f_0 \ge 1 + mr - \binom r2 \ge 2n - 2$: the difference is
+$n(r-2) - \frac{3r^2 - r - 6}2$, which is $\ge 0$ when $n \ge \frac32 r + \frac92$. Otherwise $m < (n+9)/3$, and Lemma E2
 gives $f_0 > \frac{3n(n-1)}{n+18} \ge 2n-2$, because $n^2 - 37n + 36 \ge 0$.
 
 *Case $17 \le n \le 120$.* The script `scripts/f0_bounds.py` checks that
-$\max(1 + G(n,b), \lceil\text{Lemma E2}\rceil) \ge 2n-2$ for every $m \le n-3$. This range overlaps the previous one.
+$\max(1 + G(n,r), \lceil\text{Lemma E2}\rceil) \ge 2n-2$ for every $m \le n-3$. This range overlaps the previous one.
 
 *Case $13 \le n \le 16$.* The same check succeeds except for $(n, m) = (13, 5), (14, 5), (14, 6), (15, 6), (16, 6)$. For
 these five pairs a linear programme over $(t_2, \dots, t_m)$ with the pair identity, Theorem A2, Theorem A4 (with
@@ -449,7 +466,8 @@ $6 \le n \le 11$, and true for $n = 4, 5$.
 excluded as follows.
 
 * $2, \dots, n-1$: by Theorem A1.
-* $n+1, \dots, 2n-5$: by Theorem A6 for $n \ge 10$, and by the classification for $n \le 9$.
+* $n+1, \dots, 2n-5$ for $n \ge 10$: by Theorem A6. (For $n \le 9$ the missing values in this range are among the
+  sporadic ones below.)
 * $\binom n2 - 1$ and $\binom n2 - 3$: by Theorem 1 of the points page.
 * The sporadic values $8$ ($n = 7$), $9, 10$ ($n = 8$), $10, 11, 12$ ($n = 9$) and $21$ ($n = 12$): every admissible type
   with that $f_0$ is non-realizable (classification files).

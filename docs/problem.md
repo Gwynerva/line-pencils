@@ -56,7 +56,7 @@ ordinary, that is, on exactly two lines.
 
 Equation (1) can also be read as a count of lost points: a pencil of $k$ lines merges $\binom k2$ would-be ordinary
 points into one, so it loses $\binom k2 - 1$ of them. The *loss* of a type is
-$\ell = \binom n2 - f_0 = \sum_{k\ge3} \big(\binom k2 - 1\big) t_k$, a sum of numbers from $2, 5, 9, 14, 20, \dots$
+$\ell = \binom n2 - f_0 = \sum_{k\ge3} \big(\binom k2 - 1\big) t_k$, a sum of numbers from $2, 5, 9, 14, 20, \dots$.
 
 ## Why the projective plane
 
@@ -69,8 +69,8 @@ exactly the pencil types of arrangements of $n$ lines in $\mathbb{RP}^2$.
 <div class="proof" markdown>
 *Proof.* A Euclidean arrangement without parallels sits in $\mathbb{RP}^2$ with the same intersection points: no two
 of its lines meet on the line at infinity. Conversely, a projective arrangement has finitely many intersection points;
-choose a line $\ell_\infty$ not in $\mathcal A$ through none of them and remove it. In the affine plane that remains,
-two lines of $\mathcal A$ are parallel only if they meet on $\ell_\infty$, which they do not, and the intersection
+choose a line $L_\infty$ not in $\mathcal A$ through none of them and remove it. In the affine plane that remains,
+two lines of $\mathcal A$ are parallel only if they meet on $L_\infty$, which they do not, and the intersection
 points are unchanged. <span class="qed">$\square$</span>
 </div>
 
@@ -84,7 +84,7 @@ The map $(a : b : c) \mapsto \{ax + by + cz = 0\}$ identifies points of $\mathbb
 and preserves incidence. Under it, an arrangement of $n$ lines becomes a set of $n$ points, and a pencil of $k$ lines
 through a point becomes a line through $k$ of the points. So:
 
-> Pencil types of $n$ lines $=$ multisets of sizes of the lines through at least three of $n$ given points in the plane.
+> Pencil types of $n$ lines $=$ the multisets of sizes of the lines that contain at least three of $n$ given points.
 
 Much of the classical literature speaks the point language. The Sylvester–Gallai theorem ("$n$ points not all on a
 line determine a line through exactly two of them") becomes "$n$ lines not all through one point have an ordinary

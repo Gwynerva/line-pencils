@@ -23,21 +23,25 @@ def utype(t):
 
 REASON = {
     "non-orientable": "no linear space of this type admits an orientation (exhaustive search)",
-    "non-realizable-proved": "orientable, but every orientable linear space of this type forces an extra collinearity (Gröbner certificate; [Theorems C4, C5](theorems.md#lines-vs-pseudolines))",
-    "theorem": "theorem: the unique linear space is the dual of the Hesse configuration, excluded by Sylvester–Gallai ([Proposition C3](theorems.md))",
+    "non-realizable-proved": "orientable, but every orientable linear space of this type forces an extra collinearity (checked cofactor certificate; [Theorems C4, C5](theorems.md#lines-vs-pseudolines))",
+    "theorem": "its nine quadruple points would form a real Hesse configuration, which Sylvester–Gallai forbids ([Proposition C3](theorems.md#c3))",
     "literature": "orchard problem: twelve lines have at most 19 triple points (Burr, Grünbaum, Sloane 1974)",
 }
-ORCH = "none of its five linear spaces (Steiner triple systems of order 13 minus a point) admits an orientation ([Proposition C3a](theorems.md))"
-SPLIT = "none of its linear spaces admits an orientation: an exhaustive SAT check over the 8 possible configurations of the five 4-pencils ([Proposition C3b](theorems.md))"
-BAND = "band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands))"
+ORCH = "none of its linear spaces (five up to isomorphism: Steiner triple systems of order 13 minus a point) admits an orientation ([Proposition C3a](theorems.md#c3a))"
+SPLIT = "none of its linear spaces admits an orientation: SAT on each of the 8 possible configurations of the five 4-pencils, with LRAT proofs checked by cake_lpr ([Proposition C3b](theorems.md#c3b))"
+BAND = "band theorem"
+BAND_NOTE = ("The types marked \"band theorem\" are excluded by [Theorem B4](theorems.md#bands): removing the largest "
+             "pencil leaves a configuration that no arrangement of the remaining lines produces.\n")
 
 
 def main(nmax):
-    out = ["# What cannot be drawn", "",
+    out = ["---", 'description: "The pencil types that pass the combinatorial test but cannot be drawn with straight lines, '
+           'for each number of lines, with the reason for each and the types still undecided."', "---", "",
+           "# What cannot be drawn", "",
            "Most arithmetically admissible pencil types cannot be drawn. This page lists, for each number of lines, "
            "the types that survive the combinatorial test but are still impossible, together with the reason, and "
-           "the types that are undecided. Types that already fail the combinatorial test (two pencils would share two "
-           "lines) or one of the classical inequalities are only counted; the full lists are in "
+           "the types that are undecided. Types that already fail the combinatorial test (the pencils cannot be placed so "
+           "that every two lines meet only once) or one of the classical inequalities are only counted; the full lists are in "
            "`data/results/classification_n{n}.json`.", "",
            "## Three famous impossible pictures", "",
            "Each of these is a perfectly good linear space, and the last two even exist with complex coordinates, "
@@ -70,6 +74,8 @@ def main(nmax):
                        "went to the combinatorial test, so the count of combinatorial failures covers those types only.\n")
         special = [r for r in rows if r["verdict"] in REASON or (r["verdict"] == "theorem" and "bands" in r.get("reference", ""))]
         if special:
+            if any("bands" in r.get("reference", "") for r in special):
+                out.append(BAND_NOTE)
             out.append("| type | points | why it cannot be drawn |\n|---|---|---|")
             for r in sorted(special, key=lambda r: (-sum(r["type"]), r["type"])):
                 ref = r.get("reference", "")
@@ -78,7 +84,10 @@ def main(nmax):
             out.append("")
         openr = [r for r in rows if r["verdict"] == "open"]
         if openr:
-            out.append("Undecided: " + ", ".join(utype(r["type"]) for r in sorted(openr, key=lambda r: (-sum(r["type"]), r["type"]))) + ".\n")
+            k = len(openr)
+            out.append(f'<details><summary>{k} undecided {"type" if k == 1 else "types"}</summary>\n')
+            out.append(", ".join(utype(r["type"]) for r in sorted(openr, key=lambda r: (-sum(r["type"]), r["type"]))) + ".\n")
+            out.append("</details>\n")
         ineqr = [r for r in rows if r["verdict"] in ("melchior", "csima-sawyer", "debruijn-erdos")]
         if ineqr:
             k = len(ineqr)

@@ -13,7 +13,7 @@ integer sequences it produces were absent from the OEIS. They are now OEIS entri
 The questions were posed by Petra Radko (GitHub: Gwynerva), who also fixed the scope of the project and the
 standards of rigour (exact certificates, a single verifier, every claim labelled). **All of the work itself — the
 mathematics (theorems, proofs, conjectures), the programs, the computations, the figures and the text of this site —
-was carried out by Claude Code (Anthropic's Claude models)**, with the author's original exploratory scripts and data
+was carried out by Claude Code (Anthropic's Claude models)**, with Petra Radko's original exploratory scripts and data
 as the starting point. Errors are therefore Claude's; the reader is invited to re-run the verifier and the proofs.
 
 ## How to cite

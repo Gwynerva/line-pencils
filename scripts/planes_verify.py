@@ -10,7 +10,7 @@ the plane a x + b y + c z + d w = 0 in RP^3.  For every entry the type is recomp
 and the entry is accepted only if the planes are distinct and the recomputed type equals the stored one.  Finally the
 number of distinct accepted types per n is printed.
 
-Usage: python scripts/planes_verify.py [runs/planes_certificates.json]
+usage: python scripts/planes_verify.py [runs/planes_certificates.json]
 """
 
 import json

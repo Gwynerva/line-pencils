@@ -9,7 +9,7 @@ correspond bijectively to linear subclasses of hyperplanes (Oxley, Matroid Theor
 A matroid is stored by its flats: a dict rank -> frozenset of bitmasks.  Every catalogued matroid is checked
 against the flat axioms (is_matroid); completeness is checked against the counts of Mayhew and Royle (OEIS A058733).
 
-Usage: python scripts/planes_matroids.py N    -> writes runs/planes_matroids_n{N}.json (all n <= N)
+usage: python scripts/planes_matroids.py N    -> writes runs/planes_matroids_n{N}.json (all n <= N)
 """
 
 import json

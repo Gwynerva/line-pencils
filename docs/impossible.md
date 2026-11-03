@@ -1,6 +1,10 @@
+---
+description: "The pencil types that pass the combinatorial test but cannot be drawn with straight lines, for each number of lines, with the reason for each and the types still undecided."
+---
+
 # What cannot be drawn
 
-Most arithmetically admissible pencil types cannot be drawn. This page lists, for each number of lines, the types that survive the combinatorial test but are still impossible, together with the reason, and the types that are undecided. Types that already fail the combinatorial test (two pencils would share two lines) or one of the classical inequalities are only counted; the full lists are in `data/results/classification_n{n}.json`.
+Most arithmetically admissible pencil types cannot be drawn. This page lists, for each number of lines, the types that survive the combinatorial test but are still impossible, together with the reason, and the types that are undecided. Types that already fail the combinatorial test (the pencils cannot be placed so that every two lines meet only once) or one of the classical inequalities are only counted; the full lists are in `data/results/classification_n{n}.json`.
 
 ## Three famous impossible pictures
 
@@ -114,16 +118,16 @@ Each of these is a perfectly good linear space, and the last two even exist with
 
 | type | points | why it cannot be drawn |
 |---|---|---|
-| {3<sup>20</sup>} | 26 | none of its five linear spaces (Steiner triple systems of order 13 minus a point) admits an orientation ([Proposition C3a](theorems.md)) |
+| {3<sup>20</sup>} | 26 | none of its linear spaces (five up to isomorphism: Steiner triple systems of order 13 minus a point) admits an orientation ([Proposition C3a](theorems.md#c3a)) |
 | {4<sup>2</sup>, 3<sup>16</sup>} | 24 | no linear space of this type admits an orientation (exhaustive search) |
 | {4<sup>3</sup>, 3<sup>14</sup>} | 23 | no linear space of this type admits an orientation (exhaustive search) |
 | {5, 3<sup>16</sup>} | 25 | no linear space of this type admits an orientation (exhaustive search) |
 | {5, 4<sup>2</sup>, 3<sup>12</sup>} | 23 | no linear space of this type admits an orientation (exhaustive search) |
 | {5<sup>2</sup>, 3<sup>13</sup>} | 22 | no linear space of this type admits an orientation (exhaustive search) |
-| {6, 3<sup>14</sup>} | 24 | orientable, but every orientable linear space of this type forces an extra collinearity (Gröbner certificate; [Theorems C4, C5](theorems.md#lines-vs-pseudolines)) |
-| {4<sup>5</sup>, 3<sup>9</sup>} | 23 | none of its linear spaces admits an orientation: an exhaustive SAT check over the 8 possible configurations of the five 4-pencils ([Proposition C3b](theorems.md)) |
+| {6, 3<sup>14</sup>} | 24 | orientable, but every orientable linear space of this type forces an extra collinearity (checked cofactor certificate; [Theorems C4, C5](theorems.md#lines-vs-pseudolines)) |
+| {4<sup>5</sup>, 3<sup>9</sup>} | 23 | none of its linear spaces admits an orientation: SAT on each of the 8 possible configurations of the five 4-pencils, with LRAT proofs checked by cake_lpr ([Proposition C3b](theorems.md#c3b)) |
 | {5<sup>2</sup>, 3<sup>12</sup>} | 24 | no linear space of this type admits an orientation (exhaustive search) |
-| {6, 4, 3<sup>12</sup>} | 23 | orientable, but every orientable linear space of this type forces an extra collinearity (Gröbner certificate; [Theorems C4, C5](theorems.md#lines-vs-pseudolines)) |
+| {6, 4, 3<sup>12</sup>} | 23 | orientable, but every orientable linear space of this type forces an extra collinearity (checked cofactor certificate; [Theorems C4, C5](theorems.md#lines-vs-pseudolines)) |
 | {5<sup>2</sup>, 4<sup>2</sup>, 3<sup>8</sup>} | 22 | no linear space of this type admits an orientation (exhaustive search) |
 | {5<sup>3</sup>, 3<sup>9</sup>} | 21 | no linear space of this type admits an orientation (exhaustive search) |
 | {5, 4<sup>5</sup>, 3<sup>5</sup>} | 22 | no linear space of this type admits an orientation (exhaustive search) |
@@ -131,7 +135,7 @@ Each of these is a perfectly good linear space, and the last two even exist with
 | {5<sup>3</sup>, 3<sup>8</sup>} | 23 | no linear space of this type admits an orientation (exhaustive search) |
 | {4<sup>8</sup>, 3<sup>2</sup>} | 22 | no linear space of this type admits an orientation (exhaustive search) |
 | {5<sup>2</sup>, 4<sup>3</sup>, 3<sup>5</sup>} | 23 | no linear space of this type admits an orientation (exhaustive search) |
-| {4<sup>9</sup>} | 21 | theorem: the unique linear space is the dual of the Hesse configuration, excluded by Sylvester–Gallai ([Proposition C3](theorems.md)) |
+| {4<sup>9</sup>} | 21 | its nine quadruple points would form a real Hesse configuration, which Sylvester–Gallai forbids ([Proposition C3](theorems.md#c3)) |
 | {4<sup>8</sup>, 3} | 24 | no linear space of this type admits an orientation (exhaustive search) |
 | {4<sup>8</sup>} | 26 | no linear space of this type admits an orientation (exhaustive search) |
 
@@ -147,38 +151,44 @@ Each of these is a perfectly good linear space, and the last two even exist with
 
 For this number of lines the inequalities were checked first, and only the types that pass them went to the combinatorial test, so the count of combinatorial failures covers those types only.
 
+The types marked "band theorem" are excluded by [Theorem B4](theorems.md#bands): removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces.
+
 | type | points | why it cannot be drawn |
 |---|---|---|
-| {5, 4<sup>8</sup>, 3<sup>2</sup>} | 25 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6<sup>2</sup>, 4, 3<sup>9</sup>} | 27 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {5<sup>4</sup>, 4, 3<sup>6</sup>} | 25 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6, 5, 4<sup>4</sup>, 3<sup>5</sup>} | 25 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6<sup>2</sup>, 4<sup>3</sup>, 3<sup>6</sup>} | 23 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {5<sup>4</sup>, 3<sup>7</sup>} | 28 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6, 5<sup>2</sup>, 4, 3<sup>7</sup>} | 27 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6<sup>2</sup>, 4<sup>2</sup>, 3<sup>7</sup>} | 26 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {5, 4<sup>8</sup>, 3} | 27 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {5<sup>3</sup>, 4<sup>4</sup>, 3<sup>3</sup>} | 25 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {5<sup>4</sup>, 4<sup>2</sup>, 3<sup>4</sup>} | 24 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {7, 4<sup>3</sup>, 3<sup>7</sup>} | 29 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {5<sup>4</sup>, 4, 3<sup>5</sup>} | 27 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6, 5, 4<sup>4</sup>, 3<sup>4</sup>} | 27 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6, 5<sup>2</sup>, 4<sup>2</sup>, 3<sup>5</sup>} | 26 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6<sup>2</sup>, 4<sup>3</sup>, 3<sup>5</sup>} | 25 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {5<sup>4</sup>, 3<sup>6</sup>} | 30 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6, 5<sup>2</sup>, 4, 3<sup>6</sup>} | 29 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6<sup>2</sup>, 4<sup>2</sup>, 3<sup>6</sup>} | 28 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {5, 4<sup>8</sup>} | 29 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {5<sup>4</sup>, 4, 3<sup>4</sup>} | 29 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {5<sup>4</sup>, 3<sup>5</sup>} | 32 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6, 5<sup>2</sup>, 4, 3<sup>5</sup>} | 31 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6<sup>2</sup>, 4<sup>2</sup>, 3<sup>5</sup>} | 30 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {5<sup>4</sup>, 4, 3<sup>3</sup>} | 31 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {5<sup>4</sup>, 3<sup>4</sup>} | 34 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6, 5<sup>2</sup>, 4, 3<sup>4</sup>} | 33 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
-| {6<sup>2</sup>, 4<sup>2</sup>, 3<sup>4</sup>} | 32 | band theorem: removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces ([Theorem B4](theorems.md#bands)) |
+| {5, 4<sup>8</sup>, 3<sup>2</sup>} | 25 | band theorem |
+| {6<sup>2</sup>, 4, 3<sup>9</sup>} | 27 | band theorem |
+| {5<sup>4</sup>, 4, 3<sup>6</sup>} | 25 | band theorem |
+| {6, 5, 4<sup>4</sup>, 3<sup>5</sup>} | 25 | band theorem |
+| {6<sup>2</sup>, 4<sup>3</sup>, 3<sup>6</sup>} | 23 | band theorem |
+| {5<sup>4</sup>, 3<sup>7</sup>} | 28 | band theorem |
+| {6, 5<sup>2</sup>, 4, 3<sup>7</sup>} | 27 | band theorem |
+| {6<sup>2</sup>, 4<sup>2</sup>, 3<sup>7</sup>} | 26 | band theorem |
+| {5, 4<sup>8</sup>, 3} | 27 | band theorem |
+| {5<sup>3</sup>, 4<sup>4</sup>, 3<sup>3</sup>} | 25 | band theorem |
+| {5<sup>4</sup>, 4<sup>2</sup>, 3<sup>4</sup>} | 24 | band theorem |
+| {7, 4<sup>3</sup>, 3<sup>7</sup>} | 29 | band theorem |
+| {5<sup>4</sup>, 4, 3<sup>5</sup>} | 27 | band theorem |
+| {6, 5, 4<sup>4</sup>, 3<sup>4</sup>} | 27 | band theorem |
+| {6, 5<sup>2</sup>, 4<sup>2</sup>, 3<sup>5</sup>} | 26 | band theorem |
+| {6<sup>2</sup>, 4<sup>3</sup>, 3<sup>5</sup>} | 25 | band theorem |
+| {5<sup>4</sup>, 3<sup>6</sup>} | 30 | band theorem |
+| {6, 5<sup>2</sup>, 4, 3<sup>6</sup>} | 29 | band theorem |
+| {6<sup>2</sup>, 4<sup>2</sup>, 3<sup>6</sup>} | 28 | band theorem |
+| {5, 4<sup>8</sup>} | 29 | band theorem |
+| {5<sup>4</sup>, 4, 3<sup>4</sup>} | 29 | band theorem |
+| {5<sup>4</sup>, 3<sup>5</sup>} | 32 | band theorem |
+| {6, 5<sup>2</sup>, 4, 3<sup>5</sup>} | 31 | band theorem |
+| {6<sup>2</sup>, 4<sup>2</sup>, 3<sup>5</sup>} | 30 | band theorem |
+| {5<sup>4</sup>, 4, 3<sup>3</sup>} | 31 | band theorem |
+| {5<sup>4</sup>, 3<sup>4</sup>} | 34 | band theorem |
+| {6, 5<sup>2</sup>, 4, 3<sup>4</sup>} | 33 | band theorem |
+| {6<sup>2</sup>, 4<sup>2</sup>, 3<sup>4</sup>} | 32 | band theorem |
 
-Undecided: {3<sup>24</sup>}, {4, 3<sup>22</sup>}, {3<sup>23</sup>}, {4<sup>2</sup>, 3<sup>20</sup>}, {4, 3<sup>21</sup>}, {3<sup>22</sup>}, {5, 3<sup>20</sup>}, {4<sup>3</sup>, 3<sup>17</sup>}, {5, 4, 3<sup>18</sup>}, {6, 3<sup>19</sup>}, {5<sup>2</sup>, 3<sup>17</sup>}, {6, 3<sup>18</sup>}, {4<sup>5</sup>, 3<sup>13</sup>}, {5, 4<sup>3</sup>, 3<sup>14</sup>}, {4<sup>6</sup>, 3<sup>11</sup>}, {5<sup>2</sup>, 4, 3<sup>14</sup>}, {6, 4<sup>2</sup>, 3<sup>14</sup>}, {5<sup>3</sup>, 3<sup>13</sup>}, {6, 5, 3<sup>14</sup>}, {6, 5, 4, 3<sup>12</sup>}, {4<sup>8</sup>, 3<sup>6</sup>}, {5, 4<sup>6</sup>, 3<sup>7</sup>}, {5<sup>3</sup>, 4, 3<sup>10</sup>}, {6, 4<sup>4</sup>, 3<sup>9</sup>}, {5<sup>3</sup>, 4<sup>2</sup>, 3<sup>8</sup>}, {6, 5, 4<sup>2</sup>, 3<sup>9</sup>}, {4<sup>9</sup>, 3<sup>3</sup>}, {5, 4<sup>7</sup>, 3<sup>4</sup>}, {5<sup>2</sup>, 4<sup>5</sup>, 3<sup>5</sup>}, {5<sup>3</sup>, 4<sup>3</sup>, 3<sup>6</sup>}, {6<sup>2</sup>, 3<sup>11</sup>}, {4<sup>10</sup>, 3}, {6, 5<sup>2</sup>, 3<sup>9</sup>}, {5<sup>2</sup>, 4<sup>5</sup>, 3<sup>4</sup>}, {5<sup>3</sup>, 4<sup>3</sup>, 3<sup>5</sup>}, {6, 5, 4<sup>3</sup>, 3<sup>6</sup>}, {4<sup>10</sup>}, {4<sup>9</sup>, 3}, {6, 4<sup>6</sup>, 3<sup>2</sup>}.
+<details><summary>39 undecided types</summary>
+
+{3<sup>24</sup>}, {4, 3<sup>22</sup>}, {3<sup>23</sup>}, {4<sup>2</sup>, 3<sup>20</sup>}, {4, 3<sup>21</sup>}, {3<sup>22</sup>}, {5, 3<sup>20</sup>}, {4<sup>3</sup>, 3<sup>17</sup>}, {5, 4, 3<sup>18</sup>}, {6, 3<sup>19</sup>}, {5<sup>2</sup>, 3<sup>17</sup>}, {6, 3<sup>18</sup>}, {4<sup>5</sup>, 3<sup>13</sup>}, {5, 4<sup>3</sup>, 3<sup>14</sup>}, {4<sup>6</sup>, 3<sup>11</sup>}, {5<sup>2</sup>, 4, 3<sup>14</sup>}, {6, 4<sup>2</sup>, 3<sup>14</sup>}, {5<sup>3</sup>, 3<sup>13</sup>}, {6, 5, 3<sup>14</sup>}, {6, 5, 4, 3<sup>12</sup>}, {4<sup>8</sup>, 3<sup>6</sup>}, {5, 4<sup>6</sup>, 3<sup>7</sup>}, {5<sup>3</sup>, 4, 3<sup>10</sup>}, {6, 4<sup>4</sup>, 3<sup>9</sup>}, {5<sup>3</sup>, 4<sup>2</sup>, 3<sup>8</sup>}, {6, 5, 4<sup>2</sup>, 3<sup>9</sup>}, {4<sup>9</sup>, 3<sup>3</sup>}, {5, 4<sup>7</sup>, 3<sup>4</sup>}, {5<sup>2</sup>, 4<sup>5</sup>, 3<sup>5</sup>}, {5<sup>3</sup>, 4<sup>3</sup>, 3<sup>6</sup>}, {6<sup>2</sup>, 3<sup>11</sup>}, {4<sup>10</sup>, 3}, {6, 5<sup>2</sup>, 3<sup>9</sup>}, {5<sup>2</sup>, 4<sup>5</sup>, 3<sup>4</sup>}, {5<sup>3</sup>, 4<sup>3</sup>, 3<sup>5</sup>}, {6, 5, 4<sup>3</sup>, 3<sup>6</sup>}, {4<sup>10</sup>}, {4<sup>9</sup>, 3}, {6, 4<sup>6</sup>, 3<sup>2</sup>}.
+
+</details>
 
 <details><summary>1400 types excluded by an inequality</summary>
 

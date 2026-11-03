@@ -59,12 +59,11 @@ Figure 5), are exactly the dissections with $P$ collinear with intersection poin
 
 Theorem 3 gives the exact number of realizable types with a pencil of size $\ge n - 4$ for all $n \ge 10$:
 $1 + 1 + 2 + 5 + 12 = 21$; with size $\ge n-5$ for $n \ge 15$: $51$; etc. Summing the stable bands,
-$$ c(n) \;\ge\; \sum_{k \,:\, n - k \ge \max(\binom k2,\, k+1)} N(k), $$
-and the lower bound $\log N(k) \gtrsim$ … is of the same order as the trivial bound. More importantly, part (1) is a
-**necessary condition for realizability** that is independent of the three sieves and very effective in practice:
-at $n = 13$ it excludes 28 types that survive the arithmetic, combinatorial and inequality sieves (41 before more of
-the combinatorial searches finished)
-(`data/exclusions.json`, kind `theorem`, reference this note), and the construction of Lemma 2 produced the missing
+$$ c(n) \;\ge\; \sum_{k \,:\, n - k \ge \max(\binom k2,\, k+1)} N(k). $$
+More importantly, part (1) is a **necessary condition for realizability** that is independent of the three sieves
+and very effective in practice: at $n = 13$ it excludes 28 types that survive the arithmetic, combinatorial and
+inequality sieves (`data/exclusions.json`, kind `theorem`, reference this note), and the construction of Lemma 2
+produced the missing
 certificates $\{8, 6\}$, $\{7^2\}$, $\{7, 4^4, 3^3\}$ (`scripts/bands.py 13`).
 
 ## Consequences for $V(n)$ (numbers of intersection points)

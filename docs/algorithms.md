@@ -84,14 +84,14 @@ Two implementations:
 
 Both agree on every type decided by both. Orientability is much harder than the combinatorial sieve: for $n = 11$,
 the nine combinatorially possible types that are neither realized nor excluded by an inequality are all non-orientable
-(`runs/orient_11.json`, `runs/sat_orient_11.json`). At $n = 12$ the engine decided all candidates but one: the
+(`runs/orient_11.json`). At $n = 12$ the engine decided all candidates but one: the
 search for $\{4^5, 3^9\}$ did not finish within four hours. That type is settled by splitting it into the 8 possible
 configurations of its five 4-pencils and running the SAT encoding on each with the 4-pencils fixed; every case is
-refuted within a minute (`scripts/orient_split.py`, [Proposition C3b](theorems.md)).
+refuted within a minute (`scripts/orient_split.py`, [Proposition C3b](theorems.md#c3b)).
 
 ```bash
 python scripts/engine_run.py 11 4 1800 runs/orient_11.json --workers 2 --only "4,3,3,3,3,3,3,3,3,3,3,3,3,3,3;..."
-python scripts/sat_orient.py 11 runs/sat_orient_11.json --workers 2 --only "..."
+python scripts/sat_orient.py 12 runs/sat_orient_12.json --workers 2 --only "..."
 ```
 
 ### Checkable UNSAT proofs {#lrat}
@@ -103,7 +103,7 @@ compiler whose correctness is proved in HOL4 down to the machine code (if it pri
 no satisfying assignment). `scripts/sat_proof.py` does this; the three SAT scripts have a `--proof DIR` option that
 does it for every `NO` they produce.
 
-The proofs are not stored: 34 of them take 108 MB, while regenerating and checking all of them takes about a minute.
+The proofs are not stored: 34 of them take 108 MB, while regenerating and checking all of them takes under two minutes (85 s on 4 processes).
 Instead `data/proofs/lrat_n12.json` lists every instance with what it encodes, the SHA-256 of its CNF and the size of
 its proof. The CNF is a deterministic function of the encoder (with python-sat 1.9.dev17, whose cardinality encodings
 are part of it), and CaDiCaL is deterministic too: the proofs come out byte for byte the same on every run. The CI
@@ -134,7 +134,7 @@ argument to the trusted part.
 
 Realizable types are proved realizable by exhibiting coordinates. The following sources were used:
 
-1. **Rich point sets** (the author's original search, `legacy/program/`): subsets of integer grids, regular polygons
+1. **Rich point sets** (Petra Radko's original exploratory search, which predates this repository): subsets of integer grids, regular polygons
    with their points at infinity ($\mathbb Q(\sqrt 2), \mathbb Q(\sqrt 3), \mathbb Q(\sqrt 5)$), rational torsion points
    of elliptic curves (orders 7–12), and intersections of their lines; simulated annealing over $n$-subsets looking for
    a target type. All examples for $n \le 11$, all but one for $n = 12$ ($\{3^{18}\}$, item 5) and all but 23 for
@@ -201,7 +201,7 @@ whose rational dual certificate is extracted from the numerical solution and re-
 
 ## 8. Proving non-realizability of an orientable type
 
-Three programs, chained (details and the proof of correctness in `notes/nonrealizability.md`):
+Four steps, chained (details and the proof of correctness in `notes/nonrealizability.md`):
 
 1. `engine/ls.c` mode 5 enumerates **all** linear spaces of the type (the mode-0 search run to exhaustion; the
    symmetry breaking only removes relabellings) and prints the orientable ones.

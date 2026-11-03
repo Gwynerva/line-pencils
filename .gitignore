@@ -10,3 +10,8 @@ runs/**/partial/
 runs/enum_*.txt
 .claude/
 oeis/
+.pytest_cache/
+runs/proofs/
+*.cnf
+*.lrat
+data/certificates/extended_n*.json

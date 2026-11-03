@@ -223,7 +223,10 @@
 
   function sourceText(src) {
     if (!src) return "";
-    if (/^legacy search/.test(src)) return "Found by a search over integer and algebraic point sets.";
+    if (/^legacy search/.test(src)) return "Found by the original exploratory search over integer and algebraic point sets.";
+    if (/^zone walk/.test(src)) return "Found by the zone walk: lines added one at a time, one for each way a new line can pass through the existing intersection points, in exact arithmetic.";
+    if (/^targeted deformation/.test(src)) return "Found by deforming a smaller arrangement within its type until chosen points become collinear, then recovering exact coordinates.";
+    if (/planes perpendicular to the symmetry axes/.test(src)) return "13 of the 31 planes perpendicular to the symmetry axes of the icosahedron, a section of the H4 mirror arrangement.";
     if (/^band construction/.test(src)) return "Built from a smaller arrangement by adding a pencil through chosen points (band theorem).";
     if (/rich line/.test(src) || /^extension/.test(src)) return "Built by adding a line through existing intersection points.";
     if (/numerical realization/.test(src)) return "Found by solving the incidence equations numerically and recovering exact coordinates.";
