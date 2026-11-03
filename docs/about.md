@@ -6,7 +6,7 @@ description: "Who did what in this project, how to cite it, the licence, and how
 
 **How n Lines Can Meet** is an open mathematical notebook. It grew out of a school-level question —
 *n lines, no two parallel: how many lines can meet at each point?* — and the discovery that three of the natural
-integer sequences it produces were absent from the OEIS.
+integer sequences it produces were absent from the OEIS. They are now OEIS entries A400149, A399464 and A399605.
 
 ## Who did what
 

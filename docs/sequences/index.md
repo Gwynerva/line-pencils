@@ -4,7 +4,9 @@ description: "All known terms of the four sequences about how n lines can meet, 
 
 # The four sequences
 
-All known terms of the four sequences, with the evidence behind each. Intervals mark terms that are not yet known
+All known terms of the four sequences, with the evidence behind each. In the OEIS: $a(n)$ is
+[A072964](https://oeis.org/A072964) shifted, $b(n)$ is [A400149](https://oeis.org/A400149), $c(n)$ is
+[A399464](https://oeis.org/A399464), $d(n)$ is [A399605](https://oeis.org/A399605). Intervals mark terms that are not yet known
 exactly. All sequences are indexed by the number of lines $n \ge 1$. Labels: <span class="status-proved">proved</span>,
 <span class="status-computed">computer-verified</span>, <span class="status-bound">bound</span>.
 
@@ -23,10 +25,11 @@ How each column is established:
   is decided ([details](points.md)). The term $d(12) = 46$ uses the non-realizability of the three types with
   $21$ points that pass both the combinatorial test and Melchior's inequality: $\{4^9\}$ by a theorem, $\{5^2, 4^3, 3^6\}$ and $\{5^3, 3^9\}$ by the orientability search.
 
-## What is not in the OEIS
+## In the OEIS
 
-The arithmetic sequence is A072964 shifted. The other three were searched for in the OEIS (full
-sequences, subsequences of five consecutive terms, shifts): no entry matches. Two entries coincide with ours on a few
+The arithmetic sequence is A072964 shifted. The other three were not in the OEIS (we searched for the full sequences,
+for five consecutive terms and for shifts) and were added as A400149 ($b$), A399464 ($c$) and A399605 ($d$); each
+entry has a table of the multisets or values behind its terms. Two older entries coincide with ours on a few
 terms by accident and must not be confused with them: A129230 ($0, 1, 3, 5, 9, 13, 18, 24, 30, 38, 46, 55, \dots$, a
 golden-ratio floor sum) is shifted by two: its terms $3, 5, \dots, 46$ coincide with $d(4), \dots, d(12)$, and the next
 term is $55 \ne d(13) = 56$; A005834

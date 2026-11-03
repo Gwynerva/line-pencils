@@ -30,13 +30,14 @@ different *numbers of intersection points* $n$ lines can have.
 | sequence | $n = 1, 2, 3, \dots$ | status |
 |---|---|---|
 | $a(n)$, types allowed by arithmetic | 1, 1, 2, 4, 7, 15, 32, 66, 141, 295, 619, 1286, 2654, … | known: [A072964](https://oeis.org/A072964), shifted by one |
-| $b(n)$, ways $n$ lines can meet, consistent with "two lines meet only once" | 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384 | <span class="status-computed">computed</span> through $n = 12$; **not in the OEIS** |
-| $c(n)$, ways $n$ lines in the plane can meet | 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336 | <span class="status-computed">computed</span> through $n = 12$ (see the [sequence page](sequences/realizable.md)); **not in the OEIS** |
-| $d(n)$, different possible numbers of intersection points | 1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56 | <span class="status-computed">computed</span> through $n = 13$; **not in the OEIS** |
+| $b(n)$, ways $n$ lines can meet, consistent with "two lines meet only once" | 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384 | <span class="status-computed">computed</span> through $n = 12$; [A400149](https://oeis.org/A400149) |
+| $c(n)$, ways $n$ lines in the plane can meet | 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336 | <span class="status-computed">computed</span> through $n = 12$ (see the [sequence page](sequences/realizable.md)); [A399464](https://oeis.org/A399464) |
+| $d(n)$, different possible numbers of intersection points | 1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56 | <span class="status-computed">computed</span> through $n = 13$; [A399605](https://oeis.org/A399605) |
 
-That three sequences arising from a question a schoolchild can ask are missing from the On-Line Encyclopedia of
-Integer Sequences is the reason for this site. The missing entries are not an oversight that a formula would
-fix: the sequence $c(n)$ contains the *orchard problem* of Sylvester (how many triple points can $n$ lines have?),
+Three of these four sequences, arising from a question a schoolchild can ask, were missing from the On-Line
+Encyclopedia of Integer Sequences; this site was written to fill the gap, and they are now entries
+[A400149](https://oeis.org/A400149), [A399464](https://oeis.org/A399464) and [A399605](https://oeis.org/A399605).
+The gap was not an oversight that a formula would fix: the sequence $c(n)$ contains the *orchard problem* of Sylvester (how many triple points can $n$ lines have?),
 which was settled only for large $n$ by Green and Tao in 2013.[^gt] The list of realizable types determines the answer
 to it, so a complete description of that list, not just its size, would solve the orchard problem for every $n$.
 

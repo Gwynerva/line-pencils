@@ -81,6 +81,14 @@ the original papers) is in the repository file `notes/literature_followup.md`.
 
 ## OEIS entries
 
+The sequences of this site:
+
+* [A400149](https://oeis.org/A400149) $b(n)$, multisets of pencil sizes that occur in linear spaces on $n$ points.
+* [A399464](https://oeis.org/A399464) $c(n)$, ways $n$ lines in the plane, no two parallel, can meet.
+* [A399605](https://oeis.org/A399605) $d(n)$, distinct numbers of intersection points of $n$ lines.
+
+Related entries:
+
 * [A072964](https://oeis.org/A072964) Number of partitions of the n-th triangular number into triangular parts.
 * [A003035](https://oeis.org/A003035) Maximal number of 3-tree rows in n-tree orchard problem.
 * [A003034](https://oeis.org/A003034) Sylvester's problem: minimal number of ordinary lines through n points in the plane.
@@ -94,4 +102,4 @@ the original papers) is in the repository file `notes/literature_followup.md`.
   Competition 2020*, in: Proc. SAT Competition 2020, University of Helsinki, 2020, 51–53. Used as CaDiCaL 1.9.5.
 * A. Ignatiev, A. Morgado, J. Marques-Silva, *PySAT: a Python toolkit for prototyping with SAT oracles*, in: SAT 2018,
   Lecture Notes in Computer Science 10929, Springer, 2018, 428–437. [doi:10.1007/978-3-319-94144-8_26](https://doi.org/10.1007/978-3-319-94144-8_26)
-* MkDocs with the Material theme; MathJax.
+* Zensical (site generator); MathJax.

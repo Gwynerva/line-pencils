@@ -1,11 +1,11 @@
 ---
-description: "b(n): the ways n lines could meet if the only rule were that two lines cross once. Known exactly up to 12 lines: 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384."
+description: "b(n): the ways n lines could meet if the only rule were that two lines cross once. Known exactly up to 12 lines: 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384. OEIS A400149."
 ---
 
 # b(n): ways n lines could meet, judging by combinatorics alone
 
 **In one sentence:** $b(n)$ is the number of different ways $n$ lines can meet that are consistent with the single
-rule that two lines meet only once — whether or not the lines can actually be drawn.
+rule that two lines meet only once — whether or not the lines can actually be drawn. OEIS: [A400149](https://oeis.org/A400149).
 
 The second test ignores geometry and keeps only the rule that two lines meet once: can each pencil be assigned a
 set of lines so that no two pencils share two lines? This page gives the terms and the two independent computations

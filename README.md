@@ -11,17 +11,18 @@ Draw *n* straight lines, no two parallel. At every intersection point write down
 The multiset of these numbers is the **pencil type** of the arrangement. Which types occur, and how many for each *n*?
 
 Three sieves — arithmetic, combinatorics (linear spaces), real geometry — give three integer sequences; a fourth
-counts how many different numbers of intersection points *n* lines can have. Only the first is in the OEIS.
+counts how many different numbers of intersection points *n* lines can have. The first is A072964; the other three
+were new and are now OEIS entries A400149, A399464 and A399605.
 
 | sequence | n = 1, 2, 3, … | status |
 |---|---|---|
 | a(n) arithmetically admissible types | 1, 1, 2, 4, 7, 15, 32, 66, 141, 295, 619, 1286, 2654, … | = A072964(n−1) |
-| b(n) ways n lines can meet, consistent with "two lines meet only once" | 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384 | computed through n = 12 |
-| c(n) ways n lines in the plane can meet | 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336 | computed through n = 12; 620 ≤ c(13) ≤ 659, c(14) ≥ 1104 |
-| d(n) different possible numbers of intersection points | 1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56 | computed through n = 13 |
+| b(n) ways n lines can meet, consistent with "two lines meet only once" | 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384 | computed through n = 12; [A400149](https://oeis.org/A400149) |
+| c(n) ways n lines in the plane can meet | 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336 | computed through n = 12; 620 ≤ c(13) ≤ 659, c(14) ≥ 1104; [A399464](https://oeis.org/A399464) |
+| d(n) different possible numbers of intersection points | 1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56 | computed through n = 13; [A399605](https://oeis.org/A399605) |
 
-The write-up — definitions, theorems with proofs, algorithms, a gallery of every known realizable type for 1 to 14 lines,
-and the prepared OEIS submissions — is the site built from `docs/`: **https://gwynerva.github.io/line-pencils/**
+The write-up — definitions, theorems with proofs, algorithms, a gallery of every known realizable type for 1 to 14 lines —
+is the site built from `docs/`: **https://gwynerva.github.io/line-pencils/**
 (built with [Zensical](https://zensical.org) by `.github/workflows/pages.yml`; `python -m zensical serve` shows it locally).
 
 **Verification:** [VERIFY.md](VERIFY.md) — definitions, how each term is established, and how to check it.
@@ -48,7 +49,6 @@ Python 3.10+ only. The searches themselves need `gcc` (for `engine/ls.c`) and `p
 | `data/exclusions.json` | types excluded by a theorem or by a published result |
 | `runs/` | logs and checkpoints of all exhaustive runs |
 | `notes/` | mathematical notes: setting, the theorem on intersection points, references, literature verification |
-| `oeis/` | the three draft submissions and a submission guide |
 | `docs/assets/` | logo, PNG favicons, the banner above and the social preview image (`scripts/brand_images.py`) |
 | `docs/`, `zensical.toml` | the site (`scripts/build_gallery_data.py` writes the drawing data, `scripts/build_impossible.py` and `scripts/build_tables.py` the generated pages) |
 | `legacy/program/` | the author's original exploratory scripts (reference only; superseded) |

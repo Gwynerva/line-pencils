@@ -9,3 +9,4 @@ site/
 runs/**/partial/
 runs/enum_*.txt
 .claude/
+oeis/

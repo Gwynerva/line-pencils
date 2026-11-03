@@ -33,4 +33,4 @@
 * Exclusion of the 39 open n = 13 types (case splits like the one for {4^5, 3^9} are the natural next step).
 * b(13): the remaining engine time-outs.
 * Figures: duality picture, search tree.
-* OEIS: A399464, A399605, A400149 submitted; after review add c(12) = 336 to A399464 (`oeis/SUBMISSION_GUIDE.md`, §7).
+* OEIS: accepted as A400149 (b), A399464 (c), A399605 (d). A399464 still lists terms through n = 11; c(12) = 336 is to be added by the author.

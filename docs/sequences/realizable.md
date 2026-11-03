@@ -1,11 +1,11 @@
 ---
-description: "c(n): the number of different ways n straight lines in the plane can meet. Exact up to 12 lines: 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336."
+description: "c(n): the number of different ways n straight lines in the plane can meet. Exact up to 12 lines: 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336. OEIS A399464."
 ---
 
 # c(n): ways n lines can meet
 
 **In one sentence:** $c(n)$ is the number of different ways $n$ lines in the plane, no two parallel, can meet — two
-ways being the same when they produce the same list of how many lines pass through each intersection point.
+ways being the same when they produce the same list of how many lines pass through each intersection point. OEIS: [A399464](https://oeis.org/A399464).
 
 This page is about the types that can actually be drawn: every known term with its evidence, and the types that
 are still undecided.

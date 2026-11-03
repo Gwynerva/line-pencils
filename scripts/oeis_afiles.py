@@ -2,6 +2,9 @@
 
 usage: python scripts/oeis_afiles.py            -> writes oeis/a399464.txt, oeis/a400149.txt, oeis/a399605.txt
 
+The sequences are OEIS entries A399464, A400149, A399605; rerun this when a term changes and upload the
+regenerated file on the entry's edit page.  oeis/ is not tracked by git.
+
 Sources: data/results/classification_n{n}.json (one record per arithmetically admissible type, with
 'linear_space' in YES/NO/None and 'verdict' in real / melchior / csima-sawyer / non-orientable / ...).
   A400149 (b): types with linear_space == "YES", n <= 12.

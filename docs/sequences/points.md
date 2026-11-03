@@ -1,11 +1,12 @@
 ---
-description: "d(n): how many different numbers of crossing points n lines can have. Exact up to 13 lines, with a proof that 2n-3 points are impossible from 12 lines on."
+description: "d(n): how many different numbers of crossing points n lines can have. Exact up to 13 lines, with a proof that 2n-3 points are impossible from 12 lines on. OEIS A399605."
 ---
 
 # d(n): how many intersection points can n lines have?
 
 **In one sentence:** $d(n)$ is the number of different possible numbers of intersection points of $n$ lines in the
 plane, no two parallel. For four lines the possible numbers are 1, 4 and 6, so $d(4) = 3$.
+OEIS: [A399605](https://oeis.org/A399605).
 
 The simplest version of the question counts only the intersection points. It already has a rich answer, and it
 is the one sequence for which statements about all $n$ can be proved.
