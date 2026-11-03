@@ -1,0 +1,63 @@
+{
+ "report": [
+  {
+   "type": "lines {}, points [4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}]",
+   "verdicts": [
+    "the other planes cut plane 6 in a Fano configuration",
+    "the other planes cut plane 7 in a Fano configuration",
+    "the planes [0, 2, 3, 4, 5, 6, 7] form the dual Fano configuration F7*",
+    null,
+    null
+   ]
+  },
+  {
+   "type": "lines {3}, points [4{3}, 4{3}, 4{3}, 4{3}, 4{3}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}]",
+   "verdicts": [
+    "the other planes cut plane 6 in a Fano configuration"
+   ]
+  },
+  {
+   "type": "lines {}, points [4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}]",
+   "verdicts": [
+    "the other planes cut plane 4 in a Fano configuration"
+   ]
+  },
+  {
+   "type": "lines {}, points [5{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}]",
+   "verdicts": [
+    "the planes [1, 2, 3, 4, 5, 6, 7] form the dual Fano configuration F7*"
+   ]
+  },
+  {
+   "type": "lines {3^3}, points [5{3^2}, 5{3^2}, 5{3^2}, 4{3}, 4{3}, 4{3}, 4{}, 4{}, 4{}, 4{}]",
+   "verdicts": [
+    "the other planes cut plane 3 in a Fano configuration"
+   ]
+  },
+  {
+   "type": "lines {3^4}, points [6{3^4}, 4{3}, 4{3}, 4{3}, 4{3}, 4{3}, 4{3}, 4{3}, 4{3}, 4{}, 4{}, 4{}]",
+   "verdicts": [
+    "the other planes cut plane 2 in a Fano configuration"
+   ]
+  },
+  {
+   "type": "lines {}, points [4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}, 4{}]",
+   "verdicts": [
+    "the other planes cut plane 0 in a Fano configuration"
+   ]
+  },
+  {
+   "type": "lines {3^7}, points [7{3^7}, 4{3}, 4{3}, 4{3}, 4{3}, 4{3}, 4{3}, 4{3}]",
+   "verdicts": [
+    "the 7 planes [1, 2, 3, 4, 5, 6, 7] pass through one point and form the Fano configuration"
+   ]
+  },
+  {
+   "type": "lines {3^8}, points [8{3^8}]",
+   "verdicts": [
+    null
+   ]
+  }
+ ],
+ "new_certificates": []
+}

@@ -56,6 +56,17 @@
 .fig-box { fill: var(--md-code-bg-color); stroke: var(--md-default-fg-color--lightest); stroke-width: 1.5; }
 .fig-box.inner { stroke: var(--lp-blue); }
 .fig-text { fill: var(--md-default-fg-color); font-family: var(--md-text-font-family, serif); }
+.fig-pt3 { fill: var(--lp-k2); stroke: var(--md-default-bg-color); stroke-width: 1; }
+.fig-sphere { fill: var(--lp-s1); fill-opacity: .12; stroke: var(--lp-line); stroke-width: 1.2; }
+.fig-gc { stroke: var(--lp-s4); stroke-width: 1.8; fill: none; }
+.fig-gc.back { stroke-opacity: .35; stroke-dasharray: 4 4; }
+.fig-pt.back, .fig-pt3.back { opacity: .45; }
+.lp-planes { max-width: 340px; margin: 0 auto; }
+.lp-planes.wide { max-width: 78%; }
+@media (max-width: 600px) { .lp-planes.wide { max-width: 100%; } }
+.md-typeset figure.fig:has(.lp-planes.wide) { display: block; }
+.lp-planes canvas { display: block; width: 100%; aspect-ratio: 1; cursor: grab; touch-action: pan-y; }
+.lp-planes canvas:active { cursor: grabbing; }
 
 /* ---------- arrangements (docs/javascripts/arrangements.js) ---------- */
 .lp-svg { width: 100%; height: auto; display: block; }
