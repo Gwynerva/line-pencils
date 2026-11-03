@@ -6,6 +6,8 @@
   docs/assets/banner-light.png, docs/assets/banner-dark.png   (1280 x 400, for README.md via <picture>)
   docs/assets/social.png                                       (1280 x 640, social preview / og:image)
       logo, title, subtitle and a symmetric arrangement from data/symmetric_drawings.json.
+  docs/assets/banner-art-{left,center,right}-{dark,light}.png  (1920 x 1080, 16:9)
+      the same arrangement alone, without text and logo, placed on the left, in the centre or on the right.
 
 Drawn with Pillow at 4x and downsampled; the geometry of the logo is read from logo.svg.
 
@@ -92,7 +94,7 @@ def arrangement_layer(L, W, H, cx, cy, R, col, pt_cols, lw, pr):
     return lay
 
 
-def banner(W, H, dark, L, path):
+def banner(W, H, dark, L, path, art_only=None):
     bg = (16, 22, 34) if dark else (247, 249, 252)
     ink = (232, 238, 247) if dark else (22, 30, 44)
     muted = (150, 164, 185) if dark else (88, 100, 120)
@@ -117,6 +119,15 @@ def banner(W, H, dark, L, path):
             P.append(((-c1 * b2 + c2 * b1) / det, (-a1 * c2 + a2 * c1) / det))
     ylo, yhi = min(y for _, y in P), max(y for _, y in P)
     xlo, xhi = min(x for x, _ in P), max(x for x, _ in P)
+    if art_only:                                     # no text and no logo: the arrangement alone, art_only = "left" / "center" / "right"
+        R = min(h * 0.82 / (yhi - ylo), w * 0.55 / (xhi - xlo))
+        cy = h / 2 + (ylo + yhi) / 2 * R
+        cx = {"left": h * 0.09 - xlo * R, "center": w / 2 - (xlo + xhi) / 2 * R, "right": w - h * 0.09 - xhi * R}[art_only]
+        k = max(1.0, H / 640)                        # thicker lines and larger points on a larger image
+        art = arrangement_layer(L, w, h, int(cx), int(cy), R, line_col, pts, int(2.2 * k * SS), 6.5 * k * SS)
+        img.alpha_composite(art)
+        img.convert("RGB").resize((W, H), Image.LANCZOS).save(path, optimize=True)
+        return
     R = min(h * 0.82 / (yhi - ylo), w * 0.36 / (xhi - xlo))
     cy = h / 2 + (ylo + yhi) / 2 * R
     cx = w - h * 0.09 - xhi * R                      # rightmost point 9% of the height from the right edge
@@ -154,6 +165,9 @@ def main():
     banner(1280, 400, False, L, os.path.join(ASSETS, "banner-light.png"))
     banner(1280, 400, True, L, os.path.join(ASSETS, "banner-dark.png"))
     banner(1280, 640, True, L, os.path.join(ASSETS, "social.png"))
+    for side in ("left", "center", "right"):
+        banner(1920, 1080, True, L, os.path.join(ASSETS, "banner-art-%s-dark.png" % side), art_only=side)
+        banner(1920, 1080, False, L, os.path.join(ASSETS, "banner-art-%s-light.png" % side), art_only=side)
     print("written:", ", ".join(sorted(f for f in os.listdir(ASSETS) if f.endswith((".png", ".ico")))))
 
 
