@@ -17,9 +17,9 @@ were new and are now OEIS entries A400149, A399464 and A399605.
 | sequence | n = 1, 2, 3, … | status |
 |---|---|---|
 | a(n) arithmetically admissible types | 1, 1, 2, 4, 7, 15, 32, 66, 141, 295, 619, 1286, 2654, … | = A072964(n−1) |
-| b(n) ways n lines can meet, consistent with "two lines meet only once" | 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384 | computed through n = 12; [A400149](https://oeis.org/A400149) |
-| c(n) ways n lines in the plane can meet | 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336 | computed through n = 12; 620 ≤ c(13) ≤ 659, c(14) ≥ 1104; [A399464](https://oeis.org/A399464) |
-| d(n) different possible numbers of intersection points | 1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56 | computed through n = 13; [A399605](https://oeis.org/A399605) |
+| b(n) ways n lines can meet, consistent with "two lines meet only once" | 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384, 729, 1357, 2558 | exact through n = 15; [A400149](https://oeis.org/A400149) |
+| c(n) ways n lines in the plane can meet | 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336 | computed through n = 12; 620 ≤ c(13) ≤ 659, 1104 ≤ c(14) ≤ 1229; [A399464](https://oeis.org/A399464) |
+| d(n) different possible numbers of intersection points | 1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56 | exact through n = 13; 65 ≤ d(14) ≤ 66, 76 ≤ d(15) ≤ 77; [A399605](https://oeis.org/A399605) |
 
 The write-up — definitions, theorems with proofs, algorithms, a gallery of every known realizable type for 1 to 14 lines —
 is the site built from `docs/`: **https://gwynerva.github.io/line-pencils/**
@@ -61,16 +61,17 @@ The verifier needs Python 3.10+ and nothing else. The searches and proofs need `
 
 ## Authorship
 
-The research questions and the standards of rigour were set by Petra Radko (GitHub: Gwynerva). All of the work — the
-theorems and proofs, the programs, the computations, the figures and the text — was carried out by Claude Code
-(Anthropic's Claude models), starting from Petra Radko's original exploratory scripts and data.
+Petra Radko (GitHub: Gwynerva) set the research questions and standards of rigour. Claude Code (Anthropic's Claude
+models) carried out the original mathematical and computational work, starting from Petra Radko's exploratory
+scripts and data. Mark Kim independently extended the combinatorial sequence to 15 points.
+[Preprint](https://doi.org/10.5281/zenodo.24567131)
 
 ## Main results
 
-* b(12) = 384 (exhaustive search, no time-outs; SAT cross-check for n ≤ 12).
+* The local exhaustive search and SAT cross-check establish b(n) through n = 12. [Mark Kim's preprint](https://doi.org/10.5281/zenodo.24567131) extends this with b(13) = 729, b(14) = 1357 and b(15) = 2558 ([code and tables](https://github.com/marik-11/linear_space_types)).
 * c(n) for n ≤ 12 with a verified certificate for every realizable type and a proof for every other type.
 * d(13) = 56, and a theorem: for n ≥ 13 the number of intersection points of n lines is 1, n, 2n−4, 2n−2 or at least 2n−1;
-  in particular 2n−3 points are impossible exactly for n ≥ 12 (`notes/points.md`).
+  in particular 2n−3 points are impossible for every n ≥ 12 (`notes/points.md`).
 * {4^9} for 12 lines is not realizable (unique linear space = dual Hesse configuration, Sylvester–Gallai).
 * **{6, 4, 3^12} and {6, 3^14} are realizable by pseudolines but not by lines** (exhaustive enumeration of their orientable
   linear spaces, exact isomorphism classes, cofactor identities checked by `verify.py --algebraic`; a five-line hand
@@ -86,7 +87,7 @@ theorems and proofs, the programs, the computations, the figures and the text �
   and 1104 types at n = 14; what else was tried is in `notes/constructions.md`.
 * Planes in space: a type for arrangements of planes, with b, c, d for n ≤ 8; c = 1, 1, 2, 4, 8, 20, 55, 198, and
   the first impossible spatial type comes from the dual Fano matroid (`docs/planes.md`, `notes/planes.md`).
-* Open: 39 types at n = 13; d(14) ∈ [65, 67].
+* Open: 39 real pencil types at n = 13, and whether 14 lines can have 28 points or 15 lines can have 32 points.
 
 ## Licenses
 

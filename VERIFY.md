@@ -26,23 +26,28 @@ the finitely many intersection points.
 
 ## Terms
 
-| n | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| a(n) | 1 | 1 | 2 | 4 | 7 | 15 | 32 | 66 | 141 | 295 | 619 | 1286 | 2654 |
-| b(n) | 1 | 1 | 2 | 3 | 5 | 9 | 17 | 29 | 56 | 106 | 202 | 384 | ≥ 662 |
-| c(n) | 1 | 1 | 2 | 3 | 5 | 9 | 16 | 28 | 53 | 98 | 180 | 336 | 620–659 |
-| d(n) | 1 | 1 | 2 | 3 | 5 | 9 | 13 | 18 | 24 | 30 | 38 | 46 | 56 |
+| n | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| a(n) | 1 | 1 | 2 | 4 | 7 | 15 | 32 | 66 | 141 | 295 | 619 | 1286 | 2654 | 5460 | 11066 |
+| b(n) | 1 | 1 | 2 | 3 | 5 | 9 | 17 | 29 | 56 | 106 | 202 | 384 | 729 | 1357 | 2558 |
+| c(n) | 1 | 1 | 2 | 3 | 5 | 9 | 16 | 28 | 53 | 98 | 180 | 336 | 620–659 | 1104–1229 | — |
+| d(n) | 1 | 1 | 2 | 3 | 5 | 9 | 13 | 18 | 24 | 30 | 38 | 46 | 56 | 65–66 | 76–77 |
 
-The OEIS entries A400149 (b), A399464 (c) and A399605 (d) contain only exact values: b(n) and c(n) for n ≤ 12,
-d(n) for n ≤ 13.
+The corresponding OEIS entries are [A400149](https://oeis.org/A400149), [A399464](https://oeis.org/A399464)
+and [A399605](https://oeis.org/A399605). The table above includes the published extension of b(n) and the current geometric bounds.
 
 ## How each term is established
 
-**b(n).** For every arithmetically admissible multiset an exhaustive backtracking search decides whether blocks of the
+**b(n), n ≤ 12.** For every arithmetically admissible multiset an exhaustive backtracking search decides whether blocks of the
 given sizes can be placed on n points with pairwise intersections of size at most one (`engine/ls.c`, mode 0; the
 search extends the first uncovered pair of points and breaks the symmetry of unused points). Every query terminated;
 the results are in `runs/comb_{n}.json`. An independent formulation as a SAT problem (`scripts/sat_linear_space.py`,
 CaDiCaL) returns the same answer for every multiset with n ≤ 12.
+
+**b(n), n = 13–15.** [Mark Kim's preprint](https://doi.org/10.5281/zenodo.24567131), Theorem 1.1, supplies these terms.
+Run `python scripts/kim_results.py` to check the [published tables](https://github.com/marik-11/linear_space_types/tree/e126faeb3f621ef4c85e3872c320a27a901f229e)
+against the candidate sets and available local verdicts, and to check the geometric exclusions. A fresh run at n = 14
+agreed on all 4843 verdicts. The n = 15 term cites Kim's published computation.
 
 **c(n).** Each realizable type is certified by explicit coordinates of n lines (`data/certificates/n{n}.json`): the
 coefficients of ax + by + cz = 0 as integers, or as integer pairs p + q√d for a non-square d. The program
@@ -88,6 +93,8 @@ Each multiset gets exactly one verdict in the classification file. The names use
 of 2, 5, 9, ...); the de Bruijn–Erdős theorem (fewer than n points only for a pencil); Elliott's theorem (for n ≥ 10,
 between n and 2n−4 only n itself); and, for the remaining values, the classification of all multisets with that
 number of points (`notes/points.md` contains the proofs, including a theorem excluding 2n−3 for all n ≥ 13).
+At n = 14 and 15, filtering Kim's tables by Melchior's inequality excludes 27 points and 29–30 points, respectively.
+Three additional exact witnesses for n = 15 are in `data/certificates/n15_points.json`.
 
 ## Checking
 

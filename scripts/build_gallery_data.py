@@ -22,6 +22,7 @@ from collections import Counter
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from draw_svg import layout
+from kim_results import RESULTS
 from pencils import f0
 
 TOL = 1e-4          # same tolerance as arrangements.js; coordinates are stored with 7 decimals
@@ -85,7 +86,9 @@ SYM = json.load(open(SYM_FILE)) if os.path.exists(SYM_FILE) else {}
 
 
 def gap_reason(n, v):
-    """why no arrangement of n lines has f0 = v, by a theorem valid for all n (None if no theorem applies)"""
+    """Why no arrangement of n lines has f0 = v, when an exclusion is known."""
+    if v in RESULTS.get(str(n), {}).get("excluded_f0", ()):
+        return "Kim’s classification and Melchior"
     if 2 <= v <= n - 1:
         return "de Bruijn–Erdős"
     if n >= 10 and n + 1 <= v <= 2 * n - 5:

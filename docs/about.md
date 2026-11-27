@@ -11,10 +11,10 @@ integer sequences it produces were absent from the OEIS. They are now OEIS entri
 ## Who did what
 
 The questions were posed by Petra Radko (GitHub: Gwynerva), who also fixed the scope of the project and the
-standards of rigour (exact certificates, a single verifier, every claim labelled). **All of the work itself — the
-mathematics (theorems, proofs, conjectures), the programs, the computations, the figures and the text of this site —
-was carried out by Claude Code (Anthropic's Claude models)**, with Petra Radko's original exploratory scripts and data
-as the starting point. Errors are therefore Claude's; the reader is invited to re-run the verifier and the proofs.
+standards of rigour (exact certificates, a single verifier, every claim labelled). Claude Code (Anthropic's Claude
+models) carried out the original mathematical and computational work, starting from Petra Radko's exploratory
+scripts and data. Mark Kim independently extended the combinatorial sequence to 15 points.
+[Preprint](https://doi.org/10.5281/zenodo.24567131) · [Results and verification](sequences/combinatorial.md#mark-kims-extension-to-15-points)
 
 ## How to cite
 

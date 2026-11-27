@@ -7,7 +7,7 @@ regenerated file on the entry's edit page.  oeis/ is not tracked by git.
 
 Sources: data/results/classification_n{n}.json (one record per arithmetically admissible type, with
 'linear_space' in YES/NO/None and 'verdict' in real / melchior / csima-sawyer / non-orientable / ...).
-  A400149 (b): types with linear_space == "YES", n <= 12.
+  A400149 (b): local types through n = 12 and Mark Kim's published tables for n = 13–15.
   A399464 (c): types with verdict == "real", n <= 12.
   A399605 (d): numbers of intersection points binomial(n,2) - Sum binomial(k_i,2) + r over the realizable types,
                n <= 13 (for n = 12, 13 the undecided types do not add new values; this is checked against
@@ -15,7 +15,11 @@ Sources: data/results/classification_n{n}.json (one record per arithmetically ad
 The script fails loudly if a count disagrees with the published terms.
 """
 import json, os, sys
+import argparse
 from math import comb
+from pathlib import Path
+
+from kim_results import SOURCE, published_types
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "oeis")
@@ -60,15 +64,24 @@ def write(name, header, lines):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--kim-dir", type=Path, help="read Kim's published tables from a local directory")
+    args = parser.parse_args()
+    os.makedirs(OUT, exist_ok=True)
     note = ["# Notation: {5, 3^10} is the multiset with one 5 and ten 3's; {} is the empty multiset.",
             "# Each line: n: a(n) multisets, in order of decreasing number of parts, then lexicographically.", "#"]
     # A400149
     out = ["# A400149: multisets of sizes of the lines with at least three points of a linear space on n points",
-           "# (the ways n lines could meet if the only rule were that two lines meet at most once)."] + note
+           "# (the ways n lines could meet if the only rule were that two lines meet at most once).",
+           "# For n = 13..15: Mark Kim, https://doi.org/10.5281/zenodo.24567131",
+           "# Source tables: " + SOURCE] + note
     for n in range(1, 13):
         ts = [r["type"] for r in rows(n) if n <= 2 or r["linear_space"] == "YES"]
         assert len(ts) == B[n - 1], (n, len(ts), B[n - 1])
         ts.sort(key=typekey)
+        out.append("%d: %s" % (n, ", ".join(fmt(t) for t in ts)))
+    for n in range(13, 16):
+        ts = sorted(published_types(n, args.kim_dir), key=typekey)
         out.append("%d: %s" % (n, ", ".join(fmt(t) for t in ts)))
     write("a400149.txt", [], out)
     # A399464

@@ -77,12 +77,15 @@ several existing points (`scripts/extend.py`) adds $29, 30, 34$ for $n = 14$. Co
 
 | $n$ | attained (certified) | undecided values | $d(n)$ |
 |---|---|---|---|
-| 14 | 65 | 27, 28 | 65 or 66 or 67 |
-| 15 | $\ge 73$ | 29–33, 37 (not yet attempted by extension) | 73 … 79 |
+| 14 | 65 | 28 | 65 … 66 |
+| 15 | 76 | 32 | 76 … 77 |
 | 16 | $\ge 83$ | 32–36, 40, 42, 120 | 83 … 91 |
 | 17 | $\ge 92$ | 36–39, 43, 45, 128–136 even | 92 … 103 |
 
-The undecided values at the low end are of two kinds: $2n-1$ and $2n$ (which the LP bound with Hirzebruch's inequality
+For $n=14,15$, the table includes the exclusions from Kim's classification and Melchior, and the three
+additional witnesses at $n=15$. See the [points page](../docs/sequences/points.md#using-kims-classifications).
+
+For $n=16,17$, the undecided values at the low end are of two kinds: $2n-1$ and $2n$ (which the LP bound with Hirzebruch's inequality
 just fails to exclude) and the next few, which would need an arrangement with largest pencil $5$ to $7$ and a very dense
 set of absorbed points. Deciding them requires either a sharper inequality or a complete search over the dense
 13-line types that are still open.

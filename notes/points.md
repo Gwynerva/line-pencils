@@ -213,8 +213,9 @@ below roughly $n^{3/2}$ come in separated "bands" $[k(n-k) - \binom k2 + 1,\ k(n
 each band (for $k \ge 3$) contributing $2\binom k2 - 1$ values, so that $d(n) = \binom n2 - \Theta(n^{3/2})$.
 
 **Open question A.** Determine $d(14), d(15), d(16)$. Our bounds leave the following values undecided (`notes/bands.md`):
-$n = 14$: $27, 28$; $n = 15$: $29$–$33$, $37$; $n = 16$: $32$–$36$, $40$, $42$, $120$. For $n = 14$ every other value is
-attained by a certified arrangement (`data/certificates/n14.json`) or excluded, so $65 \le d(14) \le 67$.
+$n=14$: $28$; $n=15$: $32$; $n=16$: $32$–$36$, $40$, $42$, $120$. Kim's classification and Melchior exclude
+$27$ at $n=14$ and $29,30$ at $n=15$. The certificates in `data/certificates/n15_points.json` attain $31,33,37$.
+Thus $65\le d(14)\le66$ and $76\le d(15)\le77$. See the [points page](../docs/sequences/points.md#using-kims-classifications).
 
 **Open question B (Salamon–Erdős).** Find the smallest $n^*$ from which the large-$n$ description of $V(n)$ is exact.
 

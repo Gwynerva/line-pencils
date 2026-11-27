@@ -69,6 +69,10 @@ def main(nmax):
         if cnt["open"]:
             parts.append(f"{cnt['open']} undecided")
         out.append("; ".join(parts) + ".\n")
+        if n == 13:
+            out.append("These totals record the local classification. "
+                       "[Kim's complete combinatorial table](sequences/combinatorial.md#mark-kims-extension-to-15-points) "
+                       "contains 729 possible types and includes all 39 undecided real types.\n")
         if any(r["verdict"] in ("melchior", "csima-sawyer") and r.get("linear_space") is None for r in rows):
             out.append("For this number of lines the inequalities were checked first, and only the types that pass them "
                        "went to the combinatorial test, so the count of combinatorial failures covers those types only.\n")
@@ -94,7 +98,7 @@ def main(nmax):
             out.append(f'<details><summary>{k} {"type" if k == 1 else "types"} excluded by an inequality</summary>\n')
             out.append(", ".join(utype(r["type"]) for r in sorted(ineqr, key=lambda r: (-sum(r["type"]), r["type"]))) + ".\n")
             out.append("</details>\n")
-    with open(os.path.join(ROOT, "docs", "impossible.md"), "w", encoding="utf-8") as f:
+    with open(os.path.join(ROOT, "docs", "impossible.md"), "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(out))
     print("docs/impossible.md written")
 

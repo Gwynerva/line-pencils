@@ -31,15 +31,15 @@ different *numbers of intersection points* $n$ lines can have.
 | | $n = 1, 2, 3, \dots$ | OEIS |
 |---|---|---|
 | [$a(n)$](sequences/arithmetic.md) arithmetic | 1, 1, 2, 4, 7, 15, 32, 66, 141, 295, 619, 1286, 2654, … | [A072964](https://oeis.org/A072964), shifted |
-| [$b(n)$](sequences/combinatorial.md) combinatorial | 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384 | [A400149](https://oeis.org/A400149) |
+| [$b(n)$](sequences/combinatorial.md) combinatorial | 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384, 729, 1357, 2558 | [A400149](https://oeis.org/A400149) |
 | [$c(n)$](sequences/realizable.md) realizable | 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336 | [A399464](https://oeis.org/A399464) |
 | [$d(n)$](sequences/points.md) numbers of points | 1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56 | [A399605](https://oeis.org/A399605) |
 
 $a(n)$ counts the types allowed by arithmetic, $b(n)$ those consistent with "two lines meet only once", $c(n)$ the
 types of actual lines in the plane, and $d(n)$ the different possible numbers of intersection points. $a(n)$ is
 <span class="status-proved">proved</span> for every $n$; the listed terms of $b$, $c$, $d$ are
-<span class="status-computed">computer-verified</span>, and beyond them only bounds are known:
-$662 \le b(13) \le 2087$, $620 \le c(13) \le 659$, $65 \le d(14) \le 67$.
+<span class="status-computed">computer-verified</span>. [Mark Kim's preprint](https://doi.org/10.5281/zenodo.24567131) establishes $b(13)$, $b(14)$ and $b(15)$.
+The current bounds include $620 \le c(13) \le 659$, $1104 \le c(14) \le 1229$, $65 \le d(14) \le 66$ and $76 \le d(15) \le 77$.
 
 Three of these four sequences, arising from a question a schoolchild can ask, were missing from the On-Line
 Encyclopedia of Integer Sequences; this site was written to fill the gap, and they are now entries

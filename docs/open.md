@@ -46,14 +46,10 @@ says nothing about triple points, whose coefficient in it is $0$).
 ## 4. The intersection-point sequence beyond n = 13
 
 <div class="thm openp" markdown>
-**Open problem.** Determine $d(14), d(15), d(16)$. For $n = 14$ this means deciding whether $27$ and $28$ intersection
-points are possible; then $65 \le d(14) \le 67$ becomes exact. For $n = 15$ and $16$ the undecided values are listed on
-the [points page](sequences/points.md).
+**Open problem.** Can 14 straight lines have 28 intersection points? Can 15 straight lines have 32?
+These cases determine $d(14)\in\{65,66\}$ and $d(15)\in\{76,77\}$.
+See the [points page](sequences/points.md#using-kims-classifications) for the exclusions, constructions, and the remaining values for $n=16$.
 </div>
-
-Our bounds (spoke, Melchior, Hirzebruch) show that an arrangement of 14 lines with 27 or 28 points would have a largest
-pencil of five to seven lines while its other lines meet in very few points, a very dense configuration. We expect
-that it does not exist, which would give $d(14) = 65$, but we have no proof and no search that covers it.
 
 The precise threshold $n^*$ from which the Salamon–Erdős description of $V(n)$ is exact is open (they expect it to be
 small). Theorem E3 proves one feature of it: the four smallest values are $1, n, 2n-4, 2n-2$, which holds from $n = 12$ on

@@ -41,8 +41,9 @@ linear space exists. `YES` answers come with an explicit witness, which is re-ch
 48 s); no time-outs (`runs/comb_12.json`, `runs/comb_12.log`). For $n = 13$ the search was run, with a limit of 300 s
 per query, only on the 1254 types that pass the inequality filters (they are the candidates for $c(13)$); 71 queries
 timed out, and the 17 of them that mattered for $c(13)$ were decided by the SAT encoding of §2. Re-running 29 of the
-time-outs with 3600 s per query decided 28 of them (15 `YES`, 13 `NO`), so 43 time-outs remain. The term $b(13)$ is
-therefore not determined ($662 \le b(13) \le 2087$): it would also need those and the types that fail an inequality.
+time-outs with 3600 s per query decided 28 of them (15 `YES`, 13 `NO`), leaving 43 time-outs in that run. Those local searches tested selected types for $c(13)$. Mark Kim's separate exhaustive search
+covers all combinatorial candidates and establishes $b(13)=729$, $b(14)=1357$ and $b(15)=2558$
+([preprint](https://doi.org/10.5281/zenodo.24567131), [scope and verification](sequences/combinatorial.md#mark-kims-extension-to-15-points)).
 
 **Command.**
 ```bash

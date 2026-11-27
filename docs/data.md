@@ -101,8 +101,16 @@ second, independent implementation (SAT) agrees wherever both finished; the 15 o
 and the enumeration behind C4 and C5 rest on the engine alone (the isomorphism step has two implementations).
 
 `data/results/classification_n{n}.json` lists, for every admissible type, its $f_0$, whether a linear space exists,
-the verdict and the reason; `data/results/sequences.json` holds the four sequences with intervals where a term is not
-yet exact.
+the verdict reached by the local computations and its reason. `data/results/sequences.json` holds the four sequences, including the published extension below.
+
+## Kim's classifications
+
+[Mark Kim's preprint](https://doi.org/10.5281/zenodo.24567131) supplies the combinatorial terms through $n=15$. The project's local classification
+for $n=13$ records which types its own search settled. For the full combinatorial classifications at $n=13,14,15$,
+see the [pinned upstream tables](https://github.com/marik-11/linear_space_types/tree/e126faeb3f621ef4c85e3872c320a27a901f229e).
+Run `python scripts/kim_results.py` to check candidate coverage, counts, consistency with the local results and the
+consequences of Melchior's inequality. Pass `--kim-dir DIRECTORY` to use a local copy of the tables. The same option works
+with `python scripts/oeis_afiles.py` to generate the supplementary A400149 table through $n=15$.
 
 ## Logs
 

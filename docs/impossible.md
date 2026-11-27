@@ -149,6 +149,8 @@ Each of these is a perfectly good linear space, and the last two even exist with
 
 2654 admissible types; 620 realizable; 567 fail the combinatorial test; 1400 fail an inequality (Melchior or Csima–Sawyer); 39 undecided.
 
+These totals record the local classification. [Kim's complete combinatorial table](sequences/combinatorial.md#mark-kims-extension-to-15-points) contains 729 possible types and includes all 39 undecided real types.
+
 For this number of lines the inequalities were checked first, and only the types that pass them went to the combinatorial test, so the count of combinatorial failures covers those types only.
 
 The types marked "band theorem" are excluded by [Theorem B4](theorems.md#bands): removing the largest pencil leaves a configuration that no arrangement of the remaining lines produces.

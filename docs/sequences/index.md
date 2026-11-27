@@ -16,8 +16,8 @@ How each column is established:
 
 * **$a(n)$** is a count of partitions and is <span class="status-proved">proved</span> for every $n$ by the identity with
   A072964 ([details](arithmetic.md)).
-* **$b(n)$** is <span class="status-computed">computer-verified</span>: an exhaustive search over linear spaces decides every
-  admissible type, with no time-outs, and a SAT solver re-derives the same answers ([details](combinatorial.md)).
+* **$b(n)$** is <span class="status-computed">computer-verified</span> through $n = 15$. The project's backtracking and SAT searches agree through $n = 12$.
+  Mark Kim's exhaustive computation supplies the next three terms ([details](combinatorial.md)).
 * **$c(n)$** for $n \le 12$ is <span class="status-computed">computer-verified</span>: every realizable type has an exact
   certificate checked by the verifier, every other type is excluded by a theorem or by the exhaustive orientability
   search ([details](realizable.md)). For $n = 13$: 620 certificates and 39 undecided types.
@@ -29,8 +29,7 @@ How each column is established:
 
 The arithmetic sequence is A072964 shifted. Before this project the other three were not in the OEIS (we searched for
 the full sequences, for five consecutive terms and for shifts); they were accepted in November 2026 as A400149 ($b$),
-A399464 ($c$) and A399605 ($d$); each
-entry has a table of the multisets or values behind its terms. Two older entries coincide with ours on a few
+A399464 ($c$) and A399605 ($d$); the entries have tables of the multisets or values behind the recorded terms. Two older entries coincide with ours on a few
 terms by accident and must not be confused with them: A129230 ($0, 1, 3, 5, 9, 13, 18, 24, 30, 38, 46, 55, \dots$, a
 golden-ratio floor sum) is shifted by two: its terms $3, 5, \dots, 46$ coincide with $d(4), \dots, d(12)$, and the next
 term is $55 \ne d(13) = 56$; A005834

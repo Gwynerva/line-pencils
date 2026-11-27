@@ -45,12 +45,14 @@ type has one of them:
 |---|---|---|
 | every $n$ | partitions of $m \le n$ into parts $\ge 3$ | $b(n) \le a(n)$ |
 | 13 | 620 | 659 |
-| 14 | 1104 | $b(14) \le a(14) = 5460$ |
+| 14 | 1104 | 1229 |
 
 For every $n$, pencils that share no lines realize every partition of a number $m \le n$ into parts $\ge 3$
 ([arithmetic page](arithmetic.md#growth)), and $c(n) \le b(n)$ ([A400149](https://oeis.org/A400149)). For $n = 13$ and
 $14$ the lower bounds are the verified certificates (`data/certificates/n13.json`, `n14.json`); for $n = 13$ the upper
-bound adds the 39 undecided types ([below](#n-13)); for $n = 14$ the classification was not run.
+bound adds the 39 undecided types ([below](#n-13)), all present in Kim's combinatorial table. At $n=14$,
+1229 of Kim's 1357 possible types pass both Melchior's inequality and the Csima–Sawyer bound, with the full pencil
+included separately. Every real type is among those 1229 ([published classifications](../data.md#kims-classifications)).
 
 ## n = 12: what is known
 
