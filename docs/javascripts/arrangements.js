@@ -141,7 +141,7 @@
   }
 
   /* ---------- gallery ---------- */
-  const MODES = { beautiful: "Beautiful", exact: "Exact" };
+  const MODES = { beautiful: "Symmetric", exact: "Exact" };
   const pick = (it, mode) => (mode === "beautiful" && it.S ? it.S : it.L);
   function symText(it) { return it.rot >= 3 ? "a symmetry group of order " + it.sym : "a mirror symmetry"; }
   function gallery(root) {
@@ -271,8 +271,8 @@
         `<span><i class="k2"></i>2 lines</span>`;
       interactive(svg, p => { now.textContent = p.k + " lines meet here" + (md === "exact" ? ": " + p.lines.map(i => "ℓ" + (i + 1)).join(", ") : "") + "."; });
       view.textContent = md === "beautiful"
-        ? `${it.how} The drawing has ${symText(it)}. It is a floating-point realization of the same type, checked with the same tolerance as the exact drawing; the certificate is shown under Exact, and the two arrangements need not be projective images of each other.`
-        : "The certified arrangement, drawn from its exact coordinates by a projective transformation chosen for legibility.";
+        ? `${it.how} The drawing has ${symText(it)}. The incidences in this view are checked numerically. The Exact view shows the certificate for this type, which may come from a different arrangement.`
+        : "The coefficients are exact. The screen drawing uses numerical coordinates after a projective transformation.";
       exact.hidden = md !== "exact";
       m.querySelector(".lp-src").hidden = md !== "exact";
     }

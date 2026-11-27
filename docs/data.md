@@ -1,11 +1,11 @@
 ---
-description: "Where the data are and how to check them yourself: exact certificates for every drawable type and a small verifier that rechecks them all."
+description: "Where the data are and how to check them yourself: exact certificates for the project's examples and a verifier that rechecks them."
 ---
 
 # Data and verification
 
-All data behind the site can be checked independently. This page describes where the data are, their formats,
-the verifier that checks every certificate, and how to run it.
+This page shows where the project stores its data, how a certificate records an arrangement, and which commands
+check the certificates or the published results.
 
 [![verify certificates](https://github.com/Gwynerva/line-pencils/actions/workflows/verify.yml/badge.svg)](https://github.com/Gwynerva/line-pencils/actions/workflows/verify.yml)
 
@@ -16,19 +16,23 @@ git clone https://github.com/Gwynerva/line-pencils.git
 cd line-pencils
 python verifier/verify.py --self-test                 # the verifier's own tests (Pappus, Desargues, pentagram, corrupted certificates)
 python verifier/verify.py data/certificates/n*.json   # every certificate: exit code 0 iff all verify
-python scripts/classify.py 13                         # recompute the four sequences from certificates + logs
+python scripts/classify.py 13                         # rebuild local verdicts and the sequence summary
+python scripts/kim_results.py                        # check Kim's published tables and geometric exclusions
 python verifier/verify.py --algebraic data/proofs/n*.json   # cofactor identities of Theorems C4, C5
 python scripts/sat_proof.py check                     # LRAT proofs of C3a, C3b (needs cadical and cake_lpr)
 ```
 
-Python 3.10+ and nothing else is needed for the first four commands; the last one also needs `cadical` and
-`cake_lpr` (built as in the CI job `lrat-proofs`). Re-running the *searches* needs a C compiler
+The verifier and classifier use Python 3.10 or later and the standard library. The classifier rebuilds local
+verdicts through 13 lines from certificates and search logs, then adds the published terms to the sequence summary.
+The Kim check loads the published tables, or reads a local copy with `--kim-dir`. The LRAT check also needs
+`cadical` and `cake_lpr` (built in the CI job `lrat-proofs`). Re-running the searches needs a C compiler
 (`gcc -O2 -o engine/ls engine/ls.c`) and, for the SAT cross-checks and the realizer, `pip install python-sat numpy scipy`.
-The same verification runs in GitHub Actions on every push (badge above).
+GitHub Actions runs the certificate and proof checks on pushes and pull requests.
 
 ## The certificate format
 
-One JSON file per $n$, `data/certificates/n{n}.json`, a list of certificates:
+The files `data/certificates/n{n}.json` contain the certificates for $3\le n\le14$.
+The three witnesses for 15 lines are in `n15_points.json`. Each file contains a list of records like this:
 
 ```json
 {"n": 10,
@@ -44,10 +48,8 @@ One JSON file per $n$, `data/certificates/n{n}.json`, a list of certificates:
   Projective coordinates are scaled to integers, so no denominators ever occur. (By duality these are also the
   coordinates of $n$ points; the type is then the multiset of sizes of the lines through $\ge 3$ of them.)
 
-Certificates were produced by Petra Radko's original exploratory search (`source` begins with `legacy search`; the
-program itself is not in the repository) or by the
-constructions of this project (`source` names the method). The provenance does not matter: **only the verifier's
-acceptance counts.**
+The `source` field names the search, construction, or published arrangement behind each example. The verifier
+checks the incidences directly from the coordinates.
 
 ## The verifier
 
@@ -62,7 +64,7 @@ acceptance counts.**
 3. Every line must be a non-zero vector; every two lines must be non-proportional (cross product non-zero, exactly).
 4. For every pair $i < j$ the intersection point $P = L_i \times L_j$ is computed exactly, and the pencil through $P$ is
    the set of **all** $k$ with $L_k \cdot P = 0$. Pencils are thus maximal concurrent sets computed from scratch, never
-   assembled by merging pairs. The distinct sets found are the intersection points; their sizes are the $t_k$.
+   assembled by merging pairs. Each distinct set represents one intersection point. For each $k$, the number of those sets of size $k$ is $t_k$.
 5. Sanity: $\sum_S \binom{|S|}2 = \binom n2$ (every pair of lines in exactly one pencil).
 6. The multiset of sizes $\ge 3$ must equal `type`.
 
@@ -75,8 +77,8 @@ which is how the lower bounds for $c(n)$ are read off.
 
 ```bash
 python verifier/verify.py data/certificates/n*.json
-# verified 2454 certificates, 0 rejected
-# distinct realizable types per n: {3: 2, 4: 3, 5: 5, 6: 9, 7: 16, 8: 28, 9: 53, 10: 98, 11: 180, 12: 336, 13: 620, 14: 1104}
+# verified 2457 certificates, 0 rejected
+# distinct realizable types per n: {3: 2, 4: 3, 5: 5, 6: 9, 7: 16, 8: 28, 9: 53, 10: 98, 11: 180, 12: 336, 13: 620, 14: 1104, 15: 3}
 ```
 
 ## Impossibility records
@@ -101,8 +103,16 @@ second, independent implementation (SAT) agrees wherever both finished; the 15 o
 and the enumeration behind C4 and C5 rest on the engine alone (the isomorphism step has two implementations).
 
 `data/results/classification_n{n}.json` lists, for every admissible type, its $f_0$, whether a linear space exists,
-the verdict and the reason; `data/results/sequences.json` holds the four sequences with intervals where a term is not
-yet exact.
+the verdict reached by the local computations and its reason. `data/results/sequences.json` holds the four sequences, including the published extension below.
+
+## Kim's classifications
+
+[Mark Kim's preprint](https://doi.org/10.5281/zenodo.24567131) supplies the combinatorial terms through $n=15$. The project's local classification
+for $n=13$ records which types its own search settled. For the full combinatorial classifications at $n=13,14,15$,
+see the [pinned upstream tables](https://github.com/marik-11/linear_space_types/tree/e126faeb3f621ef4c85e3872c320a27a901f229e).
+Run `python scripts/kim_results.py` to check candidate coverage, counts, consistency with the local results and the
+consequences of Melchior's inequality. Pass `--kim-dir DIRECTORY` to use a local copy of the tables. The same option works
+with `python scripts/oeis_afiles.py` to generate the supplementary A400149 table through $n=15$.
 
 ## Logs
 

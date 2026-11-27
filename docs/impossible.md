@@ -6,9 +6,9 @@ description: "The pencil types that pass the combinatorial test but cannot be dr
 
 Most arithmetically admissible pencil types cannot be drawn. This page lists, for each number of lines, the types that survive the combinatorial test but are still impossible, together with the reason, and the types that are undecided. Types that already fail the combinatorial test (the pencils cannot be placed so that every two lines meet only once) or one of the classical inequalities are only counted; the full lists are in `data/results/classification_n{n}.json`.
 
-## Three famous impossible pictures
+## Three types without a real drawing
 
-Each of these is a perfectly good linear space, and the last two even exist with complex coordinates, but no drawing with straight real lines exists. Dashed curves mark the lines that would have to bend.
+Each of these types occurs in a finite linear space. The last two also have realizations with complex coordinates. None can be drawn with straight real lines. The dashed curves show the required incidences.
 
 <div class="figs" markdown>
 
@@ -148,6 +148,8 @@ Each of these is a perfectly good linear space, and the last two even exist with
 ## 13 lines
 
 2654 admissible types; 620 realizable; 567 fail the combinatorial test; 1400 fail an inequality (Melchior or Csima–Sawyer); 39 undecided.
+
+These totals record the local classification. [Kim's complete combinatorial table](sequences/combinatorial.md#mark-kims-extension-to-15-points) contains 729 possible types and includes all 39 undecided real types.
 
 For this number of lines the inequalities were checked first, and only the types that pass them went to the combinatorial test, so the count of combinatorial failures covers those types only.
 

@@ -280,7 +280,8 @@ Open questions and known limits:
 
 * **Nine planes.** $n = 9$ means 185 981 matroids of rank 4. The extension step is feasible, but the isomorphism
   reduction needs a canonical form (for example via nauty or a C routine); networkx is too slow.
-* **Realizability in rank 4.** It is unknown beyond $n = 8$ even for oriented matroids (Fukuda–Miyata–Moriyama).
+* **Realizability in rank 4.** The classification of Fukuda–Miyata–Moriyama covers realizable rank-4 oriented
+  matroids on at most eight elements.
   Deciding $c(9)$ would need orientability tests and Gröbner computations as in the planar $n = 12$ case, now in
   rank 4. The growth ($\approx n^{3}$ triples instead of $n^2$ pairs) puts $n \ge 10$ out of reach of this method.
 * **The number of points.** The section and cone arguments of §2 hold for every $n$; the complete list of $f_0$

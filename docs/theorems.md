@@ -396,8 +396,7 @@ their pencils, so the multiset of their sizes is the pencil type. Acceptance mea
 $\ge 3$, equals $T$. <span class="qed">$\square$</span>
 </div>
 
-The verifier is deliberately dumb: it never merges pairs, never uses floating point, never trusts a field of the
-certificate other than the numbers. Its tests (`verifier/test_verify.py`) check that Pappus, Desargues, the
+The verifier computes incidences by exact arithmetic and checks the claimed type against the result. Its tests (`verifier/test_verify.py`) check that Pappus, Desargues, the
 pentagram and generic arrangements are accepted and that every single-number perturbation of a rigid configuration,
 wrong fields, duplicated lines, wrong types and floating-point coordinates are rejected.
 

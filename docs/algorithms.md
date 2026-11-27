@@ -41,8 +41,9 @@ linear space exists. `YES` answers come with an explicit witness, which is re-ch
 48 s); no time-outs (`runs/comb_12.json`, `runs/comb_12.log`). For $n = 13$ the search was run, with a limit of 300 s
 per query, only on the 1254 types that pass the inequality filters (they are the candidates for $c(13)$); 71 queries
 timed out, and the 17 of them that mattered for $c(13)$ were decided by the SAT encoding of §2. Re-running 29 of the
-time-outs with 3600 s per query decided 28 of them (15 `YES`, 13 `NO`), so 43 time-outs remain. The term $b(13)$ is
-therefore not determined ($662 \le b(13) \le 2087$): it would also need those and the types that fail an inequality.
+time-outs with 3600 s per query decided 28 of them (15 `YES`, 13 `NO`), leaving 43 time-outs in that run. Those local searches tested selected types for $c(13)$. Mark Kim's separate exhaustive search
+covers all combinatorial candidates and establishes $b(13)=729$, $b(14)=1357$ and $b(15)=2558$
+([preprint](https://doi.org/10.5281/zenodo.24567131), [scope and verification](sequences/combinatorial.md#mark-kims-extension-to-15-points)).
 
 **Command.**
 ```bash
@@ -54,8 +55,8 @@ python scripts/engine_run.py 12 0 120 runs/comb_12.json --workers 11
 `scripts/sat_linear_space.py` encodes the same question for CaDiCaL (via python-sat): a Boolean variable $x_S$ for
 every $k$-subset $S$ of the points and every needed size $k$; "exactly $t_k$ true variables among the $k$-subsets"
 (sequential-counter cardinality encodings); "at most one true variable among the subsets containing a given pair"
-(66 pairs for $n = 12$); and the first block of the largest size fixed to $\{0, \dots, k-1\}$. Nothing clever, on
-purpose: the encoding can be audited in a few minutes. Agreement with the exhaustive search: all 295 types for
+(66 pairs for $n = 12$); and the first block of the largest size fixed to $\{0, \dots, k-1\}$. Each constraint corresponds to a block count, a pair of points, or a choice of labels. The encoding agrees with the
+exhaustive search on all 295 types for
 $n = 10$, all 619 types for $n = 11$ and all 1286 types for $n = 12$ (`runs/sat_{n}.json`).
 
 ```bash
@@ -228,7 +229,7 @@ Step 4 checks step 3 completely. Steps 1 and 2 are not covered by a certificate:
 the orientable linear spaces of the type rests on the exhaustive enumeration of the engine and on the isomorphism
 test (two independent implementations).
 
-## Timings at a glance
+## Recorded timings
 
 | computation | size | time |
 |---|---|---|
@@ -236,7 +237,7 @@ test (two independent implementations).
 | combinatorial sieve, $n = 12$ | 1286 types | 71 s (11 threads) |
 | SAT cross-check, $n = 10$ | 295 types | 12 s (2 processes) |
 | SAT cross-check, $n = 12$ | 1286 types | 5.4 h (2 processes) |
-| verification of all certificates | 2454 certificates | 3.6 s |
+| certificate verification before the three 15-line witnesses were added | 2454 certificates | 3.6 s |
 | orientability, $\{4, 3^{14}\}$ at $n = 11$ (engine mode 4) | | 126 s |
 | orientability, $\{4^3, 3^{14}\}$ at $n = 12$ (engine mode 4, non-orientable) | | 88 min |
 | orientability, $\{4^5, 3^9\}$ at $n = 12$ (engine mode 4) | | unfinished after 4 h |

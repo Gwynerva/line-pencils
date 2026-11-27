@@ -4,8 +4,18 @@ description: "The papers and books cited on the site, from Melchior and Sylveste
 
 # References
 
-Full bibliographic data for everything cited on this site. Statements quoted from these works were checked against
-the original papers where they are available online.
+References for the results and methods discussed on the site.
+
+## Line-size classifications and small arrangements
+
+- M. Kim, *Line-size types of finite linear spaces: an exhaustive computation up to fifteen points*, preprint, Zenodo, 2026.
+  [DOI](https://doi.org/10.5281/zenodo.24567131) · [Code and tables](https://github.com/marik-11/linear_space_types)
+- B. Grünbaum, *A catalogue of simplicial arrangements in the real projective plane*, Ars Mathematica Contemporanea 2 (2009), 1–25.
+  [DOI](https://doi.org/10.26493/1855-3974.88.e12)
+- M. Cuntz, *Simplicial arrangements with up to 27 lines*, Discrete & Computational Geometry 48 (2012), 682–701.
+  [arXiv:1108.3000](https://arxiv.org/abs/1108.3000)
+- M. Cuntz, S. Elia, J.-P. Labbé, *Congruence normality of simplicial hyperplane arrangements via oriented matroids*,
+  Annals of Combinatorics 26 (2022), 1–85. [arXiv:2009.14152](https://arxiv.org/abs/2009.14152)
 
 ## Classical theorems on real arrangements
 

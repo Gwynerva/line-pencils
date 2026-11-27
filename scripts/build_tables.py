@@ -30,6 +30,8 @@ seq = load("data/results/sequences.json")
 
 
 def cell(v):
+    if v is None:
+        return "—"
     return f"<span class=\"status-bound\">{v[0]} … {v[1]}</span>" if isinstance(v, list) else str(v)
 
 
@@ -71,13 +73,14 @@ for r in sorted(sel, key=lambda r: (r["verdict"] != "open", key(tuple(r["type"])
     else:
         st = "orchard bound $t_3 \\le 19$"
     lines.append(f"| ${tex(t)}$ | {r['f0']} | {ostr} | {st} |")
-open(os.path.join(OUT, "open12.md"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
+open(os.path.join(OUT, "open12.md"), "w", encoding="utf-8", newline="\n").write("\n".join(lines) + "\n")
 
 # ---- sequence table
 hdr = ["| $n$ | $a(n)$ arithmetic | $b(n)$ combinatorial | $c(n)$ realizable | $d(n)$ values of $f_0$ |", "|---|---|---|---|---|"]
 body = []
 for i in range(len(seq["a"])):
-    body.append(f"| {i+1} | {cell(seq['a'][i])} | {cell(seq['b'][i])} | {cell(seq['c'][i])} | {cell(seq['d'][i])} |")
-open(os.path.join(OUT, "sequences.md"), "w", encoding="utf-8").write("\n".join(hdr + body) + "\n")
+    values = [seq[s][i] if i < len(seq[s]) else None for s in "abcd"]
+    body.append("| %d | %s |" % (i + 1, " | ".join(map(cell, values))))
+open(os.path.join(OUT, "sequences.md"), "w", encoding="utf-8", newline="\n").write("\n".join(hdr + body) + "\n")
 
 print("tables written; open types at n=12:", sum(1 for r in rows if r["verdict"] == "open"))

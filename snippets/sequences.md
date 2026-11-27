@@ -12,4 +12,6 @@
 | 10 | 295 | 106 | 98 | 30 |
 | 11 | 619 | 202 | 180 | 38 |
 | 12 | 1286 | 384 | 336 | 46 |
-| 13 | 2654 | <span class="status-bound">662 … 2087</span> | <span class="status-bound">620 … 659</span> | 56 |
+| 13 | 2654 | 729 | <span class="status-bound">620 … 659</span> | 56 |
+| 14 | 5460 | 1357 | <span class="status-bound">1104 … 1229</span> | <span class="status-bound">65 … 66</span> |
+| 15 | 11066 | 2558 | — | <span class="status-bound">76 … 77</span> |

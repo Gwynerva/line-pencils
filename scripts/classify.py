@@ -25,6 +25,7 @@ import json, os, sys
 from collections import Counter
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pencils import candidates, key, unkey, fmt, f0, t2, melchior_ok, csima_sawyer_ok, debruijn_erdos_ok
+from kim_results import extend_sequences
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "verifier"))
 from verify import verify, Reject
@@ -116,14 +117,16 @@ if __name__ == "__main__":
     seqs = {"a": [], "b": [], "c": [], "d": []}
     for n in range(1, nmax + 1):
         rows = classify(n)
-        with open(os.path.join(ROOT, "data", "results", "classification_n%d.json" % n), "w") as f:
+        with open(os.path.join(ROOT, "data", "results", "classification_n%d.json" % n), "w", newline="\n") as f:
             json.dump(rows, f, indent=0); f.write("\n")
         s = summary(n, rows)
         for q in "abcd":
             seqs[q].append(s[q])
-        print(n, {q: s[q] for q in "abcd"}, s["verdicts"], ("undecided f0: %s" % s["f0_undecided"]) if s["f0_undecided"] else "")
+        print(n, "local", {q: s[q] for q in "abcd"}, s["verdicts"], ("undecided f0: %s" % s["f0_undecided"]) if s["f0_undecided"] else "")
         if n == 1:   # one line: no intersection points; the empty type
             pass
+    if nmax >= 13:
+        extend_sequences(seqs)
     print("a:", seqs["a"]); print("b:", seqs["b"]); print("c:", seqs["c"]); print("d:", seqs["d"])
-    with open(os.path.join(ROOT, "data", "results", "sequences.json"), "w") as f:
+    with open(os.path.join(ROOT, "data", "results", "sequences.json"), "w", newline="\n") as f:
         json.dump(seqs, f, indent=1)

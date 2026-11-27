@@ -1,5 +1,5 @@
 ---
-description: "b(n): the ways n lines could meet if the only rule were that two lines cross once. Known exactly up to 12 lines: 1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384. OEIS A400149."
+description: "b(n): the ways n lines could meet if the only rule were that two lines cross once. Known exactly through 15 lines. OEIS A400149."
 ---
 
 # b(n): ways n lines could meet, judging by combinatorics alone
@@ -8,7 +8,7 @@ description: "b(n): the ways n lines could meet if the only rule were that two l
 rule that two lines meet only once — whether or not the lines can actually be drawn. OEIS: [A400149](https://oeis.org/A400149).
 
 In other words: can each pencil be assigned a set of lines so that no two pencils share two lines? This page gives
-the terms and the two independent computations behind them.
+the terms, the project's two computations through 12 lines, and Mark Kim's extension through 15.
 
 <div class="thm" markdown>
 **Definition.** A type $\{k_1, \dots, k_r\} \in A_n$ is *combinatorially possible* if there is a family of blocks
@@ -23,8 +23,8 @@ linear spaces on $n$ elements (compare A001200, which counts the linear spaces t
 
 ## Terms
 
-$b(n)$ for $n = 1, \dots, 12$: **1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384**; for $n = 13$: <span class="status-bound">662 … 2087</span>.
-The arithmetic sieve loses $0, 0, 0, 1, 2, 6, 15, 37, 85, 189, 417, 902$ types to the combinatorial one.
+$b(n)$ for $n = 1, \dots, 15$: **1, 1, 2, 3, 5, 9, 17, 29, 56, 106, 202, 384, 729, 1357, 2558**.
+The combinatorial sieve excludes $a(n)-b(n)$ arithmetic candidates, including 1925, 4103 and 8508 for $n = 13,14,15$.
 
 All terms through $n = 12$ are <span class="status-computed">computer-verified</span>:
 
@@ -41,24 +41,25 @@ All terms through $n = 12$ are <span class="status-computed">computer-verified</
   a given pair of elements". Agrees with the exhaustive search on every type: all $295$ types for $n = 10$, all $619$ for
   $n = 11$ and all $1286$ for $n = 12$ (`runs/sat_{n}.json`).
 
-## Bounds
+## Mark Kim's extension to 15 points
 
-| $n$ | lower bound | upper bound |
-|---|---|---|
-| every $n$ | $c(n)$ | $a(n)$ |
-| 13 | 662 | 2087 |
+[Mark Kim, *Line-size types of finite linear spaces: an exhaustive computation up to fifteen points*](https://doi.org/10.5281/zenodo.24567131) (2026), Theorem 1.1 and Table 1, gives
+$\lambda(13)=729$, $\lambda(14)=1357$ and $\lambda(15)=2558$. His $\lambda(n)$ is exactly $b(n)$ by the definition above.
+The search enumerates feasible distributions of block sizes through each point and then tries to build the blocks.
+The [source and per-type verdicts](https://github.com/marik-11/linear_space_types/tree/e126faeb3f621ef4c85e3872c320a27a901f229e)
+precede any test for real realizability. A fresh rerun of Kim's method at $n=14$ agreed on all 4843 verdicts.
+See [how to check the published tables](../data.md#kims-classifications).
 
-For every $n$, $c(n) \le b(n) \le a(n)$ ([A399464](https://oeis.org/A399464), [A072964](https://oeis.org/A072964)).
-For $n = 13$ the lower bound counts the types for which the search found a linear space (`runs/comb_13*.json`,
-`runs/sat_13*.json`), and the upper bound is $a(13) - 567$, the $567$ types without a linear space being excluded by the
-search or the SAT check. The $2087 - 662 = 1425$ undecided types are 43 queries that timed out and types that fail an
-inequality and were therefore not searched ([algorithms](../algorithms.md)).
+Kim first discards types with $k_1+k_2>n+1$ for the two largest blocks, which cannot fit in an $n$-element set
+with at most one shared point. This leaves 2347, 4843 and 10027 candidates at $n=13,14,15$.
+The corresponding arithmetic counts $a(n)$ are 2654, 5460 and 11066.
+For every $n$, $c(n)\le b(n)\le a(n)$ ([A399464](https://oeis.org/A399464), [A072964](https://oeis.org/A072964)).
 
 ## Where the arithmetic and combinatorial tests differ
 
 The first type lost is $\{3, 3\}$ at $n = 4$: two triple points among four lines would share two lines. At $n = 12$ the
 combinatorial test removes 902 of the 1286 admissible types. Typical reasons are pencils that are too large to coexist
-(two pencils of seven lines among twelve lines share at least two lines), or packings that are just barely impossible:
+(two pencils of seven lines among twelve lines share at least two lines), or packings limited by the maximum number of triples:
 a linear space on 12 elements has at most 20 blocks of size 3, so $\{3^{20}\}$ is combinatorially possible while
 $\{3^{21}\}$ is not, although its $21 \cdot 3 = 63$ pairs would fit into $66$.
 

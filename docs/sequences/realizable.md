@@ -28,7 +28,7 @@ type has one of them:
   there is nothing to certify) a set of $n$ lines with coordinates in $\mathbb Q$ (all but six), $\mathbb Q(\sqrt 2)$ or
   $\mathbb Q(\sqrt 5)$ is stored in `data/certificates/` (see [fields of definition](#fields-of-definition)). The
   [verifier](../data.md) recomputes the pencil type of each certificate with exact arithmetic; it runs in continuous
-  integration on every change of the repository.
+  integration on pushes and pull requests.
 * **Non-realizable types: a proof.** Each of the $b(n) - c(n)$ combinatorially possible but non-realizable types is
   excluded by Melchior's inequality (Fano $\{3^7\}$, dual Hesse $\{3^{12}\}$, and most others), by the Csima–Sawyer bound
   $t_2 \ge 6n/13$ ($\{3^{11}\}$ at $n = 9$, $\{4, 3^{15}\}$ and $\{3^{17}\}$ at $n = 11$), or because no linear space of
@@ -45,12 +45,14 @@ type has one of them:
 |---|---|---|
 | every $n$ | partitions of $m \le n$ into parts $\ge 3$ | $b(n) \le a(n)$ |
 | 13 | 620 | 659 |
-| 14 | 1104 | $b(14) \le a(14) = 5460$ |
+| 14 | 1104 | 1229 |
 
 For every $n$, pencils that share no lines realize every partition of a number $m \le n$ into parts $\ge 3$
 ([arithmetic page](arithmetic.md#growth)), and $c(n) \le b(n)$ ([A400149](https://oeis.org/A400149)). For $n = 13$ and
 $14$ the lower bounds are the verified certificates (`data/certificates/n13.json`, `n14.json`); for $n = 13$ the upper
-bound adds the 39 undecided types ([below](#n-13)); for $n = 14$ the classification was not run.
+bound adds the 39 undecided types ([below](#n-13)), all present in Kim's combinatorial table. At $n=14$,
+1229 of Kim's 1357 possible types pass both Melchior's inequality and the Csima–Sawyer bound, with the full pencil
+included separately. Every real type is among those 1229 ([published classifications](../data.md#kims-classifications)).
 
 ## n = 12: what is known
 

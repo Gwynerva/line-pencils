@@ -45,7 +45,7 @@ independent check.
     A. Betten, D. Betten, Linear spaces with at most 12 points, *Journal of Combinatorial Designs* 7 (1999), 119–145.
 
 **Where it is first not enough: $n = 7$.** The Fano plane — seven points, seven lines of three,
-every pair of points on a line — is a perfectly good linear space of type $\{3^7\}$. It cannot be drawn with real
+every pair of points on a line — is a linear space of type $\{3^7\}$. It cannot be drawn with real
 lines: a real arrangement that is not a pencil always has an ordinary point (the Sylvester–Gallai theorem, in its
 dual form), and the Fano type has $t_2 = 21 - 21 = 0$.
 

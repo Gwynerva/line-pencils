@@ -62,9 +62,7 @@ points, counted as one (empty) type and one value $f_0 = 0$.
 Results on this site are labelled by how they are established.
 
 * <span class="status-proved">proved</span> — a complete proof is given or a precise reference is cited;
-* <span class="status-computed">computer-verified</span> — established by a program whose algorithm is described on the
-  [algorithms page](algorithms.md), with the exact command, log and (for examples) an exact certificate checked by the
-  [verifier](data.md);
+* <span class="status-computed">computer-verified</span> — established by a computation, with links to the project's [methods and data](data.md) or to the published computation;
 * <span class="status-proved">proved, computer-assisted</span> — a proof whose finite part is an exact computation in
   the repository;
 * <span class="status-bound">bound</span> — only an interval is known; both ends are justified;
