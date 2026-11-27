@@ -124,9 +124,8 @@ The three sieves carry over:
 * *realizable* ($c$): the type of real planes;
 * the number $d$ of possible values of $f_0$.
 
-There is no good analogue of the arithmetic sieve. The pairs of line sizes and points that satisfy the two
-identities as inequalities, with every $\tau_P$ an arithmetically admissible planar type, number
-$1, 1, 2, 11, 128, 3474, \dots$ for $n = 1, 2, 3, \dots$: far too many.
+The two counting inequalities, together with arithmetic admissibility of each planar type $\tau_P$, leave
+$1, 1, 2, 11, 128, 3474$ candidates for $n = 1, \dots, 6$. At $n = 6$ only 20 types pass the combinatorial test.
 
 In the table, "rank 4" means that the planes do not all pass through one point.
 
@@ -198,8 +197,8 @@ projectively, have this type.
 <div class="thm openp" markdown>
 **Open problem.** Compute $b$ and $c$ for nine planes.
 
-There are 185 981 simple matroids of rank 4 on nine elements.[^mr] Their orientability has been tested,[^mmib]
-but real realizability in rank 4 is settled only up to eight elements, even for oriented matroids.[^fmm]
+There are 185 981 simple matroids of rank 4 on nine elements.[^mr] Their orientability has been tested.[^mmib]
+The cited classification of realizable rank-4 oriented matroids covers up to eight elements.[^fmm]
 </div>
 
 * **Inequalities.** In the plane, Melchior's and Hirzebruch's inequalities do most of the excluding. For planes in

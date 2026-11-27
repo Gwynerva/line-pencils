@@ -29,8 +29,8 @@ Terms ($n = 1, 2, \dots$): 1, 1, 2, 4, 7, 15, 32, 66, 141, 295, 619, 1286, 2654,
 ## Growth
 
 The number of partitions of $N$ into triangular numbers grows like $\exp(c N^{1/3})$ (partitions into values of a
-quadratic polynomial; Hardy–Ramanujan–type asymptotics[^hr]), so $\log a(n) \asymp n^{2/3}$. This is the trivial upper
-bound for $\log b(n)$ and $\log c(n)$. A trivial lower bound for $c(n)$ comes from pencils that share no lines:
+quadratic polynomial; Hardy–Ramanujan–type asymptotics[^hr]), so $\log a(n) \asymp n^{2/3}$. This gives an upper
+bound for $\log b(n)$ and $\log c(n)$. Pencils that share no lines give a lower bound for $c(n)$:
 every partition of a number $\le n$ into parts $\ge 3$ is a realizable type (put the parts as disjoint pencils, the
 remaining lines in general position), so $\log c(n) \gtrsim \pi\sqrt{2n/3}$; thus $n^{1/2} \lesssim \log c(n) \lesssim n^{2/3}$.
 Whether the true exponent is $1/2$, $2/3$ or in between is an [open problem](../open.md).
@@ -43,4 +43,4 @@ Whether the true exponent is $1/2$, $2/3$ or in between is an [open problem](../
 
 The number of intersection points of a type is $f_0 = \binom n2 - \sum_i (\binom{k_i}2 - 1)$. The possible losses
 $\binom k2 - 1$ are $2, 5, 9, 14, 20, \dots$; neither $1$ nor $3$ is a sum of these, so $f_0 = \binom n2 - 1$ and
-$f_0 = \binom n2 - 3$ never occur, for any $n$. Everything else about $d(n)$ needs geometry.
+$f_0 = \binom n2 - 3$ never occur, for any $n$. The combinatorial and geometric tests give further exclusions.

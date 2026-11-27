@@ -21,7 +21,7 @@ were new and are now OEIS entries A400149, A399464 and A399605.
 | c(n) ways n lines in the plane can meet | 1, 1, 2, 3, 5, 9, 16, 28, 53, 98, 180, 336 | computed through n = 12; 620 ≤ c(13) ≤ 659, 1104 ≤ c(14) ≤ 1229; [A399464](https://oeis.org/A399464) |
 | d(n) different possible numbers of intersection points | 1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56 | exact through n = 13; 65 ≤ d(14) ≤ 66, 76 ≤ d(15) ≤ 77; [A399605](https://oeis.org/A399605) |
 
-The write-up — definitions, theorems with proofs, algorithms, a gallery of every known realizable type for 1 to 14 lines —
+The write-up — definitions, theorems with proofs, algorithms, a gallery of this project's certified types for 1 to 14 lines —
 is the site built from `docs/`: **https://gwynerva.github.io/line-pencils/**
 (built with [Zensical](https://zensical.org) by `.github/workflows/pages.yml`; `python -m zensical serve` shows it locally).
 
@@ -59,12 +59,9 @@ The verifier needs Python 3.10+ and nothing else. The searches and proofs need `
 | `snippets/` | generated tables and figures included into the site pages |
 | `overrides/` | theme template override for the site |
 
-## Authorship
+## Contributors
 
-Petra Radko (GitHub: Gwynerva) set the research questions and standards of rigour. Claude Code (Anthropic's Claude
-models) carried out the original mathematical and computational work, starting from Petra Radko's exploratory
-scripts and data. Mark Kim independently extended the combinatorial sequence to 15 points.
-[Preprint](https://doi.org/10.5281/zenodo.24567131)
+See [Who contributed](docs/about.md#who-contributed) for the roles of the people and AI agents who worked on the project.
 
 ## Main results
 

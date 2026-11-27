@@ -2,7 +2,7 @@
 description: "What is still unknown about how n lines can meet: the undecided cases for 13 lines, the number of intersection points for 14 lines and more, growth rates, and related questions worth exploring."
 ---
 
-# Open problems and where to dig
+# Open problems
 
 What is not known: the undecided terms, conjectures supported by the data, and related questions.
 
@@ -24,11 +24,9 @@ isomorphism reduction. The outcome for $\{6, 3^{14}\}$ and $\{6, 4, 3^{12}\}$ is
 
 ## 2. Thirteen lines
 
-$620 \le c(13) \le 659$: 620 types have certificates and 39 are undecided. The constructive searches of the
-[algorithms page](algorithms.md#zone-walk) (zone walk, targeted deformation, mirror sections) found no numerical solution for any of the 39, which suggests that
-most of them are not realizable. Deciding them needs the orientability
-search and, where it says "orientable", the algebraic method used at $n = 12$; several of these types are harder than
-anything at $n = 12$.
+$620 \le c(13) \le 659$: 620 types have certificates and 39 are undecided. The [numerical searches](algorithms.md#zone-walk)
+found no realization for any of the 39. The orientability search can rule out a type by excluding every
+orientation. The algebraic method used for 12 lines can then test cases that admit an orientation.
 
 ## 3. How fast do b(n) and c(n) grow?
 
@@ -38,7 +36,8 @@ anything at $n = 12$.
 
 Known: $\log a(n) \asymp n^{2/3}$ (partitions into triangular numbers) and $\log c(n) \gtrsim n^{1/2}$ (pencils that share
 no lines realize every partition of $m \le n$ into parts $\ge 3$). The ratios $c(n)/a(n)$ for $n = 6, \dots, 12$ are
-$0.60, 0.50, 0.42, 0.38, 0.33, 0.29, 0.26$: geometry eats a growing share of the arithmetic candidates, but slowly.
+$0.60, 0.50, 0.42, 0.38, 0.33, 0.29, 0.26$. The share of arithmetic candidates realizable over the reals
+falls from 60% to 26% over this range.
 A better lower bound would come from a construction that realizes many types at once; a better upper bound from a
 structural restriction on how many large pencils can coexist (Melchior's inequality is such a restriction, but it
 says nothing about triple points, whose coefficient in it is $0$).
@@ -62,9 +61,10 @@ small). Theorem E3 proves one feature of it: the four smallest values are $1, n,
 $\ge 3$? Is $\{5, 3^{10}\}$ ($n = 10$) the smallest type that is not realizable over $\mathbb Q$?
 </div>
 
-For $n \le 14$ all our certificates are over $\mathbb Q$ or $\mathbb Q(\sqrt d)$, $d \in \{2, 3, 5\}$, but except for the
-pentagram we never proved that the irrationality is needed; most of the $\sqrt d$ examples probably have rational cousins.
-Rational realizability is a different sieve ("drawable on graph paper") that would give yet another sequence.
+For $n \le 14$ the project's certificates use rational coordinates or coordinates in $\mathbb Q(\sqrt d)$
+with $d \in \{2, 3, 5\}$. A certificate shows where one realization exists. The pentagram proof also rules out
+rational coordinates for that type. Counting the types that have at least one realization with rational
+coordinates would give another sequence.
 
 ## 6. Other geometries
 

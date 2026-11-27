@@ -1,5 +1,5 @@
 ---
-description: "Who did what in this project, how to cite it, the licence, and how the results can be reproduced."
+description: "Who contributed to this project, how to cite it, the licence, and how the results can be reproduced."
 ---
 
 # About
@@ -8,13 +8,19 @@ description: "Who did what in this project, how to cite it, the licence, and how
 *n lines, no two parallel: how many lines can meet at each point?* — and the discovery that three of the natural
 integer sequences it produces were absent from the OEIS. They are now OEIS entries A400149, A399464 and A399605.
 
-## Who did what
+## Who contributed
 
-The questions were posed by Petra Radko (GitHub: Gwynerva), who also fixed the scope of the project and the
-standards of rigour (exact certificates, a single verifier, every claim labelled). Claude Code (Anthropic's Claude
-models) carried out the original mathematical and computational work, starting from Petra Radko's exploratory
-scripts and data. Mark Kim independently extended the combinatorial sequence to 15 points.
-[Preprint](https://doi.org/10.5281/zenodo.24567131) · [Results and verification](sequences/combinatorial.md#mark-kims-extension-to-15-points)
+### People
+
+- **Petra Radko** posed the original question, provided the exploratory scripts and data, and set the verification standards.
+- **Mark Kim** computed $b(13)=729$, $b(14)=1357$, and $b(15)=2558$ and published the preprint, code, and classifications.
+  [Preprint](https://doi.org/10.5281/zenodo.24567131) · [Code and tables](https://github.com/marik-11/linear_space_types)
+
+### AI agents
+
+- **Claude Code (Anthropic)** developed the project's original proofs, programs, computations, illustrations, and write-up.
+- **Codex (OpenAI)** checked Kim's tables against the project data, reproduced all 4,843 decisions for $n=14$,
+  checked the consequences for intersection counts, and updated the documentation.
 
 ## How to cite
 
@@ -40,8 +46,8 @@ Code (`verifier/`, `engine/`, `scripts/`): MIT.
 
 ## Reproducibility
 
-Everything stated here is either proved on the site, cited with full references, or computed by code in the
-repository with logs and exact certificates. The verifier runs automatically on every change of the repository.
+The site links to proofs, certificates, computational methods, and published results. GitHub Actions runs the
+certificate verifier on pushes and pull requests. See [Data and verification](data.md) for the commands.
 Corrections and questions are welcome as issues on GitHub.
 
 ## Acknowledgements

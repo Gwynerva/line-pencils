@@ -8,7 +8,7 @@ repeated.
 
 | method | script | outcome |
 |---|---|---|
-| zone walk | `scripts/zone_walk.py` | every type with a rational realization for n ≤ 12, including {3^18}; 14 new types at n = 13; 1104 types at n = 14 |
+| zone walk | `scripts/zone_walk.py` | every type for which the project has a rational certificate for n ≤ 12, including {3^18}; 14 new types at n = 13; 1104 types at n = 14 |
 | zone walk over Z[√5], Z[√2], started from the certificates of 12 lines | `scripts/zone_walk.py --from 12 --d 5` | 4 more new types at n = 13 (over Q(√5)) |
 | targeted deformation (one or two new lines) | `scripts/targeted.py` | {3^18} over Q(√5); {5^3, 4^2, 3^7} at n = 13; rebuilds the √5 types {5, 3^10} and {3^16} from rational arrangements |
 | sections of 4-dimensional mirror arrangements | `scripts/mirror_sections.py` | {4^9} at n = 13: 13 of the 31 planes perpendicular to the symmetry axes of the icosahedron (over Q(√5)) |

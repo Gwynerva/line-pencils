@@ -8,8 +8,7 @@ description: "d(n): how many different numbers of intersection points n lines ca
 plane, no two parallel. For four lines the possible numbers are 1, 4 and 6, so $d(4) = 3$.
 OEIS: [A399605](https://oeis.org/A399605).
 
-The simplest version of the question counts only the intersection points. It already has a rich answer, and it
-is the one sequence for which statements about all $n$ can be proved.
+To compute $d(n)$, count each attainable number of intersection points once, even if several types have that count.
 
 <div class="thm" markdown>
 **Definition.** $V(n)$ is the set of numbers of intersection points of arrangements of $n$ lines,
@@ -35,8 +34,7 @@ piece of the large-$n$ structure from $n = 13$ on.
 $d(n)$ for $n = 1, \dots, 13$: **1, 1, 2, 3, 5, 9, 13, 18, 24, 30, 38, 46, 56** (out of $\binom n2 = 0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78$ conceivable values).
 
 All thirteen terms are <span class="status-computed">computer-verified</span> (the attained values by certificates,
-the missing values by theorems or exhaustive computation). The only missing value of $V(13)$ below $2n - 2$, namely
-$23$, is also excluded by Theorem 3 below, independently of the classification.
+the missing values by theorems or exhaustive computation). For 13 lines, Theorem 3 independently excludes 23 intersection points.
 
 ## The sets V(n)
 

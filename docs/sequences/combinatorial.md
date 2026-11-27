@@ -59,7 +59,7 @@ For every $n$, $c(n)\le b(n)\le a(n)$ ([A399464](https://oeis.org/A399464), [A07
 
 The first type lost is $\{3, 3\}$ at $n = 4$: two triple points among four lines would share two lines. At $n = 12$ the
 combinatorial test removes 902 of the 1286 admissible types. Typical reasons are pencils that are too large to coexist
-(two pencils of seven lines among twelve lines share at least two lines), or packings that are just barely impossible:
+(two pencils of seven lines among twelve lines share at least two lines), or packings limited by the maximum number of triples:
 a linear space on 12 elements has at most 20 blocks of size 3, so $\{3^{20}\}$ is combinatorially possible while
 $\{3^{21}\}$ is not, although its $21 \cdot 3 = 63$ pairs would fit into $66$.
 

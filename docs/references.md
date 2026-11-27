@@ -4,8 +4,7 @@ description: "The papers and books cited on the site, from Melchior and Sylveste
 
 # References
 
-Full bibliographic data for everything cited on this site. Statements quoted from these works were checked against
-the original papers where they are available online.
+References for the results and methods discussed on the site.
 
 ## Line-size classifications and small arrangements
 

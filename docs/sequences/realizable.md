@@ -28,7 +28,7 @@ type has one of them:
   there is nothing to certify) a set of $n$ lines with coordinates in $\mathbb Q$ (all but six), $\mathbb Q(\sqrt 2)$ or
   $\mathbb Q(\sqrt 5)$ is stored in `data/certificates/` (see [fields of definition](#fields-of-definition)). The
   [verifier](../data.md) recomputes the pencil type of each certificate with exact arithmetic; it runs in continuous
-  integration on every change of the repository.
+  integration on pushes and pull requests.
 * **Non-realizable types: a proof.** Each of the $b(n) - c(n)$ combinatorially possible but non-realizable types is
   excluded by Melchior's inequality (Fano $\{3^7\}$, dual Hesse $\{3^{12}\}$, and most others), by the Csima–Sawyer bound
   $t_2 \ge 6n/13$ ($\{3^{11}\}$ at $n = 9$, $\{4, 3^{15}\}$ and $\{3^{17}\}$ at $n = 11$), or because no linear space of

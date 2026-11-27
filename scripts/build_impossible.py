@@ -43,9 +43,9 @@ def main(nmax):
            "the types that are undecided. Types that already fail the combinatorial test (the pencils cannot be placed so "
            "that every two lines meet only once) or one of the classical inequalities are only counted; the full lists are in "
            "`data/results/classification_n{n}.json`.", "",
-           "## Three famous impossible pictures", "",
-           "Each of these is a perfectly good linear space, and the last two even exist with complex coordinates, "
-           "but no drawing with straight real lines exists. Dashed curves mark the lines that would have to bend.", "",
+           "## Three types without a real drawing", "",
+           "Each of these types occurs in a finite linear space. The last two also have realizations with complex coordinates. "
+           "None can be drawn with straight real lines. The dashed curves show the required incidences.", "",
            '<div class="figs" markdown>', ""]
     for f, cap in (("fano.svg", "The Fano plane, type {3<sup>7</sup>} for 7 lines: there is no ordinary point at all, which the Sylvester–Gallai theorem forbids."),
                    ("moebius-kantor.svg", "The Möbius–Kantor configuration, type {3<sup>8</sup>} for 8 lines: it passes every inequality, but admits no orientation."),

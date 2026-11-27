@@ -8,7 +8,7 @@ well, for display.  The regular pentagram with its axes is stored under "star" w
 Every stored drawing is checked here: the pencils recomputed from the float lines with the same tolerance as the
 browser must give exactly the certified type.  Where data/symmetric_drawings.json (scripts/symmetric_drawings.py)
 has a symmetric drawing of the type, it is checked in the same way and stored as "S" (with its symmetry order and a
-sentence on how it was obtained); the gallery shows it under "Beautiful" and the certified drawing under "Exact".
+sentence on how it was obtained); the gallery shows it under "Symmetric" and the certified drawing under "Exact".
 
 "gaps" lists, for every n, the numbers of intersection points 1 <= f0 <= C(n,2) that no drawing has, with the reason
 (as in the V(n) table of docs/sequences/points.md): the theorems of de Bruijn-Erdos, Elliott, Theorem 1 and Theorem E3,

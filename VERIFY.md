@@ -104,16 +104,18 @@ cd line-pencils
 python verifier/verify.py --self-test
 python verifier/verify.py data/certificates/n*.json
 python scripts/classify.py 13
+python scripts/kim_results.py
 ```
 
-The first command runs the verifier's own tests. The second prints `verified 2454 certificates, 0 rejected` and the
-number of distinct certified types for each n: 2, 3, 5, 9, 16, 28, 53, 98, 180, 336, 620 for n = 3, ..., 13, and 1104
-for n = 14 (a lower bound for c(14)).
+- `--self-test` runs the verifier's tests. The command with `data/certificates/n*.json` checks coordinates and reports
+  `verified 2457 certificates, 0 rejected`. It finds 1104 distinct certified types for 14 lines and checks three
+  witnesses for 15 lines.
+- `classify.py 13` rebuilds local verdicts from the certificates, theorem filters, and search logs. It then writes
+  the sequence summary in `data/results/`, with Kim's published terms and the known bounds.
+- `kim_results.py` checks the published classifications, compares them with available local results, and verifies
+  the intersection-count exclusions. Use `--kim-dir DIRECTORY` to read local copies of Kim's tables.
 
-The third recomputes all four sequences (and rewrites `data/results/`) from the certificates, the theorem filters and the search logs. For each n it
-prints the four terms and how many multisets received each verdict, then the four sequences, with an interval
-`[low, high]` wherever a term is not exact. It stops with an error if any certificate fails or if two searches
-disagree. Python 3.10 or later is the only requirement.
+These commands use Python 3.10 or later and the standard library.
 
 The certificate files can also be compared with `data/CHECKSUMS.txt` (`sha256sum -c data/CHECKSUMS.txt`).
 
@@ -134,7 +136,7 @@ The second checks {3^20} and {4^5,3^9} (Propositions C3a, C3b). It rebuilds the 
 `data/proofs/lrat_n12.json`, compares each CNF with its stored SHA-256, solves it with CaDiCaL writing an LRAT proof,
 and checks the proof with cake_lpr. cake_lpr is a proof checker whose correctness is proved in HOL4 (CakeML). It
 needs `cadical` (2.1.3) and `cake_lpr` on PATH and `pip install python-sat==1.9.dev17`; it takes about a minute. The
-proofs (108 MB) are regenerated rather than stored. CI runs both checks on every push.
+proofs (108 MB) are regenerated rather than stored. CI runs both checks on pushes and pull requests.
 
 Not covered by any certificate: verdicts that come only from the exhaustive search `engine/ls.c`. These are the
 combinatorial sieve (b(n)), the other 15 non-orientable types at n = 12, and the completeness of the list of
@@ -165,9 +167,6 @@ The side direction on arrangements of planes (`docs/planes.md`, `notes/planes.md
 verifier: `python scripts/planes_verify.py` recomputes the type of every plane certificate in
 `runs/planes_certificates.json` in exact integer arithmetic and confirms 1, 1, 2, 4, 8, 20, 55, 198 types for n ≤ 8.
 
-## Authorship
+## Contributors
 
-The research questions and the standards of rigour were set by Petra Radko (GitHub: Gwynerva). All of the work — the
-theorems and proofs, the programs, the computations, the figures and the text — was carried out by Claude Code
-(Anthropic's Claude models), starting from Petra Radko's original exploratory scripts and data. The complete
-write-up is at https://gwynerva.github.io/line-pencils/.
+See [Who contributed](docs/about.md#who-contributed) for the roles of the people and AI agents who worked on the project.
